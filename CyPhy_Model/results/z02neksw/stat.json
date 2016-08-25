@@ -1,0 +1,34 @@
+{
+  "UserId": "",
+  "Id": 16,
+  "IsRemote": false,
+  "VFUrl": "",
+  "Executions": [
+    {
+      "StartTime": "2016-08-24 16:16:28Z",
+      "StatusTraces": [
+        {
+          "Status": "Ready",
+          "TimeStamp": "2016-08-24 16:16:15Z"
+        },
+        {
+          "Status": "QueuedLocal",
+          "TimeStamp": "2016-08-24 16:16:15Z"
+        },
+        {
+          "Status": "RunningLocal",
+          "TimeStamp": "2016-08-24 16:16:28Z"
+        },
+        {
+          "Status": "Succeeded",
+          "TimeStamp": "2016-08-24 16:16:36Z"
+        }
+      ]
+    }
+  ],
+  "JobReceived": "2016-08-24 16:16:15Z",
+  "JobName": "CyPhy2Modelica_v2_DC_Spacecraft_333",
+  "RunCommand": "simulate_om.cmd OpenModelica__latest_",
+  "SizeOfSourcePackage": null,
+  "ToolSpecifics": null
+}

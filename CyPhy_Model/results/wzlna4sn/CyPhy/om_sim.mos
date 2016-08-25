@@ -1,0 +1,7 @@
+// OpenModelica script file to run a model
+loadModel(Modelica, {"3.2"});
+loadModel(TbLib);
+cd("C:/Work/SatExample/CyPhy_Model/results/wzlna4sn/CyPhy");
+loadFile("package.mo");
+translateModel(CyPhy.TestBenches.DC_Spacecraft_4444, fileNamePrefix="DC_Spacecraft_4444");
+getErrorString();

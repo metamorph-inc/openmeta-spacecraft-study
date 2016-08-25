@@ -1,0 +1,17 @@
+{
+    "version_number": "", 
+    "mat_file_size": 529771, 
+    "PCC_times": {}, 
+    "version": "1.9.2 Beta1", 
+    "mo_file_size": 0, 
+    "exec_times": {
+        "total_time": 6.947999954223633, 
+        "translation_time": 2.1019999980926514, 
+        "load_mat_time": 0.0, 
+        "simulation_time": 1.0209999084472656, 
+        "make_time": 3.825000047683716, 
+        "compilation_time": 5.927000045776367, 
+        "post_scripts_time": 0
+    }, 
+    "tool_name": "OpenModelica"
+}

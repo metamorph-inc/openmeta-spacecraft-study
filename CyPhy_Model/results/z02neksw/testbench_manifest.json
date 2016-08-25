@@ -1,0 +1,69 @@
+{
+  "Status": "OK", 
+  "CopyTestResults": false, 
+  "Parameters": [], 
+  "TierLevel": 0, 
+  "Artifacts": [], 
+  "VisualizationArtifacts": [], 
+  "DesignName": "DC_Spacecraft_333", 
+  "Metrics": [
+    {
+      "GMEID": "id-0067-00008026", 
+      "Description": "", 
+      "DisplayedName": null, 
+      "VisualizationArtifacts": [], 
+      "Value": "", 
+      "ID": "383a7b29-9c7a-42fe-b710-7144addb0138", 
+      "Unit": "", 
+      "Name": "Bus_v"
+    }, 
+    {
+      "GMEID": "id-0067-00008024", 
+      "Description": "", 
+      "DisplayedName": null, 
+      "VisualizationArtifacts": [], 
+      "Value": "", 
+      "ID": "c0de8124-dcef-4173-947a-561d494e8ec6", 
+      "Unit": "", 
+      "Name": "Gyro_i"
+    }, 
+    {
+      "GMEID": "id-0067-00008025", 
+      "Description": "", 
+      "DisplayedName": null, 
+      "VisualizationArtifacts": [], 
+      "Value": "", 
+      "ID": "db7d15de-c41b-4fe1-ac07-f6d2092c5fae", 
+      "Unit": "", 
+      "Name": "Battery_i"
+    }, 
+    {
+      "GMEID": "id-0067-00008027", 
+      "Description": "", 
+      "DisplayedName": null, 
+      "VisualizationArtifacts": [], 
+      "Value": "", 
+      "ID": "206995cf-fe71-4ef1-956e-7cdeb7178cc6", 
+      "Unit": "", 
+      "Name": "Solar_i"
+    }
+  ], 
+  "DesignID": "{1bfa3304-8af1-464b-a6d5-77b91230fb38}", 
+  "Dependencies": [], 
+  "Steps": [
+    {
+      "ExecutionCompletionTimestamp": "2016-08-24T16:16:36.443000", 
+      "Status": "OK", 
+      "Description": null, 
+      "Parameters": [], 
+      "ExecutionStartTimestamp": "2016-08-24T16:16:28.349000", 
+      "Invocation": "simulate_om.cmd OpenModelica__latest_", 
+      "PostProcess": null, 
+      "PreProcess": null, 
+      "LogFile": "log/log2016-08-24T161628.349000.log", 
+      "Type": null
+    }
+  ], 
+  "TestBench": "PowerAnalysis_DS", 
+  "Created": "2016-08-24T21:16:15.1574179Z"
+}

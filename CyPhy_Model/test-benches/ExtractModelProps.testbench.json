@@ -1,0 +1,49 @@
+{
+  "$id": "1",
+  "Name": "ExtractModelProps",
+  "Metrics": [
+    {
+      "$id": "2",
+      "Requirement": null,
+      "Name": "Panels",
+      "Unit": "",
+      "Value": null
+    },
+    {
+      "$id": "3",
+      "Requirement": null,
+      "Name": "normalizedIntertia",
+      "Unit": "",
+      "Value": null
+    },
+    {
+      "$id": "4",
+      "Requirement": null,
+      "Name": "roughMass",
+      "Unit": "",
+      "Value": null
+    },
+    {
+      "$id": "5",
+      "Requirement": null,
+      "Name": "bomCost",
+      "Unit": "",
+      "Value": null
+    }
+  ],
+  "Parameters": [
+    {
+      "$id": "6",
+      "Name": "Sdep",
+      "Unit": "",
+      "Value": "40.0"
+    },
+    {
+      "$id": "7",
+      "Name": "inertia",
+      "Unit": "",
+      "Value": "5.91E+10"
+    }
+  ],
+  "Requirements": []
+}

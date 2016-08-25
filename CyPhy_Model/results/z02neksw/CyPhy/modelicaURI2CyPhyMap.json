@@ -1,0 +1,390 @@
+{
+  "TestBench": "CyPhy.TestBenches.DC_Spacecraft_333",
+  "VerifTestBench": "CyPhy.TestBenches.verif_DC_Spacecraft_333",
+  "InstanceMapping": {
+    "CyPhy.TestBenches.DC_Spacecraft_333": {
+      "Name": "DC_Spacecraft_333",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0",
+      "ID": "id-0065-00007bf2",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333",
+      "Kind": "TestBench",
+      "AVMID": null,
+      "ModelType": "ContextAssembly",
+      "Reference": {
+        "Name": "PowerAnalysis_DS",
+        "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS|kind=TestBench|relpos=0",
+        "ID": "id-0065-0000138f",
+        "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS",
+        "Kind": "TestBench",
+        "AVMID": null,
+        "ModelType": "ContextAssembly",
+        "Reference": null
+      }
+    },
+    "CyPhy.TestBenches.DC_Spacecraft_333.DC_Spacecraft_cfg1": {
+      "Name": "DC_Spacecraft_cfg1",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0",
+      "ID": "id-0065-00007bf3",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1",
+      "Kind": "ComponentAssembly",
+      "AVMID": null,
+      "ModelType": "PlantAssembly",
+      "Reference": {
+        "Name": "DC_Spacecraft_cfg1",
+        "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=TopLevelSystemUnderTest|relpos=0",
+        "ID": "id-0067-00001bd0",
+        "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS/@DC_Spacecraft_cfg1",
+        "Kind": "TopLevelSystemUnderTest",
+        "AVMID": null,
+        "ModelType": "PlantAssembly",
+        "Reference": null
+      }
+    },
+    "CyPhy.TestBenches.DC_Spacecraft_333.DC_Spacecraft_cfg1.attitudeScenario": {
+      "Name": "attitudeScenario",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@attitudeScenario|kind=Component|relpos=0",
+      "ID": "id-0065-00007c00",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@attitudeScenario",
+      "Kind": "Component",
+      "AVMID": "2e94bb29-9026-4e96-a80b-c609837574ee",
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "attitudeScenario",
+        "AbsPath": "/@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-24-2016  16:16:13)|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft_333|kind=ComponentAssembly|relpos=0/@attitudeScenario|kind=ComponentRef|relpos=0",
+        "ID": "id-0067-00008016",
+        "Path": "/@Generated configurations/@DC_Spacecraft/@Configurations (08-24-2016  16:16:13)/@DC_Spacecraft_333/@attitudeScenario",
+        "Kind": "ComponentRef",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "CyPhy.TestBenches.DC_Spacecraft_333.DC_Spacecraft_cfg1.Gyroscope_Momentum_Control": {
+      "Name": "Gyroscope_Momentum_Control",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Gyroscope_Momentum_Control|kind=Component|relpos=0",
+      "ID": "id-0065-00007c05",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Gyroscope_Momentum_Control",
+      "Kind": "Component",
+      "AVMID": "becaa698-dac9-4ae6-808a-8c2b8c13f8bd",
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "Gyroscope_Momentum_Control",
+        "AbsPath": "/@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-24-2016  16:16:13)|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft_333|kind=ComponentAssembly|relpos=0/@Gyroscope_Momentum_Control|kind=ComponentRef|relpos=0",
+        "ID": "id-0067-00008014",
+        "Path": "/@Generated configurations/@DC_Spacecraft/@Configurations (08-24-2016  16:16:13)/@DC_Spacecraft_333/@Gyroscope_Momentum_Control",
+        "Kind": "ComponentRef",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "CyPhy.TestBenches.DC_Spacecraft_333.DC_Spacecraft_cfg1.Computers": {
+      "Name": "Computers",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Computers|kind=Component|relpos=0",
+      "ID": "id-0065-00007c30",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Computers",
+      "Kind": "Component",
+      "AVMID": "2a474a18-874f-4f45-a100-cfe0418d501c",
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "Computers",
+        "AbsPath": "/@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-24-2016  16:16:13)|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft_333|kind=ComponentAssembly|relpos=0/@Computers|kind=ComponentRef|relpos=0",
+        "ID": "id-0067-0000800a",
+        "Path": "/@Generated configurations/@DC_Spacecraft/@Configurations (08-24-2016  16:16:13)/@DC_Spacecraft_333/@Computers",
+        "Kind": "ComponentRef",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "CyPhy.TestBenches.DC_Spacecraft_333.DC_Spacecraft_cfg1.Batteries": {
+      "Name": "Batteries",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Batteries|kind=Component|relpos=0",
+      "ID": "id-0065-00007c45",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Batteries",
+      "Kind": "Component",
+      "AVMID": "2d239665-187c-4522-8ecb-b5591e53137c",
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "Batteries",
+        "AbsPath": "/@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-24-2016  16:16:13)|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft_333|kind=ComponentAssembly|relpos=0/@Batteries|kind=ComponentRef|relpos=0",
+        "ID": "id-0067-00008008",
+        "Path": "/@Generated configurations/@DC_Spacecraft/@Configurations (08-24-2016  16:16:13)/@DC_Spacecraft_333/@Batteries",
+        "Kind": "ComponentRef",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "CyPhy.TestBenches.DC_Spacecraft_333.DC_Spacecraft_cfg1.Solar_Panels_B__Solar_Panels_3B": {
+      "Name": "Solar_Panels_B__Solar_Panels_3B",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Solar_Panels_B__Solar_Panels_3B|kind=Component|relpos=0",
+      "ID": "id-0065-00007c57",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Solar_Panels_B__Solar_Panels_3B",
+      "Kind": "Component",
+      "AVMID": "6fa3d930-21df-430e-b1a8-76521c782eb2",
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "Solar_Panels_B__Solar_Panels_3B",
+        "AbsPath": "/@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-24-2016  16:16:13)|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft_333|kind=ComponentAssembly|relpos=0/@Solar_Panels_B__Solar_Panels_3B|kind=ComponentRef|relpos=0",
+        "ID": "id-0067-00008002",
+        "Path": "/@Generated configurations/@DC_Spacecraft/@Configurations (08-24-2016  16:16:13)/@DC_Spacecraft_333/@Solar_Panels_B__Solar_Panels_3B",
+        "Kind": "ComponentRef",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "CyPhy.TestBenches.DC_Spacecraft_333.DC_Spacecraft_cfg1.Solar_Panels_A__Solar_Panels_3A": {
+      "Name": "Solar_Panels_A__Solar_Panels_3A",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Solar_Panels_A__Solar_Panels_3A|kind=Component|relpos=0",
+      "ID": "id-0065-00007c69",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Solar_Panels_A__Solar_Panels_3A",
+      "Kind": "Component",
+      "AVMID": "557c0dbe-5677-48dd-8b3c-ad38976be62f",
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "Solar_Panels_A__Solar_Panels_3A",
+        "AbsPath": "/@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-24-2016  16:16:13)|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft_333|kind=ComponentAssembly|relpos=0/@Solar_Panels_A__Solar_Panels_3A|kind=ComponentRef|relpos=0",
+        "ID": "id-0067-00008000",
+        "Path": "/@Generated configurations/@DC_Spacecraft/@Configurations (08-24-2016  16:16:13)/@DC_Spacecraft_333/@Solar_Panels_A__Solar_Panels_3A",
+        "Kind": "ComponentRef",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    }
+  },
+  "ModelMapping": {
+    "CyPhy.ComponentAssemblies.DC_Spacecraft_cfg1.DC_Spacecraft_cfg1": {
+      "Name": "DC_Spacecraft_cfg1",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0",
+      "ID": "id-0065-00007bf3",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1",
+      "Kind": "ComponentAssembly",
+      "AVMID": null,
+      "ModelType": "PlantAssembly",
+      "Reference": {
+        "Name": "DC_Spacecraft_cfg1",
+        "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=TopLevelSystemUnderTest|relpos=0",
+        "ID": "id-0067-00001bd0",
+        "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS/@DC_Spacecraft_cfg1",
+        "Kind": "TopLevelSystemUnderTest",
+        "AVMID": null,
+        "ModelType": "PlantAssembly",
+        "Reference": null
+      }
+    },
+    "CyPhy.Components.RootFolder.A_Space_Components.Scenarios.attitudeScenario": {
+      "Name": "attitudeScenario",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@attitudeScenario|kind=Component|relpos=0",
+      "ID": "id-0065-00007c00",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@attitudeScenario",
+      "Kind": "Component",
+      "AVMID": "2e94bb29-9026-4e96-a80b-c609837574ee",
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "attitudeScenario",
+        "AbsPath": "/@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-24-2016  16:16:13)|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft_333|kind=ComponentAssembly|relpos=0/@attitudeScenario|kind=ComponentRef|relpos=0",
+        "ID": "id-0067-00008016",
+        "Path": "/@Generated configurations/@DC_Spacecraft/@Configurations (08-24-2016  16:16:13)/@DC_Spacecraft_333/@attitudeScenario",
+        "Kind": "ComponentRef",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "CyPhy.Components.RootFolder.A_Space_Components.AttitudeControl.Gyroscope_Momentum_Control": {
+      "Name": "Gyroscope_Momentum_Control",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Gyroscope_Momentum_Control|kind=Component|relpos=0",
+      "ID": "id-0065-00007c05",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Gyroscope_Momentum_Control",
+      "Kind": "Component",
+      "AVMID": "becaa698-dac9-4ae6-808a-8c2b8c13f8bd",
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "Gyroscope_Momentum_Control",
+        "AbsPath": "/@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-24-2016  16:16:13)|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft_333|kind=ComponentAssembly|relpos=0/@Gyroscope_Momentum_Control|kind=ComponentRef|relpos=0",
+        "ID": "id-0067-00008014",
+        "Path": "/@Generated configurations/@DC_Spacecraft/@Configurations (08-24-2016  16:16:13)/@DC_Spacecraft_333/@Gyroscope_Momentum_Control",
+        "Kind": "ComponentRef",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "CyPhy.Components.RootFolder.A_Space_Components.CommunicationsAndCompute.Computer": {
+      "Name": "Computers",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Computers|kind=Component|relpos=0",
+      "ID": "id-0065-00007c30",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Computers",
+      "Kind": "Component",
+      "AVMID": "2a474a18-874f-4f45-a100-cfe0418d501c",
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "Computers",
+        "AbsPath": "/@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-24-2016  16:16:13)|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft_333|kind=ComponentAssembly|relpos=0/@Computers|kind=ComponentRef|relpos=0",
+        "ID": "id-0067-0000800a",
+        "Path": "/@Generated configurations/@DC_Spacecraft/@Configurations (08-24-2016  16:16:13)/@DC_Spacecraft_333/@Computers",
+        "Kind": "ComponentRef",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "CyPhy.Components.RootFolder.A_Space_Components.Energy.Battery": {
+      "Name": "Batteries",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Batteries|kind=Component|relpos=0",
+      "ID": "id-0065-00007c45",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Batteries",
+      "Kind": "Component",
+      "AVMID": "2d239665-187c-4522-8ecb-b5591e53137c",
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "Batteries",
+        "AbsPath": "/@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-24-2016  16:16:13)|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft_333|kind=ComponentAssembly|relpos=0/@Batteries|kind=ComponentRef|relpos=0",
+        "ID": "id-0067-00008008",
+        "Path": "/@Generated configurations/@DC_Spacecraft/@Configurations (08-24-2016  16:16:13)/@DC_Spacecraft_333/@Batteries",
+        "Kind": "ComponentRef",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "CyPhy.Components.RootFolder.A_Space_Components.Energy.Solar_Panels_3B": {
+      "Name": "Solar_Panels_B__Solar_Panels_3B",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Solar_Panels_B__Solar_Panels_3B|kind=Component|relpos=0",
+      "ID": "id-0065-00007c57",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Solar_Panels_B__Solar_Panels_3B",
+      "Kind": "Component",
+      "AVMID": "6fa3d930-21df-430e-b1a8-76521c782eb2",
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "Solar_Panels_B__Solar_Panels_3B",
+        "AbsPath": "/@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-24-2016  16:16:13)|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft_333|kind=ComponentAssembly|relpos=0/@Solar_Panels_B__Solar_Panels_3B|kind=ComponentRef|relpos=0",
+        "ID": "id-0067-00008002",
+        "Path": "/@Generated configurations/@DC_Spacecraft/@Configurations (08-24-2016  16:16:13)/@DC_Spacecraft_333/@Solar_Panels_B__Solar_Panels_3B",
+        "Kind": "ComponentRef",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "CyPhy.Components.RootFolder.A_Space_Components.Energy.Solar_Panels_3A": {
+      "Name": "Solar_Panels_A__Solar_Panels_3A",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Solar_Panels_A__Solar_Panels_3A|kind=Component|relpos=0",
+      "ID": "id-0065-00007c69",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Solar_Panels_A__Solar_Panels_3A",
+      "Kind": "Component",
+      "AVMID": "557c0dbe-5677-48dd-8b3c-ad38976be62f",
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "Solar_Panels_A__Solar_Panels_3A",
+        "AbsPath": "/@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-24-2016  16:16:13)|kind=ComponentAssemblies|relpos=0/@DC_Spacecraft_333|kind=ComponentAssembly|relpos=0/@Solar_Panels_A__Solar_Panels_3A|kind=ComponentRef|relpos=0",
+        "ID": "id-0067-00008000",
+        "Path": "/@Generated configurations/@DC_Spacecraft/@Configurations (08-24-2016  16:16:13)/@DC_Spacecraft_333/@Solar_Panels_A__Solar_Panels_3A",
+        "Kind": "ComponentRef",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    }
+  },
+  "ExtendsMapping": {
+    "TbLib.scenario": {
+      "Name": "ModelicaFScenario",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@attitudeScenario|kind=Component|relpos=0/@ModelicaFScenario|kind=ModelicaModel|relpos=0",
+      "ID": "id-0065-00007c01",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@attitudeScenario/@ModelicaFScenario",
+      "Kind": "ModelicaModel",
+      "AVMID": null,
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "ModelicaFScenario",
+        "AbsPath": "/@A_Space_Components|kind=Components|relpos=0/@Scenarios|kind=Components|relpos=0/@attitudeScenario|kind=Component|relpos=0/@ModelicaFScenario|kind=ModelicaModel|relpos=0",
+        "ID": "id-0065-00002ebb",
+        "Path": "/@A_Space_Components/@Scenarios/@attitudeScenario/@ModelicaFScenario",
+        "Kind": "ModelicaModel",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "TbLib.Gyroscope_Momentum_Control": {
+      "Name": "ModelicLoadGyro",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Gyroscope_Momentum_Control|kind=Component|relpos=0/@ModelicLoadGyro|kind=ModelicaModel|relpos=0",
+      "ID": "id-0065-00007c07",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Gyroscope_Momentum_Control/@ModelicLoadGyro",
+      "Kind": "ModelicaModel",
+      "AVMID": null,
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "ModelicLoadGyro",
+        "AbsPath": "/@A_Space_Components|kind=Components|relpos=0/@AttitudeControl|kind=Components|relpos=0/@Gyroscope_Momentum_Control|kind=Component|relpos=0/@ModelicLoadGyro|kind=ModelicaModel|relpos=0",
+        "ID": "id-0065-00000bff",
+        "Path": "/@A_Space_Components/@AttitudeControl/@Gyroscope_Momentum_Control/@ModelicLoadGyro",
+        "Kind": "ModelicaModel",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "TbLib.FullCtrl": {
+      "Name": "ModelicaCtrl",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Computers|kind=Component|relpos=0/@ModelicaCtrl|kind=ModelicaModel|relpos=0",
+      "ID": "id-0065-00007c3d",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Computers/@ModelicaCtrl",
+      "Kind": "ModelicaModel",
+      "AVMID": null,
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "ModelicaCtrl",
+        "AbsPath": "/@A_Space_Components|kind=Components|relpos=0/@CommunicationsAndCompute|kind=Components|relpos=0/@Computer|kind=Component|relpos=0/@ModelicaCtrl|kind=ModelicaModel|relpos=0",
+        "ID": "id-0065-00002d53",
+        "Path": "/@A_Space_Components/@CommunicationsAndCompute/@Computer/@ModelicaCtrl",
+        "Kind": "ModelicaModel",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "TbLib.BattCapSurrogate": {
+      "Name": "BattCapSurrogate",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Batteries|kind=Component|relpos=0/@BattCapSurrogate|kind=ModelicaModel|relpos=0",
+      "ID": "id-0065-00007c4f",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Batteries/@BattCapSurrogate",
+      "Kind": "ModelicaModel",
+      "AVMID": null,
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "BattCapSurrogate",
+        "AbsPath": "/@A_Space_Components|kind=Components|relpos=0/@Energy|kind=Components|relpos=0/@Battery|kind=Component|relpos=0/@BattCapSurrogate|kind=ModelicaModel|relpos=0",
+        "ID": "id-0065-00000fbf",
+        "Path": "/@A_Space_Components/@Energy/@Battery/@BattCapSurrogate",
+        "Kind": "ModelicaModel",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    },
+    "TbLib.Solar_Panels_3": {
+      "Name": "ModelicaPV",
+      "AbsPath": "/@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS TemporaryFolder|kind=Testing|relpos=0/@DC_Spacecraft_333|kind=TestBench|relpos=0/@DC_Spacecraft_cfg1|kind=ComponentAssembly|relpos=0/@Solar_Panels_B__Solar_Panels_3B|kind=Component|relpos=0/@ModelicaPV|kind=ModelicaModel|relpos=0",
+      "ID": "id-0065-00007c63",
+      "Path": "/@Testing/@DynamicsSim/@PowerAnalysis_DS TemporaryFolder/@DC_Spacecraft_333/@DC_Spacecraft_cfg1/@Solar_Panels_B__Solar_Panels_3B/@ModelicaPV",
+      "Kind": "ModelicaModel",
+      "AVMID": null,
+      "ModelType": "PlantModel",
+      "Reference": {
+        "Name": "ModelicaPV",
+        "AbsPath": "/@A_Space_Components|kind=Components|relpos=0/@Energy|kind=Components|relpos=0/@Solar_Panels_3B|kind=Component|relpos=0/@ModelicaPV|kind=ModelicaModel|relpos=0",
+        "ID": "id-0065-0000295a",
+        "Path": "/@A_Space_Components/@Energy/@Solar_Panels_3B/@ModelicaPV",
+        "Kind": "ModelicaModel",
+        "AVMID": null,
+        "ModelType": "PlantModel",
+        "Reference": null
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+2016-08-24T16:16:05 - [Info] - Master Interpreter 2.0
+2016-08-24T16:16:05 - [Debug] - === HEADER ===================================================
+Date/Time:       8/24/2016 4:16:05 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-24T16:16:05 - [Info] - Processing PowerAnalysis_DS [TestBench] model
+2016-08-24T16:16:05 - [Debug] - Interactive mode: True
+2016-08-24T16:16:05 - [Debug] - Entering TryCheckContext checker
+2016-08-24T16:16:05 - [Debug] - Getting context checker for TestBench
+2016-08-24T16:16:05 - [Debug] - Got context checker TestBenchChecker for context TestBench
+2016-08-24T16:16:05 - [Debug] - Checking context
+2016-08-24T16:16:05 - [Debug] - Context is checked
+2016-08-24T16:16:05 - [Success] -  <i><a href="mga:id-0065-00000038">DC_Spacecraft</a></i> 'DC_Spacecraft_cfg1' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-24T16:16:05 - [Success] -  <i><a href="mga:id-0065-0000138f">PowerAnalysis_DS</a></i> No component in TestBench.
+2016-08-24T16:16:05 - [Success] -  <i><a href="mga:id-0065-0000138f">PowerAnalysis_DS</a></i> No component references in TestBench.
+2016-08-24T16:16:05 - [Success] -  <i><a href="mga:id-0065-0000138f">PowerAnalysis_DS</a></i> TestBench is not a library object.
+2016-08-24T16:16:05 - [Success] -  <i><a href="mga:id-0065-0000138f">PowerAnalysis_DS</a></i> TestBench is not a subtype or instance.
+2016-08-24T16:16:05 - [Success] -  <i><a href="mga:id-0065-0000138f">PowerAnalysis_DS</a></i> TestBench is not an instance.
+2016-08-24T16:16:05 - [Success] -  <i><a href="mga:id-0065-0000138f">PowerAnalysis_DS</a></i> TestBench is writable.
+2016-08-24T16:16:05 - [Success] -  <i><a href="mga:id-0067-00001bd0">DC_Spacecraft_cfg1</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-24T16:16:05 - [Success] -  <i><a href="mga:id-0067-00001bd0">DC_Spacecraft_cfg1</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-24T16:16:08 - [Debug] - MasterExe command: CyPhyMasterExe.exe "MGA=C:\Work\SatExample\CyPhy_Model\Digisat_AB.mga" "/@Testing/@DynamicsSim/@PowerAnalysis_DS" "/@_ZZ_DS_Spacecraft/@DC_Spacecraft/@Exported-Configurations-at--04-12--19-28-26/@22" "/@_ZZ_DS_Spacecraft/@DC_Spacecraft/@Exported-Configurations-at--04-12--19-28-26/@333" "/@_ZZ_DS_Spacecraft/@DC_Spacecraft/@Exported-Configurations-at--04-12--19-28-26/@4444"
+2016-08-24T16:16:08 - [Debug] - Start main method for master interpreter.
+2016-08-24T16:16:08 - [Debug] - Start copying dashboard sync.
+2016-08-24T16:16:08 - [Debug] - Generate project manifest.
+2016-08-24T16:16:08 - [Debug] - Project manifest was generated C:\Work\SatExample\CyPhy_Model\manifest.project.json
+2016-08-24T16:16:08 - [Debug] - Project directory: C:\Work\SatExample\CyPhy_Model
+2016-08-24T16:16:08 - [Debug] - Configuration 22 [CWC] was resolved to:  22 [CWC]
+2016-08-24T16:16:08 - [Debug] - Configuration 333 [CWC] was resolved to:  333 [CWC]
+2016-08-24T16:16:08 - [Debug] - Configuration 4444 [CWC] was resolved to:  4444 [CWC]
+2016-08-24T16:16:08 - [Info] - Number of configurations to execute: 3
+2016-08-24T16:16:08 - [Debug] - Wait for dashboard copy to finish
+2016-08-24T16:16:08 - [Debug] - Dashboard copy finished
+2016-08-24T16:16:08 - [Debug] - Processing 1 out of 3 [0 success(es) and 0 failure(s)]
+2016-08-24T16:16:08 - [Debug] - Configuration /@_ZZ_DS_Spacecraft|kind=DesignSpace|relpos=0/@DC_Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--04-12--19-28-26|kind=Configurations|relpos=0/@22|kind=CWC|relpos=0
+2016-08-24T16:16:08 - [Debug] - Starting analysis model processor
+2016-08-24T16:16:08 - [Debug] - Preparing analysis model processor
+2016-08-24T16:16:08 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-24T16:16:08 - [Debug] - Getting analysis model processor instance for TestBench type
+2016-08-24T16:16:08 - [Debug] - Got TestBenchTypeProcessor for TestBench /@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS|kind=TestBench|relpos=0
+2016-08-24T16:16:08 - [Debug] - CWC was specified as configuration. Start expanding it. /@_ZZ_DS_Spacecraft|kind=DesignSpace|relpos=0/@DC_Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--04-12--19-28-26|kind=Configurations|relpos=0/@22|kind=CWC|relpos=0
+2016-08-24T16:16:09 - [Debug] - Expand finished for /@_ZZ_DS_Spacecraft|kind=DesignSpace|relpos=0/@DC_Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--04-12--19-28-26|kind=Configurations|relpos=0/@22|kind=CWC|relpos=0
+2016-08-24T16:16:09 - [Debug] - Calling design space exporter
+2016-08-24T16:16:09 - [Debug] - Design space exporter succeeded.
+2016-08-24T16:16:09 - [Debug] - Calling design exporter
+2016-08-24T16:16:09 - [Debug] - Design exporter succeeded.
+2016-08-24T16:16:09 - [Debug] - Saving test bench definition
+2016-08-24T16:16:09 - [Debug] - Saving test bench definition succeeded.
+2016-08-24T16:16:09 - [Debug] - Saving test bench manifest
+2016-08-24T16:16:09 - [Debug] - Saving test bench manifest succeeded.
+2016-08-24T16:16:09 - [Debug] - Serializing Project manifest file with updates.
+2016-08-24T16:16:09 - [Debug] - Project manifest was successfully saved.
+2016-08-24T16:16:10 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-24T16:16:12 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-24T16:16:13 - [Debug] - Interpreters finished.
+2016-08-24T16:16:13 - [Debug] - Job manager instance is null. Initializing one.
+2016-08-24T16:16:13 - [Debug] - Job manager dispatch is ready to receive jobs
+2016-08-24T16:16:13 - [Debug] - Posting to the job manager
+2016-08-24T16:16:13 - [Info] - Job posted to the job manager: PowerAnalysis_DS
+2016-08-24T16:16:13 - [Debug] - Removing temporary models.
+2016-08-24T16:16:13 - [Debug] - Temporary models are removed.
+2016-08-24T16:16:13 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-24T16:16:13 - [Debug] - Analysis model processor is done
+2016-08-24T16:16:13 - [Debug] - Processing 2 out of 3 [1 success(es) and 0 failure(s)]
+2016-08-24T16:16:13 - [Debug] - Configuration /@_ZZ_DS_Spacecraft|kind=DesignSpace|relpos=0/@DC_Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--04-12--19-28-26|kind=Configurations|relpos=0/@333|kind=CWC|relpos=0
+2016-08-24T16:16:13 - [Debug] - Starting analysis model processor
+2016-08-24T16:16:13 - [Debug] - Preparing analysis model processor
+2016-08-24T16:16:13 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-24T16:16:13 - [Debug] - Getting analysis model processor instance for TestBench type
+2016-08-24T16:16:13 - [Debug] - Got TestBenchTypeProcessor for TestBench /@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS|kind=TestBench|relpos=0
+2016-08-24T16:16:13 - [Debug] - CWC was specified as configuration. Start expanding it. /@_ZZ_DS_Spacecraft|kind=DesignSpace|relpos=0/@DC_Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--04-12--19-28-26|kind=Configurations|relpos=0/@333|kind=CWC|relpos=0
+2016-08-24T16:16:13 - [Debug] - Expand finished for /@_ZZ_DS_Spacecraft|kind=DesignSpace|relpos=0/@DC_Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--04-12--19-28-26|kind=Configurations|relpos=0/@333|kind=CWC|relpos=0
+2016-08-24T16:16:13 - [Debug] - Calling design space exporter
+2016-08-24T16:16:13 - [Debug] - Design space exporter succeeded.
+2016-08-24T16:16:13 - [Debug] - Calling design exporter
+2016-08-24T16:16:14 - [Debug] - Design exporter succeeded.
+2016-08-24T16:16:14 - [Debug] - Saving test bench definition
+2016-08-24T16:16:14 - [Debug] - Saving test bench definition succeeded.
+2016-08-24T16:16:14 - [Debug] - Saving test bench manifest
+2016-08-24T16:16:14 - [Debug] - Saving test bench manifest succeeded.
+2016-08-24T16:16:14 - [Debug] - Serializing Project manifest file with updates.
+2016-08-24T16:16:14 - [Debug] - Project manifest was successfully saved.
+2016-08-24T16:16:14 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-24T16:16:14 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-24T16:16:15 - [Debug] - Interpreters finished.
+2016-08-24T16:16:15 - [Debug] - Posting to the job manager
+2016-08-24T16:16:15 - [Info] - Job posted to the job manager: PowerAnalysis_DS
+2016-08-24T16:16:15 - [Debug] - Removing temporary models.
+2016-08-24T16:16:15 - [Debug] - Temporary models are removed.
+2016-08-24T16:16:15 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-24T16:16:15 - [Debug] - Analysis model processor is done
+2016-08-24T16:16:15 - [Debug] - Processing 3 out of 3 [2 success(es) and 0 failure(s)]
+2016-08-24T16:16:15 - [Debug] - Configuration /@_ZZ_DS_Spacecraft|kind=DesignSpace|relpos=0/@DC_Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--04-12--19-28-26|kind=Configurations|relpos=0/@4444|kind=CWC|relpos=0
+2016-08-24T16:16:15 - [Debug] - Starting analysis model processor
+2016-08-24T16:16:15 - [Debug] - Preparing analysis model processor
+2016-08-24T16:16:15 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-24T16:16:15 - [Debug] - Getting analysis model processor instance for TestBench type
+2016-08-24T16:16:15 - [Debug] - Got TestBenchTypeProcessor for TestBench /@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis_DS|kind=TestBench|relpos=0
+2016-08-24T16:16:15 - [Debug] - CWC was specified as configuration. Start expanding it. /@_ZZ_DS_Spacecraft|kind=DesignSpace|relpos=0/@DC_Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--04-12--19-28-26|kind=Configurations|relpos=0/@4444|kind=CWC|relpos=0
+2016-08-24T16:16:15 - [Debug] - Expand finished for /@_ZZ_DS_Spacecraft|kind=DesignSpace|relpos=0/@DC_Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--04-12--19-28-26|kind=Configurations|relpos=0/@4444|kind=CWC|relpos=0
+2016-08-24T16:16:15 - [Debug] - Calling design space exporter
+2016-08-24T16:16:15 - [Debug] - Design space exporter succeeded.
+2016-08-24T16:16:15 - [Debug] - Calling design exporter
+2016-08-24T16:16:16 - [Debug] - Design exporter succeeded.
+2016-08-24T16:16:16 - [Debug] - Saving test bench definition
+2016-08-24T16:16:16 - [Debug] - Saving test bench definition succeeded.
+2016-08-24T16:16:16 - [Debug] - Saving test bench manifest
+2016-08-24T16:16:16 - [Debug] - Saving test bench manifest succeeded.
+2016-08-24T16:16:16 - [Debug] - Serializing Project manifest file with updates.
+2016-08-24T16:16:16 - [Debug] - Project manifest was successfully saved.
+2016-08-24T16:16:16 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-24T16:16:16 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-24T16:16:17 - [Debug] - Interpreters finished.
+2016-08-24T16:16:17 - [Debug] - Posting to the job manager
+2016-08-24T16:16:17 - [Info] - Job posted to the job manager: PowerAnalysis_DS
+2016-08-24T16:16:17 - [Debug] - Removing temporary models.
+2016-08-24T16:16:17 - [Debug] - Temporary models are removed.
+2016-08-24T16:16:17 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-24T16:16:17 - [Debug] - Analysis model processor is done
+2016-08-24T16:16:17 - [Debug] - Generate dashboard script files
+2016-08-24T16:16:17 - [Debug] - Dashboard script files generated
+2016-08-24T16:16:17 - [Info] -  Summary 
+2016-08-24T16:16:17 - [Success] -  <a href="mga:id-0065-0000138f">PowerAnalysis_DS</a> <a href="mga:id-0065-00003f93">22</a>  
+2016-08-24T16:16:17 - [Success] -  <a href="mga:id-0065-0000138f">PowerAnalysis_DS</a> <a href="mga:id-0065-00003f95">333</a>  
+2016-08-24T16:16:17 - [Success] -  <a href="mga:id-0065-0000138f">PowerAnalysis_DS</a> <a href="mga:id-0065-00003f94">4444</a>  
+2016-08-24T16:16:17 - [Info] - Log file was generated here: <a href="file:///C:\Work\SatExample\CyPhy_Model\log" target="_blank">C:\Work\SatExample\CyPhy_Model\log\CyPhyMasterInterpreter.12832.log</a>
+2016-08-24T16:16:17 - [Info] - Master Interpreter 2.0 finished

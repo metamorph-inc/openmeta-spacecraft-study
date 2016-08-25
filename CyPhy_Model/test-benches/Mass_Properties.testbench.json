@@ -1,0 +1,68 @@
+{
+  "$id": "1",
+  "Name": "Mass_Properties",
+  "Metrics": [
+    {
+      "$id": "2",
+      "Requirement": null,
+      "Name": "Gyroscope_Location",
+      "Unit": "",
+      "Value": null
+    },
+    {
+      "$id": "3",
+      "Requirement": null,
+      "Name": "Mass",
+      "Unit": "",
+      "Value": null
+    },
+    {
+      "$id": "4",
+      "Requirement": null,
+      "Name": "Interference Count",
+      "Unit": "",
+      "Value": null
+    },
+    {
+      "$id": "5",
+      "Requirement": null,
+      "Name": "Center of Gravity",
+      "Unit": "",
+      "Value": null
+    },
+    {
+      "$id": "6",
+      "Requirement": null,
+      "Name": "Bounding Box",
+      "Unit": "",
+      "Value": null
+    }
+  ],
+  "Parameters": [
+    {
+      "$id": "7",
+      "Name": "Debug",
+      "Unit": "",
+      "Value": "200"
+    },
+    {
+      "$id": "8",
+      "Name": "Batteries_z_Offset_From_Center",
+      "Unit": "",
+      "Value": "200"
+    },
+    {
+      "$id": "9",
+      "Name": "Batteries_x_Offset_From_Center",
+      "Unit": "",
+      "Value": "800"
+    },
+    {
+      "$id": "10",
+      "Name": "Angle_Between_Panels",
+      "Unit": "",
+      "Value": "180"
+    }
+  ],
+  "Requirements": []
+}

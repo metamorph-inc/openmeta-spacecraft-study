@@ -1,0 +1,74 @@
+{
+  "Project": {
+    "Components": [],
+    "DesignSpaceModels": [
+      "./design-space/DC_Spacecraft.adm",
+      "./design-space/DC__NewProject.adm"
+    ],
+    "Configurations": [
+      "./designs/DC_Spacecraft_cfg1.adm",
+      "./designs/DC_Spacecraft_cfg2.adm",
+      "./designs/DC_Spacecraft_cfg3.adm",
+      "./designs/DC_Spacecraft_cfg4.adm",
+      "./designs/DC_Spacecraft_cfg5.adm",
+      "./designs/DC_Spacecraft_cfg6.adm",
+      "./designs/DC_Spacecraft_cfg7.adm",
+      "./designs/DC_Spacecraft_cfg8.adm",
+      "./designs/DC_Spacecraft_cfg9.adm",
+      "./designs/DC_Spacecraft_SP3.adm",
+      "./designs/DC_Spacecraft_333333.adm",
+      "./designs/DC_Spacecraft_fufu.adm",
+      "./designs/DC_Spacecraft_2222.adm",
+      "./designs/DC_Spacecraft_3333.adm",
+      "./designs/DC_Spacecraft_4444.adm",
+      "./designs/TestSolar.adm",
+      "./designs/DC_Spacecraft_222.adm",
+      "./designs/DC_Spacecraft_333.adm",
+      "./designs/DC_Spacecraft_444.adm",
+      "./designs/DC_Spacecraft_22.adm",
+      "./designs/DC_Spacecraft_33.adm",
+      "./designs/DC_Spacecraft_44.adm",
+      "./designs/DC_Spacecraft_2.adm",
+      "./designs/DC_Spacecraft_3.adm",
+      "./designs/DC_Spacecraft_4.adm",
+      "./designs/NewProject.adm",
+      "./designs/DC__NewProject_2Panel.adm",
+      "./designs/DC__NewProject_3Panel.adm",
+      "./designs/DC__NewProject_4Panel.adm",
+      "./designs/DC__NewProject_cfg1.adm",
+      "./designs/DC__NewProject_cfg2.adm",
+      "./designs/DC__NewProject_cfg3.adm",
+      "./designs/DC__NewProject_cfg4.adm",
+      "./designs/DC__NewProject_cfg5.adm",
+      "./designs/DC__NewProject_cfg6.adm",
+      "./designs/DC__NewProject_cfg7.adm",
+      "./designs/DC__NewProject_cfg8.adm",
+      "./designs/DC__NewProject_cfg9.adm",
+      "./designs/DigiSat1.adm"
+    ],
+    "TestBenches": [
+      "./test-benches/Mass_Properties.testbench.json",
+      "./test-benches/Gyroscope_Mass_Moment_of_Inertia.testbench.json",
+      "./test-benches/Distance_Between_Components.testbench.json",
+      "./test-benches/ExtractModelProps.testbench.json",
+      "./test-benches/PowerAnalysis.testbench.json",
+      "./test-benches/PowerAnalysis_DS.testbench.json",
+      "./test-benches/tsttst.testbench.json"
+    ],
+    "Results": {
+      "UrlHints": [
+        "./results/results.metaresults.json"
+      ]
+    },
+    "Requirements": {
+      "UrlHints": [
+        "./requirements/requirements.json"
+      ],
+      "id": "",
+      "vfLink": "",
+      "text": ""
+    },
+    "CyPhyProjectFileName": "Digisat_AB.mga",
+    "LastModified": "2016-08-24 16-16-08"
+  }
+}

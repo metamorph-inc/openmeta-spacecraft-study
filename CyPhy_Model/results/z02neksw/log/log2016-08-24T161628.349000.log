@@ -1,0 +1,70 @@
+
+C:\Work\SatExample\CyPhy_Model\results\z02neksw>echo off 
+
+HKEY_LOCAL_MACHINE\software\META
+    META_PATH    REG_SZ    C:\Program Files (x86)\META\
+
+Found py_modelica in virtual python environment
+current dir C:\Work\SatExample\CyPhy_Model\results\z02neksw\CyPhy
+ --- =====  See debug.log for error/debug messages ===== --- 
+
+ in C:\Work\SatExample\CyPhy_Model\results\z02neksw\CyPhy
+2016-08-24 16:16:29 INFO:  --- ==== ******* New Run Started ******* ==== ---
+2016-08-24 16:16:29 INFO: tool_name : OpenModelica
+2016-08-24 16:16:29 INFO: tool_path : C:\OpenModelica1.9.2Beta1\bin
+2016-08-24 16:16:29 INFO: mo_dir : C:\Work\SatExample\CyPhy_Model\results\z02neksw\CyPhy
+2016-08-24 16:16:29 INFO: model_file_name : C:\Work\SatExample\CyPhy_Model\results\z02neksw\CyPhy\package.mo
+2016-08-24 16:16:29 INFO: model_name : CyPhy.TestBenches.DC_Spacecraft_333
+2016-08-24 16:16:29 INFO: msl_version : 3.2
+2016-08-24 16:16:29 INFO: Experiment settings : {'StopTime': u'10000', 'StartTime': u'0', 'Algorithm': u'dassl', 'NumberOfIntervals': u'500', 'Interval': '0', 'Tolerance': u'1e-04'}
+Found MAX_SIMULATION_TIME in registry, value was 86400 (=24.0 h).
+2016-08-24 16:16:29 INFO: Result mat-file name set to : DC_Spacecraft_333_res.mat
+2016-08-24 16:16:29 INFO: About to call : "C:\OpenModelica1.9.2Beta1\bin\omc" +version
+2016-08-24 16:16:29 INFO: Subprocess call returned with 0.
+2016-08-24 16:16:29 INFO: console output : 
+1.9.2 Beta1 (r24371)
+
+2016-08-24 16:16:29 INFO: About to call : "C:\OpenModelica1.9.2Beta1\bin\omc" +q +s "om_sim.mos"
+2016-08-24 16:16:31 INFO: Subprocess call returned with 0.
+2016-08-24 16:16:31 INFO: console output : 
+true
+true
+"C:/Work/SatExample/CyPhy_Model/results/z02neksw/CyPhy"
+true
+true
+"[C:/Work/SatExample/CyPhy_Model/results/z02neksw/CyPhy/package.mo:3:52-3:57:writable] Warning: Uses-annotation is missing version for library TbLib. Assuming the tool-specific version="default".
+Warning: Requested package TbLib of version default, but this package was already loaded with version unknown. You might experience problems if these versions are incompatible.
+Warning: Requested package Modelica of version 3.2, but this package was already loaded with version 3.2.1. You might experience problems if these versions are incompatible.
+Warning: Ignoring unknown experiment annotation option: Algorithm = "dassl"
+[C:/Work/SatExample/CyPhy_Model/results/z02neksw/Libraries/TbLib.mo:298:5-298:61:writable] Warning: Parameter DC_Spacecraft_cfg1.Computers.iyy has no value, and is fixed during initialization (fixed=true), using available start value (start=0.0) as default value.
+[C:/Work/SatExample/CyPhy_Model/results/z02neksw/Libraries/TbLib.mo:298:5-298:61:writable] Warning: Parameter DC_Spacecraft_cfg1.Computers.izz has no value, and is fixed during initialization (fixed=true), using available start value (start=0.0) as default value.
+[C:/Work/SatExample/CyPhy_Model/results/z02neksw/Libraries/TbLib.mo:298:5-298:61:writable] Warning: Parameter DC_Spacecraft_cfg1.Computers.pI has no value, and is fixed during initialization (fixed=true), using available start value (start=0.0) as default value.
+Warning: The initial conditions are not fully specified. Use +d=initialization for more information.
+Warning: There are iteration variables with default zero start attribute. Use +d=initialization for more information.
+"
+
+2016-08-24 16:16:31 INFO: About to call : mingw32-make.exe -f DC_Spacecraft_333.makefile
+2016-08-24 16:16:35 INFO: Subprocess call returned with 0.
+2016-08-24 16:16:35 INFO: console output : 
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333.o DC_Spacecraft_333.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_functions.o DC_Spacecraft_333_functions.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_records.o DC_Spacecraft_333_records.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_01exo.o DC_Spacecraft_333_01exo.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_02nls.o DC_Spacecraft_333_02nls.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_03lsy.o DC_Spacecraft_333_03lsy.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_04set.o DC_Spacecraft_333_04set.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_05evt.o DC_Spacecraft_333_05evt.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_06inz.o DC_Spacecraft_333_06inz.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_07dly.o DC_Spacecraft_333_07dly.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_08bnd.o DC_Spacecraft_333_08bnd.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_09alg.o DC_Spacecraft_333_09alg.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_10asr.o DC_Spacecraft_333_10asr.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_11mix.o DC_Spacecraft_333_11mix.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_12jac.o DC_Spacecraft_333_12jac.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_13opt.o DC_Spacecraft_333_13opt.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_333_14lnz.o DC_Spacecraft_333_14lnz.c
+gcc -I. -o DC_Spacecraft_333.exe DC_Spacecraft_333.o DC_Spacecraft_333_functions.o DC_Spacecraft_333_records.o DC_Spacecraft_333_01exo.o DC_Spacecraft_333_02nls.o DC_Spacecraft_333_03lsy.o DC_Spacecraft_333_04set.o DC_Spacecraft_333_05evt.o DC_Spacecraft_333_06inz.o DC_Spacecraft_333_07dly.o DC_Spacecraft_333_08bnd.o DC_Spacecraft_333_09alg.o DC_Spacecraft_333_10asr.o DC_Spacecraft_333_11mix.o DC_Spacecraft_333_12jac.o DC_Spacecraft_333_13opt.o DC_Spacecraft_333_14lnz.o -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -L"C:/Work/SatExample/CyPhy_Model/results/z02neksw/CyPhy/TestBenches"      -falign-functions -msse2 -mfpmath=sse     -L"C:/Work/SatExample/CyPhy_Model/results/z02neksw/CyPhy/TestBenches" -L"C:/OpenModelica1.9.2Beta1//lib/omc" -L"C:/OpenModelica1.9.2Beta1//lib" -Wl,--stack,0x2000000,-rpath,"C:/OpenModelica1.9.2Beta1//lib/omc" -Wl,-rpath,"C:/OpenModelica1.9.2Beta1//lib"   -lregex -lexpat -lgc -lpthread -fopenmp -loleaut32  -lSimulationRuntimeC -lgc -lexpat -lregex -static-libgcc -luuid -loleaut32 -lole32 -lws2_32 -llis -lumfpack -lamd -lsundials_kinsol -lsundials_nvecserial -lipopt -lcoinmumps -lpthread -lm -lgfortranbegin -lgfortran -lmingw32 -lgcc_eh -lmoldname -lmingwex -lmsvcrt -luser32 -lkernel32 -ladvapi32 -lshell32 -llapack-mingw -lcminpack -ltmglib-mingw -lblas-mingw -lf2c -lwsock32 -lstdc++ 
+
+2016-08-24 16:16:35 INFO: Parameters : {}
+2016-08-24 16:16:36 INFO: Simulation output : 
+2016-08-24 16:16:36 INFO: OpenModelica simulation was successful.

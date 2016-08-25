@@ -1,0 +1,36 @@
+{
+  "$id": "1",
+  "Name": "PowerAnalysis_DS",
+  "Metrics": [
+    {
+      "$id": "2",
+      "Requirement": null,
+      "Name": "Gyro_i",
+      "Unit": "",
+      "Value": null
+    },
+    {
+      "$id": "3",
+      "Requirement": null,
+      "Name": "Battery_i",
+      "Unit": "",
+      "Value": null
+    },
+    {
+      "$id": "4",
+      "Requirement": null,
+      "Name": "Bus_v",
+      "Unit": "",
+      "Value": null
+    },
+    {
+      "$id": "5",
+      "Requirement": null,
+      "Name": "Solar_i",
+      "Unit": "",
+      "Value": null
+    }
+  ],
+  "Parameters": [],
+  "Requirements": []
+}

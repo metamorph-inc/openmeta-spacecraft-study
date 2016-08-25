@@ -1,0 +1,76 @@
+2016-08-24 16:16:18 DEBUG:  --- ==== ******************************* ==== ---
+2016-08-24 16:16:18 INFO:  --- ==== ******* New Run Started ******* ==== ---
+2016-08-24 16:16:18 DEBUG:  --- ==== * 2016-08-24 16:16:18.245000 ** ==== ---
+2016-08-24 16:16:18 DEBUG:  --- ==== ******************************* ==== ---
+2016-08-24 16:16:18 DEBUG: Entered _initialize
+2016-08-24 16:16:18 INFO: tool_name : OpenModelica
+2016-08-24 16:16:18 INFO: tool_path : C:\OpenModelica1.9.2Beta1\bin
+2016-08-24 16:16:18 INFO: mo_dir : C:\Work\SatExample\CyPhy_Model\results\ledbatfv\CyPhy
+2016-08-24 16:16:18 INFO: model_file_name : C:\Work\SatExample\CyPhy_Model\results\ledbatfv\CyPhy\package.mo
+2016-08-24 16:16:18 INFO: model_name : CyPhy.TestBenches.DC_Spacecraft_22
+2016-08-24 16:16:18 INFO: msl_version : 3.2
+2016-08-24 16:16:18 INFO: Experiment settings : {'StopTime': u'10000', 'StartTime': u'0', 'Algorithm': u'dassl', 'NumberOfIntervals': u'500', 'Interval': '0', 'Tolerance': u'1e-04'}
+2016-08-24 16:16:18 DEBUG: Entered compile_model
+2016-08-24 16:16:18 DEBUG: Working dir : C:\Work\SatExample\CyPhy_Model\results\ledbatfv\CyPhy
+2016-08-24 16:16:18 INFO: Result mat-file name set to : DC_Spacecraft_22_res.mat
+2016-08-24 16:16:18 DEBUG: Entered _write_mos_script
+2016-08-24 16:16:18 DEBUG: Generated .mos-script at : om_sim.mos
+2016-08-24 16:16:18 DEBUG: Entered _print_revision_number
+2016-08-24 16:16:18 INFO: About to call : "C:\OpenModelica1.9.2Beta1\bin\omc" +version
+2016-08-24 16:16:18 INFO: Subprocess call returned with 0.
+2016-08-24 16:16:18 INFO: console output : 
+1.9.2 Beta1 (r24371)
+
+2016-08-24 16:16:18 DEBUG: Entered _setup_libs_env_vars
+2016-08-24 16:16:18 DEBUG: Added paths to existing OPENMODELICALIBRARY environment variable; 
+2016-08-24 16:16:18 DEBUG: OPENMODELICALIBRARY : C:\OpenModelica1.9.2Beta1\lib\omlibrary;C:\Work\SatExample\CyPhy_Model\results\ledbatfv\Libraries;
+2016-08-24 16:16:18 INFO: About to call : "C:\OpenModelica1.9.2Beta1\bin\omc" +q +s "om_sim.mos"
+2016-08-24 16:16:21 INFO: Subprocess call returned with 0.
+2016-08-24 16:16:21 INFO: console output : 
+true
+true
+"C:/Work/SatExample/CyPhy_Model/results/ledbatfv/CyPhy"
+true
+true
+"[C:/Work/SatExample/CyPhy_Model/results/ledbatfv/CyPhy/package.mo:3:52-3:57:writable] Warning: Uses-annotation is missing version for library TbLib. Assuming the tool-specific version="default".
+Warning: Requested package TbLib of version default, but this package was already loaded with version unknown. You might experience problems if these versions are incompatible.
+Warning: Requested package Modelica of version 3.2, but this package was already loaded with version 3.2.1. You might experience problems if these versions are incompatible.
+Warning: Ignoring unknown experiment annotation option: Algorithm = "dassl"
+[C:/Work/SatExample/CyPhy_Model/results/ledbatfv/Libraries/TbLib.mo:298:5-298:61:writable] Warning: Parameter DC_Spacecraft_cfg1.Computers.iyy has no value, and is fixed during initialization (fixed=true), using available start value (start=0.0) as default value.
+[C:/Work/SatExample/CyPhy_Model/results/ledbatfv/Libraries/TbLib.mo:298:5-298:61:writable] Warning: Parameter DC_Spacecraft_cfg1.Computers.izz has no value, and is fixed during initialization (fixed=true), using available start value (start=0.0) as default value.
+[C:/Work/SatExample/CyPhy_Model/results/ledbatfv/Libraries/TbLib.mo:298:5-298:61:writable] Warning: Parameter DC_Spacecraft_cfg1.Computers.pI has no value, and is fixed during initialization (fixed=true), using available start value (start=0.0) as default value.
+Warning: The initial conditions are not fully specified. Use +d=initialization for more information.
+Warning: There are iteration variables with default zero start attribute. Use +d=initialization for more information.
+"
+
+2016-08-24 16:16:21 DEBUG: Added "C:\OpenModelica1.9.2Beta1\mingw\bin" to beginning of env var PATH.
+2016-08-24 16:16:21 INFO: About to call : mingw32-make.exe -f DC_Spacecraft_22.makefile
+2016-08-24 16:16:27 INFO: Subprocess call returned with 0.
+2016-08-24 16:16:27 INFO: console output : 
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22.o DC_Spacecraft_22.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_functions.o DC_Spacecraft_22_functions.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_records.o DC_Spacecraft_22_records.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_01exo.o DC_Spacecraft_22_01exo.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_02nls.o DC_Spacecraft_22_02nls.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_03lsy.o DC_Spacecraft_22_03lsy.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_04set.o DC_Spacecraft_22_04set.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_05evt.o DC_Spacecraft_22_05evt.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_06inz.o DC_Spacecraft_22_06inz.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_07dly.o DC_Spacecraft_22_07dly.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_08bnd.o DC_Spacecraft_22_08bnd.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_09alg.o DC_Spacecraft_22_09alg.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_10asr.o DC_Spacecraft_22_10asr.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_11mix.o DC_Spacecraft_22_11mix.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_12jac.o DC_Spacecraft_22_12jac.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_13opt.o DC_Spacecraft_22_13opt.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o DC_Spacecraft_22_14lnz.o DC_Spacecraft_22_14lnz.c
+gcc -I. -o DC_Spacecraft_22.exe DC_Spacecraft_22.o DC_Spacecraft_22_functions.o DC_Spacecraft_22_records.o DC_Spacecraft_22_01exo.o DC_Spacecraft_22_02nls.o DC_Spacecraft_22_03lsy.o DC_Spacecraft_22_04set.o DC_Spacecraft_22_05evt.o DC_Spacecraft_22_06inz.o DC_Spacecraft_22_07dly.o DC_Spacecraft_22_08bnd.o DC_Spacecraft_22_09alg.o DC_Spacecraft_22_10asr.o DC_Spacecraft_22_11mix.o DC_Spacecraft_22_12jac.o DC_Spacecraft_22_13opt.o DC_Spacecraft_22_14lnz.o -I"C:/OpenModelica1.9.2Beta1//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -L"C:/Work/SatExample/CyPhy_Model/results/ledbatfv/CyPhy/TestBenches"      -falign-functions -msse2 -mfpmath=sse     -L"C:/Work/SatExample/CyPhy_Model/results/ledbatfv/CyPhy/TestBenches" -L"C:/OpenModelica1.9.2Beta1//lib/omc" -L"C:/OpenModelica1.9.2Beta1//lib" -Wl,--stack,0x2000000,-rpath,"C:/OpenModelica1.9.2Beta1//lib/omc" -Wl,-rpath,"C:/OpenModelica1.9.2Beta1//lib"   -lregex -lexpat -lgc -lpthread -fopenmp -loleaut32  -lSimulationRuntimeC -lgc -lexpat -lregex -static-libgcc -luuid -loleaut32 -lole32 -lws2_32 -llis -lumfpack -lamd -lsundials_kinsol -lsundials_nvecserial -lipopt -lcoinmumps -lpthread -lm -lgfortranbegin -lgfortran -lmingw32 -lgcc_eh -lmoldname -lmingwex -lmsvcrt -luser32 -lkernel32 -ladvapi32 -lshell32 -llapack-mingw -lcminpack -ltmglib-mingw -lblas-mingw -lf2c -lwsock32 -lstdc++ 
+
+2016-08-24 16:16:27 DEBUG: Retrieving model data from *.xml
+2016-08-24 16:16:27 DEBUG: inside simulate.py : execute_test_bench, cwd = C:\Work\SatExample\CyPhy_Model\results\ledbatfv\CyPhy
+2016-08-24 16:16:27 INFO: Parameters : {}
+2016-08-24 16:16:27 DEBUG: Entered simulate_model
+2016-08-24 16:16:27 DEBUG: Added "C:\OpenModelica1.9.2Beta1\bin" to beginning of env var PATH.
+2016-08-24 16:16:27 DEBUG: OpenModelica simulation sub-process opened.
+2016-08-24 16:16:28 INFO: Simulation output : 
+2016-08-24 16:16:28 INFO: OpenModelica simulation was successful.

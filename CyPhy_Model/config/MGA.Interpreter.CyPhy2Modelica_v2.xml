@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<CyPhy2Modelica_v2Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <IncludeDirectoryPath>
+    <string>ModelicaLib\TbLib.mo</string>
+  </IncludeDirectoryPath>
+  <NonCheckedIncludeDirPaths>
+    <string>ModelicaLib\Modelica_EnergyStorages.mo</string>
+  </NonCheckedIncludeDirPaths>
+  <CheckWithDymola>false</CheckWithDymola>
+  <CheckWithOpenModelica>false</CheckWithOpenModelica>
+  <GenerateConstrainedBys>false</GenerateConstrainedBys>
+</CyPhy2Modelica_v2Settings>
