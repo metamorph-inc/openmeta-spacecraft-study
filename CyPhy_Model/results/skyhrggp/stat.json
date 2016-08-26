@@ -1,0 +1,30 @@
+{
+  "UserId": "",
+  "Id": 0,
+  "IsRemote": false,
+  "VFUrl": "",
+  "Executions": [
+    {
+      "StartTime": "2016-08-26 17:49:00Z",
+      "StatusTraces": [
+        {
+          "Status": "Ready",
+          "TimeStamp": "2016-08-26 17:49:00Z"
+        },
+        {
+          "Status": "RunningLocal",
+          "TimeStamp": "2016-08-26 17:49:00Z"
+        },
+        {
+          "Status": "Succeeded",
+          "TimeStamp": "2016-08-26 17:49:02Z"
+        }
+      ]
+    }
+  ],
+  "JobReceived": "2016-08-26 17:49:00Z",
+  "JobName": "CyPhyPython_DC__Spacecraft_cfg1",
+  "RunCommand": "run_classifications.cmd",
+  "SizeOfSourcePackage": null,
+  "ToolSpecifics": null
+}

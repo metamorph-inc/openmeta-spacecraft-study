@@ -3,7 +3,8 @@
     "Components": [],
     "DesignSpaceModels": [
       "./design-space/DC_Spacecraft.adm",
-      "./design-space/DC__NewProject.adm"
+      "./design-space/DC__NewProject.adm",
+      "./design-space/DC__Spacecraft.adm"
     ],
     "Configurations": [
       "./designs/DC_Spacecraft_cfg1.adm",
@@ -44,7 +45,11 @@
       "./designs/DC__NewProject_cfg7.adm",
       "./designs/DC__NewProject_cfg8.adm",
       "./designs/DC__NewProject_cfg9.adm",
-      "./designs/DigiSat1.adm"
+      "./designs/DigiSat1.adm",
+      "./designs/SpacecraftNominalConfig.adm",
+      "./designs/DC__Spacecraft_cfg1.adm",
+      "./designs/DC__Spacecraft_cfg2.adm",
+      "./designs/DC__Spacecraft_cfg3.adm"
     ],
     "TestBenches": [
       "./test-benches/Mass_Properties.testbench.json",
@@ -53,7 +58,10 @@
       "./test-benches/ExtractModelProps.testbench.json",
       "./test-benches/PowerAnalysis.testbench.json",
       "./test-benches/PowerAnalysis_DS.testbench.json",
-      "./test-benches/tsttst.testbench.json"
+      "./test-benches/tsttst.testbench.json",
+      "./test-benches/PowerAnalysis_DC.testbench.json",
+      "./test-benches/PowerAnalysis_DesignSpace.testbench.json",
+      "./test-benches/Inertial_and_Geometry.testbench.json"
     ],
     "Results": {
       "UrlHints": [
@@ -68,7 +76,7 @@
       "vfLink": "",
       "text": ""
     },
-    "CyPhyProjectFileName": "Digisat_AB.mga",
-    "LastModified": "2016-08-24 16-16-08"
+    "CyPhyProjectFileName": "Sat.mga",
+    "LastModified": "2016-08-26 17-48-52"
   }
 }

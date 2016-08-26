@@ -1,0 +1,803 @@
+2016-08-26T09:20:58 - [Info] - Master Interpreter 2.0
+2016-08-26T09:20:58 - [Debug] - === HEADER ===================================================
+Date/Time:       8/26/2016 9:20:58 AM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     16.3.23.2581
+META version:    14.13.68
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t8
+CyPhyML GUID:    {9088E798-8A24-4B44-B98E-D5C7C1792C2F}
+Python Dll:      UNKNOWN
+Python Exe:      UNKNOWN
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.4.0
+Username:        ted
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t8
+
+2016-08-26T09:20:58 - [Info] - Processing PowerAnalysis [TestBench] model
+2016-08-26T09:20:58 - [Debug] - Interactive mode: True
+2016-08-26T09:20:58 - [Debug] - Entering TryCheckContext checker
+2016-08-26T09:20:58 - [Debug] - Getting context checker for TestBench
+2016-08-26T09:20:58 - [Debug] - Got context checker TestBenchChecker for context TestBench
+2016-08-26T09:20:58 - [Debug] - Checking context
+2016-08-26T09:20:58 - [Debug] - Context is checked
+2016-08-26T09:20:58 - [Success] -  <i><a href="mga:id-0065-00000390">SpacecraftNominalConfig</a></i> 'DC_Spacecraft' [TopLevelSystemUnderTest] refers to a valid object [ComponentAssembly] and the ComponentAssembly is in a folder.
+2016-08-26T09:20:58 - [Success] -  <i><a href="mga:id-0065-00000103">PowerAnalysis</a></i> No component in TestBench.
+2016-08-26T09:20:58 - [Success] -  <i><a href="mga:id-0065-00000103">PowerAnalysis</a></i> No component references in TestBench.
+2016-08-26T09:20:58 - [Success] -  <i><a href="mga:id-0065-00000103">PowerAnalysis</a></i> TestBench is not a library object.
+2016-08-26T09:20:58 - [Success] -  <i><a href="mga:id-0065-00000103">PowerAnalysis</a></i> TestBench is not a subtype or instance.
+2016-08-26T09:20:58 - [Success] -  <i><a href="mga:id-0065-00000103">PowerAnalysis</a></i> TestBench is not an instance.
+2016-08-26T09:20:58 - [Success] -  <i><a href="mga:id-0065-00000103">PowerAnalysis</a></i> TestBench is writable.
+2016-08-26T09:20:58 - [Success] -  <i><a href="mga:id-0067-0000046a">DC_Spacecraft</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T09:20:58 - [Success] -  <i><a href="mga:id-0067-0000046a">DC_Spacecraft</a></i> TopLevelSystemUnderTest refers to ComponentAssembly.
+2016-08-26T09:21:01 - [Debug] - MasterExe command: CyPhyMasterExe.exe "MGA=D:\Work\SatExample\CyPhy_Model\ExampleSatV2xxInitial.mga" "/@Testing/@DynamicsSim/@PowerAnalysis" "/@A_DemoSystems/@SpacecraftNominalConfig"
+2016-08-26T09:21:01 - [Debug] - Start main method for master interpreter.
+2016-08-26T09:21:01 - [Debug] - Start copying dashboard sync.
+2016-08-26T09:21:01 - [Debug] - Generate project manifest.
+2016-08-26T09:21:01 - [Debug] - Project manifest was generated D:\Work\SatExample\CyPhy_Model\manifest.project.json
+2016-08-26T09:21:01 - [Debug] - Project directory: D:\Work\SatExample\CyPhy_Model
+2016-08-26T09:21:01 - [Debug] - Configuration SpacecraftNominalConfig [ComponentAssembly] was resolved to:  SpacecraftNominalConfig [ComponentAssembly]
+2016-08-26T09:21:01 - [Info] - Number of configurations to execute: 1
+2016-08-26T09:21:01 - [Debug] - Wait for dashboard copy to finish
+2016-08-26T09:21:01 - [Debug] - Dashboard copy finished
+2016-08-26T09:21:01 - [Debug] - Processing 1 out of 1 [0 success(es) and 0 failure(s)]
+2016-08-26T09:21:01 - [Debug] - Configuration /@A_DemoSystems|kind=ComponentAssemblies|relpos=0/@SpacecraftNominalConfig|kind=ComponentAssembly|relpos=0
+2016-08-26T09:21:01 - [Debug] - Starting analysis model processor
+2016-08-26T09:21:01 - [Debug] - Preparing analysis model processor
+2016-08-26T09:21:01 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:21:01 - [Debug] - Getting analysis model processor instance for TestBench type
+2016-08-26T09:21:01 - [Debug] - Got TestBenchTypeProcessor for TestBench /@Testing|kind=Testing|relpos=0/@DynamicsSim|kind=Testing|relpos=0/@PowerAnalysis|kind=TestBench|relpos=0
+2016-08-26T09:21:01 - [Debug] - ComponentAssembly was specified as configuration. Start expanding it. /@A_DemoSystems|kind=ComponentAssemblies|relpos=0/@SpacecraftNominalConfig|kind=ComponentAssembly|relpos=0
+2016-08-26T09:21:01 - [Debug] - Expand finished for /@A_DemoSystems|kind=ComponentAssemblies|relpos=0/@SpacecraftNominalConfig|kind=ComponentAssembly|relpos=0
+2016-08-26T09:21:01 - [Debug] - [SKIP] Calling design space exporter, since the test bench is defined over a design and not a design space.
+2016-08-26T09:21:01 - [Debug] - Calling design exporter
+2016-08-26T09:21:01 - [Debug] - Design exporter succeeded.
+2016-08-26T09:21:01 - [Debug] - Saving test bench definition
+2016-08-26T09:21:01 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T09:21:01 - [Debug] - Saving test bench manifest
+2016-08-26T09:21:01 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T09:21:01 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T09:21:01 - [Debug] - Project manifest was successfully saved.
+2016-08-26T09:21:01 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T09:21:11 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T09:21:13 - [Debug] - Interpreters finished.
+2016-08-26T09:21:13 - [Debug] - Job manager instance is null. Initializing one.
+2016-08-26T09:21:13 - [Debug] - Job manager dispatch is ready to receive jobs
+2016-08-26T09:21:13 - [Debug] - Posting to the job manager
+2016-08-26T09:21:13 - [Info] - Job posted to the job manager: PowerAnalysis
+2016-08-26T09:21:13 - [Debug] - Removing temporary models.
+2016-08-26T09:21:13 - [Debug] - Temporary models are removed.
+2016-08-26T09:21:13 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:21:13 - [Debug] - Analysis model processor is done
+2016-08-26T09:21:13 - [Debug] - Generate dashboard script files
+2016-08-26T09:21:13 - [Debug] - Dashboard script files generated
+2016-08-26T09:21:13 - [Info] -  Summary 
+2016-08-26T09:21:13 - [Success] -  <a href="mga:id-0065-00000103">PowerAnalysis</a> <a href="mga:id-0065-00000390">SpacecraftNominalConfig</a>  
+2016-08-26T09:21:13 - [Info] - Log file was generated here: <a href="file:///D:\Work\SatExample\CyPhy_Model\log" target="_blank">D:\Work\SatExample\CyPhy_Model\log\CyPhyMasterInterpreter.11180.log</a>
+2016-08-26T09:21:13 - [Info] - Master Interpreter 2.0 finished
+2016-08-26T09:22:01 - [Info] - Master Interpreter 2.0
+2016-08-26T09:22:02 - [Debug] - === HEADER ===================================================
+Date/Time:       8/26/2016 9:22:01 AM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     16.3.23.2581
+META version:    14.13.68
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t8
+CyPhyML GUID:    {9088E798-8A24-4B44-B98E-D5C7C1792C2F}
+Python Dll:      UNKNOWN
+Python Exe:      UNKNOWN
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.4.0
+Username:        ted
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t8
+
+2016-08-26T09:22:02 - [Info] - Processing ExploreGeoAndPerf [ParametricExploration] model
+2016-08-26T09:22:02 - [Debug] - Interactive mode: True
+2016-08-26T09:22:02 - [Debug] - Entering TryCheckContext checker
+2016-08-26T09:22:02 - [Debug] - Getting context checker for ParametricExploration
+2016-08-26T09:22:02 - [Debug] - Got context checker ParametricExplorationChecker for context ParametricExploration
+2016-08-26T09:22:02 - [Debug] - Checking context
+2016-08-26T09:22:02 - [Debug] - Context is checked
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'DC_Spacecraft' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> No component in TestBench.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> No component in TestBench.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> No component in TestBench.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> No component references in TestBench.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> No component references in TestBench.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> No component references in TestBench.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0067-00000460">RotationalElectricalDynamics</a></i> One or more test bench references found.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a></i> ParametricExploration is not a library object.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a></i> ParametricExploration is not a subtype or instance.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a></i> ParametricExploration is not an instance.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a></i> ParametricExploration is writable.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'Protector1015' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'Spacecraft' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-000000f1">FullParameterStudy</a></i> Test bench has exectly driver: ParameterStudy.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0067-0000045e">Geometric Analysis</a></i> Test bench reference is not null.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0067-00000460">RotationalElectricalDynamics</a></i> Test bench reference is not null.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0067-0000045f">ConvertAndExtractParams</a></i> Test bench reference is not null.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not a library object.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not a library object.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> TestBench is not a library object.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not a subtype or instance.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> TestBench is not a subtype or instance.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not a subtype or instance.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not an instance.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> TestBench is not an instance.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not an instance.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> TestBench is writable.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is writable.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is writable.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0067-0000046c">Protector1015</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0067-0000046b">DC_Spacecraft</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0067-00000466">Spacecraft</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0067-0000046b">DC_Spacecraft</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0067-00000466">Spacecraft</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T09:22:02 - [Success] -  <i><a href="mga:id-0067-0000046c">Protector1015</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T09:22:06 - [Debug] - MasterExe command: CyPhyMasterExe.exe "MGA=D:\Work\SatExample\CyPhy_Model\ExampleSatV2xxInitial.mga" "/@Testing/@ParametricExploration/@ExploreGeoAndPerf" "/@Generated configurations/@DC__Spacecraft/@Configurations (08-25-2016  15:56:12)/@DC__Spacecraft_cfg1" "/@Generated configurations/@DC__Spacecraft/@Configurations (08-25-2016  15:56:22)/@DC__Spacecraft_cfg2" "/@Generated configurations/@DC__Spacecraft/@Configurations (08-25-2016  15:56:30)/@DC__Spacecraft_cfg3"
+2016-08-26T09:22:06 - [Debug] - Start main method for master interpreter.
+2016-08-26T09:22:06 - [Debug] - Start copying dashboard sync.
+2016-08-26T09:22:06 - [Debug] - Generate project manifest.
+2016-08-26T09:22:06 - [Debug] - Project manifest was generated D:\Work\SatExample\CyPhy_Model\manifest.project.json
+2016-08-26T09:22:06 - [Debug] - Project directory: D:\Work\SatExample\CyPhy_Model
+2016-08-26T09:22:06 - [Debug] - Configuration DC__Spacecraft_cfg1 [ComponentAssembly] was resolved to:  DC__Spacecraft_cfg1 [ComponentAssembly]
+2016-08-26T09:22:06 - [Debug] - Configuration DC__Spacecraft_cfg2 [ComponentAssembly] was resolved to:  DC__Spacecraft_cfg2 [ComponentAssembly]
+2016-08-26T09:22:06 - [Debug] - Configuration DC__Spacecraft_cfg3 [ComponentAssembly] was resolved to:  DC__Spacecraft_cfg3 [ComponentAssembly]
+2016-08-26T09:22:07 - [Info] - Number of configurations to execute: 3
+2016-08-26T09:22:07 - [Debug] - Wait for dashboard copy to finish
+2016-08-26T09:22:07 - [Debug] - Dashboard copy finished
+2016-08-26T09:22:07 - [Debug] - Processing 1 out of 3 [0 success(es) and 0 failure(s)]
+2016-08-26T09:22:07 - [Debug] - Configuration /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-25-2016  15:56:12)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg1|kind=ComponentAssembly|relpos=0
+2016-08-26T09:22:07 - [Debug] - Starting analysis model processor
+2016-08-26T09:22:07 - [Debug] - Preparing analysis model processor
+2016-08-26T09:22:07 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:22:07 - [Debug] - Getting analysis model processor instance for ParametricExploration type
+2016-08-26T09:22:07 - [Debug] - Got ParametricExplorationProcessor for ParametricExploration /@Testing|kind=Testing|relpos=0/@ParametricExploration|kind=ParametricExplorationFolder|relpos=0/@ExploreGeoAndPerf|kind=ParametricExploration|relpos=0
+2016-08-26T09:22:07 - [Debug] - ComponentAssembly was specified as configuration. Start expanding it. /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-25-2016  15:56:12)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg1|kind=ComponentAssembly|relpos=0
+2016-08-26T09:22:07 - [Debug] - Expand finished for /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-25-2016  15:56:12)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg1|kind=ComponentAssembly|relpos=0
+2016-08-26T09:22:07 - [Debug] - Calling design space exporter
+2016-08-26T09:22:07 - [Debug] - Design space exporter succeeded.
+2016-08-26T09:22:07 - [Debug] - Calling design exporter
+2016-08-26T09:22:07 - [Debug] - Design exporter succeeded.
+2016-08-26T09:22:07 - [Debug] - Saving test bench definition
+2016-08-26T09:22:07 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T09:22:07 - [Debug] - Saving test bench manifest
+2016-08-26T09:22:07 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T09:22:07 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T09:22:07 - [Debug] - Project manifest was successfully saved.
+2016-08-26T09:22:08 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T09:22:21 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T09:22:27 - [Debug] - Interpreters finished.
+2016-08-26T09:22:27 - [Debug] - Job manager instance is null. Initializing one.
+2016-08-26T09:22:27 - [Debug] - Job manager dispatch is ready to receive jobs
+2016-08-26T09:22:27 - [Debug] - Posting to the job manager
+2016-08-26T09:22:27 - [Info] - Job posted to the job manager: ExploreGeoAndPerf
+2016-08-26T09:22:27 - [Debug] - Removing temporary models.
+2016-08-26T09:22:27 - [Debug] - Temporary models are removed.
+2016-08-26T09:22:28 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:22:28 - [Debug] - Analysis model processor is done
+2016-08-26T09:22:28 - [Debug] - Processing 2 out of 3 [1 success(es) and 0 failure(s)]
+2016-08-26T09:22:28 - [Debug] - Configuration /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-25-2016  15:56:22)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg2|kind=ComponentAssembly|relpos=0
+2016-08-26T09:22:28 - [Debug] - Starting analysis model processor
+2016-08-26T09:22:28 - [Debug] - Preparing analysis model processor
+2016-08-26T09:22:28 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:22:28 - [Debug] - Getting analysis model processor instance for ParametricExploration type
+2016-08-26T09:22:28 - [Debug] - Got ParametricExplorationProcessor for ParametricExploration /@Testing|kind=Testing|relpos=0/@ParametricExploration|kind=ParametricExplorationFolder|relpos=0/@ExploreGeoAndPerf|kind=ParametricExploration|relpos=0
+2016-08-26T09:22:28 - [Debug] - ComponentAssembly was specified as configuration. Start expanding it. /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-25-2016  15:56:22)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg2|kind=ComponentAssembly|relpos=0
+2016-08-26T09:22:28 - [Debug] - Expand finished for /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-25-2016  15:56:22)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg2|kind=ComponentAssembly|relpos=0
+2016-08-26T09:22:28 - [Debug] - Calling design space exporter
+2016-08-26T09:22:28 - [Debug] - Design space exporter succeeded.
+2016-08-26T09:22:28 - [Debug] - Calling design exporter
+2016-08-26T09:22:28 - [Debug] - Design exporter succeeded.
+2016-08-26T09:22:28 - [Debug] - Saving test bench definition
+2016-08-26T09:22:28 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T09:22:28 - [Debug] - Saving test bench manifest
+2016-08-26T09:22:28 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T09:22:28 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T09:22:28 - [Debug] - Project manifest was successfully saved.
+2016-08-26T09:22:29 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T09:22:29 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T09:22:34 - [Debug] - Interpreters finished.
+2016-08-26T09:22:34 - [Debug] - Posting to the job manager
+2016-08-26T09:22:34 - [Info] - Job posted to the job manager: ExploreGeoAndPerf
+2016-08-26T09:22:34 - [Debug] - Removing temporary models.
+2016-08-26T09:22:34 - [Debug] - Temporary models are removed.
+2016-08-26T09:22:34 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:22:34 - [Debug] - Analysis model processor is done
+2016-08-26T09:22:34 - [Debug] - Processing 3 out of 3 [2 success(es) and 0 failure(s)]
+2016-08-26T09:22:34 - [Debug] - Configuration /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-25-2016  15:56:30)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg3|kind=ComponentAssembly|relpos=0
+2016-08-26T09:22:34 - [Debug] - Starting analysis model processor
+2016-08-26T09:22:34 - [Debug] - Preparing analysis model processor
+2016-08-26T09:22:34 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:22:34 - [Debug] - Getting analysis model processor instance for ParametricExploration type
+2016-08-26T09:22:34 - [Debug] - Got ParametricExplorationProcessor for ParametricExploration /@Testing|kind=Testing|relpos=0/@ParametricExploration|kind=ParametricExplorationFolder|relpos=0/@ExploreGeoAndPerf|kind=ParametricExploration|relpos=0
+2016-08-26T09:22:34 - [Debug] - ComponentAssembly was specified as configuration. Start expanding it. /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-25-2016  15:56:30)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg3|kind=ComponentAssembly|relpos=0
+2016-08-26T09:22:35 - [Debug] - Expand finished for /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-25-2016  15:56:30)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg3|kind=ComponentAssembly|relpos=0
+2016-08-26T09:22:35 - [Debug] - Calling design space exporter
+2016-08-26T09:22:35 - [Debug] - Design space exporter succeeded.
+2016-08-26T09:22:35 - [Debug] - Calling design exporter
+2016-08-26T09:22:35 - [Debug] - Design exporter succeeded.
+2016-08-26T09:22:35 - [Debug] - Saving test bench definition
+2016-08-26T09:22:35 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T09:22:35 - [Debug] - Saving test bench manifest
+2016-08-26T09:22:35 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T09:22:35 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T09:22:35 - [Debug] - Project manifest was successfully saved.
+2016-08-26T09:22:36 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T09:22:36 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T09:22:42 - [Debug] - Interpreters finished.
+2016-08-26T09:22:42 - [Debug] - Posting to the job manager
+2016-08-26T09:22:42 - [Info] - Job posted to the job manager: ExploreGeoAndPerf
+2016-08-26T09:22:42 - [Debug] - Removing temporary models.
+2016-08-26T09:22:42 - [Debug] - Temporary models are removed.
+2016-08-26T09:22:42 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:22:42 - [Debug] - Analysis model processor is done
+2016-08-26T09:22:42 - [Debug] - Generate dashboard script files
+2016-08-26T09:22:42 - [Debug] - Dashboard script files generated
+2016-08-26T09:22:42 - [Info] -  Summary 
+2016-08-26T09:22:42 - [Success] -  <a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a> <a href="mga:id-0065-0000045c">DC__Spacecraft_cfg1</a>  
+2016-08-26T09:22:42 - [Success] -  <a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a> <a href="mga:id-0065-00000469">DC__Spacecraft_cfg2</a>  
+2016-08-26T09:22:42 - [Success] -  <a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a> <a href="mga:id-0065-00000476">DC__Spacecraft_cfg3</a>  
+2016-08-26T09:22:42 - [Info] - Log file was generated here: <a href="file:///D:\Work\SatExample\CyPhy_Model\log" target="_blank">D:\Work\SatExample\CyPhy_Model\log\CyPhyMasterInterpreter.11180.log</a>
+2016-08-26T09:22:42 - [Info] - Master Interpreter 2.0 finished
+2016-08-26T09:25:04 - [Info] - Master Interpreter 2.0
+2016-08-26T09:25:05 - [Debug] - === HEADER ===================================================
+Date/Time:       8/26/2016 9:25:04 AM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     16.3.23.2581
+META version:    14.13.68
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t8
+CyPhyML GUID:    {9088E798-8A24-4B44-B98E-D5C7C1792C2F}
+Python Dll:      UNKNOWN
+Python Exe:      UNKNOWN
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.4.0
+Username:        ted
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t8
+
+2016-08-26T09:25:05 - [Info] - Processing ExploreGeoAndPerf [ParametricExploration] model
+2016-08-26T09:25:05 - [Debug] - Interactive mode: True
+2016-08-26T09:25:05 - [Debug] - Entering TryCheckContext checker
+2016-08-26T09:25:05 - [Debug] - Getting context checker for ParametricExploration
+2016-08-26T09:25:05 - [Debug] - Got context checker ParametricExplorationChecker for context ParametricExploration
+2016-08-26T09:25:05 - [Debug] - Checking context
+2016-08-26T09:25:05 - [Debug] - Context is checked
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'DC_Spacecraft' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> No component in TestBench.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> No component in TestBench.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> No component in TestBench.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> No component references in TestBench.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> No component references in TestBench.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> No component references in TestBench.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0067-00000460">RotationalElectricalDynamics</a></i> One or more test bench references found.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a></i> ParametricExploration is not a library object.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a></i> ParametricExploration is not a subtype or instance.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a></i> ParametricExploration is not an instance.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a></i> ParametricExploration is writable.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'Protector1015' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'Spacecraft' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-000000f1">FullParameterStudy</a></i> Test bench has exectly driver: ParameterStudy.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0067-0000045e">GeometricAnalysis</a></i> Test bench reference is not null.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0067-00000460">RotationalElectricalDynamics</a></i> Test bench reference is not null.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0067-0000045f">ConvertAndExtractParams</a></i> Test bench reference is not null.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not a library object.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not a library object.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> TestBench is not a library object.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not a subtype or instance.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> TestBench is not a subtype or instance.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not a subtype or instance.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not an instance.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> TestBench is not an instance.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not an instance.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> TestBench is writable.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is writable.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is writable.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0067-0000046c">Protector1015</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0067-0000046b">DC_Spacecraft</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0067-00000466">Spacecraft</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0067-0000046b">DC_Spacecraft</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0067-00000466">Spacecraft</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T09:25:05 - [Success] -  <i><a href="mga:id-0067-0000046c">Protector1015</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T09:25:08 - [Debug] - MasterExe command: CyPhyMasterExe.exe "MGA=D:\Work\SatExample\CyPhy_Model\ExampleSatV2xxInitial.mga" "/@Testing/@ParametricExploration/@ExploreGeoAndPerf" "/@A_DesignSpaces/@DC__Spacecraft/@SymmetricArrays/@cfg1" "/@A_DesignSpaces/@DC__Spacecraft/@SymmetricArrays/@cfg2" "/@A_DesignSpaces/@DC__Spacecraft/@SymmetricArrays/@cfg3"
+2016-08-26T09:25:08 - [Debug] - Start main method for master interpreter.
+2016-08-26T09:25:08 - [Debug] - Start copying dashboard sync.
+2016-08-26T09:25:08 - [Debug] - Generate project manifest.
+2016-08-26T09:25:08 - [Debug] - Project manifest was generated D:\Work\SatExample\CyPhy_Model\manifest.project.json
+2016-08-26T09:25:08 - [Debug] - Project directory: D:\Work\SatExample\CyPhy_Model
+2016-08-26T09:25:08 - [Debug] - Configuration cfg1 [CWC] was resolved to:  cfg1 [CWC]
+2016-08-26T09:25:08 - [Debug] - Configuration cfg2 [CWC] was resolved to:  cfg2 [CWC]
+2016-08-26T09:25:08 - [Debug] - Configuration cfg3 [CWC] was resolved to:  cfg3 [CWC]
+2016-08-26T09:25:08 - [Info] - Number of configurations to execute: 3
+2016-08-26T09:25:08 - [Debug] - Wait for dashboard copy to finish
+2016-08-26T09:25:08 - [Debug] - Dashboard copy finished
+2016-08-26T09:25:08 - [Debug] - Processing 1 out of 3 [0 success(es) and 0 failure(s)]
+2016-08-26T09:25:08 - [Debug] - Configuration /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@SymmetricArrays|kind=Configurations|relpos=0/@cfg1|kind=CWC|relpos=0
+2016-08-26T09:25:08 - [Debug] - Starting analysis model processor
+2016-08-26T09:25:08 - [Debug] - Preparing analysis model processor
+2016-08-26T09:25:08 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:25:08 - [Debug] - Getting analysis model processor instance for ParametricExploration type
+2016-08-26T09:25:08 - [Debug] - Got ParametricExplorationProcessor for ParametricExploration /@Testing|kind=Testing|relpos=0/@ParametricExploration|kind=ParametricExplorationFolder|relpos=0/@ExploreGeoAndPerf|kind=ParametricExploration|relpos=0
+2016-08-26T09:25:08 - [Debug] - CWC was specified as configuration. Start expanding it. /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@SymmetricArrays|kind=Configurations|relpos=0/@cfg1|kind=CWC|relpos=0
+2016-08-26T09:25:08 - [Debug] - Expand finished for /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@SymmetricArrays|kind=Configurations|relpos=0/@cfg1|kind=CWC|relpos=0
+2016-08-26T09:25:08 - [Debug] - Calling design space exporter
+2016-08-26T09:25:08 - [Debug] - Design space exporter succeeded.
+2016-08-26T09:25:08 - [Debug] - Calling design exporter
+2016-08-26T09:25:09 - [Debug] - Design exporter succeeded.
+2016-08-26T09:25:09 - [Debug] - Saving test bench definition
+2016-08-26T09:25:09 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T09:25:09 - [Debug] - Saving test bench manifest
+2016-08-26T09:25:09 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T09:25:09 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T09:25:09 - [Debug] - Project manifest was successfully saved.
+2016-08-26T09:25:10 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T09:25:25 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T09:25:31 - [Debug] - Interpreters finished.
+2016-08-26T09:25:31 - [Debug] - Job manager instance is null. Initializing one.
+2016-08-26T09:25:31 - [Debug] - Job manager dispatch is ready to receive jobs
+2016-08-26T09:25:31 - [Debug] - Posting to the job manager
+2016-08-26T09:25:31 - [Info] - Job posted to the job manager: ExploreGeoAndPerf
+2016-08-26T09:25:31 - [Debug] - Removing temporary models.
+2016-08-26T09:25:31 - [Debug] - Temporary models are removed.
+2016-08-26T09:25:31 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:25:31 - [Debug] - Analysis model processor is done
+2016-08-26T09:25:31 - [Debug] - Processing 2 out of 3 [1 success(es) and 0 failure(s)]
+2016-08-26T09:25:31 - [Debug] - Configuration /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@SymmetricArrays|kind=Configurations|relpos=0/@cfg2|kind=CWC|relpos=0
+2016-08-26T09:25:31 - [Debug] - Starting analysis model processor
+2016-08-26T09:25:31 - [Debug] - Preparing analysis model processor
+2016-08-26T09:25:31 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:25:31 - [Debug] - Getting analysis model processor instance for ParametricExploration type
+2016-08-26T09:25:31 - [Debug] - Got ParametricExplorationProcessor for ParametricExploration /@Testing|kind=Testing|relpos=0/@ParametricExploration|kind=ParametricExplorationFolder|relpos=0/@ExploreGeoAndPerf|kind=ParametricExploration|relpos=0
+2016-08-26T09:25:31 - [Debug] - CWC was specified as configuration. Start expanding it. /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@SymmetricArrays|kind=Configurations|relpos=0/@cfg2|kind=CWC|relpos=0
+2016-08-26T09:25:31 - [Debug] - Expand finished for /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@SymmetricArrays|kind=Configurations|relpos=0/@cfg2|kind=CWC|relpos=0
+2016-08-26T09:25:31 - [Debug] - Calling design space exporter
+2016-08-26T09:25:32 - [Debug] - Design space exporter succeeded.
+2016-08-26T09:25:32 - [Debug] - Calling design exporter
+2016-08-26T09:25:32 - [Debug] - Design exporter succeeded.
+2016-08-26T09:25:32 - [Debug] - Saving test bench definition
+2016-08-26T09:25:32 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T09:25:32 - [Debug] - Saving test bench manifest
+2016-08-26T09:25:32 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T09:25:32 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T09:25:32 - [Debug] - Project manifest was successfully saved.
+2016-08-26T09:25:33 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T09:25:33 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T09:25:39 - [Debug] - Interpreters finished.
+2016-08-26T09:25:39 - [Debug] - Posting to the job manager
+2016-08-26T09:25:39 - [Info] - Job posted to the job manager: ExploreGeoAndPerf
+2016-08-26T09:25:39 - [Debug] - Removing temporary models.
+2016-08-26T09:25:39 - [Debug] - Temporary models are removed.
+2016-08-26T09:25:40 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:25:40 - [Debug] - Analysis model processor is done
+2016-08-26T09:25:40 - [Debug] - Processing 3 out of 3 [2 success(es) and 0 failure(s)]
+2016-08-26T09:25:40 - [Debug] - Configuration /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@SymmetricArrays|kind=Configurations|relpos=0/@cfg3|kind=CWC|relpos=0
+2016-08-26T09:25:40 - [Debug] - Starting analysis model processor
+2016-08-26T09:25:40 - [Debug] - Preparing analysis model processor
+2016-08-26T09:25:40 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:25:40 - [Debug] - Getting analysis model processor instance for ParametricExploration type
+2016-08-26T09:25:40 - [Debug] - Got ParametricExplorationProcessor for ParametricExploration /@Testing|kind=Testing|relpos=0/@ParametricExploration|kind=ParametricExplorationFolder|relpos=0/@ExploreGeoAndPerf|kind=ParametricExploration|relpos=0
+2016-08-26T09:25:40 - [Debug] - CWC was specified as configuration. Start expanding it. /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@SymmetricArrays|kind=Configurations|relpos=0/@cfg3|kind=CWC|relpos=0
+2016-08-26T09:25:40 - [Debug] - Expand finished for /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@SymmetricArrays|kind=Configurations|relpos=0/@cfg3|kind=CWC|relpos=0
+2016-08-26T09:25:40 - [Debug] - Calling design space exporter
+2016-08-26T09:25:40 - [Debug] - Design space exporter succeeded.
+2016-08-26T09:25:40 - [Debug] - Calling design exporter
+2016-08-26T09:25:40 - [Debug] - Design exporter succeeded.
+2016-08-26T09:25:40 - [Debug] - Saving test bench definition
+2016-08-26T09:25:40 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T09:25:40 - [Debug] - Saving test bench manifest
+2016-08-26T09:25:40 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T09:25:40 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T09:25:40 - [Debug] - Project manifest was successfully saved.
+2016-08-26T09:25:42 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T09:25:42 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T09:25:47 - [Debug] - Interpreters finished.
+2016-08-26T09:25:47 - [Debug] - Posting to the job manager
+2016-08-26T09:25:47 - [Info] - Job posted to the job manager: ExploreGeoAndPerf
+2016-08-26T09:25:47 - [Debug] - Removing temporary models.
+2016-08-26T09:25:47 - [Debug] - Temporary models are removed.
+2016-08-26T09:25:48 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:25:48 - [Debug] - Analysis model processor is done
+2016-08-26T09:25:48 - [Debug] - Generate dashboard script files
+2016-08-26T09:25:48 - [Debug] - Dashboard script files generated
+2016-08-26T09:25:48 - [Info] -  Summary 
+2016-08-26T09:25:48 - [Success] -  <a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a> <a href="mga:id-0065-000003bd">cfg1</a>  
+2016-08-26T09:25:48 - [Success] -  <a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a> <a href="mga:id-0065-000003be">cfg2</a>  
+2016-08-26T09:25:48 - [Success] -  <a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a> <a href="mga:id-0065-000003bf">cfg3</a>  
+2016-08-26T09:25:48 - [Info] - Log file was generated here: <a href="file:///D:\Work\SatExample\CyPhy_Model\log" target="_blank">D:\Work\SatExample\CyPhy_Model\log\CyPhyMasterInterpreter.11180.log</a>
+2016-08-26T09:25:48 - [Info] - Master Interpreter 2.0 finished
+2016-08-26T09:57:43 - [Info] - Master Interpreter 2.0
+2016-08-26T09:57:44 - [Debug] - === HEADER ===================================================
+Date/Time:       8/26/2016 9:57:43 AM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     16.3.23.2581
+META version:    14.13.68
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t8
+CyPhyML GUID:    {9088E798-8A24-4B44-B98E-D5C7C1792C2F}
+Python Dll:      UNKNOWN
+Python Exe:      UNKNOWN
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.4.0
+Username:        ted
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t8
+
+2016-08-26T09:57:44 - [Info] - Processing ExploreGeoAndPerf [ParametricExploration] model
+2016-08-26T09:57:44 - [Debug] - Interactive mode: True
+2016-08-26T09:57:44 - [Debug] - Entering TryCheckContext checker
+2016-08-26T09:57:44 - [Debug] - Getting context checker for ParametricExploration
+2016-08-26T09:57:44 - [Debug] - Got context checker ParametricExplorationChecker for context ParametricExploration
+2016-08-26T09:57:44 - [Debug] - Checking context
+2016-08-26T09:57:44 - [Debug] - Context is checked
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'DC_Spacecraft' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> No component in TestBench.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> No component in TestBench.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> No component in TestBench.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> No component references in TestBench.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> No component references in TestBench.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> No component references in TestBench.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0067-00000460">RotationalElectricalDynamics</a></i> One or more test bench references found.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a></i> ParametricExploration is not a library object.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a></i> ParametricExploration is not a subtype or instance.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a></i> ParametricExploration is not an instance.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a></i> ParametricExploration is writable.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'Protector1015' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'Spacecraft' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-000000f1">FullParameterStudy</a></i> Test bench has exectly driver: ParameterStudy.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0067-0000045e">GeometricAnalysis</a></i> Test bench reference is not null.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0067-00000460">RotationalElectricalDynamics</a></i> Test bench reference is not null.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0067-0000045f">ConvertAndExtractParams</a></i> Test bench reference is not null.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not a library object.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not a library object.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> TestBench is not a library object.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not a subtype or instance.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> TestBench is not a subtype or instance.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not a subtype or instance.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not an instance.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> TestBench is not an instance.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not an instance.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-000000f9">Inertial_and_Geometry</a></i> TestBench is writable.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is writable.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is writable.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0067-0000046c">Protector1015</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0067-0000046b">DC_Spacecraft</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0067-00000466">Spacecraft</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0067-0000046b">DC_Spacecraft</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0067-00000466">Spacecraft</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T09:57:44 - [Success] -  <i><a href="mga:id-0067-0000046c">Protector1015</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T09:58:23 - [Debug] - MasterExe command: CyPhyMasterExe.exe "MGA=D:\Work\SatExample\CyPhy_Model\ExampleSatV2xxInitial.mga" "/@Testing/@ParametricExploration/@ExploreGeoAndPerf" "/@A_DesignSpaces/@DC__Spacecraft/@Exported-Configurations-at--08-26--09-23-47/@cfg1" "/@A_DesignSpaces/@DC__Spacecraft/@Exported-Configurations-at--08-26--09-23-47/@cfg2" "/@A_DesignSpaces/@DC__Spacecraft/@Exported-Configurations-at--08-26--09-23-47/@cfg3"
+2016-08-26T09:58:23 - [Debug] - Start main method for master interpreter.
+2016-08-26T09:58:23 - [Debug] - Start copying dashboard sync.
+2016-08-26T09:58:23 - [Debug] - Generate project manifest.
+2016-08-26T09:58:23 - [Debug] - Project manifest was generated D:\Work\SatExample\CyPhy_Model\manifest.project.json
+2016-08-26T09:58:23 - [Debug] - Project directory: D:\Work\SatExample\CyPhy_Model
+2016-08-26T09:58:23 - [Debug] - Configuration cfg1 [CWC] was resolved to:  cfg1 [CWC]
+2016-08-26T09:58:23 - [Debug] - Configuration cfg2 [CWC] was resolved to:  cfg2 [CWC]
+2016-08-26T09:58:23 - [Debug] - Configuration cfg3 [CWC] was resolved to:  cfg3 [CWC]
+2016-08-26T09:58:23 - [Info] - Number of configurations to execute: 3
+2016-08-26T09:58:23 - [Debug] - Wait for dashboard copy to finish
+2016-08-26T09:58:23 - [Debug] - Dashboard copy finished
+2016-08-26T09:58:23 - [Debug] - Processing 1 out of 3 [0 success(es) and 0 failure(s)]
+2016-08-26T09:58:23 - [Debug] - Configuration /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--08-26--09-23-47|kind=Configurations|relpos=0/@cfg1|kind=CWC|relpos=0
+2016-08-26T09:58:23 - [Debug] - Starting analysis model processor
+2016-08-26T09:58:23 - [Debug] - Preparing analysis model processor
+2016-08-26T09:58:23 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:58:23 - [Debug] - Getting analysis model processor instance for ParametricExploration type
+2016-08-26T09:58:23 - [Debug] - Got ParametricExplorationProcessor for ParametricExploration /@Testing|kind=Testing|relpos=0/@ParametricExploration|kind=ParametricExplorationFolder|relpos=0/@ExploreGeoAndPerf|kind=ParametricExploration|relpos=0
+2016-08-26T09:58:23 - [Debug] - CWC was specified as configuration. Start expanding it. /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--08-26--09-23-47|kind=Configurations|relpos=0/@cfg1|kind=CWC|relpos=0
+2016-08-26T09:58:23 - [Debug] - Expand finished for /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--08-26--09-23-47|kind=Configurations|relpos=0/@cfg1|kind=CWC|relpos=0
+2016-08-26T09:58:23 - [Debug] - Calling design space exporter
+2016-08-26T09:58:23 - [Debug] - Design space exporter succeeded.
+2016-08-26T09:58:23 - [Debug] - Calling design exporter
+2016-08-26T09:58:23 - [Debug] - Design exporter succeeded.
+2016-08-26T09:58:23 - [Debug] - Saving test bench definition
+2016-08-26T09:58:23 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T09:58:23 - [Debug] - Saving test bench manifest
+2016-08-26T09:58:23 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T09:58:23 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T09:58:23 - [Debug] - Project manifest was successfully saved.
+2016-08-26T09:58:25 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T09:58:39 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T09:58:46 - [Debug] - Interpreters finished.
+2016-08-26T09:58:46 - [Debug] - Job manager instance is null. Initializing one.
+2016-08-26T09:58:46 - [Debug] - Job manager dispatch is ready to receive jobs
+2016-08-26T09:58:46 - [Debug] - Posting to the job manager
+2016-08-26T09:58:46 - [Info] - Job posted to the job manager: ExploreGeoAndPerf
+2016-08-26T09:58:46 - [Debug] - Removing temporary models.
+2016-08-26T09:58:46 - [Debug] - Temporary models are removed.
+2016-08-26T09:58:46 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:58:46 - [Debug] - Analysis model processor is done
+2016-08-26T09:58:46 - [Debug] - Processing 2 out of 3 [1 success(es) and 0 failure(s)]
+2016-08-26T09:58:46 - [Debug] - Configuration /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--08-26--09-23-47|kind=Configurations|relpos=0/@cfg2|kind=CWC|relpos=0
+2016-08-26T09:58:46 - [Debug] - Starting analysis model processor
+2016-08-26T09:58:46 - [Debug] - Preparing analysis model processor
+2016-08-26T09:58:46 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:58:46 - [Debug] - Getting analysis model processor instance for ParametricExploration type
+2016-08-26T09:58:46 - [Debug] - Got ParametricExplorationProcessor for ParametricExploration /@Testing|kind=Testing|relpos=0/@ParametricExploration|kind=ParametricExplorationFolder|relpos=0/@ExploreGeoAndPerf|kind=ParametricExploration|relpos=0
+2016-08-26T09:58:46 - [Debug] - CWC was specified as configuration. Start expanding it. /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--08-26--09-23-47|kind=Configurations|relpos=0/@cfg2|kind=CWC|relpos=0
+2016-08-26T09:58:46 - [Debug] - Expand finished for /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--08-26--09-23-47|kind=Configurations|relpos=0/@cfg2|kind=CWC|relpos=0
+2016-08-26T09:58:46 - [Debug] - Calling design space exporter
+2016-08-26T09:58:46 - [Debug] - Design space exporter succeeded.
+2016-08-26T09:58:46 - [Debug] - Calling design exporter
+2016-08-26T09:58:47 - [Debug] - Design exporter succeeded.
+2016-08-26T09:58:47 - [Debug] - Saving test bench definition
+2016-08-26T09:58:47 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T09:58:47 - [Debug] - Saving test bench manifest
+2016-08-26T09:58:47 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T09:58:47 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T09:58:47 - [Debug] - Project manifest was successfully saved.
+2016-08-26T09:58:48 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T09:58:48 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T09:58:54 - [Debug] - Interpreters finished.
+2016-08-26T09:58:54 - [Debug] - Posting to the job manager
+2016-08-26T09:58:54 - [Info] - Job posted to the job manager: ExploreGeoAndPerf
+2016-08-26T09:58:54 - [Debug] - Removing temporary models.
+2016-08-26T09:58:54 - [Debug] - Temporary models are removed.
+2016-08-26T09:58:54 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:58:54 - [Debug] - Analysis model processor is done
+2016-08-26T09:58:54 - [Debug] - Processing 3 out of 3 [2 success(es) and 0 failure(s)]
+2016-08-26T09:58:54 - [Debug] - Configuration /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--08-26--09-23-47|kind=Configurations|relpos=0/@cfg3|kind=CWC|relpos=0
+2016-08-26T09:58:54 - [Debug] - Starting analysis model processor
+2016-08-26T09:58:54 - [Debug] - Preparing analysis model processor
+2016-08-26T09:58:54 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:58:54 - [Debug] - Getting analysis model processor instance for ParametricExploration type
+2016-08-26T09:58:54 - [Debug] - Got ParametricExplorationProcessor for ParametricExploration /@Testing|kind=Testing|relpos=0/@ParametricExploration|kind=ParametricExplorationFolder|relpos=0/@ExploreGeoAndPerf|kind=ParametricExploration|relpos=0
+2016-08-26T09:58:54 - [Debug] - CWC was specified as configuration. Start expanding it. /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--08-26--09-23-47|kind=Configurations|relpos=0/@cfg3|kind=CWC|relpos=0
+2016-08-26T09:58:54 - [Debug] - Expand finished for /@A_DesignSpaces|kind=DesignSpace|relpos=0/@DC__Spacecraft|kind=DesignContainer|relpos=0/@Exported-Configurations-at--08-26--09-23-47|kind=Configurations|relpos=0/@cfg3|kind=CWC|relpos=0
+2016-08-26T09:58:54 - [Debug] - Calling design space exporter
+2016-08-26T09:58:54 - [Debug] - Design space exporter succeeded.
+2016-08-26T09:58:54 - [Debug] - Calling design exporter
+2016-08-26T09:58:55 - [Debug] - Design exporter succeeded.
+2016-08-26T09:58:55 - [Debug] - Saving test bench definition
+2016-08-26T09:58:55 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T09:58:55 - [Debug] - Saving test bench manifest
+2016-08-26T09:58:55 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T09:58:55 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T09:58:55 - [Debug] - Project manifest was successfully saved.
+2016-08-26T09:58:56 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T09:58:56 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T09:59:02 - [Debug] - Interpreters finished.
+2016-08-26T09:59:02 - [Debug] - Posting to the job manager
+2016-08-26T09:59:02 - [Info] - Job posted to the job manager: ExploreGeoAndPerf
+2016-08-26T09:59:02 - [Debug] - Removing temporary models.
+2016-08-26T09:59:02 - [Debug] - Temporary models are removed.
+2016-08-26T09:59:02 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T09:59:02 - [Debug] - Analysis model processor is done
+2016-08-26T09:59:02 - [Debug] - Generate dashboard script files
+2016-08-26T09:59:02 - [Debug] - Dashboard script files generated
+2016-08-26T09:59:02 - [Info] -  Summary 
+2016-08-26T09:59:02 - [Success] -  <a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a> <a href="mga:id-0065-0000101c">cfg1</a>  
+2016-08-26T09:59:02 - [Success] -  <a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a> <a href="mga:id-0065-0000101d">cfg2</a>  
+2016-08-26T09:59:02 - [Success] -  <a href="mga:id-0065-000000f0">ExploreGeoAndPerf</a> <a href="mga:id-0065-0000101e">cfg3</a>  
+2016-08-26T09:59:02 - [Info] - Log file was generated here: <a href="file:///D:\Work\SatExample\CyPhy_Model\log" target="_blank">D:\Work\SatExample\CyPhy_Model\log\CyPhyMasterInterpreter.11180.log</a>
+2016-08-26T09:59:02 - [Info] - Master Interpreter 2.0 finished
+2016-08-26T13:12:32 - [Info] - Master Interpreter 2.0
+2016-08-26T13:12:33 - [Debug] - === HEADER ===================================================
+Date/Time:       8/26/2016 1:12:32 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     16.3.23.2581
+META version:    14.13.68
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t8
+CyPhyML GUID:    {9088E798-8A24-4B44-B98E-D5C7C1792C2F}
+Python Dll:      UNKNOWN
+Python Exe:      UNKNOWN
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.4.0
+Username:        ted
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t8
+
+2016-08-26T13:12:33 - [Info] - Processing PerformanceStudy [ParametricExploration] model
+2016-08-26T13:12:33 - [Debug] - Interactive mode: True
+2016-08-26T13:12:33 - [Debug] - Entering TryCheckContext checker
+2016-08-26T13:12:33 - [Debug] - Getting context checker for ParametricExploration
+2016-08-26T13:12:33 - [Debug] - Got context checker ParametricExplorationChecker for context ParametricExploration
+2016-08-26T13:12:33 - [Debug] - Checking context
+2016-08-26T13:12:33 - [Debug] - Context is checked
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'DC_Spacecraft' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> No component in TestBench.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> No component in TestBench.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> No component references in TestBench.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> No component references in TestBench.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0067-00000461">ExtractModelProps</a></i> One or more test bench references found.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-000000f2">PerformanceStudy</a></i> ParametricExploration is not a library object.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-000000f2">PerformanceStudy</a></i> ParametricExploration is not a subtype or instance.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-000000f2">PerformanceStudy</a></i> ParametricExploration is not an instance.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-000000f2">PerformanceStudy</a></i> ParametricExploration is writable.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'Protector1015' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-000000f3">ParameterStudy</a></i> Test bench has exectly driver: ParameterStudy.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0067-00000462">Dynamics</a></i> Test bench reference is not null.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0067-00000461">ExtractModelProps</a></i> Test bench reference is not null.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not a library object.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not a library object.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not a subtype or instance.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not a subtype or instance.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not an instance.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not an instance.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is writable.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is writable.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0067-0000046c">Protector1015</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0067-0000046b">DC_Spacecraft</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0067-0000046c">Protector1015</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T13:12:33 - [Success] -  <i><a href="mga:id-0067-0000046b">DC_Spacecraft</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T13:12:35 - [Warning] - Operation was canceled by user. Main form was canceled.
+2016-08-26T13:12:35 - [Info] - Log file was generated here: <a href="file:///D:\Work\SatExample\CyPhy_Model\log" target="_blank">D:\Work\SatExample\CyPhy_Model\log\CyPhyMasterInterpreter.11180.log</a>
+2016-08-26T13:12:35 - [Info] - Master Interpreter 2.0 finished
+2016-08-26T13:12:41 - [Info] - Master Interpreter 2.0
+2016-08-26T13:12:42 - [Debug] - === HEADER ===================================================
+Date/Time:       8/26/2016 1:12:41 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     16.3.23.2581
+META version:    14.13.68
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t8
+CyPhyML GUID:    {9088E798-8A24-4B44-B98E-D5C7C1792C2F}
+Python Dll:      UNKNOWN
+Python Exe:      UNKNOWN
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.4.0
+Username:        ted
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t8
+
+2016-08-26T13:12:42 - [Info] - Processing PerformanceStudy [ParametricExploration] model
+2016-08-26T13:12:42 - [Debug] - Interactive mode: True
+2016-08-26T13:12:42 - [Debug] - Entering TryCheckContext checker
+2016-08-26T13:12:42 - [Debug] - Getting context checker for ParametricExploration
+2016-08-26T13:12:42 - [Debug] - Got context checker ParametricExplorationChecker for context ParametricExploration
+2016-08-26T13:12:42 - [Debug] - Checking context
+2016-08-26T13:12:42 - [Debug] - Context is checked
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'DC_Spacecraft' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> No component in TestBench.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> No component in TestBench.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> No component references in TestBench.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> No component references in TestBench.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0067-00000462">Dynamics</a></i> One or more test bench references found.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-000000f2">PerformanceStudy</a></i> ParametricExploration is not a library object.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-000000f2">PerformanceStudy</a></i> ParametricExploration is not a subtype or instance.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-000000f2">PerformanceStudy</a></i> ParametricExploration is not an instance.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-000000f2">PerformanceStudy</a></i> ParametricExploration is writable.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-0000039e">DC__Spacecraft</a></i> 'Protector1015' [TopLevelSystemUnderTest] refers to a valid object [DesignContainer] and the DesignContainer is in a folder.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-000000f3">ParameterStudy</a></i> Test bench has exectly driver: ParameterStudy.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0067-00000462">Dynamics</a></i> Test bench reference is not null.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0067-00000461">ExtractModelProps</a></i> Test bench reference is not null.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not a library object.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not a library object.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not a subtype or instance.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not a subtype or instance.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is not an instance.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is not an instance.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-00000105">PowerAnalysis_DesignSpace</a></i> TestBench is writable.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0065-00000107">ExtractModelProps</a></i> TestBench is writable.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0067-0000046c">Protector1015</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0067-0000046b">DC_Spacecraft</a></i> TopLevelSystemUnderTest object is not a null reference.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0067-0000046c">Protector1015</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T13:12:42 - [Success] -  <i><a href="mga:id-0067-0000046b">DC_Spacecraft</a></i> TopLevelSystemUnderTest refers to Compound DesignContainer.
+2016-08-26T13:12:45 - [Debug] - MasterExe command: CyPhyMasterExe.exe "MGA=D:\Work\SatExample\CyPhy_Model\ExampleSatV2xxInitial.mga" "/@Testing/@ParametricExploration/@PerformanceStudy" "/@Generated configurations/@DC__Spacecraft/@Configurations (08-26-2016  09:25:08)/@DC__Spacecraft_cfg1" "/@Generated configurations/@DC__Spacecraft/@Configurations (08-26-2016  09:25:31)/@DC__Spacecraft_cfg2" "/@Generated configurations/@DC__Spacecraft/@Configurations (08-26-2016  09:25:40)/@DC__Spacecraft_cfg3"
+2016-08-26T13:12:45 - [Debug] - Start main method for master interpreter.
+2016-08-26T13:12:45 - [Debug] - Start copying dashboard sync.
+2016-08-26T13:12:45 - [Debug] - Generate project manifest.
+2016-08-26T13:12:45 - [Debug] - Project manifest was generated D:\Work\SatExample\CyPhy_Model\manifest.project.json
+2016-08-26T13:12:45 - [Debug] - Project directory: D:\Work\SatExample\CyPhy_Model
+2016-08-26T13:12:45 - [Debug] - Configuration DC__Spacecraft_cfg1 [ComponentAssembly] was resolved to:  DC__Spacecraft_cfg1 [ComponentAssembly]
+2016-08-26T13:12:45 - [Debug] - Configuration DC__Spacecraft_cfg2 [ComponentAssembly] was resolved to:  DC__Spacecraft_cfg2 [ComponentAssembly]
+2016-08-26T13:12:45 - [Debug] - Configuration DC__Spacecraft_cfg3 [ComponentAssembly] was resolved to:  DC__Spacecraft_cfg3 [ComponentAssembly]
+2016-08-26T13:12:45 - [Info] - Number of configurations to execute: 3
+2016-08-26T13:12:45 - [Debug] - Wait for dashboard copy to finish
+2016-08-26T13:12:45 - [Debug] - Dashboard copy finished
+2016-08-26T13:12:45 - [Debug] - Processing 1 out of 3 [0 success(es) and 0 failure(s)]
+2016-08-26T13:12:45 - [Debug] - Configuration /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-26-2016  09:25:08)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg1|kind=ComponentAssembly|relpos=0
+2016-08-26T13:12:45 - [Debug] - Starting analysis model processor
+2016-08-26T13:12:45 - [Debug] - Preparing analysis model processor
+2016-08-26T13:12:45 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T13:12:45 - [Debug] - Getting analysis model processor instance for ParametricExploration type
+2016-08-26T13:12:45 - [Debug] - Got ParametricExplorationProcessor for ParametricExploration /@Testing|kind=Testing|relpos=0/@ParametricExploration|kind=ParametricExplorationFolder|relpos=0/@PerformanceStudy|kind=ParametricExploration|relpos=0
+2016-08-26T13:12:45 - [Debug] - ComponentAssembly was specified as configuration. Start expanding it. /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-26-2016  09:25:08)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg1|kind=ComponentAssembly|relpos=0
+2016-08-26T13:12:45 - [Debug] - Expand finished for /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-26-2016  09:25:08)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg1|kind=ComponentAssembly|relpos=0
+2016-08-26T13:12:45 - [Debug] - Calling design space exporter
+2016-08-26T13:12:45 - [Debug] - Design space exporter succeeded.
+2016-08-26T13:12:45 - [Debug] - Calling design exporter
+2016-08-26T13:12:45 - [Debug] - Design exporter succeeded.
+2016-08-26T13:12:45 - [Debug] - Saving test bench definition
+2016-08-26T13:12:45 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T13:12:45 - [Debug] - Saving test bench manifest
+2016-08-26T13:12:45 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T13:12:45 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T13:12:45 - [Debug] - Project manifest was successfully saved.
+2016-08-26T13:12:46 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T13:13:00 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T13:13:06 - [Debug] - Interpreters finished.
+2016-08-26T13:13:06 - [Debug] - Job manager instance is null. Initializing one.
+2016-08-26T13:13:06 - [Debug] - Job manager dispatch is ready to receive jobs
+2016-08-26T13:13:06 - [Debug] - Posting to the job manager
+2016-08-26T13:13:06 - [Info] - Job posted to the job manager: PerformanceStudy
+2016-08-26T13:13:06 - [Debug] - Removing temporary models.
+2016-08-26T13:13:06 - [Debug] - Temporary models are removed.
+2016-08-26T13:13:06 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T13:13:06 - [Debug] - Analysis model processor is done
+2016-08-26T13:13:06 - [Debug] - Processing 2 out of 3 [1 success(es) and 0 failure(s)]
+2016-08-26T13:13:06 - [Debug] - Configuration /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-26-2016  09:25:31)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg2|kind=ComponentAssembly|relpos=0
+2016-08-26T13:13:06 - [Debug] - Starting analysis model processor
+2016-08-26T13:13:06 - [Debug] - Preparing analysis model processor
+2016-08-26T13:13:06 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T13:13:06 - [Debug] - Getting analysis model processor instance for ParametricExploration type
+2016-08-26T13:13:06 - [Debug] - Got ParametricExplorationProcessor for ParametricExploration /@Testing|kind=Testing|relpos=0/@ParametricExploration|kind=ParametricExplorationFolder|relpos=0/@PerformanceStudy|kind=ParametricExploration|relpos=0
+2016-08-26T13:13:06 - [Debug] - ComponentAssembly was specified as configuration. Start expanding it. /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-26-2016  09:25:31)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg2|kind=ComponentAssembly|relpos=0
+2016-08-26T13:13:06 - [Debug] - Expand finished for /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-26-2016  09:25:31)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg2|kind=ComponentAssembly|relpos=0
+2016-08-26T13:13:06 - [Debug] - Calling design space exporter
+2016-08-26T13:13:06 - [Debug] - Design space exporter succeeded.
+2016-08-26T13:13:06 - [Debug] - Calling design exporter
+2016-08-26T13:13:07 - [Debug] - Design exporter succeeded.
+2016-08-26T13:13:07 - [Debug] - Saving test bench definition
+2016-08-26T13:13:07 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T13:13:07 - [Debug] - Saving test bench manifest
+2016-08-26T13:13:07 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T13:13:07 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T13:13:07 - [Debug] - Project manifest was successfully saved.
+2016-08-26T13:13:08 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T13:13:08 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T13:13:14 - [Debug] - Interpreters finished.
+2016-08-26T13:13:14 - [Debug] - Posting to the job manager
+2016-08-26T13:13:14 - [Info] - Job posted to the job manager: PerformanceStudy
+2016-08-26T13:13:14 - [Debug] - Removing temporary models.
+2016-08-26T13:13:14 - [Debug] - Temporary models are removed.
+2016-08-26T13:13:14 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T13:13:14 - [Debug] - Analysis model processor is done
+2016-08-26T13:13:14 - [Debug] - Processing 3 out of 3 [2 success(es) and 0 failure(s)]
+2016-08-26T13:13:14 - [Debug] - Configuration /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-26-2016  09:25:40)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg3|kind=ComponentAssembly|relpos=0
+2016-08-26T13:13:14 - [Debug] - Starting analysis model processor
+2016-08-26T13:13:14 - [Debug] - Preparing analysis model processor
+2016-08-26T13:13:14 - [Debug] - Turning off addons for perfomance reasons: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T13:13:14 - [Debug] - Getting analysis model processor instance for ParametricExploration type
+2016-08-26T13:13:14 - [Debug] - Got ParametricExplorationProcessor for ParametricExploration /@Testing|kind=Testing|relpos=0/@ParametricExploration|kind=ParametricExplorationFolder|relpos=0/@PerformanceStudy|kind=ParametricExploration|relpos=0
+2016-08-26T13:13:14 - [Debug] - ComponentAssembly was specified as configuration. Start expanding it. /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-26-2016  09:25:40)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg3|kind=ComponentAssembly|relpos=0
+2016-08-26T13:13:14 - [Debug] - Expand finished for /@Generated configurations|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft|kind=ComponentAssemblies|relpos=0/@Configurations (08-26-2016  09:25:40)|kind=ComponentAssemblies|relpos=0/@DC__Spacecraft_cfg3|kind=ComponentAssembly|relpos=0
+2016-08-26T13:13:14 - [Debug] - Calling design space exporter
+2016-08-26T13:13:15 - [Debug] - Design space exporter succeeded.
+2016-08-26T13:13:15 - [Debug] - Calling design exporter
+2016-08-26T13:13:15 - [Debug] - Design exporter succeeded.
+2016-08-26T13:13:15 - [Debug] - Saving test bench definition
+2016-08-26T13:13:15 - [Debug] - Saving test bench definition succeeded.
+2016-08-26T13:13:15 - [Debug] - Saving test bench manifest
+2016-08-26T13:13:15 - [Debug] - Saving test bench manifest succeeded.
+2016-08-26T13:13:15 - [Debug] - Serializing Project manifest file with updates.
+2016-08-26T13:13:15 - [Debug] - Project manifest was successfully saved.
+2016-08-26T13:13:16 - [Debug] - Execution is interactive, showing interpreter configuration forms.
+2016-08-26T13:13:16 - [Debug] - Running interpreters. Keeping temp models: False
+2016-08-26T13:13:21 - [Debug] - Interpreters finished.
+2016-08-26T13:13:21 - [Debug] - Posting to the job manager
+2016-08-26T13:13:21 - [Info] - Job posted to the job manager: PerformanceStudy
+2016-08-26T13:13:21 - [Debug] - Removing temporary models.
+2016-08-26T13:13:21 - [Debug] - Temporary models are removed.
+2016-08-26T13:13:21 - [Debug] - Turning addons back on: ConstraintManager, CyPhyAddOn, CyPhyDecoratorAddon, CyPhyMdaoAddOn, CyPhySignalBlocksAddOn
+2016-08-26T13:13:21 - [Debug] - Analysis model processor is done
+2016-08-26T13:13:21 - [Debug] - Generate dashboard script files
+2016-08-26T13:13:21 - [Debug] - Dashboard script files generated
+2016-08-26T13:13:21 - [Info] -  Summary 
+2016-08-26T13:13:21 - [Success] -  <a href="mga:id-0065-000000f2">PerformanceStudy</a> <a href="mga:id-0065-0000101f">DC__Spacecraft_cfg1</a>  
+2016-08-26T13:13:21 - [Success] -  <a href="mga:id-0065-000000f2">PerformanceStudy</a> <a href="mga:id-0065-000012cc">DC__Spacecraft_cfg2</a>  
+2016-08-26T13:13:21 - [Success] -  <a href="mga:id-0065-000000f2">PerformanceStudy</a> <a href="mga:id-0065-00001579">DC__Spacecraft_cfg3</a>  
+2016-08-26T13:13:21 - [Info] - Log file was generated here: <a href="file:///D:\Work\SatExample\CyPhy_Model\log" target="_blank">D:\Work\SatExample\CyPhy_Model\log\CyPhyMasterInterpreter.11180.log</a>
+2016-08-26T13:13:21 - [Info] - Master Interpreter 2.0 finished

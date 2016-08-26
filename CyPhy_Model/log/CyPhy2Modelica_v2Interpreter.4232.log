@@ -1,0 +1,1903 @@
+2016-08-25T14:33:55 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T14:33:56 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 2:33:55 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T14:33:56 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T14:33:56 - [Debug] - Configuration : OK
+2016-08-25T14:33:56 - [Info] - PowerAnalysis [TestBench]
+2016-08-25T14:33:56 - [Debug] - Found originalDesignName SpacecraftNominalConfig
+2016-08-25T14:33:56 - [Debug] - Elaborating model...
+2016-08-25T14:33:56 - [Debug] - Elaboration is done.
+2016-08-25T14:33:56 - [Debug] - Elaborator : OK
+2016-08-25T14:33:56 - [Debug] - Checking rules...
+2016-08-25T14:33:57 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T14:33:57 - [Warning] - Involved Objects : 
+2016-08-25T14:33:57 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Cargo_Module.Solar_Panels_Starboard__VNeg<=>Cargo_Module.Base_Frame_To_Cargo__VNeg within Cargo_Module
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004bb9">Cargo_Module</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Solar_Panels_Starboard__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d81">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Cargo_Module.Solar_Panels_Starboard__VPos<=>Cargo_Module.Base_Frame_To_Cargo__VPos within Cargo_Module
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004bb9">Cargo_Module</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Solar_Panels_Starboard__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d82">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Cargo_Module.Solar_Panels_Starboard__VNeg<=>Cargo_Module.Base_Frame_To_Cargo__VNeg within Cargo_Module
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004bb9">Cargo_Module</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Cargo_Module.Base_Frame_To_Cargo__VNeg<=>Cargo_Module.Solar_Panels_Port__VNeg within Cargo_Module
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004bb9">Cargo_Module</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Base_Frame_To_Cargo__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d87">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Cargo_Module.Solar_Panels_Starboard__VPos<=>Cargo_Module.Base_Frame_To_Cargo__VPos within Cargo_Module
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004bb9">Cargo_Module</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Cargo_Module.Base_Frame_To_Cargo__VPos<=>Cargo_Module.Solar_Panels_Port__VPos within Cargo_Module
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004bb9">Cargo_Module</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Base_Frame_To_Cargo__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d88">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Cargo_Module.Base_Frame_To_Cargo__VPos<=>Cargo_Module.Solar_Panels_Port__VPos within Cargo_Module
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004bb9">Cargo_Module</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Solar_Panels_Port__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d84">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Cargo_Module.Base_Frame_To_Cargo__VNeg<=>Cargo_Module.Solar_Panels_Port__VNeg within Cargo_Module
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004bb9">Cargo_Module</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Solar_Panels_Port__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d83">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Frame_To_Shelf__VNeg<=>Shelf2.Mount_1_On_Shelf__VNeg within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d9b">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Frame_To_Shelf__VPos<=>Shelf2.Mount_1_On_Shelf__VPos within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d9c">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_2_On_Shelf__VPos<=>Shelf2.Mount_3_On_Shelf__VPos within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_3_On_Shelf__VPos<=>Shelf2.Mount_4_On_Shelf__VPos within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_3_On_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d98">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Frame_To_Shelf__VPos<=>Shelf2.Mount_1_On_Shelf__VPos within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_1_On_Shelf__VPos<=>Shelf2.Mount_2_On_Shelf__VPos within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_1_On_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d94">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Frame_To_Shelf__VNeg<=>Shelf2.Mount_1_On_Shelf__VNeg within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_2_On_Shelf__VNeg<=>Shelf2.Mount_1_On_Shelf__VNeg within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_1_On_Shelf__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d93">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_4_On_Shelf__VNeg<=>Shelf2.Mount_3_On_Shelf__VNeg within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_3_On_Shelf__VNeg<=>Shelf2.Mount_2_On_Shelf__VNeg within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_3_On_Shelf__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d97">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_4_On_Shelf__VNeg<=>Shelf2.Mount_3_On_Shelf__VNeg within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_4_On_Shelf__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d99">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_3_On_Shelf__VPos<=>Shelf2.Mount_4_On_Shelf__VPos within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_4_On_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d9a">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_3_On_Shelf__VNeg<=>Shelf2.Mount_2_On_Shelf__VNeg within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_2_On_Shelf__VNeg<=>Shelf2.Mount_1_On_Shelf__VNeg within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_2_On_Shelf__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d95">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_1_On_Shelf__VPos<=>Shelf2.Mount_2_On_Shelf__VPos within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_2_On_Shelf__VPos<=>Shelf2.Mount_3_On_Shelf__VPos within Shelf2
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_2_On_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d96">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Frame_To_Shelf__VNeg<=>Shelf3.Mount_1_On_Shelf__VNeg within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d9b">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Frame_To_Shelf__VPos<=>Shelf3.Mount_1_On_Shelf__VPos within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d9c">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_2_On_Shelf__VPos<=>Shelf3.Mount_3_On_Shelf__VPos within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_3_On_Shelf__VPos<=>Shelf3.Mount_4_On_Shelf__VPos within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_3_On_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d98">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Frame_To_Shelf__VNeg<=>Shelf3.Mount_1_On_Shelf__VNeg within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_2_On_Shelf__VNeg<=>Shelf3.Mount_1_On_Shelf__VNeg within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_1_On_Shelf__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d93">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Frame_To_Shelf__VPos<=>Shelf3.Mount_1_On_Shelf__VPos within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_1_On_Shelf__VPos<=>Shelf3.Mount_2_On_Shelf__VPos within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_1_On_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d94">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_4_On_Shelf__VNeg<=>Shelf3.Mount_3_On_Shelf__VNeg within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_3_On_Shelf__VNeg<=>Shelf3.Mount_2_On_Shelf__VNeg within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_3_On_Shelf__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d97">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_4_On_Shelf__VNeg<=>Shelf3.Mount_3_On_Shelf__VNeg within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_4_On_Shelf__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d99">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_3_On_Shelf__VPos<=>Shelf3.Mount_4_On_Shelf__VPos within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_4_On_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d9a">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_3_On_Shelf__VNeg<=>Shelf3.Mount_2_On_Shelf__VNeg within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_2_On_Shelf__VNeg<=>Shelf3.Mount_1_On_Shelf__VNeg within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_2_On_Shelf__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d95">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_1_On_Shelf__VPos<=>Shelf3.Mount_2_On_Shelf__VPos within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_2_On_Shelf__VPos<=>Shelf3.Mount_3_On_Shelf__VPos within Shelf3
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_2_On_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d96">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Base_Frame_To_Cargo__VPos<=>Base_Module_Frame.Frame_To_Shelf_1__VPos within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_1__VPos<=>Base_Module_Frame.Frame_To_Shelf_2__VPos within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf_1__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d8a">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_2__VNeg<=>Base_Module_Frame.Frame_To_Shelf_1__VNeg within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_1__VNeg<=>Base_Module_Frame.Base_Frame_To_Cargo__VNeg within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf_1__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d89">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_2__VPos<=>Base_Module_Frame.Frame_To_Shelf_3__VPos within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_3__VPos<=>Base_Module_Frame.Frame_To_Shelf_4__VPos within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf_3__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d8e">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_4__VNeg<=>Base_Module_Frame.Frame_To_Shelf_3__VNeg within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_3__VNeg<=>Base_Module_Frame.Frame_To_Shelf_2__VNeg within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf_3__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d8d">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_1__VPos<=>Base_Module_Frame.Frame_To_Shelf_2__VPos within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_2__VPos<=>Base_Module_Frame.Frame_To_Shelf_3__VPos within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf_2__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d8c">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_3__VNeg<=>Base_Module_Frame.Frame_To_Shelf_2__VNeg within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_2__VNeg<=>Base_Module_Frame.Frame_To_Shelf_1__VNeg within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf_2__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d8b">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_1__VNeg<=>Base_Module_Frame.Base_Frame_To_Cargo__VNeg within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Base_Frame_To_Cargo__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d91">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Base_Frame_To_Cargo__VPos<=>Base_Module_Frame.Frame_To_Shelf_1__VPos within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Base_Frame_To_Cargo__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d92">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_4__VNeg<=>Base_Module_Frame.Frame_To_Shelf_3__VNeg within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf_4__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d8f">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_3__VPos<=>Base_Module_Frame.Frame_To_Shelf_4__VPos within Base_Module_Frame
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf_4__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d90">VPos</a> ]
+2016-08-25T14:33:57 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T14:33:57 - [Warning] - Involved Objects : 
+2016-08-25T14:33:57 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Frame_To_Shelf__VNeg<=>Shelf1.Mount_1_On_Shelf__VNeg within Shelf1
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d9b">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Frame_To_Shelf__VPos<=>Shelf1.Mount_1_On_Shelf__VPos within Shelf1
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Frame_To_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d9c">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_2_On_Shelf__VPos<=>Shelf1.Mount_3_On_Shelf__VPos within Shelf1
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_3_On_Shelf__VPos<=>Shelf1.Mount_4_On_Shelf__VPos within Shelf1
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_3_On_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d98">VPos</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Frame_To_Shelf__VNeg<=>Shelf1.Mount_1_On_Shelf__VNeg within Shelf1
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_2_On_Shelf__VNeg<=>Shelf1.Mount_1_On_Shelf__VNeg within Shelf1
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_1_On_Shelf__VNeg
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0065-00007d93">VNeg</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Frame_To_Shelf__VPos<=>Shelf1.Mount_1_On_Shelf__VPos within Shelf1
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:57 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_1_On_Shelf__VPos<=>Shelf1.Mount_2_On_Shelf__VPos within Shelf1
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:57 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:57 - [Failed] - Could not find a valid connection for Mount_1_On_Shelf__VPos
+2016-08-25T14:33:57 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0065-00007d94">VPos</a> ]
+2016-08-25T14:33:58 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_4_On_Shelf__VNeg<=>Shelf1.Mount_3_On_Shelf__VNeg within Shelf1
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:58 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_3_On_Shelf__VNeg<=>Shelf1.Mount_2_On_Shelf__VNeg within Shelf1
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:58 - [Failed] - Could not find a valid connection for Mount_3_On_Shelf__VNeg
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0065-00007d97">VNeg</a> ]
+2016-08-25T14:33:58 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_4_On_Shelf__VNeg<=>Shelf1.Mount_3_On_Shelf__VNeg within Shelf1
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:58 - [Failed] - Could not find a valid connection for Mount_4_On_Shelf__VNeg
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0065-00007d99">VNeg</a> ]
+2016-08-25T14:33:58 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_3_On_Shelf__VPos<=>Shelf1.Mount_4_On_Shelf__VPos within Shelf1
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:58 - [Failed] - Could not find a valid connection for Mount_4_On_Shelf__VPos
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0065-00007d9a">VPos</a> ]
+2016-08-25T14:33:58 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_3_On_Shelf__VNeg<=>Shelf1.Mount_2_On_Shelf__VNeg within Shelf1
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:58 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_2_On_Shelf__VNeg<=>Shelf1.Mount_1_On_Shelf__VNeg within Shelf1
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:58 - [Failed] - Could not find a valid connection for Mount_2_On_Shelf__VNeg
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0065-00007d95">VNeg</a> ]
+2016-08-25T14:33:58 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_1_On_Shelf__VPos<=>Shelf1.Mount_2_On_Shelf__VPos within Shelf1
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:58 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_2_On_Shelf__VPos<=>Shelf1.Mount_3_On_Shelf__VPos within Shelf1
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:33:58 - [Failed] - Could not find a valid connection for Mount_2_On_Shelf__VPos
+2016-08-25T14:33:58 - [Failed] - Involved Objects : 
+2016-08-25T14:33:58 - [Failed] - [ <a href="mga:id-0065-00007d96">VPos</a> ]
+2016-08-25T14:33:58 - [Error] - Errors: 118, Warnings: 2, Successes : 660
+2016-08-25T14:33:58 - [Error] - Model check : FAILED
+2016-08-25T14:33:59 - [Debug] - ======================================================
+2016-08-25T14:33:59 - [Debug] - Start time: 8/25/2016 2:33:51 PM
+2016-08-25T14:33:59 - [Debug] - Configuration = 00:00:04.7867776
+2016-08-25T14:33:59 - [Debug] - Elaborator = 00:00:05.3191619
+2016-08-25T14:33:59 - [Debug] - Model check = 00:00:06.6039786
+2016-08-25T14:33:59 - [Debug] - ======================================================
+2016-08-25T14:33:59 - [Error] - CyPhy2Modelica 2.0 failed! See error messages above.
+2016-08-25T14:56:48 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T14:56:49 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 2:56:48 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T14:56:49 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T14:56:49 - [Debug] - Configuration : OK
+2016-08-25T14:56:49 - [Info] - PowerAnalysis [TestBench]
+2016-08-25T14:56:49 - [Debug] - Found originalDesignName SpacecraftNominalConfig
+2016-08-25T14:56:49 - [Debug] - Elaborating model...
+2016-08-25T14:56:49 - [Debug] - Elaboration is done.
+2016-08-25T14:56:49 - [Debug] - Elaborator : OK
+2016-08-25T14:56:49 - [Debug] - Checking rules...
+2016-08-25T14:56:49 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T14:56:49 - [Warning] - Involved Objects : 
+2016-08-25T14:56:49 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T14:56:49 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_4_On_Shelf__VNeg<=>Shelf3.Mount_3_On_Shelf__VNeg within Shelf3
+2016-08-25T14:56:49 - [Failed] - Involved Objects : 
+2016-08-25T14:56:49 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:49 - [Failed] - Could not find a valid connection for Mount_4_On_Shelf__VNeg
+2016-08-25T14:56:49 - [Failed] - Involved Objects : 
+2016-08-25T14:56:49 - [Failed] - [ <a href="mga:id-0065-00007d99">VNeg</a> ]
+2016-08-25T14:56:49 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_3_On_Shelf__VPos<=>Shelf3.Mount_4_On_Shelf__VPos within Shelf3
+2016-08-25T14:56:49 - [Failed] - Involved Objects : 
+2016-08-25T14:56:49 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:49 - [Failed] - Could not find a valid connection for Mount_4_On_Shelf__VPos
+2016-08-25T14:56:49 - [Failed] - Involved Objects : 
+2016-08-25T14:56:49 - [Failed] - [ <a href="mga:id-0065-00007d9a">VPos</a> ]
+2016-08-25T14:56:49 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_3_On_Shelf__VNeg<=>Shelf3.Mount_2_On_Shelf__VNeg within Shelf3
+2016-08-25T14:56:49 - [Failed] - Involved Objects : 
+2016-08-25T14:56:49 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:49 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_2_On_Shelf__VNeg<=>Shelf3.Mount_1_On_Shelf__VNeg within Shelf3
+2016-08-25T14:56:49 - [Failed] - Involved Objects : 
+2016-08-25T14:56:49 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:49 - [Failed] - Could not find a valid connection for Mount_2_On_Shelf__VNeg
+2016-08-25T14:56:49 - [Failed] - Involved Objects : 
+2016-08-25T14:56:49 - [Failed] - [ <a href="mga:id-0065-00007d95">VNeg</a> ]
+2016-08-25T14:56:49 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_1_On_Shelf__VPos<=>Shelf3.Mount_2_On_Shelf__VPos within Shelf3
+2016-08-25T14:56:49 - [Failed] - Involved Objects : 
+2016-08-25T14:56:49 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:49 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_2_On_Shelf__VPos<=>Shelf3.Mount_3_On_Shelf__VPos within Shelf3
+2016-08-25T14:56:49 - [Failed] - Involved Objects : 
+2016-08-25T14:56:49 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:49 - [Failed] - Could not find a valid connection for Mount_2_On_Shelf__VPos
+2016-08-25T14:56:49 - [Failed] - Involved Objects : 
+2016-08-25T14:56:49 - [Failed] - [ <a href="mga:id-0065-00007d96">VPos</a> ]
+2016-08-25T14:56:49 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_2_On_Shelf__VNeg<=>Shelf3.Mount_1_On_Shelf__VNeg within Shelf3
+2016-08-25T14:56:49 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Frame_To_Shelf__VNeg<=>Shelf3.Mount_1_On_Shelf__VNeg within Shelf3
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_1_On_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d93">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Frame_To_Shelf__VPos<=>Shelf3.Mount_1_On_Shelf__VPos within Shelf3
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_1_On_Shelf__VPos<=>Shelf3.Mount_2_On_Shelf__VPos within Shelf3
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_1_On_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d94">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Frame_To_Shelf__VPos<=>Shelf3.Mount_1_On_Shelf__VPos within Shelf3
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d9c">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Frame_To_Shelf__VNeg<=>Shelf3.Mount_1_On_Shelf__VNeg within Shelf3
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d9b">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_2_On_Shelf__VPos<=>Shelf3.Mount_3_On_Shelf__VPos within Shelf3
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_3_On_Shelf__VPos<=>Shelf3.Mount_4_On_Shelf__VPos within Shelf3
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_3_On_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d98">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_4_On_Shelf__VNeg<=>Shelf3.Mount_3_On_Shelf__VNeg within Shelf3
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf3.Mount_3_On_Shelf__VNeg<=>Shelf3.Mount_2_On_Shelf__VNeg within Shelf3
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c86">Shelf3</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_3_On_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d97">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Base_Frame_To_Cargo__VPos<=>Base_Module_Frame.Frame_To_Shelf_1__VPos within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_1__VPos<=>Base_Module_Frame.Frame_To_Shelf_2__VPos within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf_1__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d8a">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_4__VNeg<=>Base_Module_Frame.Frame_To_Shelf_3__VNeg within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_3__VNeg<=>Base_Module_Frame.Frame_To_Shelf_2__VNeg within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf_3__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d8d">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_2__VNeg<=>Base_Module_Frame.Frame_To_Shelf_1__VNeg within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_1__VNeg<=>Base_Module_Frame.Base_Frame_To_Cargo__VNeg within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf_1__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d89">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_1__VPos<=>Base_Module_Frame.Frame_To_Shelf_2__VPos within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_2__VPos<=>Base_Module_Frame.Frame_To_Shelf_3__VPos within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf_2__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d8c">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_2__VPos<=>Base_Module_Frame.Frame_To_Shelf_3__VPos within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_3__VPos<=>Base_Module_Frame.Frame_To_Shelf_4__VPos within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf_3__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d8e">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_1__VNeg<=>Base_Module_Frame.Base_Frame_To_Cargo__VNeg within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Base_Frame_To_Cargo__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d91">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_3__VNeg<=>Base_Module_Frame.Frame_To_Shelf_2__VNeg within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_2__VNeg<=>Base_Module_Frame.Frame_To_Shelf_1__VNeg within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf_2__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d8b">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_3__VPos<=>Base_Module_Frame.Frame_To_Shelf_4__VPos within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf_4__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d90">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_4__VNeg<=>Base_Module_Frame.Frame_To_Shelf_3__VNeg within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf_4__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d8f">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Base_Frame_To_Cargo__VPos<=>Base_Module_Frame.Frame_To_Shelf_1__VPos within Base_Module_Frame
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Base_Frame_To_Cargo__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d92">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_4_On_Shelf__VNeg<=>Shelf2.Mount_3_On_Shelf__VNeg within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_4_On_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d99">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_3_On_Shelf__VPos<=>Shelf2.Mount_4_On_Shelf__VPos within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_4_On_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d9a">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_1_On_Shelf__VPos<=>Shelf2.Mount_2_On_Shelf__VPos within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_2_On_Shelf__VPos<=>Shelf2.Mount_3_On_Shelf__VPos within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_2_On_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d96">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_3_On_Shelf__VNeg<=>Shelf2.Mount_2_On_Shelf__VNeg within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_2_On_Shelf__VNeg<=>Shelf2.Mount_1_On_Shelf__VNeg within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_2_On_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d95">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_2_On_Shelf__VNeg<=>Shelf2.Mount_1_On_Shelf__VNeg within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Frame_To_Shelf__VNeg<=>Shelf2.Mount_1_On_Shelf__VNeg within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_1_On_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d93">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Frame_To_Shelf__VPos<=>Shelf2.Mount_1_On_Shelf__VPos within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_1_On_Shelf__VPos<=>Shelf2.Mount_2_On_Shelf__VPos within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_1_On_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d94">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Frame_To_Shelf__VPos<=>Shelf2.Mount_1_On_Shelf__VPos within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d9c">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Frame_To_Shelf__VNeg<=>Shelf2.Mount_1_On_Shelf__VNeg within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d9b">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_2_On_Shelf__VPos<=>Shelf2.Mount_3_On_Shelf__VPos within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_3_On_Shelf__VPos<=>Shelf2.Mount_4_On_Shelf__VPos within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_3_On_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d98">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_4_On_Shelf__VNeg<=>Shelf2.Mount_3_On_Shelf__VNeg within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf2.Mount_3_On_Shelf__VNeg<=>Shelf2.Mount_2_On_Shelf__VNeg within Shelf2
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c4c">Shelf2</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_3_On_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d97">VNeg</a> ]
+2016-08-25T14:56:50 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T14:56:50 - [Warning] - Involved Objects : 
+2016-08-25T14:56:50 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_4_On_Shelf__VNeg<=>Shelf1.Mount_3_On_Shelf__VNeg within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_4_On_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d99">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_3_On_Shelf__VPos<=>Shelf1.Mount_4_On_Shelf__VPos within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_4_On_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d9a">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_1_On_Shelf__VPos<=>Shelf1.Mount_2_On_Shelf__VPos within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_2_On_Shelf__VPos<=>Shelf1.Mount_3_On_Shelf__VPos within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_2_On_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d96">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_3_On_Shelf__VNeg<=>Shelf1.Mount_2_On_Shelf__VNeg within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_2_On_Shelf__VNeg<=>Shelf1.Mount_1_On_Shelf__VNeg within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_2_On_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d95">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_2_On_Shelf__VNeg<=>Shelf1.Mount_1_On_Shelf__VNeg within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Frame_To_Shelf__VNeg<=>Shelf1.Mount_1_On_Shelf__VNeg within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_1_On_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d93">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Frame_To_Shelf__VPos<=>Shelf1.Mount_1_On_Shelf__VPos within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_1_On_Shelf__VPos<=>Shelf1.Mount_2_On_Shelf__VPos within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_1_On_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d94">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Frame_To_Shelf__VNeg<=>Shelf1.Mount_1_On_Shelf__VNeg within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d9b">VNeg</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Frame_To_Shelf__VPos<=>Shelf1.Mount_1_On_Shelf__VPos within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Frame_To_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d9c">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_2_On_Shelf__VPos<=>Shelf1.Mount_3_On_Shelf__VPos within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_3_On_Shelf__VPos<=>Shelf1.Mount_4_On_Shelf__VPos within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_3_On_Shelf__VPos
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d98">VPos</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_4_On_Shelf__VNeg<=>Shelf1.Mount_3_On_Shelf__VNeg within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Shelf1.Mount_3_On_Shelf__VNeg<=>Shelf1.Mount_2_On_Shelf__VNeg within Shelf1
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0067-00004c23">Shelf1</a> ]
+2016-08-25T14:56:50 - [Failed] - Could not find a valid connection for Mount_3_On_Shelf__VNeg
+2016-08-25T14:56:50 - [Failed] - Involved Objects : 
+2016-08-25T14:56:50 - [Failed] - [ <a href="mga:id-0065-00007d97">VNeg</a> ]
+2016-08-25T14:56:50 - [Error] - Errors: 104, Warnings: 2, Successes : 677
+2016-08-25T14:56:50 - [Error] - Model check : FAILED
+2016-08-25T14:56:51 - [Debug] - ======================================================
+2016-08-25T14:56:51 - [Debug] - Start time: 8/25/2016 2:56:45 PM
+2016-08-25T14:56:51 - [Debug] - Configuration = 00:00:03.7020431
+2016-08-25T14:56:51 - [Debug] - Elaborator = 00:00:04.1640862
+2016-08-25T14:56:51 - [Debug] - Model check = 00:00:05.2346167
+2016-08-25T14:56:51 - [Debug] - ======================================================
+2016-08-25T14:56:51 - [Error] - CyPhy2Modelica 2.0 failed! See error messages above.
+2016-08-25T14:59:58 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T14:59:59 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 2:59:58 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T14:59:59 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T14:59:59 - [Debug] - Configuration : OK
+2016-08-25T14:59:59 - [Info] - PowerAnalysis [TestBench]
+2016-08-25T14:59:59 - [Debug] - Found originalDesignName SpacecraftNominalConfig
+2016-08-25T14:59:59 - [Debug] - Elaborating model...
+2016-08-25T15:00:00 - [Debug] - Elaboration is done.
+2016-08-25T15:00:00 - [Debug] - Elaborator : OK
+2016-08-25T15:00:00 - [Debug] - Checking rules...
+2016-08-25T15:00:00 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:00:00 - [Warning] - Involved Objects : 
+2016-08-25T15:00:00 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_1__VNeg<=>Base_Module_Frame.Base_Frame_To_Cargo__VNeg within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Could not find a valid connection for Base_Frame_To_Cargo__VNeg
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0065-00007d91">VNeg</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Base_Frame_To_Cargo__VPos<=>Base_Module_Frame.Frame_To_Shelf_1__VPos within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Could not find a valid connection for Base_Frame_To_Cargo__VPos
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0065-00007d92">VPos</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_4__VNeg<=>Base_Module_Frame.Frame_To_Shelf_3__VNeg within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Could not find a valid connection for Frame_To_Shelf_4__VNeg
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0065-00007d8f">VNeg</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_3__VPos<=>Base_Module_Frame.Frame_To_Shelf_4__VPos within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Could not find a valid connection for Frame_To_Shelf_4__VPos
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0065-00007d90">VPos</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Base_Frame_To_Cargo__VPos<=>Base_Module_Frame.Frame_To_Shelf_1__VPos within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_1__VPos<=>Base_Module_Frame.Frame_To_Shelf_2__VPos within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Could not find a valid connection for Frame_To_Shelf_1__VPos
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0065-00007d8a">VPos</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_2__VNeg<=>Base_Module_Frame.Frame_To_Shelf_1__VNeg within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_1__VNeg<=>Base_Module_Frame.Base_Frame_To_Cargo__VNeg within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Could not find a valid connection for Frame_To_Shelf_1__VNeg
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0065-00007d89">VNeg</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_2__VPos<=>Base_Module_Frame.Frame_To_Shelf_3__VPos within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_3__VPos<=>Base_Module_Frame.Frame_To_Shelf_4__VPos within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Could not find a valid connection for Frame_To_Shelf_3__VPos
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0065-00007d8e">VPos</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_4__VNeg<=>Base_Module_Frame.Frame_To_Shelf_3__VNeg within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_3__VNeg<=>Base_Module_Frame.Frame_To_Shelf_2__VNeg within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Could not find a valid connection for Frame_To_Shelf_3__VNeg
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0065-00007d8d">VNeg</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_3__VNeg<=>Base_Module_Frame.Frame_To_Shelf_2__VNeg within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_2__VNeg<=>Base_Module_Frame.Frame_To_Shelf_1__VNeg within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Could not find a valid connection for Frame_To_Shelf_2__VNeg
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0065-00007d8b">VNeg</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_1__VPos<=>Base_Module_Frame.Frame_To_Shelf_2__VPos within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Must not connect 2 ModelicaConnectors within the same Container: Base_Module_Frame.Frame_To_Shelf_2__VPos<=>Base_Module_Frame.Frame_To_Shelf_3__VPos within Base_Module_Frame
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0067-00004c0b">Base_Module_Frame</a> ]
+2016-08-25T15:00:00 - [Failed] - Could not find a valid connection for Frame_To_Shelf_2__VPos
+2016-08-25T15:00:00 - [Failed] - Involved Objects : 
+2016-08-25T15:00:00 - [Failed] - [ <a href="mga:id-0065-00007d8c">VPos</a> ]
+2016-08-25T15:00:01 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:00:01 - [Warning] - Involved Objects : 
+2016-08-25T15:00:01 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:00:01 - [Error] - Errors: 26, Warnings: 2, Successes : 740
+2016-08-25T15:00:01 - [Error] - Model check : FAILED
+2016-08-25T15:00:02 - [Debug] - ======================================================
+2016-08-25T15:00:02 - [Debug] - Start time: 8/25/2016 2:59:57 PM
+2016-08-25T15:00:02 - [Debug] - Configuration = 00:00:02.7714635
+2016-08-25T15:00:02 - [Debug] - Elaborator = 00:00:03.2412413
+2016-08-25T15:00:02 - [Debug] - Model check = 00:00:03.8725492
+2016-08-25T15:00:02 - [Debug] - ======================================================
+2016-08-25T15:00:02 - [Error] - CyPhy2Modelica 2.0 failed! See error messages above.
+2016-08-25T15:02:23 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:02:24 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:02:23 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:02:24 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:02:24 - [Debug] - Configuration : OK
+2016-08-25T15:02:24 - [Info] - PowerAnalysis [TestBench]
+2016-08-25T15:02:24 - [Debug] - Found originalDesignName SpacecraftNominalConfig
+2016-08-25T15:02:24 - [Debug] - Elaborating model...
+2016-08-25T15:02:24 - [Debug] - Elaboration is done.
+2016-08-25T15:02:24 - [Debug] - Elaborator : OK
+2016-08-25T15:02:24 - [Debug] - Checking rules...
+2016-08-25T15:02:24 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:02:24 - [Warning] - Involved Objects : 
+2016-08-25T15:02:24 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:02:25 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:02:25 - [Warning] - Involved Objects : 
+2016-08-25T15:02:25 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:02:25 - [Warning] - Errors: 0, Warnings: 2, Successes : 761
+2016-08-25T15:02:25 - [Debug] - Model check : OK
+2016-08-25T15:02:25 - [Debug] - Modelica model was not found for component: RootFolder/Testing/DynamicsSim/PowerAnalysis/DC_Spacecraft/Antenna
+2016-08-25T15:02:25 - [Debug] - <b>DC_Spacecraft</b>
+2016-08-25T15:02:25 - [Debug] - <b>- attitudeScenario</b>
+2016-08-25T15:02:25 - [Debug] - <b>- Gyroscope_Momentum_Control</b>
+2016-08-25T15:02:25 - [Debug] - - Antenna
+2016-08-25T15:02:25 - [Debug] - <b>- Shelf1</b>
+2016-08-25T15:02:25 - [Debug] - <b>- Battery</b>
+2016-08-25T15:02:25 - [Debug] - <b>- Solar_Panels_3A</b>
+2016-08-25T15:02:25 - [Debug] - <b>- Shelf3</b>
+2016-08-25T15:02:25 - [Debug] - <b>- Cargo_Module</b>
+2016-08-25T15:02:25 - [Debug] - <b>- Base_Module_Frame</b>
+2016-08-25T15:02:25 - [Debug] - <b>- Computer</b>
+2016-08-25T15:02:25 - [Debug] - <b>- Solar_Panels_3B</b>
+2016-08-25T15:02:25 - [Debug] - <b>- Shelf2</b>
+2016-08-25T15:02:25 - [Debug] - Solver settings being used:
+2016-08-25T15:02:25 - [Debug] - - [Dymola] Solver: dassl
+2016-08-25T15:02:25 - [Debug] - - [OpenModelica] Solver: dassl
+2016-08-25T15:02:25 - [Debug] - - Tool selection for JobManager: OpenModelica__latest_
+2016-08-25T15:02:25 - [Debug] - - Start time: 0
+2016-08-25T15:02:25 - [Debug] - - Stop time: 10000
+2016-08-25T15:02:25 - [Warning] - Component 'Antenna' inside 'DC_Spacecraft' does not contain any dynamic models, it will not be generated.
+2016-08-25T15:02:25 - [Debug] - Trying to get svn info for C:\Work\SatExample\CyPhy_Model\ModelicaLib.
+2016-08-25T15:02:25 - [Debug] - svn command line tools not installed
+2016-08-25T15:02:25 - [Debug] - Modelica translation : OK
+2016-08-25T15:02:25 - [Debug] - Copied library from C:\Work\SatExample\CyPhy_Model\ModelicaLib\TbLib.mo to C:\Work\SatExample\CyPhy_Model\results\nf3ublk5\Libraries\TbLib.mo
+2016-08-25T15:02:25 - [Debug] - Script generation : OK
+2016-08-25T15:02:26 - [Debug] - ======================================================
+2016-08-25T15:02:26 - [Debug] - Start time: 8/25/2016 3:02:20 PM
+2016-08-25T15:02:26 - [Debug] - Configuration = 00:00:04.0388799
+2016-08-25T15:02:26 - [Debug] - Elaborator = 00:00:04.5303804
+2016-08-25T15:02:26 - [Debug] - Model check = 00:00:04.9581892
+2016-08-25T15:02:26 - [Debug] - Modelica translation = 00:00:05.1749778
+2016-08-25T15:02:26 - [Debug] - Script generation = 00:00:05.2910515
+2016-08-25T15:02:26 - [Debug] - ======================================================
+2016-08-25T15:02:26 - [Info] - CyPhy2Modelica 2.0 finished successfully.
+2016-08-25T15:02:26 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\nf3ublk5" target="_blank">C:\Work\SatExample\CyPhy_Model\results\nf3ublk5</a>
+2016-08-25T15:02:26 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]
+2016-08-25T15:46:07 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:46:07 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:46:07 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:46:07 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:46:07 - [Debug] - Configuration : OK
+2016-08-25T15:46:07 - [Info] - DC__Spacecraft_cfg1 [TestBench]
+2016-08-25T15:46:07 - [Debug] - Found originalDesignName DC__Spacecraft_cfg1
+2016-08-25T15:46:07 - [Debug] - Elaborating model...
+2016-08-25T15:46:08 - [Debug] - Elaboration is done.
+2016-08-25T15:46:08 - [Debug] - Elaborator : OK
+2016-08-25T15:46:08 - [Debug] - Checking rules...
+2016-08-25T15:46:08 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:46:08 - [Warning] - Involved Objects : 
+2016-08-25T15:46:08 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:46:08 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:46:08 - [Warning] - Involved Objects : 
+2016-08-25T15:46:08 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:46:08 - [Warning] - Errors: 0, Warnings: 2, Successes : 763
+2016-08-25T15:46:08 - [Debug] - Model check : OK
+2016-08-25T15:46:08 - [Debug] - Modelica model was not found for component: RootFolder/Testing/DynamicsSim/PowerAnalysis_DC TemporaryFolder/DC__Spacecraft_cfg1/DC_Spacecraft/Antenna
+2016-08-25T15:46:08 - [Debug] - <b>DC_Spacecraft</b>
+2016-08-25T15:46:08 - [Debug] - <b>- NewDC__Solar_Panels_3A__Solar_Panels_4A</b>
+2016-08-25T15:46:08 - [Debug] - <b>- NewDC__Solar_Panels_3B__Solar_Panels_4B</b>
+2016-08-25T15:46:08 - [Debug] - - Antenna
+2016-08-25T15:46:08 - [Debug] - <b>- Base_Module_Frame</b>
+2016-08-25T15:46:08 - [Debug] - <b>- Cargo_Module</b>
+2016-08-25T15:46:08 - [Debug] - <b>- Shelf1</b>
+2016-08-25T15:46:08 - [Debug] - <b>- attitudeScenario</b>
+2016-08-25T15:46:08 - [Debug] - <b>- Shelf2</b>
+2016-08-25T15:46:08 - [Debug] - <b>- Battery</b>
+2016-08-25T15:46:08 - [Debug] - <b>- Gyroscope_Momentum_Control</b>
+2016-08-25T15:46:08 - [Debug] - <b>- Computer</b>
+2016-08-25T15:46:08 - [Debug] - <b>- Shelf3</b>
+2016-08-25T15:46:08 - [Debug] - Solver settings being used:
+2016-08-25T15:46:08 - [Debug] - - [Dymola] Solver: dassl
+2016-08-25T15:46:08 - [Debug] - - [OpenModelica] Solver: dassl
+2016-08-25T15:46:08 - [Debug] - - Tool selection for JobManager: OpenModelica__latest_
+2016-08-25T15:46:08 - [Debug] - - Start time: 0
+2016-08-25T15:46:08 - [Debug] - - Stop time: 10000
+2016-08-25T15:46:08 - [Warning] - Component 'Antenna' inside 'DC_Spacecraft' does not contain any dynamic models, it will not be generated.
+2016-08-25T15:46:08 - [Debug] - Trying to get svn info for C:\Work\SatExample\CyPhy_Model\ModelicaLib.
+2016-08-25T15:46:08 - [Debug] - svn command line tools not installed
+2016-08-25T15:46:08 - [Debug] - Modelica translation : OK
+2016-08-25T15:46:08 - [Debug] - Copied library from C:\Work\SatExample\CyPhy_Model\ModelicaLib\TbLib.mo to C:\Work\SatExample\CyPhy_Model\results\jozdga1k\Libraries\TbLib.mo
+2016-08-25T15:46:08 - [Debug] - Script generation : OK
+2016-08-25T15:46:09 - [Debug] - ======================================================
+2016-08-25T15:46:09 - [Debug] - Start time: 8/25/2016 3:46:03 PM
+2016-08-25T15:46:09 - [Debug] - Configuration = 00:00:04.4688297
+2016-08-25T15:46:09 - [Debug] - Elaborator = 00:00:04.9356113
+2016-08-25T15:46:09 - [Debug] - Model check = 00:00:05.3489703
+2016-08-25T15:46:09 - [Debug] - Modelica translation = 00:00:05.4843884
+2016-08-25T15:46:09 - [Debug] - Script generation = 00:00:05.5156098
+2016-08-25T15:46:09 - [Debug] - ======================================================
+2016-08-25T15:46:09 - [Info] - CyPhy2Modelica 2.0 finished successfully.
+2016-08-25T15:46:09 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\jozdga1k" target="_blank">C:\Work\SatExample\CyPhy_Model\results\jozdga1k</a>
+2016-08-25T15:46:09 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]
+2016-08-25T15:46:11 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:46:12 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:46:11 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:46:12 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:46:12 - [Debug] - Configuration : OK
+2016-08-25T15:46:12 - [Info] - DC__Spacecraft_cfg2 [TestBench]
+2016-08-25T15:46:12 - [Debug] - Found originalDesignName DC__Spacecraft_cfg2
+2016-08-25T15:46:12 - [Debug] - Elaborating model...
+2016-08-25T15:46:12 - [Debug] - Elaboration is done.
+2016-08-25T15:46:12 - [Debug] - Elaborator : OK
+2016-08-25T15:46:12 - [Debug] - Checking rules...
+2016-08-25T15:46:12 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:46:12 - [Warning] - Involved Objects : 
+2016-08-25T15:46:12 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:46:12 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:46:12 - [Warning] - Involved Objects : 
+2016-08-25T15:46:12 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:46:13 - [Failed] - Could not find a valid connection for Solar_Panels__VPos
+2016-08-25T15:46:13 - [Failed] - Involved Objects : 
+2016-08-25T15:46:13 - [Failed] - [ <a href="mga:id-0065-000082c9">VPos</a> ]
+2016-08-25T15:46:13 - [Failed] - Could not find a valid connection for Solar_Panels__VNeg
+2016-08-25T15:46:13 - [Failed] - Involved Objects : 
+2016-08-25T15:46:13 - [Failed] - [ <a href="mga:id-0065-000082ca">VNeg</a> ]
+2016-08-25T15:46:13 - [Error] - Errors: 2, Warnings: 2, Successes : 769
+2016-08-25T15:46:13 - [Error] - Model check : FAILED
+2016-08-25T15:46:13 - [Debug] - ======================================================
+2016-08-25T15:46:13 - [Debug] - Start time: 8/25/2016 3:46:11 PM
+2016-08-25T15:46:13 - [Debug] - Configuration = 00:00:00.8896647
+2016-08-25T15:46:13 - [Debug] - Elaborator = 00:00:01.3797705
+2016-08-25T15:46:13 - [Debug] - Model check = 00:00:01.8423321
+2016-08-25T15:46:13 - [Debug] - ======================================================
+2016-08-25T15:46:13 - [Error] - CyPhy2Modelica 2.0 failed! See error messages above.
+2016-08-25T15:46:15 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:46:16 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:46:15 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:46:16 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:46:16 - [Debug] - Configuration : OK
+2016-08-25T15:46:16 - [Info] - DC__Spacecraft_cfg3 [TestBench]
+2016-08-25T15:46:16 - [Debug] - Found originalDesignName DC__Spacecraft_cfg3
+2016-08-25T15:46:16 - [Debug] - Elaborating model...
+2016-08-25T15:46:16 - [Debug] - Elaboration is done.
+2016-08-25T15:46:16 - [Debug] - Elaborator : OK
+2016-08-25T15:46:16 - [Debug] - Checking rules...
+2016-08-25T15:46:17 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:46:17 - [Warning] - Involved Objects : 
+2016-08-25T15:46:17 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:46:17 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:46:17 - [Warning] - Involved Objects : 
+2016-08-25T15:46:17 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:46:17 - [Warning] - Errors: 0, Warnings: 2, Successes : 763
+2016-08-25T15:46:17 - [Debug] - Model check : OK
+2016-08-25T15:46:17 - [Debug] - Modelica model was not found for component: RootFolder/Testing/DynamicsSim/PowerAnalysis_DC TemporaryFolder/DC__Spacecraft_cfg3/DC_Spacecraft/Antenna
+2016-08-25T15:46:17 - [Debug] - <b>DC_Spacecraft</b>
+2016-08-25T15:46:17 - [Debug] - <b>- Shelf3</b>
+2016-08-25T15:46:17 - [Debug] - <b>- Gyroscope_Momentum_Control</b>
+2016-08-25T15:46:17 - [Debug] - <b>- Shelf2</b>
+2016-08-25T15:46:17 - [Debug] - <b>- Shelf1</b>
+2016-08-25T15:46:17 - [Debug] - <b>- Computer</b>
+2016-08-25T15:46:17 - [Debug] - <b>- Base_Module_Frame</b>
+2016-08-25T15:46:17 - [Debug] - <b>- NewDC__Solar_Panels_3A__Solar_Panels_3A</b>
+2016-08-25T15:46:17 - [Debug] - - Antenna
+2016-08-25T15:46:17 - [Debug] - <b>- NewDC__Solar_Panels_3B__Solar_Panels_3B</b>
+2016-08-25T15:46:17 - [Debug] - <b>- attitudeScenario</b>
+2016-08-25T15:46:17 - [Debug] - <b>- Battery</b>
+2016-08-25T15:46:17 - [Debug] - <b>- Cargo_Module</b>
+2016-08-25T15:46:17 - [Debug] - Solver settings being used:
+2016-08-25T15:46:17 - [Debug] - - [Dymola] Solver: dassl
+2016-08-25T15:46:17 - [Debug] - - [OpenModelica] Solver: dassl
+2016-08-25T15:46:17 - [Debug] - - Tool selection for JobManager: OpenModelica__latest_
+2016-08-25T15:46:17 - [Debug] - - Start time: 0
+2016-08-25T15:46:17 - [Debug] - - Stop time: 10000
+2016-08-25T15:46:17 - [Warning] - Component 'Antenna' inside 'DC_Spacecraft' does not contain any dynamic models, it will not be generated.
+2016-08-25T15:46:17 - [Debug] - Trying to get svn info for C:\Work\SatExample\CyPhy_Model\ModelicaLib.
+2016-08-25T15:46:17 - [Debug] - svn command line tools not installed
+2016-08-25T15:46:17 - [Debug] - Modelica translation : OK
+2016-08-25T15:46:17 - [Debug] - Copied library from C:\Work\SatExample\CyPhy_Model\ModelicaLib\TbLib.mo to C:\Work\SatExample\CyPhy_Model\results\fmnfdx0n\Libraries\TbLib.mo
+2016-08-25T15:46:17 - [Debug] - Script generation : OK
+2016-08-25T15:46:18 - [Debug] - ======================================================
+2016-08-25T15:46:18 - [Debug] - Start time: 8/25/2016 3:46:15 PM
+2016-08-25T15:46:18 - [Debug] - Configuration = 00:00:00.8036896
+2016-08-25T15:46:18 - [Debug] - Elaborator = 00:00:01.3703429
+2016-08-25T15:46:18 - [Debug] - Model check = 00:00:01.8937428
+2016-08-25T15:46:18 - [Debug] - Modelica translation = 00:00:02.0018868
+2016-08-25T15:46:18 - [Debug] - Script generation = 00:00:02.0386574
+2016-08-25T15:46:18 - [Debug] - ======================================================
+2016-08-25T15:46:18 - [Info] - CyPhy2Modelica 2.0 finished successfully.
+2016-08-25T15:46:18 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\fmnfdx0n" target="_blank">C:\Work\SatExample\CyPhy_Model\results\fmnfdx0n</a>
+2016-08-25T15:46:18 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]
+2016-08-25T15:49:50 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:49:51 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:49:50 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:49:51 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:49:51 - [Debug] - Configuration : OK
+2016-08-25T15:49:51 - [Info] - DC__Spacecraft_cfg1 [TestBench]
+2016-08-25T15:49:51 - [Debug] - Found originalDesignName DC__Spacecraft_cfg1
+2016-08-25T15:49:51 - [Debug] - Elaborating model...
+2016-08-25T15:49:51 - [Debug] - Elaboration is done.
+2016-08-25T15:49:51 - [Debug] - Elaborator : OK
+2016-08-25T15:49:51 - [Debug] - Checking rules...
+2016-08-25T15:49:52 - [Failed] - Redundant connection between targetAttitude__y<=>angle_setpoint__i within attitudeScenario
+2016-08-25T15:49:52 - [Failed] - Involved Objects : 
+2016-08-25T15:49:52 - [Failed] - [ <a href="mga:id-0067-00008544">attitudeScenario</a> ]
+2016-08-25T15:49:52 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:49:52 - [Warning] - Involved Objects : 
+2016-08-25T15:49:52 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:49:52 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:49:52 - [Warning] - Involved Objects : 
+2016-08-25T15:49:52 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:49:52 - [Failed] - Could not find a valid connection for Solar_Panels__VNeg
+2016-08-25T15:49:52 - [Failed] - Involved Objects : 
+2016-08-25T15:49:52 - [Failed] - [ <a href="mga:id-0065-000082ca">VNeg</a> ]
+2016-08-25T15:49:52 - [Failed] - Could not find a valid connection for Solar_Panels__VPos
+2016-08-25T15:49:52 - [Failed] - Involved Objects : 
+2016-08-25T15:49:52 - [Failed] - [ <a href="mga:id-0065-000082c9">VPos</a> ]
+2016-08-25T15:49:52 - [Failed] - Redundant connection between angle_setpoint__i<=>targetAttitude__y within DC_Spacecraft
+2016-08-25T15:49:52 - [Failed] - Involved Objects : 
+2016-08-25T15:49:52 - [Failed] - [ <a href="mga:id-0067-000082eb">DC_Spacecraft</a> ]
+2016-08-25T15:49:52 - [Error] - Errors: 4, Warnings: 2, Successes : 768
+2016-08-25T15:49:52 - [Error] - Model check : FAILED
+2016-08-25T15:49:53 - [Debug] - ======================================================
+2016-08-25T15:49:53 - [Debug] - Start time: 8/25/2016 3:49:46 PM
+2016-08-25T15:49:53 - [Debug] - Configuration = 00:00:04.8956155
+2016-08-25T15:49:53 - [Debug] - Elaborator = 00:00:05.3648543
+2016-08-25T15:49:53 - [Debug] - Model check = 00:00:05.8441613
+2016-08-25T15:49:53 - [Debug] - ======================================================
+2016-08-25T15:49:53 - [Error] - CyPhy2Modelica 2.0 failed! See error messages above.
+2016-08-25T15:49:54 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:49:55 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:49:54 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:49:55 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:49:55 - [Debug] - Configuration : OK
+2016-08-25T15:49:55 - [Info] - DC__Spacecraft_cfg2 [TestBench]
+2016-08-25T15:49:55 - [Debug] - Found originalDesignName DC__Spacecraft_cfg2
+2016-08-25T15:49:55 - [Debug] - Elaborating model...
+2016-08-25T15:49:55 - [Debug] - Elaboration is done.
+2016-08-25T15:49:55 - [Debug] - Elaborator : OK
+2016-08-25T15:49:55 - [Debug] - Checking rules...
+2016-08-25T15:49:55 - [Failed] - Redundant connection between angle_setpoint__i<=>targetAttitude__y within DC_Spacecraft
+2016-08-25T15:49:55 - [Failed] - Involved Objects : 
+2016-08-25T15:49:55 - [Failed] - [ <a href="mga:id-0067-000082eb">DC_Spacecraft</a> ]
+2016-08-25T15:49:55 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:49:55 - [Warning] - Involved Objects : 
+2016-08-25T15:49:55 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:49:56 - [Failed] - Redundant connection between targetAttitude__y<=>angle_setpoint__i within attitudeScenario
+2016-08-25T15:49:56 - [Failed] - Involved Objects : 
+2016-08-25T15:49:56 - [Failed] - [ <a href="mga:id-0067-000085e9">attitudeScenario</a> ]
+2016-08-25T15:49:56 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:49:56 - [Warning] - Involved Objects : 
+2016-08-25T15:49:56 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:49:56 - [Error] - Errors: 2, Warnings: 2, Successes : 762
+2016-08-25T15:49:56 - [Error] - Model check : FAILED
+2016-08-25T15:49:56 - [Debug] - ======================================================
+2016-08-25T15:49:56 - [Debug] - Start time: 8/25/2016 3:49:54 PM
+2016-08-25T15:49:56 - [Debug] - Configuration = 00:00:00.7697900
+2016-08-25T15:49:56 - [Debug] - Elaborator = 00:00:01.2037814
+2016-08-25T15:49:56 - [Debug] - Model check = 00:00:01.6926943
+2016-08-25T15:49:56 - [Debug] - ======================================================
+2016-08-25T15:49:56 - [Error] - CyPhy2Modelica 2.0 failed! See error messages above.
+2016-08-25T15:49:58 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:49:59 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:49:58 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:49:59 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:49:59 - [Debug] - Configuration : OK
+2016-08-25T15:49:59 - [Info] - DC__Spacecraft_cfg3 [TestBench]
+2016-08-25T15:49:59 - [Debug] - Found originalDesignName DC__Spacecraft_cfg3
+2016-08-25T15:49:59 - [Debug] - Elaborating model...
+2016-08-25T15:49:59 - [Debug] - Elaboration is done.
+2016-08-25T15:49:59 - [Debug] - Elaborator : OK
+2016-08-25T15:49:59 - [Debug] - Checking rules...
+2016-08-25T15:49:59 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:49:59 - [Warning] - Involved Objects : 
+2016-08-25T15:49:59 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:49:59 - [Failed] - Redundant connection between targetAttitude__y<=>angle_setpoint__i within attitudeScenario
+2016-08-25T15:49:59 - [Failed] - Involved Objects : 
+2016-08-25T15:49:59 - [Failed] - [ <a href="mga:id-0067-0000868e">attitudeScenario</a> ]
+2016-08-25T15:50:00 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:50:00 - [Warning] - Involved Objects : 
+2016-08-25T15:50:00 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:50:00 - [Failed] - Redundant connection between angle_setpoint__i<=>targetAttitude__y within DC_Spacecraft
+2016-08-25T15:50:00 - [Failed] - Involved Objects : 
+2016-08-25T15:50:00 - [Failed] - [ <a href="mga:id-0067-000082eb">DC_Spacecraft</a> ]
+2016-08-25T15:50:00 - [Error] - Errors: 2, Warnings: 2, Successes : 762
+2016-08-25T15:50:00 - [Error] - Model check : FAILED
+2016-08-25T15:50:00 - [Debug] - ======================================================
+2016-08-25T15:50:00 - [Debug] - Start time: 8/25/2016 3:49:58 PM
+2016-08-25T15:50:00 - [Debug] - Configuration = 00:00:00.7813578
+2016-08-25T15:50:00 - [Debug] - Elaborator = 00:00:01.1907871
+2016-08-25T15:50:00 - [Debug] - Model check = 00:00:01.6290375
+2016-08-25T15:50:00 - [Debug] - ======================================================
+2016-08-25T15:50:00 - [Error] - CyPhy2Modelica 2.0 failed! See error messages above.
+2016-08-25T15:53:18 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:53:19 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:53:18 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:53:19 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:53:19 - [Debug] - Configuration : OK
+2016-08-25T15:53:19 - [Info] - DC__Spacecraft_cfg1 [TestBench]
+2016-08-25T15:53:19 - [Debug] - Found originalDesignName DC__Spacecraft_cfg1
+2016-08-25T15:53:19 - [Debug] - Elaborating model...
+2016-08-25T15:53:20 - [Debug] - Elaboration is done.
+2016-08-25T15:53:20 - [Debug] - Elaborator : OK
+2016-08-25T15:53:20 - [Debug] - Checking rules...
+2016-08-25T15:53:20 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:53:20 - [Warning] - Involved Objects : 
+2016-08-25T15:53:20 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:53:20 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:53:20 - [Warning] - Involved Objects : 
+2016-08-25T15:53:20 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:53:20 - [Warning] - Errors: 0, Warnings: 2, Successes : 772
+2016-08-25T15:53:20 - [Debug] - Model check : OK
+2016-08-25T15:53:20 - [Debug] - Modelica model was not found for component: RootFolder/Testing/DynamicsSim/PowerAnalysis_DC TemporaryFolder/DC__Spacecraft_cfg1/DC_Spacecraft/Antenna
+2016-08-25T15:53:20 - [Debug] - <b>DC_Spacecraft</b>
+2016-08-25T15:53:20 - [Debug] - <b>- NewDC__Solar_Panels_3B__Solar_Panels_2B</b>
+2016-08-25T15:53:20 - [Debug] - <b>- NewDC__Solar_Panels_3A__Solar_Panels_2A</b>
+2016-08-25T15:53:20 - [Debug] - <b>- Cargo_Module</b>
+2016-08-25T15:53:20 - [Debug] - <b>- Shelf2</b>
+2016-08-25T15:53:20 - [Debug] - - Antenna
+2016-08-25T15:53:20 - [Debug] - <b>- Base_Module_Frame</b>
+2016-08-25T15:53:20 - [Debug] - <b>- Shelf1</b>
+2016-08-25T15:53:20 - [Debug] - <b>- Gyroscope_Momentum_Control</b>
+2016-08-25T15:53:20 - [Debug] - <b>- Shelf3</b>
+2016-08-25T15:53:20 - [Debug] - <b>- attitudeScenario</b>
+2016-08-25T15:53:20 - [Debug] - <b>- Battery</b>
+2016-08-25T15:53:20 - [Debug] - <b>- Computer</b>
+2016-08-25T15:53:20 - [Debug] - Solver settings being used:
+2016-08-25T15:53:20 - [Debug] - - [Dymola] Solver: dassl
+2016-08-25T15:53:20 - [Debug] - - [OpenModelica] Solver: dassl
+2016-08-25T15:53:20 - [Debug] - - Tool selection for JobManager: OpenModelica__latest_
+2016-08-25T15:53:20 - [Debug] - - Start time: 0
+2016-08-25T15:53:20 - [Debug] - - Stop time: 10000
+2016-08-25T15:53:20 - [Warning] - Component 'Antenna' inside 'DC_Spacecraft' does not contain any dynamic models, it will not be generated.
+2016-08-25T15:53:20 - [Debug] - Trying to get svn info for C:\Work\SatExample\CyPhy_Model\ModelicaLib.
+2016-08-25T15:53:20 - [Debug] - svn command line tools not installed
+2016-08-25T15:53:20 - [Debug] - Modelica translation : OK
+2016-08-25T15:53:20 - [Debug] - Copied library from C:\Work\SatExample\CyPhy_Model\ModelicaLib\TbLib.mo to C:\Work\SatExample\CyPhy_Model\results\gs12miyr\Libraries\TbLib.mo
+2016-08-25T15:53:20 - [Debug] - Script generation : OK
+2016-08-25T15:53:21 - [Debug] - ======================================================
+2016-08-25T15:53:21 - [Debug] - Start time: 8/25/2016 3:53:16 PM
+2016-08-25T15:53:21 - [Debug] - Configuration = 00:00:02.9376545
+2016-08-25T15:53:21 - [Debug] - Elaborator = 00:00:03.4221016
+2016-08-25T15:53:21 - [Debug] - Model check = 00:00:03.8641840
+2016-08-25T15:53:21 - [Debug] - Modelica translation = 00:00:03.9863912
+2016-08-25T15:53:21 - [Debug] - Script generation = 00:00:04.0176479
+2016-08-25T15:53:21 - [Debug] - ======================================================
+2016-08-25T15:53:21 - [Info] - CyPhy2Modelica 2.0 finished successfully.
+2016-08-25T15:53:21 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\gs12miyr" target="_blank">C:\Work\SatExample\CyPhy_Model\results\gs12miyr</a>
+2016-08-25T15:53:21 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]
+2016-08-25T15:53:23 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:53:25 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:53:23 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:53:25 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:53:25 - [Debug] - Configuration : OK
+2016-08-25T15:53:25 - [Info] - DC__Spacecraft_cfg2 [TestBench]
+2016-08-25T15:53:25 - [Debug] - Found originalDesignName DC__Spacecraft_cfg2
+2016-08-25T15:53:25 - [Debug] - Elaborating model...
+2016-08-25T15:53:25 - [Debug] - Elaboration is done.
+2016-08-25T15:53:25 - [Debug] - Elaborator : OK
+2016-08-25T15:53:25 - [Debug] - Checking rules...
+2016-08-25T15:53:25 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:53:25 - [Warning] - Involved Objects : 
+2016-08-25T15:53:25 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:53:25 - [Failed] - Redundant connection between targetAttitude__y<=>angle_setpoint__i within attitudeScenario
+2016-08-25T15:53:25 - [Failed] - Involved Objects : 
+2016-08-25T15:53:25 - [Failed] - [ <a href="mga:id-0067-000085e9">attitudeScenario</a> ]
+2016-08-25T15:53:25 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:53:25 - [Warning] - Involved Objects : 
+2016-08-25T15:53:25 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:53:26 - [Failed] - Redundant connection between angle_setpoint__i<=>targetAttitude__y within DC_Spacecraft
+2016-08-25T15:53:26 - [Failed] - Involved Objects : 
+2016-08-25T15:53:26 - [Failed] - [ <a href="mga:id-0067-000082eb">DC_Spacecraft</a> ]
+2016-08-25T15:53:26 - [Error] - Errors: 2, Warnings: 2, Successes : 762
+2016-08-25T15:53:26 - [Error] - Model check : FAILED
+2016-08-25T15:53:27 - [Debug] - ======================================================
+2016-08-25T15:53:27 - [Debug] - Start time: 8/25/2016 3:53:23 PM
+2016-08-25T15:53:27 - [Debug] - Configuration = 00:00:01.5526230
+2016-08-25T15:53:27 - [Debug] - Elaborator = 00:00:02.0741066
+2016-08-25T15:53:27 - [Debug] - Model check = 00:00:02.6341856
+2016-08-25T15:53:27 - [Debug] - ======================================================
+2016-08-25T15:53:27 - [Error] - CyPhy2Modelica 2.0 failed! See error messages above.
+2016-08-25T15:53:29 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:53:30 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:53:29 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:53:30 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:53:30 - [Debug] - Configuration : OK
+2016-08-25T15:53:30 - [Info] - DC__Spacecraft_cfg3 [TestBench]
+2016-08-25T15:53:30 - [Debug] - Found originalDesignName DC__Spacecraft_cfg3
+2016-08-25T15:53:30 - [Debug] - Elaborating model...
+2016-08-25T15:53:31 - [Debug] - Elaboration is done.
+2016-08-25T15:53:31 - [Debug] - Elaborator : OK
+2016-08-25T15:53:31 - [Debug] - Checking rules...
+2016-08-25T15:53:31 - [Failed] - Redundant connection between angle_setpoint__i<=>targetAttitude__y within DC_Spacecraft
+2016-08-25T15:53:31 - [Failed] - Involved Objects : 
+2016-08-25T15:53:31 - [Failed] - [ <a href="mga:id-0067-000082eb">DC_Spacecraft</a> ]
+2016-08-25T15:53:31 - [Failed] - Redundant connection between targetAttitude__y<=>angle_setpoint__i within attitudeScenario
+2016-08-25T15:53:31 - [Failed] - Involved Objects : 
+2016-08-25T15:53:31 - [Failed] - [ <a href="mga:id-0067-0000868e">attitudeScenario</a> ]
+2016-08-25T15:53:31 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:53:31 - [Warning] - Involved Objects : 
+2016-08-25T15:53:31 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:53:31 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:53:31 - [Warning] - Involved Objects : 
+2016-08-25T15:53:31 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:53:31 - [Error] - Errors: 2, Warnings: 2, Successes : 762
+2016-08-25T15:53:31 - [Error] - Model check : FAILED
+2016-08-25T15:53:32 - [Debug] - ======================================================
+2016-08-25T15:53:32 - [Debug] - Start time: 8/25/2016 3:53:29 PM
+2016-08-25T15:53:32 - [Debug] - Configuration = 00:00:01.3177303
+2016-08-25T15:53:32 - [Debug] - Elaborator = 00:00:01.8265663
+2016-08-25T15:53:32 - [Debug] - Model check = 00:00:02.3045616
+2016-08-25T15:53:32 - [Debug] - ======================================================
+2016-08-25T15:53:32 - [Error] - CyPhy2Modelica 2.0 failed! See error messages above.
+2016-08-25T15:56:19 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:56:20 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:56:19 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:56:20 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:56:20 - [Debug] - Configuration : OK
+2016-08-25T15:56:20 - [Info] - DC__Spacecraft_cfg1 [TestBench]
+2016-08-25T15:56:20 - [Debug] - Found originalDesignName DC__Spacecraft_cfg1
+2016-08-25T15:56:20 - [Debug] - Elaborating model...
+2016-08-25T15:56:20 - [Debug] - Elaboration is done.
+2016-08-25T15:56:20 - [Debug] - Elaborator : OK
+2016-08-25T15:56:20 - [Debug] - Checking rules...
+2016-08-25T15:56:20 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:56:20 - [Warning] - Involved Objects : 
+2016-08-25T15:56:20 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:56:21 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:56:21 - [Warning] - Involved Objects : 
+2016-08-25T15:56:21 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:56:21 - [Warning] - Errors: 0, Warnings: 2, Successes : 764
+2016-08-25T15:56:21 - [Debug] - Model check : OK
+2016-08-25T15:56:21 - [Debug] - Modelica model was not found for component: RootFolder/Testing/DynamicsSim/PowerAnalysis_DC TemporaryFolder/DC__Spacecraft_cfg1/DC_Spacecraft/Antenna
+2016-08-25T15:56:21 - [Debug] - <b>DC_Spacecraft</b>
+2016-08-25T15:56:21 - [Debug] - <b>- Computer</b>
+2016-08-25T15:56:21 - [Debug] - <b>- Shelf2</b>
+2016-08-25T15:56:21 - [Debug] - <b>- Shelf1</b>
+2016-08-25T15:56:21 - [Debug] - <b>- Battery</b>
+2016-08-25T15:56:21 - [Debug] - <b>- Cargo_Module</b>
+2016-08-25T15:56:21 - [Debug] - <b>- Base_Module_Frame</b>
+2016-08-25T15:56:21 - [Debug] - <b>- attitudeScenario</b>
+2016-08-25T15:56:21 - [Debug] - <b>- Gyroscope_Momentum_Control</b>
+2016-08-25T15:56:21 - [Debug] - <b>- Shelf3</b>
+2016-08-25T15:56:21 - [Debug] - - Antenna
+2016-08-25T15:56:21 - [Debug] - <b>- NewDC__Solar_Panels_3A__Solar_Panels_4A</b>
+2016-08-25T15:56:21 - [Debug] - <b>- NewDC__Solar_Panels_3B__Solar_Panels_4B</b>
+2016-08-25T15:56:21 - [Debug] - Solver settings being used:
+2016-08-25T15:56:21 - [Debug] - - [Dymola] Solver: dassl
+2016-08-25T15:56:21 - [Debug] - - [OpenModelica] Solver: dassl
+2016-08-25T15:56:21 - [Debug] - - Tool selection for JobManager: OpenModelica__latest_
+2016-08-25T15:56:21 - [Debug] - - Start time: 0
+2016-08-25T15:56:21 - [Debug] - - Stop time: 10000
+2016-08-25T15:56:21 - [Warning] - Component 'Antenna' inside 'DC_Spacecraft' does not contain any dynamic models, it will not be generated.
+2016-08-25T15:56:21 - [Debug] - Trying to get svn info for C:\Work\SatExample\CyPhy_Model\ModelicaLib.
+2016-08-25T15:56:21 - [Debug] - svn command line tools not installed
+2016-08-25T15:56:21 - [Debug] - Modelica translation : OK
+2016-08-25T15:56:21 - [Debug] - Copied library from C:\Work\SatExample\CyPhy_Model\ModelicaLib\TbLib.mo to C:\Work\SatExample\CyPhy_Model\results\lipcmcle\Libraries\TbLib.mo
+2016-08-25T15:56:21 - [Debug] - Script generation : OK
+2016-08-25T15:56:22 - [Debug] - ======================================================
+2016-08-25T15:56:22 - [Debug] - Start time: 8/25/2016 3:56:14 PM
+2016-08-25T15:56:22 - [Debug] - Configuration = 00:00:06.2654505
+2016-08-25T15:56:22 - [Debug] - Elaborator = 00:00:06.7690155
+2016-08-25T15:56:22 - [Debug] - Model check = 00:00:07.2693062
+2016-08-25T15:56:22 - [Debug] - Modelica translation = 00:00:07.4224273
+2016-08-25T15:56:22 - [Debug] - Script generation = 00:00:07.4380561
+2016-08-25T15:56:22 - [Debug] - ======================================================
+2016-08-25T15:56:22 - [Info] - CyPhy2Modelica 2.0 finished successfully.
+2016-08-25T15:56:22 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\lipcmcle" target="_blank">C:\Work\SatExample\CyPhy_Model\results\lipcmcle</a>
+2016-08-25T15:56:22 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]
+2016-08-25T15:56:25 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:56:26 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:56:25 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:56:26 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:56:26 - [Debug] - Configuration : OK
+2016-08-25T15:56:26 - [Info] - DC__Spacecraft_cfg2 [TestBench]
+2016-08-25T15:56:26 - [Debug] - Found originalDesignName DC__Spacecraft_cfg2
+2016-08-25T15:56:26 - [Debug] - Elaborating model...
+2016-08-25T15:56:27 - [Debug] - Elaboration is done.
+2016-08-25T15:56:27 - [Debug] - Elaborator : OK
+2016-08-25T15:56:27 - [Debug] - Checking rules...
+2016-08-25T15:56:27 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:56:27 - [Warning] - Involved Objects : 
+2016-08-25T15:56:27 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:56:27 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:56:27 - [Warning] - Involved Objects : 
+2016-08-25T15:56:27 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:56:28 - [Warning] - Errors: 0, Warnings: 2, Successes : 764
+2016-08-25T15:56:28 - [Debug] - Model check : OK
+2016-08-25T15:56:28 - [Debug] - Modelica model was not found for component: RootFolder/Testing/DynamicsSim/PowerAnalysis_DC TemporaryFolder/DC__Spacecraft_cfg2/DC_Spacecraft/Antenna
+2016-08-25T15:56:28 - [Debug] - <b>DC_Spacecraft</b>
+2016-08-25T15:56:28 - [Debug] - <b>- NewDC__Solar_Panels_3A__Solar_Panels_3A</b>
+2016-08-25T15:56:28 - [Debug] - - Antenna
+2016-08-25T15:56:28 - [Debug] - <b>- Shelf2</b>
+2016-08-25T15:56:28 - [Debug] - <b>- Shelf1</b>
+2016-08-25T15:56:28 - [Debug] - <b>- Cargo_Module</b>
+2016-08-25T15:56:28 - [Debug] - <b>- NewDC__Solar_Panels_3B__Solar_Panels_3B</b>
+2016-08-25T15:56:28 - [Debug] - <b>- attitudeScenario</b>
+2016-08-25T15:56:28 - [Debug] - <b>- Gyroscope_Momentum_Control</b>
+2016-08-25T15:56:28 - [Debug] - <b>- Battery</b>
+2016-08-25T15:56:28 - [Debug] - <b>- Computer</b>
+2016-08-25T15:56:28 - [Debug] - <b>- Shelf3</b>
+2016-08-25T15:56:28 - [Debug] - <b>- Base_Module_Frame</b>
+2016-08-25T15:56:28 - [Debug] - Solver settings being used:
+2016-08-25T15:56:28 - [Debug] - - [Dymola] Solver: dassl
+2016-08-25T15:56:28 - [Debug] - - [OpenModelica] Solver: dassl
+2016-08-25T15:56:28 - [Debug] - - Tool selection for JobManager: OpenModelica__latest_
+2016-08-25T15:56:28 - [Debug] - - Start time: 0
+2016-08-25T15:56:28 - [Debug] - - Stop time: 10000
+2016-08-25T15:56:28 - [Warning] - Component 'Antenna' inside 'DC_Spacecraft' does not contain any dynamic models, it will not be generated.
+2016-08-25T15:56:28 - [Debug] - Trying to get svn info for C:\Work\SatExample\CyPhy_Model\ModelicaLib.
+2016-08-25T15:56:28 - [Debug] - svn command line tools not installed
+2016-08-25T15:56:28 - [Debug] - Modelica translation : OK
+2016-08-25T15:56:28 - [Debug] - Copied library from C:\Work\SatExample\CyPhy_Model\ModelicaLib\TbLib.mo to C:\Work\SatExample\CyPhy_Model\results\eqp0esay\Libraries\TbLib.mo
+2016-08-25T15:56:28 - [Debug] - Script generation : OK
+2016-08-25T15:56:29 - [Debug] - ======================================================
+2016-08-25T15:56:29 - [Debug] - Start time: 8/25/2016 3:56:25 PM
+2016-08-25T15:56:29 - [Debug] - Configuration = 00:00:01.3948701
+2016-08-25T15:56:29 - [Debug] - Elaborator = 00:00:01.9332489
+2016-08-25T15:56:29 - [Debug] - Model check = 00:00:02.5156357
+2016-08-25T15:56:29 - [Debug] - Modelica translation = 00:00:02.7127907
+2016-08-25T15:56:29 - [Debug] - Script generation = 00:00:02.7338498
+2016-08-25T15:56:29 - [Debug] - ======================================================
+2016-08-25T15:56:29 - [Info] - CyPhy2Modelica 2.0 finished successfully.
+2016-08-25T15:56:29 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\eqp0esay" target="_blank">C:\Work\SatExample\CyPhy_Model\results\eqp0esay</a>
+2016-08-25T15:56:29 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]
+2016-08-25T15:56:33 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T15:56:34 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 3:56:33 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T15:56:34 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T15:56:34 - [Debug] - Configuration : OK
+2016-08-25T15:56:34 - [Info] - DC__Spacecraft_cfg3 [TestBench]
+2016-08-25T15:56:34 - [Debug] - Found originalDesignName DC__Spacecraft_cfg3
+2016-08-25T15:56:34 - [Debug] - Elaborating model...
+2016-08-25T15:56:35 - [Debug] - Elaboration is done.
+2016-08-25T15:56:35 - [Debug] - Elaborator : OK
+2016-08-25T15:56:35 - [Debug] - Checking rules...
+2016-08-25T15:56:35 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T15:56:35 - [Warning] - Involved Objects : 
+2016-08-25T15:56:35 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T15:56:35 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T15:56:35 - [Warning] - Involved Objects : 
+2016-08-25T15:56:35 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T15:56:36 - [Warning] - Errors: 0, Warnings: 2, Successes : 772
+2016-08-25T15:56:36 - [Debug] - Model check : OK
+2016-08-25T15:56:36 - [Debug] - Modelica model was not found for component: RootFolder/Testing/DynamicsSim/PowerAnalysis_DC TemporaryFolder/DC__Spacecraft_cfg3/DC_Spacecraft/Antenna
+2016-08-25T15:56:36 - [Debug] - <b>DC_Spacecraft</b>
+2016-08-25T15:56:36 - [Debug] - <b>- Base_Module_Frame</b>
+2016-08-25T15:56:36 - [Debug] - - Antenna
+2016-08-25T15:56:36 - [Debug] - <b>- attitudeScenario</b>
+2016-08-25T15:56:36 - [Debug] - <b>- Computer</b>
+2016-08-25T15:56:36 - [Debug] - <b>- Shelf2</b>
+2016-08-25T15:56:36 - [Debug] - <b>- Gyroscope_Momentum_Control</b>
+2016-08-25T15:56:36 - [Debug] - <b>- Battery</b>
+2016-08-25T15:56:36 - [Debug] - <b>- Shelf3</b>
+2016-08-25T15:56:36 - [Debug] - <b>- NewDC__Solar_Panels_3B__Solar_Panels_2B</b>
+2016-08-25T15:56:36 - [Debug] - <b>- NewDC__Solar_Panels_3A__Solar_Panels_2A</b>
+2016-08-25T15:56:36 - [Debug] - <b>- Cargo_Module</b>
+2016-08-25T15:56:36 - [Debug] - <b>- Shelf1</b>
+2016-08-25T15:56:36 - [Debug] - Solver settings being used:
+2016-08-25T15:56:36 - [Debug] - - [Dymola] Solver: dassl
+2016-08-25T15:56:36 - [Debug] - - [OpenModelica] Solver: dassl
+2016-08-25T15:56:36 - [Debug] - - Tool selection for JobManager: OpenModelica__latest_
+2016-08-25T15:56:36 - [Debug] - - Start time: 0
+2016-08-25T15:56:36 - [Debug] - - Stop time: 10000
+2016-08-25T15:56:36 - [Warning] - Component 'Antenna' inside 'DC_Spacecraft' does not contain any dynamic models, it will not be generated.
+2016-08-25T15:56:36 - [Debug] - Trying to get svn info for C:\Work\SatExample\CyPhy_Model\ModelicaLib.
+2016-08-25T15:56:36 - [Debug] - svn command line tools not installed
+2016-08-25T15:56:36 - [Debug] - Modelica translation : OK
+2016-08-25T15:56:36 - [Debug] - Copied library from C:\Work\SatExample\CyPhy_Model\ModelicaLib\TbLib.mo to C:\Work\SatExample\CyPhy_Model\results\etjegdwd\Libraries\TbLib.mo
+2016-08-25T15:56:36 - [Debug] - Script generation : OK
+2016-08-25T15:56:37 - [Debug] - ======================================================
+2016-08-25T15:56:37 - [Debug] - Start time: 8/25/2016 3:56:33 PM
+2016-08-25T15:56:37 - [Debug] - Configuration = 00:00:01.4850153
+2016-08-25T15:56:37 - [Debug] - Elaborator = 00:00:02.0346067
+2016-08-25T15:56:37 - [Debug] - Model check = 00:00:02.7350102
+2016-08-25T15:56:37 - [Debug] - Modelica translation = 00:00:02.9099176
+2016-08-25T15:56:37 - [Debug] - Script generation = 00:00:02.9339852
+2016-08-25T15:56:37 - [Debug] - ======================================================
+2016-08-25T15:56:37 - [Info] - CyPhy2Modelica 2.0 finished successfully.
+2016-08-25T15:56:37 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\etjegdwd" target="_blank">C:\Work\SatExample\CyPhy_Model\results\etjegdwd</a>
+2016-08-25T15:56:37 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]
+2016-08-25T16:38:09 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T16:38:09 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 4:38:09 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T16:38:09 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T16:38:09 - [Debug] - Configuration : OK
+2016-08-25T16:38:09 - [Info] - DC__Spacecraft_cfg1 [TestBench]
+2016-08-25T16:38:09 - [Debug] - Found originalDesignName DC__Spacecraft_cfg1
+2016-08-25T16:38:09 - [Debug] - Elaborating model...
+2016-08-25T16:38:09 - [Debug] - Elaboration is done.
+2016-08-25T16:38:09 - [Debug] - Elaborator : OK
+2016-08-25T16:38:09 - [Debug] - Checking rules...
+2016-08-25T16:38:10 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T16:38:10 - [Warning] - Involved Objects : 
+2016-08-25T16:38:10 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T16:38:10 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T16:38:10 - [Warning] - Involved Objects : 
+2016-08-25T16:38:10 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T16:38:10 - [Warning] - Errors: 0, Warnings: 2, Successes : 764
+2016-08-25T16:38:10 - [Debug] - Model check : OK
+2016-08-25T16:38:10 - [Debug] - Modelica model was not found for component: RootFolder/Testing/DynamicsSim/PowerAnalysis_DesignSpace TemporaryFolder/DC__Spacecraft_cfg1/DC_Spacecraft/Antenna
+2016-08-25T16:38:10 - [Debug] - <b>DC_Spacecraft</b>
+2016-08-25T16:38:10 - [Debug] - <b>- NewDC__Solar_Panels_3A__Solar_Panels_4A</b>
+2016-08-25T16:38:10 - [Debug] - - Antenna
+2016-08-25T16:38:10 - [Debug] - <b>- Cargo_Module</b>
+2016-08-25T16:38:10 - [Debug] - <b>- NewDC__Solar_Panels_3B__Solar_Panels_4B</b>
+2016-08-25T16:38:10 - [Debug] - <b>- Shelf2</b>
+2016-08-25T16:38:10 - [Debug] - <b>- Base_Module_Frame</b>
+2016-08-25T16:38:10 - [Debug] - <b>- Shelf1</b>
+2016-08-25T16:38:10 - [Debug] - <b>- attitudeScenario</b>
+2016-08-25T16:38:10 - [Debug] - <b>- Battery</b>
+2016-08-25T16:38:10 - [Debug] - <b>- Gyroscope_Momentum_Control</b>
+2016-08-25T16:38:10 - [Debug] - <b>- Computer</b>
+2016-08-25T16:38:10 - [Debug] - <b>- Shelf3</b>
+2016-08-25T16:38:10 - [Debug] - Solver settings being used:
+2016-08-25T16:38:10 - [Debug] - - [Dymola] Solver: dassl
+2016-08-25T16:38:10 - [Debug] - - [OpenModelica] Solver: dassl
+2016-08-25T16:38:10 - [Debug] - - Tool selection for JobManager: OpenModelica__latest_
+2016-08-25T16:38:10 - [Debug] - - Start time: 0
+2016-08-25T16:38:10 - [Debug] - - Stop time: 10000
+2016-08-25T16:38:10 - [Warning] - Component 'Antenna' inside 'DC_Spacecraft' does not contain any dynamic models, it will not be generated.
+2016-08-25T16:38:10 - [Debug] - Trying to get svn info for C:\Work\SatExample\CyPhy_Model\ModelicaLib.
+2016-08-25T16:38:10 - [Debug] - svn command line tools not installed
+2016-08-25T16:38:10 - [Debug] - Modelica translation : OK
+2016-08-25T16:38:10 - [Debug] - Copied library from C:\Work\SatExample\CyPhy_Model\ModelicaLib\TbLib.mo to C:\Work\SatExample\CyPhy_Model\results\j3am5pny\TestBench_Dynamics\Libraries\TbLib.mo
+2016-08-25T16:38:10 - [Debug] - Script generation : OK
+2016-08-25T16:38:11 - [Debug] - ======================================================
+2016-08-25T16:38:11 - [Debug] - Start time: 8/25/2016 4:38:09 PM
+2016-08-25T16:38:11 - [Debug] - Configuration = 00:00:00.1471715
+2016-08-25T16:38:11 - [Debug] - Elaborator = 00:00:00.5559819
+2016-08-25T16:38:11 - [Debug] - Model check = 00:00:01.0186647
+2016-08-25T16:38:11 - [Debug] - Modelica translation = 00:00:01.1567186
+2016-08-25T16:38:11 - [Debug] - Script generation = 00:00:01.1879846
+2016-08-25T16:38:11 - [Debug] - ======================================================
+2016-08-25T16:38:11 - [Info] - CyPhy2Modelica 2.0 finished successfully.
+2016-08-25T16:38:11 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\j3am5pny\TestBench_Dynamics" target="_blank">C:\Work\SatExample\CyPhy_Model\results\j3am5pny\TestBench_Dynamics</a>
+2016-08-25T16:38:11 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]
+2016-08-25T16:38:18 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T16:38:18 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 4:38:18 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T16:38:18 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T16:38:18 - [Debug] - Configuration : OK
+2016-08-25T16:38:18 - [Info] - DC__Spacecraft_cfg2 [TestBench]
+2016-08-25T16:38:18 - [Debug] - Found originalDesignName DC__Spacecraft_cfg2
+2016-08-25T16:38:18 - [Debug] - Elaborating model...
+2016-08-25T16:38:19 - [Debug] - Elaboration is done.
+2016-08-25T16:38:19 - [Debug] - Elaborator : OK
+2016-08-25T16:38:19 - [Debug] - Checking rules...
+2016-08-25T16:38:19 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T16:38:19 - [Warning] - Involved Objects : 
+2016-08-25T16:38:19 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T16:38:19 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T16:38:19 - [Warning] - Involved Objects : 
+2016-08-25T16:38:19 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T16:38:19 - [Warning] - Errors: 0, Warnings: 2, Successes : 764
+2016-08-25T16:38:19 - [Debug] - Model check : OK
+2016-08-25T16:38:19 - [Debug] - Modelica model was not found for component: RootFolder/Testing/DynamicsSim/PowerAnalysis_DesignSpace TemporaryFolder/DC__Spacecraft_cfg2/DC_Spacecraft/Antenna
+2016-08-25T16:38:19 - [Debug] - <b>DC_Spacecraft</b>
+2016-08-25T16:38:19 - [Debug] - <b>- Cargo_Module</b>
+2016-08-25T16:38:19 - [Debug] - <b>- NewDC__Solar_Panels_3A__Solar_Panels_3A</b>
+2016-08-25T16:38:19 - [Debug] - <b>- NewDC__Solar_Panels_3B__Solar_Panels_3B</b>
+2016-08-25T16:38:19 - [Debug] - <b>- Base_Module_Frame</b>
+2016-08-25T16:38:19 - [Debug] - <b>- Shelf1</b>
+2016-08-25T16:38:19 - [Debug] - <b>- Gyroscope_Momentum_Control</b>
+2016-08-25T16:38:19 - [Debug] - <b>- attitudeScenario</b>
+2016-08-25T16:38:19 - [Debug] - <b>- Battery</b>
+2016-08-25T16:38:19 - [Debug] - - Antenna
+2016-08-25T16:38:19 - [Debug] - <b>- Shelf2</b>
+2016-08-25T16:38:19 - [Debug] - <b>- Shelf3</b>
+2016-08-25T16:38:19 - [Debug] - <b>- Computer</b>
+2016-08-25T16:38:19 - [Debug] - Solver settings being used:
+2016-08-25T16:38:19 - [Debug] - - [Dymola] Solver: dassl
+2016-08-25T16:38:19 - [Debug] - - [OpenModelica] Solver: dassl
+2016-08-25T16:38:19 - [Debug] - - Tool selection for JobManager: OpenModelica__latest_
+2016-08-25T16:38:19 - [Debug] - - Start time: 0
+2016-08-25T16:38:19 - [Debug] - - Stop time: 10000
+2016-08-25T16:38:19 - [Warning] - Component 'Antenna' inside 'DC_Spacecraft' does not contain any dynamic models, it will not be generated.
+2016-08-25T16:38:19 - [Debug] - Trying to get svn info for C:\Work\SatExample\CyPhy_Model\ModelicaLib.
+2016-08-25T16:38:19 - [Debug] - svn command line tools not installed
+2016-08-25T16:38:20 - [Debug] - Modelica translation : OK
+2016-08-25T16:38:20 - [Debug] - Copied library from C:\Work\SatExample\CyPhy_Model\ModelicaLib\TbLib.mo to C:\Work\SatExample\CyPhy_Model\results\e2rjw2de\TestBench_Dynamics\Libraries\TbLib.mo
+2016-08-25T16:38:20 - [Debug] - Script generation : OK
+2016-08-25T16:38:21 - [Debug] - ======================================================
+2016-08-25T16:38:21 - [Debug] - Start time: 8/25/2016 4:38:18 PM
+2016-08-25T16:38:21 - [Debug] - Configuration = 00:00:00.2005574
+2016-08-25T16:38:21 - [Debug] - Elaborator = 00:00:00.6165624
+2016-08-25T16:38:21 - [Debug] - Model check = 00:00:01.3545636
+2016-08-25T16:38:21 - [Debug] - Modelica translation = 00:00:01.5571012
+2016-08-25T16:38:21 - [Debug] - Script generation = 00:00:01.6518540
+2016-08-25T16:38:21 - [Debug] - ======================================================
+2016-08-25T16:38:21 - [Info] - CyPhy2Modelica 2.0 finished successfully.
+2016-08-25T16:38:21 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\e2rjw2de\TestBench_Dynamics" target="_blank">C:\Work\SatExample\CyPhy_Model\results\e2rjw2de\TestBench_Dynamics</a>
+2016-08-25T16:38:21 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]
+2016-08-25T16:38:29 - [Info] - Running CyPhy2Modelica 2.0
+2016-08-25T16:38:29 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 4:38:29 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T16:38:29 - [Debug] - Components not used in this design will not be generated in the Modelica Package. Use verbose console to enable this option.
+2016-08-25T16:38:29 - [Debug] - Configuration : OK
+2016-08-25T16:38:29 - [Info] - DC__Spacecraft_cfg3 [TestBench]
+2016-08-25T16:38:29 - [Debug] - Found originalDesignName DC__Spacecraft_cfg3
+2016-08-25T16:38:29 - [Debug] - Elaborating model...
+2016-08-25T16:38:30 - [Debug] - Elaboration is done.
+2016-08-25T16:38:30 - [Debug] - Elaborator : OK
+2016-08-25T16:38:30 - [Debug] - Checking rules...
+2016-08-25T16:38:30 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Computers_Mount__v.
+2016-08-25T16:38:30 - [Warning] - Involved Objects : 
+2016-08-25T16:38:30 - [Warning] - [ <a href="mga:id-0065-00007d9f">v</a> ]
+2016-08-25T16:38:30 - [Warning] - ModelicaConnector should have at least 1 connection! This ModelicaConnector will not be generated. Batteries_Mount__v.
+2016-08-25T16:38:30 - [Warning] - Involved Objects : 
+2016-08-25T16:38:30 - [Warning] - [ <a href="mga:id-0065-00007da2">v</a> ]
+2016-08-25T16:38:30 - [Warning] - Errors: 0, Warnings: 2, Successes : 772
+2016-08-25T16:38:30 - [Debug] - Model check : OK
+2016-08-25T16:38:30 - [Debug] - Modelica model was not found for component: RootFolder/Testing/DynamicsSim/PowerAnalysis_DesignSpace TemporaryFolder/DC__Spacecraft_cfg3/DC_Spacecraft/Antenna
+2016-08-25T16:38:30 - [Debug] - <b>DC_Spacecraft</b>
+2016-08-25T16:38:30 - [Debug] - <b>- Gyroscope_Momentum_Control</b>
+2016-08-25T16:38:30 - [Debug] - <b>- attitudeScenario</b>
+2016-08-25T16:38:30 - [Debug] - <b>- Computer</b>
+2016-08-25T16:38:30 - [Debug] - <b>- NewDC__Solar_Panels_3B__Solar_Panels_2B</b>
+2016-08-25T16:38:30 - [Debug] - <b>- NewDC__Solar_Panels_3A__Solar_Panels_2A</b>
+2016-08-25T16:38:30 - [Debug] - <b>- Cargo_Module</b>
+2016-08-25T16:38:30 - [Debug] - - Antenna
+2016-08-25T16:38:30 - [Debug] - <b>- Base_Module_Frame</b>
+2016-08-25T16:38:30 - [Debug] - <b>- Shelf1</b>
+2016-08-25T16:38:30 - [Debug] - <b>- Shelf3</b>
+2016-08-25T16:38:30 - [Debug] - <b>- Battery</b>
+2016-08-25T16:38:30 - [Debug] - <b>- Shelf2</b>
+2016-08-25T16:38:30 - [Debug] - Solver settings being used:
+2016-08-25T16:38:30 - [Debug] - - [Dymola] Solver: dassl
+2016-08-25T16:38:30 - [Debug] - - [OpenModelica] Solver: dassl
+2016-08-25T16:38:30 - [Debug] - - Tool selection for JobManager: OpenModelica__latest_
+2016-08-25T16:38:30 - [Debug] - - Start time: 0
+2016-08-25T16:38:30 - [Debug] - - Stop time: 10000
+2016-08-25T16:38:31 - [Warning] - Component 'Antenna' inside 'DC_Spacecraft' does not contain any dynamic models, it will not be generated.
+2016-08-25T16:38:31 - [Debug] - Trying to get svn info for C:\Work\SatExample\CyPhy_Model\ModelicaLib.
+2016-08-25T16:38:31 - [Debug] - svn command line tools not installed
+2016-08-25T16:38:31 - [Debug] - Modelica translation : OK
+2016-08-25T16:38:31 - [Debug] - Copied library from C:\Work\SatExample\CyPhy_Model\ModelicaLib\TbLib.mo to C:\Work\SatExample\CyPhy_Model\results\uydq2oaw\TestBench_Dynamics\Libraries\TbLib.mo
+2016-08-25T16:38:31 - [Debug] - Script generation : OK
+2016-08-25T16:38:32 - [Debug] - ======================================================
+2016-08-25T16:38:32 - [Debug] - Start time: 8/25/2016 4:38:29 PM
+2016-08-25T16:38:32 - [Debug] - Configuration = 00:00:00.2662068
+2016-08-25T16:38:32 - [Debug] - Elaborator = 00:00:00.7011974
+2016-08-25T16:38:32 - [Debug] - Model check = 00:00:01.3495012
+2016-08-25T16:38:32 - [Debug] - Modelica translation = 00:00:01.5264716
+2016-08-25T16:38:32 - [Debug] - Script generation = 00:00:01.5490321
+2016-08-25T16:38:32 - [Debug] - ======================================================
+2016-08-25T16:38:32 - [Info] - CyPhy2Modelica 2.0 finished successfully.
+2016-08-25T16:38:32 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\uydq2oaw\TestBench_Dynamics" target="_blank">C:\Work\SatExample\CyPhy_Model\results\uydq2oaw\TestBench_Dynamics</a>
+2016-08-25T16:38:32 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]

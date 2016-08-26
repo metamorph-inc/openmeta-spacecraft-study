@@ -1,0 +1,183 @@
+2016-08-25T16:38:06 - [Info] - Running CyPhyPET
+2016-08-25T16:38:07 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 4:38:06 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T16:38:09 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 4:38:07 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T16:38:09 - [Debug] - Configuration : OK
+2016-08-25T16:38:09 - [Info] - DC__Spacecraft_cfg1 [ParametricExploration]
+2016-08-25T16:38:09 - [Debug] - Checking rules...
+2016-08-25T16:38:09 - [Success] - <a href="mga:id-0065-00009318">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg1 (not mapped)</a> : OneAndOnlyOneDriver - There should be one and only one driver.
+2016-08-25T16:38:09 - [Success] - <a href="mga:id-0065-00009318">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg1 (not mapped)</a> : UniqueTestBenchRefNames - TestBenchReferences should have unique names
+2016-08-25T16:38:09 - [Success] - <a href="mga:id-0067-00008ac6">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg1/ExtractModelProps (not mapped)</a> : TestBenchCorrectlySetUp - Basic rules for the test-bench reference checked.
+2016-08-25T16:38:09 - [Success] - <a href="mga:id-0065-00009319">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg1/ParameterStudy (not mapped)</a> : ParameterStudySetUpCorrectly - Checks rules for a ParameterStudy
+2016-08-25T16:38:09 - [Success] - <a href="mga:id-0067-00008ab7">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg1/Dynamics (not mapped)</a> : TestBenchCorrectlySetUp - Basic rules for the test-bench reference checked.
+2016-08-25T16:38:09 - [Debug] - PET check : OK
+2016-08-25T16:38:09 - [Debug] - Errors: 0, Warnings: 0, Successes : 5
+2016-08-25T16:38:11 - [Debug] - Interpreter successful :  : OK
+2016-08-25T16:38:12 - [Debug] - Interpreter successful :  : OK
+2016-08-25T16:38:13 - [Debug] - ======================================================
+2016-08-25T16:38:13 - [Debug] - Start time: 8/25/2016 4:38:03 PM
+2016-08-25T16:38:13 - [Debug] - Configuration = 00:00:05.3651263
+2016-08-25T16:38:13 - [Debug] - PET check = 00:00:05.4029330
+2016-08-25T16:38:13 - [Debug] - Interpreter successful :  = 00:00:07.8613622
+2016-08-25T16:38:13 - [Debug] - Interpreter successful :  = 00:00:08.3619788
+2016-08-25T16:38:13 - [Debug] - ======================================================
+2016-08-25T16:38:13 - [Info] - CyPhyPET finished successfully.
+2016-08-25T16:38:13 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\j3am5pny" target="_blank">C:\Work\SatExample\CyPhy_Model\results\j3am5pny</a>
+2016-08-25T16:38:13 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]
+2016-08-25T16:38:15 - [Info] - Running CyPhyPET
+2016-08-25T16:38:16 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 4:38:15 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T16:38:18 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 4:38:16 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T16:38:18 - [Debug] - Configuration : OK
+2016-08-25T16:38:18 - [Info] - DC__Spacecraft_cfg2 [ParametricExploration]
+2016-08-25T16:38:18 - [Debug] - Checking rules...
+2016-08-25T16:38:18 - [Success] - <a href="mga:id-0065-00009469">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg2 (not mapped)</a> : OneAndOnlyOneDriver - There should be one and only one driver.
+2016-08-25T16:38:18 - [Success] - <a href="mga:id-0065-00009469">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg2 (not mapped)</a> : UniqueTestBenchRefNames - TestBenchReferences should have unique names
+2016-08-25T16:38:18 - [Success] - <a href="mga:id-0067-00008b61">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg2/ExtractModelProps (not mapped)</a> : TestBenchCorrectlySetUp - Basic rules for the test-bench reference checked.
+2016-08-25T16:38:18 - [Success] - <a href="mga:id-0065-0000946a">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg2/ParameterStudy (not mapped)</a> : ParameterStudySetUpCorrectly - Checks rules for a ParameterStudy
+2016-08-25T16:38:18 - [Success] - <a href="mga:id-0067-00008b52">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg2/Dynamics (not mapped)</a> : TestBenchCorrectlySetUp - Basic rules for the test-bench reference checked.
+2016-08-25T16:38:18 - [Debug] - PET check : OK
+2016-08-25T16:38:18 - [Debug] - Errors: 0, Warnings: 0, Successes : 5
+2016-08-25T16:38:21 - [Debug] - Interpreter successful :  : OK
+2016-08-25T16:38:21 - [Debug] - Interpreter successful :  : OK
+2016-08-25T16:38:23 - [Debug] - ======================================================
+2016-08-25T16:38:23 - [Debug] - Start time: 8/25/2016 4:38:15 PM
+2016-08-25T16:38:23 - [Debug] - Configuration = 00:00:03.0579669
+2016-08-25T16:38:23 - [Debug] - PET check = 00:00:03.0735938
+2016-08-25T16:38:23 - [Debug] - Interpreter successful :  = 00:00:06.4048949
+2016-08-25T16:38:23 - [Debug] - Interpreter successful :  = 00:00:06.5580945
+2016-08-25T16:38:23 - [Debug] - ======================================================
+2016-08-25T16:38:23 - [Info] - CyPhyPET finished successfully.
+2016-08-25T16:38:23 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\e2rjw2de" target="_blank">C:\Work\SatExample\CyPhy_Model\results\e2rjw2de</a>
+2016-08-25T16:38:23 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]
+2016-08-25T16:38:25 - [Info] - Running CyPhyPET
+2016-08-25T16:38:27 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 4:38:25 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T16:38:29 - [Debug] - === HEADER ===================================================
+Date/Time:       8/25/2016 4:38:27 PM
+Windows Version: Microsoft Windows NT 6.2.9200.0
+x64 bit OS:      True
+GME version:     14.7.28.2144
+META version:    14.13.2554
+META install:    C:\Program Files (x86)\META\
+CyPhyML version: 14.13-t1
+CyPhyML GUID:    {72F42996-34FA-489B-B2DF-017E4AB67FEA}
+Python Dll:      UNKNOWN
+Python Exe:      "C:\Python27\python.exe" "%1" %*
+Python27 VE exe: C:\Program Files (x86)\META\bin\Python27\Scripts\python.exe
+PROE ISIS Ext. : C:\Program Files\META\Proe ISIS Extensions\bin\CADCreoParametricCreateAssembly.exe
+PROE ISIS ver. : CADCreoParametricCreateAssembly 1.5.3.0
+Username:        bapty
+Currently opened paradigm information
+  MetaName    : CyPhyML
+  MetaVersion : 14.13-t1
+
+2016-08-25T16:38:29 - [Debug] - Configuration : OK
+2016-08-25T16:38:29 - [Info] - DC__Spacecraft_cfg3 [ParametricExploration]
+2016-08-25T16:38:29 - [Debug] - Checking rules...
+2016-08-25T16:38:29 - [Success] - <a href="mga:id-0065-000095ba">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg3 (not mapped)</a> : OneAndOnlyOneDriver - There should be one and only one driver.
+2016-08-25T16:38:29 - [Success] - <a href="mga:id-0065-000095ba">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg3 (not mapped)</a> : UniqueTestBenchRefNames - TestBenchReferences should have unique names
+2016-08-25T16:38:29 - [Success] - <a href="mga:id-0067-00008bfc">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg3/ExtractModelProps (not mapped)</a> : TestBenchCorrectlySetUp - Basic rules for the test-bench reference checked.
+2016-08-25T16:38:29 - [Success] - <a href="mga:id-0065-000095bb">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg3/ParameterStudy (not mapped)</a> : ParameterStudySetUpCorrectly - Checks rules for a ParameterStudy
+2016-08-25T16:38:29 - [Success] - <a href="mga:id-0067-00008bed">RootFolder/Testing/ParametricExploration/PerformanceStudy TemporaryFolder/DC__Spacecraft_cfg3/Dynamics (not mapped)</a> : TestBenchCorrectlySetUp - Basic rules for the test-bench reference checked.
+2016-08-25T16:38:29 - [Debug] - PET check : OK
+2016-08-25T16:38:29 - [Debug] - Errors: 0, Warnings: 0, Successes : 5
+2016-08-25T16:38:32 - [Debug] - Interpreter successful :  : OK
+2016-08-25T16:38:33 - [Debug] - Interpreter successful :  : OK
+2016-08-25T16:38:34 - [Debug] - ======================================================
+2016-08-25T16:38:34 - [Debug] - Start time: 8/25/2016 4:38:25 PM
+2016-08-25T16:38:34 - [Debug] - Configuration = 00:00:03.8275979
+2016-08-25T16:38:34 - [Debug] - PET check = 00:00:03.8376235
+2016-08-25T16:38:34 - [Debug] - Interpreter successful :  = 00:00:07.1834331
+2016-08-25T16:38:34 - [Debug] - Interpreter successful :  = 00:00:07.4020151
+2016-08-25T16:38:34 - [Debug] - ======================================================
+2016-08-25T16:38:34 - [Info] - CyPhyPET finished successfully.
+2016-08-25T16:38:34 - [Info] - Generated files are here: <a href="file:///C:\Work\SatExample\CyPhy_Model\results\uydq2oaw" target="_blank">C:\Work\SatExample\CyPhy_Model\results\uydq2oaw</a>
+2016-08-25T16:38:34 - [Debug] - [SUCCESS: True, Labels: OpenModelica__latest_ && py_modelica14.13]

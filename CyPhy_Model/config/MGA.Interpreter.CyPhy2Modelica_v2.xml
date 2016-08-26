@@ -3,9 +3,7 @@
   <IncludeDirectoryPath>
     <string>ModelicaLib\TbLib.mo</string>
   </IncludeDirectoryPath>
-  <NonCheckedIncludeDirPaths>
-    <string>ModelicaLib\Modelica_EnergyStorages.mo</string>
-  </NonCheckedIncludeDirPaths>
+  <NonCheckedIncludeDirPaths />
   <CheckWithDymola>false</CheckWithDymola>
   <CheckWithOpenModelica>false</CheckWithOpenModelica>
   <GenerateConstrainedBys>false</GenerateConstrainedBys>

@@ -1,0 +1,90 @@
+{
+  "Status": "OK", 
+  "CopyTestResults": false, 
+  "Parameters": [
+    {
+      "Description": "", 
+      "DisplayedName": null, 
+      "GMEID": "id-0067-000009c6", 
+      "Value": "5.91E+10", 
+      "Range": "-inf..inf", 
+      "ID": "cbc5cdbe-dc03-45a3-9798-8f4385181ec9", 
+      "Unit": "", 
+      "Name": "inertia"
+    }, 
+    {
+      "Description": "", 
+      "DisplayedName": null, 
+      "GMEID": "id-0067-000009cc", 
+      "Value": "40.0", 
+      "Range": "-inf..inf", 
+      "ID": "87105ffd-4cba-4359-a6ea-bfdb660a82dd", 
+      "Unit": "", 
+      "Name": "Sdep"
+    }
+  ], 
+  "TierLevel": 0, 
+  "Artifacts": [], 
+  "VisualizationArtifacts": [], 
+  "DesignName": "DC__Spacecraft_cfg2", 
+  "Metrics": [
+    {
+      "GMEID": "id-0067-000009c5", 
+      "Description": "normalizedIntertia=inertia/59084338505\n", 
+      "DisplayedName": null, 
+      "VisualizationArtifacts": [], 
+      "Value": 1.0002650701589673, 
+      "ID": "1e1f845c-3b32-49ef-99a1-f212081d75d6", 
+      "Unit": "", 
+      "Name": "normalizedIntertia"
+    }, 
+    {
+      "GMEID": "id-0067-000009c7", 
+      "Description": "bomCost=sum_parts_cost", 
+      "DisplayedName": null, 
+      "VisualizationArtifacts": [], 
+      "Value": 249066.0, 
+      "ID": "9351a0fc-612c-4345-ae9c-cd1bc701e577", 
+      "Unit": "", 
+      "Name": "bomCost"
+    }, 
+    {
+      "GMEID": "id-0067-000009cb", 
+      "Description": "Panels=panels_prop", 
+      "DisplayedName": null, 
+      "VisualizationArtifacts": [], 
+      "Value": 4, 
+      "ID": "ac01f581-91bd-4343-9eed-d346c8cccc7f", 
+      "Unit": "", 
+      "Name": "Panels"
+    }, 
+    {
+      "GMEID": "id-0067-000009c8", 
+      "Description": "roughMass=parts_mass", 
+      "DisplayedName": null, 
+      "VisualizationArtifacts": [], 
+      "Value": 0.0, 
+      "ID": "2170fc37-9262-48c4-8d5e-32c155a58a41", 
+      "Unit": "", 
+      "Name": "roughMass"
+    }
+  ], 
+  "DesignID": "{2b7243f7-4bfe-4860-9d66-cb7e00ef09ad}", 
+  "Dependencies": [], 
+  "Steps": [
+    {
+      "ExecutionCompletionTimestamp": "2016-08-26T17:49:04.991000", 
+      "Status": "OK", 
+      "Description": null, 
+      "Parameters": [], 
+      "ExecutionStartTimestamp": "2016-08-26T17:49:04.725000", 
+      "Invocation": "run_classifications.cmd", 
+      "PostProcess": null, 
+      "PreProcess": null, 
+      "LogFile": "log/log2016-08-26T174904.725000.log", 
+      "Type": null
+    }
+  ], 
+  "TestBench": "ExtractModelProps", 
+  "Created": "2016-08-26T22:49:02.1093252Z"
+}

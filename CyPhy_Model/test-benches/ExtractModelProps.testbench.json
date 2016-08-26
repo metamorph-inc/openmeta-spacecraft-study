@@ -5,28 +5,28 @@
     {
       "$id": "2",
       "Requirement": null,
-      "Name": "Panels",
+      "Name": "normalizedIntertia",
       "Unit": "",
       "Value": null
     },
     {
       "$id": "3",
       "Requirement": null,
-      "Name": "normalizedIntertia",
+      "Name": "Panels",
       "Unit": "",
       "Value": null
     },
     {
       "$id": "4",
       "Requirement": null,
-      "Name": "roughMass",
+      "Name": "bomCost",
       "Unit": "",
       "Value": null
     },
     {
       "$id": "5",
       "Requirement": null,
-      "Name": "bomCost",
+      "Name": "roughMass",
       "Unit": "",
       "Value": null
     }
@@ -34,15 +34,15 @@
   "Parameters": [
     {
       "$id": "6",
-      "Name": "Sdep",
-      "Unit": "",
-      "Value": "40.0"
-    },
-    {
-      "$id": "7",
       "Name": "inertia",
       "Unit": "",
       "Value": "5.91E+10"
+    },
+    {
+      "$id": "7",
+      "Name": "Sdep",
+      "Unit": "",
+      "Value": "40.0"
     }
   ],
   "Requirements": []

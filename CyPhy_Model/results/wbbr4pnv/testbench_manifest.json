@@ -1,0 +1,77 @@
+{
+  "Status": "UNEXECUTED",
+  "Dependencies": [],
+  "Artifacts": [],
+  "VisualizationArtifacts": [],
+  "Created": "2016-08-26T22:40:18.6380054Z",
+  "DesignID": "{f9896377-dc19-45d6-8209-10670bec8388}",
+  "DesignName": "DC__Spacecraft_cfg3",
+  "Metrics": [
+    {
+      "VisualizationArtifacts": [],
+      "Description": "normalizedIntertia=inertia/59084338505\n",
+      "Name": "normalizedIntertia",
+      "Unit": "",
+      "Value": "",
+      "ID": "edaac001-ba0a-47c7-b2bf-1c289c370ee5",
+      "DisplayedName": null,
+      "GMEID": "id-0067-000009af"
+    },
+    {
+      "VisualizationArtifacts": [],
+      "Description": "bomCost=sum_parts_cost",
+      "Name": "bomCost",
+      "Unit": "",
+      "Value": "",
+      "ID": "02879964-26fc-4e08-88f4-c8a0747b0370",
+      "DisplayedName": null,
+      "GMEID": "id-0067-000009b1"
+    },
+    {
+      "VisualizationArtifacts": [],
+      "Description": "Panels=panels_prop",
+      "Name": "Panels",
+      "Unit": "",
+      "Value": "",
+      "ID": "b9966ef7-b06c-400d-a1c4-9a167b5e9a48",
+      "DisplayedName": null,
+      "GMEID": "id-0067-000009b5"
+    },
+    {
+      "VisualizationArtifacts": [],
+      "Description": "roughMass=parts_mass",
+      "Name": "roughMass",
+      "Unit": "",
+      "Value": "",
+      "ID": "7b3ade7d-a32c-4bc3-9041-f0fe44df911a",
+      "DisplayedName": null,
+      "GMEID": "id-0067-000009b2"
+    }
+  ],
+  "Parameters": [
+    {
+      "Range": "-inf..inf",
+      "Description": "",
+      "Name": "Sdep",
+      "Unit": "",
+      "Value": "40.0",
+      "ID": "8778528c-00ec-4380-85f9-f2f0576646de",
+      "DisplayedName": null,
+      "GMEID": "id-0067-000009b6"
+    },
+    {
+      "Range": "-inf..inf",
+      "Description": "",
+      "Name": "inertia",
+      "Unit": "",
+      "Value": "5.91E+10",
+      "ID": "f3644e3a-ad9e-4ade-9f6f-87b362afd03e",
+      "DisplayedName": null,
+      "GMEID": "id-0067-000009b0"
+    }
+  ],
+  "Steps": [],
+  "TestBench": "ExtractModelProps",
+  "TierLevel": 0,
+  "CopyTestResults": false
+}

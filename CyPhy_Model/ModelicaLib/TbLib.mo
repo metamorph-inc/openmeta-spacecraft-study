@@ -345,6 +345,12 @@ model TbLib
     connect(trapezoid1.y, y) annotation(Line(points = {{-29, 40}, {9.107469999999999, 40}, {9.107469999999999, 40.0729}, {40, 40.0729}, {40, 40}}));
     annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Line(origin = {-16.7577, -2.73226}, points = {{-73.224, 98.1785}, {-189.8, 99.2714}, {-189.8, -82.8779}, {-63.0237, -83.2422}, {-62.2951, 98.9071}, {-83.42440000000001, 98.5428}})}));
   end scenario;
+
+  model ConnPoints
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-80, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end ConnPoints;
 equation
   connect(tbload1.pin_n, src1.pin_n) annotation(Line(points = {{14, 40}, {-14.6172, 40}, {-14.6172, 38.3207}, {-20, 38.3207}, {-20, 38}}));
   connect(src1.pin_p, tbload1.pin_p) annotation(Line(points = {{-20, 44}, {12.5807, 44}, {12.5807, 41.4422}, {14, 41.4422}, {14, 42}}));

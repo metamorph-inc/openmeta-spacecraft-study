@@ -158,6 +158,7 @@ def main():
     for metric in json_data['Metrics']: 
         if metric["Name"] == "angleMaxError": 
             metric["Value"] = str(maxErr)
+            print 'angleMaxError '+str(maxErr)
         if metric["Name"] == "angleAvgError": 
             metric["Value"] = str(avgErr)
         if metric["Name"] == "minBusVoltage": 

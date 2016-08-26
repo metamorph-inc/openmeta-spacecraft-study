@@ -12,42 +12,42 @@
     {
       "$id": "3",
       "Requirement": null,
-      "Name": "angleAvgError",
+      "Name": "maxGyroCurrent",
       "Unit": "",
       "Value": null
     },
     {
       "$id": "4",
       "Requirement": null,
-      "Name": "maxBusVoltage",
+      "Name": "angleMaxError",
       "Unit": "",
       "Value": null
     },
     {
       "$id": "5",
       "Requirement": null,
-      "Name": "maxGyroCurrent",
+      "Name": "angleAvgError",
       "Unit": "",
       "Value": null
     },
     {
       "$id": "6",
       "Requirement": null,
-      "Name": "maxTemp",
+      "Name": "minBusVoltage",
       "Unit": "",
       "Value": null
     },
     {
       "$id": "7",
       "Requirement": null,
-      "Name": "minBusVoltage",
+      "Name": "maxTemp",
       "Unit": "",
       "Value": null
     },
     {
       "$id": "8",
       "Requirement": null,
-      "Name": "angleMaxError",
+      "Name": "maxBusVoltage",
       "Unit": "",
       "Value": null
     }
@@ -55,9 +55,9 @@
   "Parameters": [
     {
       "$id": "9",
-      "Name": "Inertia",
+      "Name": "BatteryCap",
       "Unit": "",
-      "Value": "1"
+      "Value": "100"
     },
     {
       "$id": "10",
@@ -79,9 +79,9 @@
     },
     {
       "$id": "13",
-      "Name": "BatteryCap",
+      "Name": "Inertia",
       "Unit": "",
-      "Value": "100"
+      "Value": "1"
     }
   ],
   "Requirements": []
