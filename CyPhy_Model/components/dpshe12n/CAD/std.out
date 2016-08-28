@@ -1,0 +1,5 @@
+License request failed for feature
+
+Requesting PROE_EngineerI ...
+7788@license.metamorphsoftware.com: (-96) License server machine is down or not responding.
+ERROR - Z:\repos\openmeta-spacecraft-study\CyPhy_Model\components\dpshe12n\CAD\config.pro, linenum 2 :  Keyword 'ENABLE_SOCIALLINK' is not valid.
