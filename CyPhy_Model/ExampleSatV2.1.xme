@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{2F380127-229D-4236-96C9-67F88BC4020A}" cdate="Tue Oct 11 15:12:51 2016" mdate="Tue Oct 11 15:12:51 2016" version="" metaguid="{200C3DB0-2E4B-44D0-936C-02A139A52EBE}" metaversion="14.13-t10" metaname="CyPhyML">
+<project guid="{D35BEAC1-145D-4401-86A2-95E4A59F44DF}" cdate="Tue Oct 11 15:12:51 2016" mdate="Tue Oct 11 15:12:51 2016" version="" metaguid="{200C3DB0-2E4B-44D0-936C-02A139A52EBE}" metaversion="14.13-t10" metaname="CyPhyML">
 	<name>RootFolder</name>
 	<comment></comment>
 	<author></author>
@@ -13235,7 +13235,7 @@
 					</connection>
 				</model>
 			</folder>
-			<folder id="id-006a-00000007" relid="0x1a" childrelidcntr="0x9" kind="Components" guid="{4c79f872-4901-44c3-ad6e-e1aecb05f70e}">
+			<folder id="id-006a-00000007" relid="0x1a" childrelidcntr="0xa" kind="Components" guid="{4c79f872-4901-44c3-ad6e-e1aecb05f70e}">
 				<name>Energy</name>
 				<model id="id-0065-00000095" kind="Component" guid="{3d16465b-66e1-4edb-80f1-ea0ce224e2ac}" relid="0x5" childrelidcntr="0x27">
 					<name>Solar_Panels_3A</name>
@@ -17535,8 +17535,8 @@
 					<attribute kind="Cardinality" status="meta">
 						<value></value>
 					</attribute>
-					<attribute kind="Classifications" status="meta">
-						<value></value>
+					<attribute kind="Classifications">
+						<value>Battery</value>
 					</attribute>
 					<attribute kind="Description" status="meta">
 						<value></value>
@@ -18710,8 +18710,8 @@
 					<attribute kind="Cardinality" status="meta">
 						<value></value>
 					</attribute>
-					<attribute kind="Classifications" status="meta">
-						<value></value>
+					<attribute kind="Classifications">
+						<value>Battery</value>
 					</attribute>
 					<attribute kind="Description" status="meta">
 						<value></value>
@@ -23724,6 +23724,1222 @@
 						<name>PortComposition</name>
 						<connpoint role="dst" target="id-0065-00000104"/>
 						<connpoint role="src" target="id-0065-0000010a"/>
+					</connection>
+				</model>
+				<model id="id-0065-00000729" kind="Component" guid="{01bbccfd-43c3-4ed6-b6b0-d6fc71281451}" relid="0xa" childrelidcntr="0x19">
+					<name>Battery2</name>
+					<regnode name="icon" isopaque="yes">
+						<value>Batteries.png</value>
+					</regnode>
+					<attribute kind="AVMID">
+						<value>e20b9d55-a4f7-457c-be70-fe3468b7453d</value>
+					</attribute>
+					<attribute kind="Cardinality" status="meta">
+						<value></value>
+					</attribute>
+					<attribute kind="Classifications">
+						<value>Battery</value>
+					</attribute>
+					<attribute kind="Description" status="meta">
+						<value></value>
+					</attribute>
+					<attribute kind="ID">
+						<value>2</value>
+					</attribute>
+					<attribute kind="InstanceGUID">
+						<value>01bbccfd-43c3-4ed6-b6b0-d6fc71281451</value>
+					</attribute>
+					<attribute kind="ManagedGUID" status="meta">
+						<value></value>
+					</attribute>
+					<attribute kind="NumAssociatedConfigs" status="meta">
+						<value></value>
+					</attribute>
+					<attribute kind="Path">
+						<value>./components/credvczy/</value>
+					</attribute>
+					<attribute kind="Revision" status="meta">
+						<value></value>
+					</attribute>
+					<attribute kind="Supercedes" status="meta">
+						<value></value>
+					</attribute>
+					<attribute kind="Version" status="meta">
+						<value></value>
+					</attribute>
+					<model id="id-0065-0000072a" kind="Connector" role="Connector" guid="{f02adb28-9b8e-4cef-944c-4292ba5b1ce9}" relid="0x11" childrelidcntr="0x5">
+						<name>v</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="AbstractPortAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="All" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>840,462</value>
+								</regnode>
+							</regnode>
+							<regnode name="BondGraphAspect2" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="ConnectorAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="ModelicaAspect2" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="RFAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="SchematicAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="SimulinkAspect2" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="SolidModeling" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="SystemCAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<attribute kind="Definition" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="DefinitionNotes" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="ID">
+							<value>id-f02adb28-9b8e-4cef-944c-4292ba5b1ce9</value>
+						</attribute>
+						<attribute kind="InstanceNotes" status="meta">
+							<value></value>
+						</attribute>
+						<model id="id-0065-0000072b" kind="ModelicaConnector" role="ModelicaConnector" guid="{3df9e2d7-4635-43de-a9fd-7d3d133764f6}" relid="0x4" childrelidcntr="0x0">
+							<name>v</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="All" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>70,91</value>
+									</regnode>
+								</regnode>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>497,392</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Class">
+								<value>Modelica.Blocks.Interfaces.RealOutput</value>
+							</attribute>
+							<attribute kind="Definition">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-3df9e2d7-4635-43de-a9fd-7d3d133764f6</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Locator">
+								<value>v</value>
+							</attribute>
+						</model>
+					</model>
+					<model id="id-0065-0000072c" kind="Connector" role="Connector" guid="{ee0cb776-4f8e-47fb-b48f-9a61c277c810}" relid="0x10" childrelidcntr="0x4">
+						<name>i</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="AbstractPortAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="All" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>833,315</value>
+								</regnode>
+							</regnode>
+							<regnode name="BondGraphAspect2" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="ConnectorAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="ModelicaAspect2" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="RFAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="SchematicAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="SimulinkAspect2" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+							<regnode name="SolidModeling" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>168,217</value>
+								</regnode>
+							</regnode>
+							<regnode name="SystemCAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>203,252</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<attribute kind="Definition" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="DefinitionNotes" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="ID">
+							<value>id-ee0cb776-4f8e-47fb-b48f-9a61c277c810</value>
+						</attribute>
+						<attribute kind="InstanceNotes" status="meta">
+							<value></value>
+						</attribute>
+						<model id="id-0065-0000072d" kind="ModelicaConnector" role="ModelicaConnector" guid="{0f496665-02e0-40a3-be2d-9cadad8e1258}" relid="0x4" childrelidcntr="0x0">
+							<name>i</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="All" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>70,91</value>
+									</regnode>
+								</regnode>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>497,392</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Class">
+								<value>Modelica.Blocks.Interfaces.RealOutput</value>
+							</attribute>
+							<attribute kind="Definition">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-0f496665-02e0-40a3-be2d-9cadad8e1258</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Locator">
+								<value>i</value>
+							</attribute>
+						</model>
+					</model>
+					<model id="id-0065-0000072e" kind="ModelicaModel" role="ModelicaModel" guid="{a01acbf5-6d8a-467f-8b78-d0a0e5d54dc0}" relid="0xc" childrelidcntr="0xa">
+						<name>BattCapSurrogate</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="AbstractPortAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>275,400</value>
+								</regnode>
+							</regnode>
+							<regnode name="All" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>385,350</value>
+								</regnode>
+							</regnode>
+							<regnode name="BehaviorModelsAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>275,400</value>
+								</regnode>
+							</regnode>
+							<regnode name="ConnectorAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>275,400</value>
+								</regnode>
+							</regnode>
+							<regnode name="ModelicaAspect2" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>275,400</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<regnode name="portLabelLength" isopaque="yes">
+							<value>0</value>
+						</regnode>
+						<attribute kind="Author" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Class">
+							<value>TbLib.BattCapSurrogate</value>
+						</attribute>
+						<attribute kind="FilePathWithinResource" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Notes" status="meta">
+							<value></value>
+						</attribute>
+						<model id="id-0065-0000072f" kind="ModelicaConnector" role="ModelicaConnector" guid="{379adf93-4b4f-42d1-a12a-be496e66a8e7}" relid="0x5" childrelidcntr="0x0">
+							<name>pin_p</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>483,63</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Class">
+								<value>Modelica.Electrical.Analog.Interfaces.PositivePin</value>
+							</attribute>
+							<attribute kind="Definition">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-379adf93-4b4f-42d1-a12a-be496e66a8e7</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Locator">
+								<value>pin_p</value>
+							</attribute>
+						</model>
+						<model id="id-0065-00000730" kind="ModelicaConnector" role="ModelicaConnector" guid="{a2344470-14ad-4275-b55f-2797012a96e6}" relid="0x6" childrelidcntr="0x0">
+							<name>pin_n</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>483,203</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Class">
+								<value>Modelica.Electrical.Analog.Interfaces.NegativePin</value>
+							</attribute>
+							<attribute kind="Definition">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-a2344470-14ad-4275-b55f-2797012a96e6</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Locator">
+								<value>pin_n</value>
+							</attribute>
+						</model>
+						<model id="id-0065-00000731" kind="ModelicaConnector" role="ModelicaConnector" guid="{3595cb38-92b7-42b8-b6a3-683a505e0420}" relid="0x9" childrelidcntr="0x0">
+							<name>i</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>497,392</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Class">
+								<value>Modelica.Blocks.Interfaces.RealOutput</value>
+							</attribute>
+							<attribute kind="Definition">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-3595cb38-92b7-42b8-b6a3-683a505e0420</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Locator">
+								<value>i</value>
+							</attribute>
+						</model>
+						<model id="id-0065-00000732" kind="ModelicaConnector" role="ModelicaConnector" guid="{de8c2e9d-3a8f-4acd-8ac6-47cff12f0eeb}" relid="0x8" childrelidcntr="0x0">
+							<name>v</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>504,525</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Class">
+								<value>Modelica.Blocks.Interfaces.RealOutput</value>
+							</attribute>
+							<attribute kind="Definition">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-de8c2e9d-3a8f-4acd-8ac6-47cff12f0eeb</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Locator">
+								<value>v</value>
+							</attribute>
+						</model>
+						<reference id="id-0067-00000af2" kind="ModelicaParameter" role="ModelicaParameter" guid="{f522b467-5e67-4a62-8e29-68557e33a700}" relid="0xa">
+							<name>CEquivalent</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>119,644</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="DefaultValue">
+								<value>100</value>
+							</attribute>
+							<attribute kind="ID" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Value">
+								<value>100</value>
+							</attribute>
+						</reference>
+					</model>
+					<model id="id-0065-00000733" kind="Connector" role="Connector" guid="{65b900f1-3bad-45f7-9739-cb5800551e6d}" relid="0x3" childrelidcntr="0x6">
+						<name>Batteries_Mount</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="AbstractPortAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>210,259</value>
+								</regnode>
+							</regnode>
+							<regnode name="All" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>14,287</value>
+								</regnode>
+							</regnode>
+							<regnode name="BondGraphAspect2" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>210,259</value>
+								</regnode>
+							</regnode>
+							<regnode name="ConnectorAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>210,259</value>
+								</regnode>
+							</regnode>
+							<regnode name="ModelicaAspect2" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>210,259</value>
+								</regnode>
+							</regnode>
+							<regnode name="SimulinkAspect2" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>210,259</value>
+								</regnode>
+							</regnode>
+							<regnode name="SolidModeling" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>238,231</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<regnode name="portLabelLength" isopaque="yes">
+							<value>0</value>
+						</regnode>
+						<attribute kind="Definition" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="DefinitionNotes" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="ID">
+							<value>id-65b900f1-3bad-45f7-9739-cb5800551e6d</value>
+						</attribute>
+						<attribute kind="InstanceNotes" status="meta">
+							<value></value>
+						</attribute>
+						<model id="id-0065-00000734" kind="ModelicaConnector" role="ModelicaConnector" guid="{d90bbca0-852e-401a-8903-fb7cc3088b88}" relid="0x4" childrelidcntr="0x0">
+							<name>VNeg</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="All" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>273,350</value>
+									</regnode>
+								</regnode>
+								<regnode name="ModelicaAspect2" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>427,273</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Class">
+								<value>Modelica.Electrical.Analog.Interfaces.PositivePin</value>
+							</attribute>
+							<attribute kind="Definition" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-d90bbca0-852e-401a-8903-fb7cc3088b88</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Locator" status="meta">
+								<value></value>
+							</attribute>
+						</model>
+						<model id="id-0065-00000735" kind="ModelicaConnector" role="ModelicaConnector" guid="{abd00063-5851-47e5-9551-fbe71f48ac37}" relid="0x5" childrelidcntr="0x0">
+							<name>VPos</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="All" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>266,252</value>
+									</regnode>
+								</regnode>
+								<regnode name="ModelicaAspect2" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>427,273</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Class">
+								<value>Modelica.Electrical.Analog.Interfaces.PositivePin</value>
+							</attribute>
+							<attribute kind="Definition" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-abd00063-5851-47e5-9551-fbe71f48ac37</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Locator" status="meta">
+								<value></value>
+							</attribute>
+						</model>
+						<atom id="id-0066-00000314" kind="Surface" role="Surface" guid="{357bb3f3-5c64-4126-aa52-b98e48950dd9}" relid="0x2">
+							<name>Mount_Center_Pln_X</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="All" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>287,14</value>
+									</regnode>
+								</regnode>
+								<regnode name="SolidModeling" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>315,224</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Alignment" status="meta">
+								<value>ALIGN</value>
+							</attribute>
+							<attribute kind="DatumName" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Definition" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="GeometricMarker" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-357bb3f3-5c64-4126-aa52-b98e48950dd9</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="IsGuide" status="meta">
+								<value>false</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000315" kind="Surface" role="Surface" guid="{b6f48c34-f1b5-4e1e-aac5-82729bdbafcc}" relid="0x3">
+							<name>Mount_Center_Pln_Z</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="All" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>280,154</value>
+									</regnode>
+								</regnode>
+								<regnode name="SolidModeling" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>392,371</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Alignment" status="meta">
+								<value>ALIGN</value>
+							</attribute>
+							<attribute kind="DatumName" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Definition" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="GeometricMarker" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-b6f48c34-f1b5-4e1e-aac5-82729bdbafcc</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="IsGuide" status="meta">
+								<value>false</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000316" kind="Surface" role="Surface" guid="{96a7c1a2-c637-4bab-bea7-ad1fdcd8f2ea}" relid="0x1">
+							<name>Mount_Base_Pln_Y</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="All" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>280,84</value>
+									</regnode>
+								</regnode>
+								<regnode name="SolidModeling" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>294,105</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Alignment" status="meta">
+								<value>ALIGN</value>
+							</attribute>
+							<attribute kind="DatumName" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Definition" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="GeometricMarker" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-96a7c1a2-c637-4bab-bea7-ad1fdcd8f2ea</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="IsGuide" status="meta">
+								<value>false</value>
+							</attribute>
+						</atom>
+					</model>
+					<model id="id-0065-00000736" kind="CADModel" role="CADModel" guid="{5ecd977c-3579-4535-8955-53739e8815f4}" relid="0x1" childrelidcntr="0x7">
+						<name>Batteries</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="All" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>378,140</value>
+								</regnode>
+							</regnode>
+							<regnode name="SolidModeling" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>623,308</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<regnode name="portLabelLength" isopaque="yes">
+							<value>0</value>
+						</regnode>
+						<attribute kind="Author" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="FileFormat" status="meta">
+							<value>Creo</value>
+						</attribute>
+						<attribute kind="FilePathWithinResource" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="FileType" status="meta">
+							<value>Part</value>
+						</attribute>
+						<attribute kind="Notes" status="meta">
+							<value></value>
+						</attribute>
+						<atom id="id-0066-00000318" kind="Surface" role="Surface" guid="{1e6c06bb-8253-4325-8be6-da3a18b5fcdc}" relid="0x5">
+							<name>Z_Normal_Center_Pln</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="SolidModeling" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>371,441</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Alignment" status="meta">
+								<value>ALIGN</value>
+							</attribute>
+							<attribute kind="DatumName">
+								<value>Z_Normal_Center_Pln</value>
+							</attribute>
+							<attribute kind="Definition" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="GeometricMarker" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-1e6c06bb-8253-4325-8be6-da3a18b5fcdc</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="IsGuide" status="meta">
+								<value>false</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000319" kind="Surface" role="Surface" guid="{6db1bc24-86de-4434-84d4-38d827aa6301}" relid="0x4">
+							<name>X_Normal_Center_Pln</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="SolidModeling" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>392,280</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Alignment" status="meta">
+								<value>ALIGN</value>
+							</attribute>
+							<attribute kind="DatumName">
+								<value>X_Normal_Center_Pln</value>
+							</attribute>
+							<attribute kind="Definition" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="GeometricMarker" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-6db1bc24-86de-4434-84d4-38d827aa6301</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="IsGuide" status="meta">
+								<value>false</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000031a" kind="Surface" role="Surface" guid="{fef16a38-dc45-4d8f-8308-0e8b4af81910}" relid="0x3">
+							<name>Mount_Pln_Y</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="SolidModeling" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>392,147</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="Alignment" status="meta">
+								<value>ALIGN</value>
+							</attribute>
+							<attribute kind="DatumName">
+								<value>Mount_Pln_Y</value>
+							</attribute>
+							<attribute kind="Definition" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="GeometricMarker" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-fef16a38-dc45-4d8f-8308-0e8b4af81910</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="IsGuide" status="meta">
+								<value>false</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000031b" kind="Point" role="Point" guid="{7e8ebcc0-e828-4c32-ae52-8397accc1629}" relid="0x6">
+							<name>Batteries_Center_Pt</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="SolidModeling" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>665,147</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="DatumName">
+								<value>Batteries_Center_Pt</value>
+							</attribute>
+							<attribute kind="Definition" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="DefinitionNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="GeometricMarker" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID">
+								<value>id-7e8ebcc0-e828-4c32-ae52-8397accc1629</value>
+							</attribute>
+							<attribute kind="InstanceNotes" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="IsGuide" status="meta">
+								<value>false</value>
+							</attribute>
+						</atom>
+						<reference id="id-0067-00000af3" kind="CADParameter" role="CADParameter" guid="{60058ff2-bcb8-4960-ac73-da0037a8985f}" relid="0x7">
+							<name>CEquiv</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="SolidModeling" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>161,119</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="CADParameterType" status="meta">
+								<value>Float</value>
+							</attribute>
+							<attribute kind="DefaultValue" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ID" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="ParameterName" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Range" status="meta">
+								<value>-inf..inf</value>
+							</attribute>
+							<attribute kind="Unit" status="meta">
+								<value></value>
+							</attribute>
+							<attribute kind="Value" status="meta">
+								<value></value>
+							</attribute>
+						</reference>
+					</model>
+					<atom id="id-0066-00000313" kind="Point" role="Point" guid="{66ce57c5-f1bd-4dce-b000-f2fcf1401f5f}" relid="0x9">
+						<name>Batteries_Center_Pt</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="All" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>84,140</value>
+								</regnode>
+							</regnode>
+							<regnode name="SolidModeling" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>833,469</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<attribute kind="DatumName" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Definition" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="DefinitionNotes" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="GeometricMarker" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="ID">
+							<value>id-66ce57c5-f1bd-4dce-b000-f2fcf1401f5f</value>
+						</attribute>
+						<attribute kind="InstanceNotes" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="IsGuide" status="meta">
+							<value>false</value>
+						</attribute>
+					</atom>
+					<atom id="id-0066-00000317" kind="Resource" role="Resource" guid="{576133ec-8fbe-461c-aab3-52f4ecbbd1e8}" relid="0x2">
+						<name>Resource</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="All" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>483,42</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<regnode name="namePosition" isopaque="yes">
+							<value>0</value>
+						</regnode>
+						<attribute kind="Hash" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="ID">
+							<value>id-576133ec-8fbe-461c-aab3-52f4ecbbd1e8</value>
+						</attribute>
+						<attribute kind="Notes" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Path">
+							<value>CAD\Batteries.prt</value>
+						</attribute>
+					</atom>
+					<reference id="id-0067-00000af0" kind="Parameter" role="Parameter" guid="{92cb5b65-fa90-4bdf-a32d-5e4bc001c7eb}" relid="0x14">
+						<name>CEquiv</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="All" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>91,497</value>
+								</regnode>
+							</regnode>
+							<regnode name="BehaviorModelsAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>231,525</value>
+								</regnode>
+							</regnode>
+							<regnode name="ManufacturingAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>231,525</value>
+								</regnode>
+							</regnode>
+							<regnode name="SolidModeling" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>231,525</value>
+								</regnode>
+							</regnode>
+							<regnode name="SystemCAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>231,525</value>
+								</regnode>
+							</regnode>
+							<regnode name="ValueFlowAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>231,525</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<attribute kind="ComputationType" status="meta">
+							<value>Addition</value>
+						</attribute>
+						<attribute kind="DataType" status="meta">
+							<value>String</value>
+						</attribute>
+						<attribute kind="DefaultValue" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Description" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Dimension" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Disable" status="meta">
+							<value>false</value>
+						</attribute>
+						<attribute kind="ID" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="ManagedGUID" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Range" status="meta">
+							<value>-inf..inf</value>
+						</attribute>
+						<attribute kind="Type" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Value">
+							<value>100</value>
+						</attribute>
+					</reference>
+					<reference id="id-0067-00000af1" kind="Property" role="Property" guid="{2ba04344-995c-4a37-b83a-5c1da5f177c9}" relid="0xb">
+						<name>cost</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="All" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>798,140</value>
+								</regnode>
+							</regnode>
+							<regnode name="BehaviorModelsAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>959,469</value>
+								</regnode>
+							</regnode>
+							<regnode name="ManufacturingAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>959,469</value>
+								</regnode>
+							</regnode>
+							<regnode name="SolidModeling" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>959,469</value>
+								</regnode>
+							</regnode>
+							<regnode name="SystemCAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>959,469</value>
+								</regnode>
+							</regnode>
+							<regnode name="ValueFlowAspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>959,469</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<attribute kind="ComputationType" status="meta">
+							<value>Addition</value>
+						</attribute>
+						<attribute kind="DataType" status="meta">
+							<value>String</value>
+						</attribute>
+						<attribute kind="DefaultValue" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Description" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Dimension" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Disable" status="meta">
+							<value>false</value>
+						</attribute>
+						<attribute kind="ID" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="IsProminent" status="meta">
+							<value>false</value>
+						</attribute>
+						<attribute kind="ManagedGUID" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Tolerance" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Type" status="meta">
+							<value></value>
+						</attribute>
+						<attribute kind="Value">
+							<value>17000</value>
+						</attribute>
+					</reference>
+					<connection id="id-0068-000004c5" kind="PortComposition" role="PortComposition" guid="{d79375eb-99b2-4dcd-9d14-e156536d0f35}" relid="0x17">
+						<name>PortComposition</name>
+						<connpoint role="dst" target="id-0065-00000730"/>
+						<connpoint role="src" target="id-0065-00000734"/>
+					</connection>
+					<connection id="id-0068-000004c6" kind="PortComposition" role="PortComposition" guid="{a403a45c-0304-4845-ba2c-44ab217be8e4}" relid="0x16">
+						<name>PortComposition</name>
+						<connpoint role="dst" target="id-0065-0000072f"/>
+						<connpoint role="src" target="id-0065-00000735"/>
+					</connection>
+					<connection id="id-0068-000004c7" kind="ModelicaParameterPortMap" role="ModelicaParameterPortMap" guid="{fb3c5e6f-0c83-48ca-a5c8-0746b28bff80}" relid="0x15">
+						<name>ModelicaParameterPortMap</name>
+						<connpoint role="src" target="id-0067-00000af0"/>
+						<connpoint role="dst" target="id-0067-00000af2"/>
+					</connection>
+					<connection id="id-0068-000004c8" kind="PortComposition" role="PortComposition" guid="{db75dfbe-4748-4a10-a34f-b9bbaed418b5}" relid="0x13">
+						<name>PortComposition</name>
+						<connpoint role="dst" target="id-0065-0000072b"/>
+						<connpoint role="src" target="id-0065-00000732"/>
+					</connection>
+					<connection id="id-0068-000004c9" kind="PortComposition" role="PortComposition" guid="{4beff19b-4cb9-445c-bd2d-b39eee10a643}" relid="0x12">
+						<name>PortComposition</name>
+						<connpoint role="dst" target="id-0065-0000072d"/>
+						<connpoint role="src" target="id-0065-00000731"/>
+					</connection>
+					<connection id="id-0068-000004ca" kind="PortComposition" role="PortComposition" guid="{d70b20e3-0468-4fb0-9d0b-a797bd72ea87}" relid="0xa">
+						<name>PortComposition</name>
+						<regnode name="autorouterPref" isopaque="yes">
+							<value>E</value>
+						</regnode>
+						<connpoint role="src" target="id-0066-00000313"/>
+						<connpoint role="dst" target="id-0066-0000031b"/>
+					</connection>
+					<connection id="id-0068-000004cb" kind="PortComposition" role="PortComposition" guid="{160235bb-b70a-4e46-bdd1-ef1c25785e80}" relid="0x8">
+						<name>PortComposition</name>
+						<connpoint role="src" target="id-0066-00000316"/>
+						<connpoint role="dst" target="id-0066-0000031a"/>
+					</connection>
+					<connection id="id-0068-000004cc" kind="PortComposition" role="PortComposition" guid="{517b99e0-e4ff-4fa4-a6a3-b09561592d83}" relid="0x6">
+						<name>PortComposition</name>
+						<connpoint role="src" target="id-0066-00000315"/>
+						<connpoint role="dst" target="id-0066-00000318"/>
+					</connection>
+					<connection id="id-0068-000004cd" kind="PortComposition" role="PortComposition" guid="{d47847b9-1334-4d2a-af23-b77f92d2753d}" relid="0x4">
+						<name>PortComposition</name>
+						<connpoint role="src" target="id-0066-00000314"/>
+						<connpoint role="dst" target="id-0066-00000319"/>
+					</connection>
+					<connection id="id-0068-000004ce" kind="UsesResource" role="UsesResource" guid="{f97539ad-2aae-4443-9173-666df204e345}" relid="0x18">
+						<name>UsesResource</name>
+						<regnode name="autorouterPref" isopaque="yes">
+							<value>Ns</value>
+						</regnode>
+						<connpoint role="src" target="id-0065-00000736"/>
+						<connpoint role="dst" target="id-0066-00000317"/>
+					</connection>
+					<connection id="id-0068-000004cf" kind="CADParameterPortMap" role="CADParameterPortMap" guid="{aa3856a5-65b4-405a-b244-ec3454ab363b}" relid="0x19">
+						<name>CADParameterPortMap</name>
+						<regnode name="autorouterPref" isopaque="yes">
+							<value>E</value>
+						</regnode>
+						<connpoint role="src" target="id-0067-00000af0"/>
+						<connpoint role="dst" target="id-0067-00000af3"/>
 					</connection>
 				</model>
 			</folder>
