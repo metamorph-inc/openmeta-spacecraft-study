@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{D35BEAC1-145D-4401-86A2-95E4A59F44DF}" cdate="Tue Oct 11 15:12:51 2016" mdate="Tue Oct 11 15:12:51 2016" version="" metaguid="{200C3DB0-2E4B-44D0-936C-02A139A52EBE}" metaversion="14.13-t10" metaname="CyPhyML">
+<project guid="{7AE76A74-8BF4-448A-9A3F-4643A5F12679}" cdate="Tue Oct 11 15:12:51 2016" mdate="Tue Oct 11 15:12:51 2016" version="" metaguid="{200C3DB0-2E4B-44D0-936C-02A139A52EBE}" metaversion="14.13-t10" metaname="CyPhyML">
 	<name>RootFolder</name>
 	<comment></comment>
 	<author></author>
@@ -47293,7 +47293,7 @@
 					</model>
 				</model>
 				<model id="id-0065-000001db" kind="DesignContainer" role="DesignContainer" guid="{872f6122-d360-4461-ad2d-c2c7e6e093a5}" relid="0x47" childrelidcntr="0x32">
-					<name>NewDC__Solar_Panels_3A</name>
+					<name>NewDC__Solar_Panels_A</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="AbstractPortAspect" status="undefined">
@@ -48226,7 +48226,7 @@
 					</connection>
 				</model>
 				<model id="id-0065-000001e5" kind="DesignContainer" role="DesignContainer" guid="{ee4979e5-613c-4895-b1ca-da8006f8b577}" relid="0x4e" childrelidcntr="0x2a">
-					<name>NewDC__Solar_Panels_3B</name>
+					<name>Solar_Panels_B</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="AbstractPortAspect" status="undefined">
