@@ -1,0 +1,1 @@
+Thu Nov 03 13:55:04 2016, CADCreoParametricCreateAssembly.exe error code: -1.  For additional information, scroll to the bottom of D:\Work\SatExample\CyPhy_Model\log\MetaLink_CreoCreateAssembly_2j4voov1.log

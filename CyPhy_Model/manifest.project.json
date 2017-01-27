@@ -4,7 +4,8 @@
     "DesignSpaceModels": [
       "./design-space/DC_Spacecraft.adm",
       "./design-space/DC__NewProject.adm",
-      "./design-space/DC__Spacecraft.adm"
+      "./design-space/DC__Spacecraft.adm",
+      "./design-space/DC_Spacecraft_V2.adm"
     ],
     "Configurations": [
       "./designs/DC_Spacecraft_cfg1.adm",
@@ -49,7 +50,20 @@
       "./designs/SpacecraftNominalConfig.adm",
       "./designs/DC__Spacecraft_cfg1.adm",
       "./designs/DC__Spacecraft_cfg2.adm",
-      "./designs/DC__Spacecraft_cfg3.adm"
+      "./designs/DC__Spacecraft_cfg3.adm",
+      "./designs/DC__Spacecraft_cfg4.adm",
+      "./designs/DC__Spacecraft_cfg5.adm",
+      "./designs/DC__Spacecraft_cfg6.adm",
+      "./designs/DC__Spacecraft_cfg7.adm",
+      "./designs/DC__Spacecraft_cfg8.adm",
+      "./designs/DC__Spacecraft_cfg9.adm",
+      "./designs/Spacecraft_V2.adm",
+      "./designs/DC_Spacecraft_V2_cfg1.adm",
+      "./designs/DC_Spacecraft_V2_cfg2.adm",
+      "./designs/DC_Spacecraft_V2_cfg3.adm",
+      "./designs/DC_Spacecraft_V2_cfg4.adm",
+      "./designs/DC_Spacecraft_V2_cfg5.adm",
+      "./designs/DC_Spacecraft_V2_cfg6.adm"
     ],
     "TestBenches": [
       "./test-benches/Mass_Properties.testbench.json",
@@ -61,7 +75,13 @@
       "./test-benches/tsttst.testbench.json",
       "./test-benches/PowerAnalysis_DC.testbench.json",
       "./test-benches/PowerAnalysis_DesignSpace.testbench.json",
-      "./test-benches/Inertial_and_Geometry.testbench.json"
+      "./test-benches/Inertial_and_Geometry.testbench.json",
+      "./test-benches/PowerAnalysis_v2.testbench.json",
+      "./test-benches/Inertial_and_Geometry_v2.testbench.json",
+      "./test-benches/ExtractModelProps_v2.testbench.json",
+      "./test-benches/PowerAnalysis_v2_DS.testbench.json",
+      "./test-benches/Inertial_and_Geometry_v2_DS.testbench.json",
+      "./test-benches/ExtractModelProps_v2_DS.testbench.json"
     ],
     "Results": {
       "UrlHints": [
@@ -76,7 +96,7 @@
       "vfLink": "",
       "text": ""
     },
-    "CyPhyProjectFileName": "Sat.mga",
-    "LastModified": "2016-08-26 17-48-52"
+    "CyPhyProjectFileName": "ExampleSat3.1.mga",
+    "LastModified": "2017-01-27 15-14-13"
   }
 }

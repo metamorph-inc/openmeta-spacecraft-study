@@ -1,0 +1,852 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+<Styles><Style ss:ID="Default" ss:Name="Normal">
+</Style>
+<Style ss:ID="s21">
+<Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+</Style>
+</Styles>
+<Worksheet ss:Name="temp">
+<Table ss:ExpandedColumnCount="13" ss:ExpandedRowCount="31" x:FullColumns="1" x:FullRows="1"><Row><Cell><Data ss:Type="String">Object Kind</Data>
+</Cell>
+<Cell><Data ss:Type="String">Object Name</Data>
+</Cell>
+<Cell><Data ss:Type="String">Object ID</Data>
+</Cell>
+<Cell><Data ss:Type="String">Extended Name</Data>
+</Cell>
+<Cell><Data ss:Type="String">Is Instance</Data>
+</Cell>
+<Cell><Data ss:Type="String">Source</Data>
+</Cell>
+<Cell><Data ss:Type="String">Destination</Data>
+</Cell>
+<Cell><Data ss:Type="String">Attribute</Data>
+</Cell>
+<Cell><Data ss:Type="String">Value</Data>
+</Cell>
+<Cell><Data ss:Type="String">Attribute</Data>
+</Cell>
+<Cell><Data ss:Type="String">Value</Data>
+</Cell>
+<Cell><Data ss:Type="String">Attribute</Data>
+</Cell>
+<Cell><Data ss:Type="String">Value</Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Parameter Study</Data>
+</Cell>
+<Cell><Data ss:Type="String">FullParameterStudy</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0065-000000f1</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">Code</Data>
+</Cell>
+<Cell ss:StyleID="s21"><Data ss:Type="String">num_samples=1000</Data>
+</Cell>
+<Cell><Data ss:Type="String">Surrogate Type:</Data>
+</Cell>
+<Cell><Data ss:Type="String">None</Data>
+</Cell>
+<Cell><Data ss:Type="String">DOE Type:</Data>
+</Cell>
+<Cell><Data ss:Type="String">Uniform</Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Design Variable</Data>
+</Cell>
+<Cell><Data ss:Type="String">CtrlGain_D</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-0000006d</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : CtrlGain_D</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">Range</Data>
+</Cell>
+<Cell><Data ss:Type="String">0.25,3.0</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Design Variable</Data>
+</Cell>
+<Cell><Data ss:Type="String">CtrlGain_P</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-0000006c</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : CtrlGain_P</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">Range</Data>
+</Cell>
+<Cell><Data ss:Type="String">0.22222,3.0</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">MaxTemperature</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-0000006b</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : MaxTemperature</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">MinBusVoltage</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-0000006a</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : MinBusVoltage</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">MaxGyroCurrent</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000069</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : MaxGyroCurrent</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">MaxBusVoltage</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000068</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : MaxBusVoltage</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">AverageAngleError</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000067</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : AverageAngleError</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">MaxAngularError</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000066</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : MaxAngularError</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">MinBatteryCharge</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000065</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : MinBatteryCharge</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Design Variable</Data>
+</Cell>
+<Cell><Data ss:Type="String">BattCap</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000064</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : BattCap</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">Range</Data>
+</Cell>
+<Cell><Data ss:Type="String">20,400</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Design Variable</Data>
+</Cell>
+<Cell><Data ss:Type="String">GyroSize</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000063</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : GyroSize</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">Range</Data>
+</Cell>
+<Cell><Data ss:Type="String">0.5,10</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">bomCost</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000062</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : bomCost</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">PV_Panels</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000061</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : PV_Panels</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Design Variable</Data>
+</Cell>
+<Cell><Data ss:Type="String">CompZ</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000060</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : CompZ</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">Range</Data>
+</Cell>
+<Cell><Data ss:Type="String">0,500</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Design Variable</Data>
+</Cell>
+<Cell><Data ss:Type="String">CompX</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-0000005f</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : CompX</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">Range</Data>
+</Cell>
+<Cell><Data ss:Type="String">0,1000</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Design Variable</Data>
+</Cell>
+<Cell><Data ss:Type="String">GyroZ</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-0000005e</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : GyroZ</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">Range</Data>
+</Cell>
+<Cell><Data ss:Type="String">0,500</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Design Variable</Data>
+</Cell>
+<Cell><Data ss:Type="String">GyroX</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-0000005d</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : GyroX</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">Range</Data>
+</Cell>
+<Cell><Data ss:Type="String">00,1000</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">Interference</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-0000005c</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : Interference</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">Dist_2_3</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-0000005b</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : Dist_2_3</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">Dist_1_3</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-0000005a</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : Dist_1_3</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">Dist_1_2</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000059</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : Dist_1_2</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">Mass</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000058</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : Mass</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">InertialTensor</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000057</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : InertialTensor</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">Izz</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000056</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : Izz</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">Iyy</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000055</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : Iyy</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Objective</Data>
+</Cell>
+<Cell><Data ss:Type="String">Ixx</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000054</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : Ixx</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Design Variable</Data>
+</Cell>
+<Cell><Data ss:Type="String">BattZ</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000053</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : BattZ</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">Range</Data>
+</Cell>
+<Cell><Data ss:Type="String">0,300</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Design Variable</Data>
+</Cell>
+<Cell><Data ss:Type="String">BattX</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000052</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : BattX</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">Range</Data>
+</Cell>
+<Cell><Data ss:Type="String">000,1000</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+<Row><Cell><Data ss:Type="String">Design Variable</Data>
+</Cell>
+<Cell><Data ss:Type="String">Angle</Data>
+</Cell>
+<Cell><Data ss:Type="String">id-0067-00000051</Data>
+</Cell>
+<Cell><Data ss:Type="String">RootFolder : Testing : ParametricExploration : ExploreGeoAndPerf : FullParameterStudy : Angle</Data>
+</Cell>
+<Cell><Data ss:Type="String">false</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">N/A</Data>
+</Cell>
+<Cell><Data ss:Type="String">Range</Data>
+</Cell>
+<Cell><Data ss:Type="String">150,180</Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+<Cell><Data ss:Type="String"></Data>
+</Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>
