@@ -1,3 +1,0 @@
-ERROR - D:\Work\SatExample\CyPhy_Model\components\i1zsegml\CAD\config.pro, linenum 2 :  Keyword 'ENABLE_SOCIALLINK' is not valid.
-gdi32_comm_shutdown wait for polling thread timed out.
-Error: CommGenPoll WaitForMultipleObjects failed! GetLastError: 6
