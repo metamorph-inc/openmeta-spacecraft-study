@@ -63,7 +63,10 @@
       "./designs/DC_Spacecraft_V2_cfg3.adm",
       "./designs/DC_Spacecraft_V2_cfg4.adm",
       "./designs/DC_Spacecraft_V2_cfg5.adm",
-      "./designs/DC_Spacecraft_V2_cfg6.adm"
+      "./designs/DC_Spacecraft_V2_cfg6.adm",
+      "./designs/DC_Spacecraft_V2_Eduardo.adm",
+      "./designs/DC_Spacecraft_V2_Guillermo.adm",
+      "./designs/DC_Spacecraft_V2_Harald.adm"
     ],
     "TestBenches": [
       "./test-benches/Mass_Properties.testbench.json",
@@ -97,6 +100,6 @@
       "text": ""
     },
     "CyPhyProjectFileName": "ExampleSat_3_1.mga",
-    "LastModified": "2017-01-30 16-30-10"
+    "LastModified": "2017-01-31 15-54-14"
   }
 }
