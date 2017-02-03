@@ -1,0 +1,7 @@
+CyPhy_Model/*.log
+*.out
+trail.txt.*
+*.pyc
+CyPhy_Model/MetaLink_*
+CyPhy_Model/tmp/
+_FAILED.txt

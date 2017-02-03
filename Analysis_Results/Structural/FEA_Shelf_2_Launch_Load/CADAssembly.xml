@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Assemblies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" VersionInfo="" xsi:noNamespaceSchemaLocation="AssemblyInterface.xsd">
+  <Assembly ConfigurationID="40f7e277-5064-40d8-800e-1a9ed525dfca|1" _id="id202">
+    <Analyses _id="id245">
+      <FEA Type="STRUCTURAL" MeshOnly="false" MaxAdaptiveIterations="3" MaxElementSize="0" AnalysisID="id-0065-0000007a" _id="id246">
+        <AnalysisConstraints _id="id266">
+          <AnalysisConstraint _id="id252">
+            <Displacement _id="id256">
+              <Rotation Units="deg" x="0" y="0" z="0" _id="id257" />
+              <Translation Units="N/A" x="FREE" y="FIXED" z="FIXED" _id="id258" />
+            </Displacement>
+            <Geometry _id="id253">
+              <Features FeatureID="id-0065-0000007c" GeometryType="FACE" FeatureInterfaceType="CAD_DATUM" FeatureGeometryType="POINT" PrimaryGeometryQualifier="InteriorAndBoundary" SecondaryGeometryQualifier="" _id="id254">
+                <Feature Name="End_Surface_2" ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" MetricID="f442cbfc-8850-46ca-a6d2-799338c76c8a:End_Surface_2" _id="id255" />
+              </Features>
+            </Geometry>
+          </AnalysisConstraint>
+          <AnalysisConstraint _id="id259">
+            <Displacement _id="id263">
+              <Rotation Units="deg" x="0" y="0" z="0" _id="id264" />
+              <Translation Units="N/A" x="FIXED" y="FIXED" z="FREE" _id="id265" />
+            </Displacement>
+            <Geometry _id="id260">
+              <Features FeatureID="id-0065-0000007e" GeometryType="FACE" FeatureInterfaceType="CAD_DATUM" FeatureGeometryType="POINT" PrimaryGeometryQualifier="InteriorAndBoundary" SecondaryGeometryQualifier="" _id="id261">
+                <Feature Name="End_Surface_1" ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" MetricID="f442cbfc-8850-46ca-a6d2-799338c76c8a:End_Surface_1" _id="id262" />
+              </Features>
+            </Geometry>
+          </AnalysisConstraint>
+        </AnalysisConstraints>
+        <Loads _id="id251">
+          <Load _id="id249">
+            <Acceleration Units="mm/s^2" x="0" y="-58.8399" z="0" _id="id250" />
+          </Load>
+        </Loads>
+        <Metrics _id="id269">
+          <Metric MetricType="VONMISESSTRESS" ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" RequestedValueType="Scalar" MetricID="id-0067-000000fb" Details="" _id="id267" />
+          <Metric MetricType="FACTOROFSAFETY" ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" RequestedValueType="Scalar" MetricID="id-0067-000000fc" Details="" _id="id268" />
+        </Metrics>
+        <Solvers _id="id247">
+          <Solver Type="NASTRAN" MeshType="SOLID" ShellElementType="N/A" ElementShapeType="MIDPOINT_PARABOLIC_FIXED" _id="id248" />
+        </Solvers>
+      </FEA>
+      <Static AnalysisID="id-0065-0000007a" _id="id270">
+        <Metrics _id="id273">
+          <Metric MetricType="POINTCOORDINATES" ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" RequestedValueType="Vector" MetricID="f442cbfc-8850-46ca-a6d2-799338c76c8a:End_Surface_2" Details="End_Surface_2" MetricName="" _id="id271" />
+          <Metric MetricType="POINTCOORDINATES" ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" RequestedValueType="Vector" MetricID="f442cbfc-8850-46ca-a6d2-799338c76c8a:End_Surface_1" Details="End_Surface_1" MetricName="" _id="id272" />
+        </Metrics>
+      </Static>
+    </Analyses>
+    <CADComponent ComponentID="40f7e277-5064-40d8-800e-1a9ed525dfca|1" Name="DC_Spacecraft_cfg1_1" DisplayName="DC_Spacecraft_cfg1_1" Type="ASSEMBLY" SpecialInstruction="" MaterialID="" Representation="" _id="id203">
+      <CADComponent ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" Name="Base_Module_Shelf" DisplayName="Base_Module_Shelf_2" Type="PART" SpecialInstruction="" MaterialID="" Representation="" _id="id214">
+        <Constraint _id="id232">
+          <Pair FeatureInterfaceType="CAD_DATUM" FeatureGeometryType="SURFACE" FeatureAlignmentType="ALIGN" _id="id233">
+            <ConstraintFeature ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" FeatureName="FRONT" FeatureOrientationType="SIDE_A" _id="id234" />
+            <ConstraintFeature ComponentID="40f7e277-5064-40d8-800e-1a9ed525dfca|1" FeatureName="ASM_FRONT" FeatureOrientationType="SIDE_A" _id="id235" />
+          </Pair>
+          <Pair FeatureInterfaceType="CAD_DATUM" FeatureGeometryType="SURFACE" FeatureAlignmentType="ALIGN" _id="id236">
+            <ConstraintFeature ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" FeatureName="TOP" FeatureOrientationType="SIDE_A" _id="id237" />
+            <ConstraintFeature ComponentID="40f7e277-5064-40d8-800e-1a9ed525dfca|1" FeatureName="ASM_TOP" FeatureOrientationType="SIDE_A" _id="id238" />
+          </Pair>
+          <Pair FeatureInterfaceType="CAD_DATUM" FeatureGeometryType="SURFACE" FeatureAlignmentType="ALIGN" _id="id239">
+            <ConstraintFeature ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" FeatureName="RIGHT" FeatureOrientationType="SIDE_A" _id="id240" />
+            <ConstraintFeature ComponentID="40f7e277-5064-40d8-800e-1a9ed525dfca|1" FeatureName="ASM_RIGHT" FeatureOrientationType="SIDE_A" _id="id241" />
+          </Pair>
+        </Constraint>
+        <ParametricParameters _id="id215">
+          <CADParameter Name="z_Offset_From_Center_2" Type="Float" Value="0" _id="id216">
+            <Units Value="" _id="id217" />
+          </CADParameter>
+          <CADParameter Name="x_Offset_From_Center_1" Type="Float" Value="800" _id="id218">
+            <Units Value="" _id="id219" />
+          </CADParameter>
+          <CADParameter Name="x_Offset_From_Center_2" Type="Float" Value="0" _id="id220">
+            <Units Value="" _id="id221" />
+          </CADParameter>
+          <CADParameter Name="z_Offset_From_Center_4" Type="Float" Value="0" _id="id222">
+            <Units Value="" _id="id223" />
+          </CADParameter>
+          <CADParameter Name="z_Offset_From_Center_3" Type="Float" Value="0" _id="id224">
+            <Units Value="" _id="id225" />
+          </CADParameter>
+          <CADParameter Name="z_Offset_From_Center_1" Type="Float" Value="200" _id="id226">
+            <Units Value="" _id="id227" />
+          </CADParameter>
+          <CADParameter Name="x_Offset_From_Center_4" Type="Float" Value="0" _id="id228">
+            <Units Value="" _id="id229" />
+          </CADParameter>
+          <CADParameter Name="x_Offset_From_Center_3" Type="Float" Value="0" _id="id230">
+            <Units Value="" _id="id231" />
+          </CADParameter>
+        </ParametricParameters>
+      </CADComponent>
+      <CADComponent ComponentID="1c244e22-b4f9-47db-84e8-b8a86d82c75e" Name="Batteries" DisplayName="Batteries" Type="PART" SpecialInstruction="" MaterialID="" Representation="" _id="id242">
+        <Constraint AdjoiningSurfaceType="CONTACTED" _id="id204">
+          <Pair FeatureInterfaceType="CAD_DATUM" FeatureGeometryType="SURFACE" FeatureAlignmentType="ALIGN" _id="id205">
+            <ConstraintFeature ComponentID="1c244e22-b4f9-47db-84e8-b8a86d82c75e" FeatureName="Z_Normal_Center_Pln" FeatureOrientationType="SIDE_A" _id="id206" />
+            <ConstraintFeature ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" FeatureName="z_Offset_From_Center_1" FeatureOrientationType="SIDE_A" _id="id207" />
+          </Pair>
+          <Pair FeatureInterfaceType="CAD_DATUM" FeatureGeometryType="SURFACE" FeatureAlignmentType="ALIGN" _id="id208">
+            <ConstraintFeature ComponentID="1c244e22-b4f9-47db-84e8-b8a86d82c75e" FeatureName="X_Normal_Center_Pln" FeatureOrientationType="SIDE_A" _id="id209" />
+            <ConstraintFeature ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" FeatureName="X_Offset_From_Center_1" FeatureOrientationType="SIDE_A" _id="id210" />
+          </Pair>
+          <Pair FeatureInterfaceType="CAD_DATUM" FeatureGeometryType="SURFACE" FeatureAlignmentType="ALIGN" _id="id211">
+            <ConstraintFeature ComponentID="1c244e22-b4f9-47db-84e8-b8a86d82c75e" FeatureName="Mount_Pln_Y" FeatureOrientationType="SIDE_A" _id="id212" />
+            <ConstraintFeature ComponentID="f442cbfc-8850-46ca-a6d2-799338c76c8a" FeatureName="Shelf_Top_Surface" FeatureOrientationType="SIDE_B" _id="id213" />
+          </Pair>
+        </Constraint>
+      </CADComponent>
+    </CADComponent>
+    <Properties _id="id243">
+      <Units Value="value1" _id="id244" />
+    </Properties>
+  </Assembly>
+  <DataExchange _id="id274">
+    <STEPFormat Name="AP203_E2_Single_File" _id="id275" />
+    <STEPFormat Name="AP203_E2_Separate_Part_Files" _id="id276" />
+  </DataExchange>
+</Assemblies>

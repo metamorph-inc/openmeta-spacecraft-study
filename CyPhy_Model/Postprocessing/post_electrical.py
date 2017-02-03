@@ -15,19 +15,24 @@ def main():
     mat_file_name = sys.argv[1]
     print "Mat file name is "+mat_file_name
     if not os.path.exists(mat_file_name):
+        print "Given result file does not exist: ",mat_file_name
         raise IOError('Given result file does not exist: {0}'.format(sys.argv[1]))
     else:
+        print "line 10....",os.getcwd()
         dstpath = os.path.join(os.getcwd(), 'matfiles')
+        print "dstPath is ",dstpath
         if not os.path.isdir(dstpath):
             os.makedirs(dstpath)
         numFiles = len(os.listdir(dstpath))
         dstname = '_' + str(numFiles) + mat_file_name
-        shutil.copyfile(mat_file_name, os.path.join(dstpath, dstname))
+        print  "dstname ",dstname
+        #shutil.copyfile(mat_file_name, os.path.join(dstpath, dstname))
+        print "line30"
 
 
     print "Line 24: Opened "+mat_file_name
     ## First limit part
-    limit_dict, filter = read_limits()
+    #limit_dict, filter = read_limits()
     print "done limits"
     filter = []
     ## End of first limit part
@@ -54,7 +59,16 @@ def main():
         if vv.find("angle_") != -1:
             print "add to dumpList: "+vv
             dumpList.append(vv)
-        
+        if vv.find("BaseTemp") != -1:
+            print "add to dumpList: "+vv
+            dumpList.append(vv)
+        if vv.find("GyroTemp") != -1:
+            print "add to dumpList: "+vv
+            dumpList.append(vv)        
+        if vv.find("BattTemp") != -1:
+            print "add to dumpList: "+vv
+            dumpList.append(vv)
+
     pp.print_time()
     print "Last time is "+str(pp.get_max_time()) 
     sampData = []    
@@ -85,6 +99,8 @@ def main():
     setAngleIdx = -1
     voltBusIdx = -1
     currGyroIdx  = -1
+    gyroTempIdx = -1
+    baseTempIdx = -1
 
     
     for c,vv in enumerate(dumpList):
@@ -97,6 +113,10 @@ def main():
         if vv.find("current_gyro") != -1:
             currGyroIdx = c
             print "gyro idx ",currGyroIdx
+        if vv.find("GyroTemp") != -1:
+            gyroTempIdx = c
+        if vv.find("BaseTemp") != -1:
+            baseTempIdx = c
                        
             
     maxErr = 0
@@ -106,6 +126,8 @@ def main():
     minBusV = 100
     minBattCap = 100
     maxGyroCurr = 0;
+    maxTemp = 0
+    maxGyroTemp = 0
     
     if actAngleIdx != -1 and setAngleIdx != -1:
         i = int(startAnalysisTime/sampleRate)
@@ -139,7 +161,24 @@ def main():
                 maxGyroCurr = vts
                 print vts
             i = i + 1
-      
+ 
+    if baseTempIdx != -1:
+        i = int(startAnalysisTime/sampleRate)     
+        while i < len(sampData[baseTempIdx]):
+            vts = abs(sampData[baseTempIdx][i])
+            if vts > maxTemp:
+                maxTemp = vts
+            i = i + 1
+ 
+    if gyroTempIdx != -1:
+        i = int(startAnalysisTime/sampleRate)     
+        while i < len(sampData[gyroTempIdx]):
+            vts = abs(sampData[gyroTempIdx][i])
+            if vts > maxGyroTemp:
+                maxGyroTemp = vts
+            i = i + 1
+ 
+ 
     output_dir = "../"
     json_filename = os.path.join(output_dir, 'testbench_manifest.json')
 	 
@@ -168,7 +207,11 @@ def main():
         if metric["Name"] == "minBattCapacity": 
             metric["Value"] = str(minBattCap)            
         if metric["Name"] == "maxGyroCurrent": 
-            metric["Value"] = str(maxGyroCurr)             
+            metric["Value"] = str(maxGyroCurr)     
+        if metric["Name"] == "maxTemp": 
+            metric["Value"] = str(maxTemp)                 
+        if metric["Name"] == "maxGyroTemp": 
+            metric["Value"] = str(maxGyroTemp)              
     print "dumping to ",json_filename
     print json_data    
     with open(json_filename, "w") as json_file:

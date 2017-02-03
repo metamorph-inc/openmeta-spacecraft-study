@@ -21,8 +21,8 @@ model TbLib
     Modelica.Blocks.Sources.Constant const(k = 0) annotation(Placement(visible = true, transformation(origin = {-80, -20}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
     Modelica.Electrical.Analog.Sources.SignalVoltage signalvoltage1 annotation(Placement(visible = true, transformation(origin = {0, 0}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
     TbLib.DCDCIdeal dcdcideal1 annotation(Placement(visible = true, transformation(origin = {60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Electrical.Analog.Basic.Resistor resistor1 annotation(Placement(visible = true, transformation(origin = {220, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Electrical.Analog.Basic.Resistor resistor2(R = 100) annotation(Placement(visible = true, transformation(origin = {80, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Basic.Resistor resistor1 annotation(Placement(visible = true, transformation(origin = {82, 52}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
     connect(dcdcideal1.OutN, resistor2.n) annotation(Line(points = {{70, -8}, {90.93770000000001, -8}, {90.93770000000001, -39.5587}, {90.93770000000001, -39.5587}}));
     connect(resistor2.p, dcdcideal1.OutP) annotation(Line(points = {{70, -40}, {69.5035, -40}, {69.5035, -22.5374}, {81.4815, -22.5374}, {81.4815, 7.72262}, {70.134, 7.72262}, {70.134, 7.72262}}));
@@ -89,23 +89,45 @@ model TbLib
   end VarLoad;
 
   model Test1
-    TbLib.VarLoad varload1 annotation(Placement(visible = true, transformation(origin = {40, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    TbLib.SampleSolarFlux samplesolarflux1 annotation(Placement(visible = true, transformation(origin = {-84, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    TbLib.Solar_Panels_3 solar_panels_33 annotation(Placement(visible = true, transformation(origin = {-40, 60}, extent = {{-15, -12}, {10, 12}}, rotation = 0)));
-    TbLib.Solar_Panels_3 solar_panels_32 annotation(Placement(visible = true, transformation(origin = {-40, 0}, extent = {{-15, -12}, {10, 12}}, rotation = 0)));
-    TbLib.Solar_Panels_3 solar_panels_31 annotation(Placement(visible = true, transformation(origin = {-40, 40}, extent = {{-15, -12}, {10, 12}}, rotation = 0)));
-    TbLib.BattCapSurrogate battcapsurrogate1 annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.BatteryV2 batteryv21 annotation(Placement(visible = true, transformation(origin = {-66, 48}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.Body body1(ixx = 1) annotation(Placement(visible = true, transformation(origin = {-20, 12}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.Shelf shelf1 annotation(Placement(visible = true, transformation(origin = {-54, 12}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.Cargo cargo1 annotation(Placement(visible = true, transformation(origin = {16, 12}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.Shelf shelf2 annotation(Placement(visible = true, transformation(origin = {-52, -16}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.Computer computer1(k = 10, p = 10, d = 0.1) annotation(Placement(visible = true, transformation(origin = {-82, -16}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.PVPanel pvpanel1 annotation(Placement(visible = true, transformation(origin = {56, 38}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.Shelf shelf3 annotation(Placement(visible = true, transformation(origin = {-114, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.scenario scenario1(commTime = 100, per = 566, tstart = 11) annotation(Placement(visible = true, transformation(origin = {-92, -46}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.Gyroscope gyroscope1(torquegain = 1, powergain = 1) annotation(Placement(visible = true, transformation(origin = {-152, 22}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
-    connect(varload1.pin_n, battcapsurrogate1.pin_n) annotation(Line(points = {{32, 20}, {32.2581, 20}, {32.2581, -15.0538}, {89.6057, -15.0538}, {89.6057, 11.7085}, {90, 11.7085}, {90, 12}}));
-    connect(battcapsurrogate1.pin_p, varload1.pin_p) annotation(Line(points = {{92, 28}, {83.871, 28}, {83.871, 37.037}, {32.736, 37.037}, {32.736, 24}, {32, 24}}));
-    connect(samplesolarflux1.y, solar_panels_31.u) annotation(Line(points = {{-80, 14}, {-68.2694, 14}, {-68.2694, 45.513}, {-50, 45.513}, {-50, 46}}));
-    connect(solar_panels_31.pin_n, solar_panels_32.pin_p) annotation(Line(points = {{-30, 34}, {-34.2545, 34}, {-30, 8.863049999999999}, {-30, 10}}));
-    connect(solar_panels_31.pin_p, solar_panels_33.pin_n) annotation(Line(points = {{-30, 50}, {-25.73, 50}, {-25.73, 54.2721}, {-30, 54.2721}, {-30, 54}}));
-    connect(samplesolarflux1.y, solar_panels_32.u) annotation(Line(points = {{-80, 14}, {-68.74850000000001, 14}, {-68.74850000000001, 5.50946}, {-50, 5.50946}, {-50, 6}}));
-    connect(solar_panels_32.pin_n, varload1.pin_n) annotation(Line(points = {{-30, -6}, {29.4637, -6}, {29.4637, 19.4029}, {32, 19.4029}, {32, 20}}));
-    connect(samplesolarflux1.y, solar_panels_33.u) annotation(Line(points = {{-80, 14}, {-67.348, 14}, {-67.348, 65.5202}, {-50, 65.5202}, {-50, 66}}));
-    connect(solar_panels_33.pin_p, varload1.pin_p) annotation(Line(points = {{-30, 70}, {32.1977, 70}, {32.1977, 23.1992}, {32, 23.1992}, {32, 24}}));
-    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+    connect(computer1.torqueReq, gyroscope1.torqueReq) annotation(Line(points = {{-72, -14}, {-68, -14}, {-68, -28}, {-172, -28}, {-172, 22}, {-161, 22}}, color = {0, 0, 127}));
+    connect(gyroscope1.angle, computer1.angleMeas) annotation(Line(points = {{-143, 22}, {-134, 22}, {-134, -20}, {-91, -20}}, color = {0, 0, 127}));
+    connect(gyroscope1.flange_b, shelf3.flange_a) annotation(Line(points = {{-143, 19}, {-132, 19}, {-132, 21}, {-123, 21}}));
+    connect(gyroscope1.pin_n, shelf3.pin_n) annotation(Line(points = {{-143, 14}, {-134, 14}, {-134, 12}, {-123, 12}}, color = {0, 0, 255}));
+    connect(gyroscope1.pin_p, shelf3.pin_p) annotation(Line(points = {{-143, 30}, {-132, 30}, {-132, 28}, {-124, 28}}, color = {0, 0, 255}));
+    connect(scenario1.y, computer1.setpoint) annotation(Line(points = {{-88, -42}, {-70, -42}, {-70, -32}, {-98, -32}, {-98, -14}, {-92, -14}, {-92, -14}}, color = {0, 0, 127}));
+    connect(shelf3.pin_p, shelf1.pin_p) annotation(Line(points = {{-124, 28}, {-124, 28}, {-124, 34}, {-70, 34}, {-70, 20}, {-64, 20}, {-64, 20}, {-64, 20}}, color = {0, 0, 255}));
+    connect(shelf3.pin_n, shelf1.pin_n) annotation(Line(points = {{-123, 12}, {-122, 12}, {-122, 4}, {-63, 4}}, color = {0, 0, 255}));
+    connect(shelf3.flange_b, body1.flange_a) annotation(Line(points = {{-105, 21}, {-96, 21}, {-96, 28}, {-34, 28}, {-34, 13}, {-29, 13}}));
+    connect(pvpanel1.pin_n, batteryv21.pin_n) annotation(Line(points = {{64, 30}, {78, 30}, {78, 60}, {-36, 60}, {-36, 34}, {-76, 34}, {-76, 40}, {-74, 40}, {-74, 40}}, color = {0, 0, 255}));
+    connect(pvpanel1.pin_p, batteryv21.pin_p) annotation(Line(points = {{65, 48}, {66, 48}, {66, 72}, {-80, 72}, {-80, 54}, {-74, 54}, {-74, 54}}, color = {0, 0, 255}));
+    connect(cargo1.flange_b, pvpanel1.flange_a) annotation(Line(points = {{25, 13}, {32, 13}, {32, 40}, {48, 40}, {48, 40}}));
+    connect(shelf2.pin_n, body1.pin_n) annotation(Line(points = {{-61, -24}, {-62, -24}, {-62, -28}, {-30, -28}, {-30, 2}, {-30, 2}}, color = {0, 0, 255}));
+    connect(computer1.pin_n, shelf2.pin_n) annotation(Line(points = {{-73, -25}, {-62, -25}, {-62, -24}, {-62, -24}, {-62, -24}}, color = {0, 0, 255}));
+    connect(batteryv21.pin_n, shelf1.pin_n) annotation(Line(points = {{-75, 41}, {-76, 41}, {-76, 4}, {-62, 4}, {-62, 4}}, color = {0, 0, 255}));
+    connect(body1.pin_n, cargo1.pin_n) annotation(Line(points = {{-29, 4}, {-30, 4}, {-30, -2}, {4, -2}, {4, 4}, {6, 4}, {6, 4}}, color = {0, 0, 255}));
+    connect(shelf1.pin_n, body1.pin_n) annotation(Line(points = {{-63, 4}, {-64, 4}, {-64, -2}, {-30, -2}, {-30, 4}, {-30, 4}}, color = {0, 0, 255}));
+    connect(shelf2.pin_p, shelf1.pin_p) annotation(Line(points = {{-62, -8}, {-62, -8}, {-62, -2}, {-80, -2}, {-80, 20}, {-64, 20}, {-64, 20}}, color = {0, 0, 255}));
+    connect(shelf2.pin_p, computer1.pin_p) annotation(Line(points = {{-62, -8}, {-72, -8}, {-72, -8}, {-72, -8}}, color = {0, 0, 255}));
+    connect(shelf1.pin_p, batteryv21.pin_p) annotation(Line(points = {{-64, 20}, {-88, 20}, {-88, 56}, {-74, 56}, {-74, 56}}, color = {0, 0, 255}));
+    connect(body1.pin_p, shelf1.pin_p) annotation(Line(points = {{-30, 20}, {-30, 20}, {-30, 26}, {-66, 26}, {-66, 20}, {-64, 20}, {-64, 20}}, color = {0, 0, 255}));
+    connect(cargo1.pin_p, body1.pin_p) annotation(Line(points = {{6, 20}, {6, 20}, {6, 26}, {-30, 26}, {-30, 20}, {-30, 20}}, color = {0, 0, 255}));
+    connect(shelf2.flange_b, body1.flange_a) annotation(Line(points = {{-43, -15}, {-36, -15}, {-36, 14}, {-30, 14}, {-30, 12}, {-30, 12}}));
+    connect(computer1.flange_b, shelf2.flange_a) annotation(Line(points = {{-73, -10}, {-66, -10}, {-66, -16}, {-60, -16}, {-60, -16}}));
+    connect(body1.flange_b, cargo1.flange_a) annotation(Line(points = {{-11, 15}, {2, 15}, {2, 12}, {6, 12}, {6, 12}}));
+    connect(shelf1.flange_b, body1.flange_a) annotation(Line(points = {{-45, 13}, {-30, 13}, {-30, 12}, {-30, 12}}));
+    connect(batteryv21.flange_b, shelf1.flange_a) annotation(Line(points = {{-57, 49}, {-50, 49}, {-50, 30}, {-74, 30}, {-74, 13}, {-63, 13}}));
+    annotation(Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
   end Test1;
 
   model SampleSolarFlux
@@ -120,31 +142,35 @@ model TbLib
     parameter Real currentFactor;
     Modelica.Electrical.Analog.Sources.SignalCurrent signalcurrent1 annotation(Placement(visible = true, transformation(origin = {0, 60}, extent = {{-7.5, -7.5}, {7.5, 7.5}}, rotation = 90)));
     Modelica.Electrical.Analog.Semiconductors.Diode diode1(Vt = 0.18) annotation(Placement(visible = true, transformation(origin = {20, 60}, extent = {{-5, -5}, {5, 5}}, rotation = -90)));
-    Modelica.Blocks.Interfaces.RealInput u annotation(Placement(visible = true, transformation(origin = {-140, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {100, -120}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {100, 120}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Electrical.Analog.Sources.SignalCurrent signalcurrent2 annotation(Placement(visible = true, transformation(origin = {0, 0}, extent = {{-7.5, -7.5}, {7.5, 7.5}}, rotation = 90)));
     Modelica.Electrical.Analog.Semiconductors.Diode diode2(Vt = 0.18) annotation(Placement(visible = true, transformation(origin = {20, 0}, extent = {{-5, -5}, {5, 5}}, rotation = -90)));
     Modelica.Electrical.Analog.Basic.Resistor resistor2(R = 0.01) annotation(Placement(visible = true, transformation(origin = {0, 20}, extent = {{-5, -5}, {5, 5}}, rotation = 90)));
     Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 0.01) annotation(Placement(visible = true, transformation(origin = {40, 80}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
-    Modelica.Electrical.Analog.Sensors.VoltageSensor voltagesensor1 annotation(Placement(visible = true, transformation(origin = {40, -40}, extent = {{-10, 10}, {10, -10}}, rotation = -90)));
     Modelica.Electrical.Analog.Sensors.CurrentSensor currentsensor1 annotation(Placement(visible = true, transformation(origin = {60, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
-    Modelica.Blocks.Interfaces.RealOutput i annotation(Placement(visible = true, transformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Interfaces.RealOutput v annotation(Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Math.Gain gain1(k = currentFactor) annotation(Placement(visible = true, transformation(origin = {-40, 60}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {94, 108}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Sensors.VoltageSensor voltagesensor1 annotation(Placement(visible = true, transformation(origin = {40, -24}, extent = {{-10, 10}, {10, -10}}, rotation = -90)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {86, -58}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Math.Gain gain1(k = currentFactor) annotation(Placement(visible = true, transformation(origin = {-34, 60}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+    Modelica.Blocks.Math.Abs abs1 annotation(Placement(visible = true, transformation(origin = {-58, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Math.Cos cos1 annotation(Placement(visible = true, transformation(origin = {-90, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput v annotation(Placement(visible = true, transformation(origin = {94, -38}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput i annotation(Placement(visible = true, transformation(origin = {96, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealInput u annotation(Placement(visible = true, transformation(origin = {-142, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
-    connect(gain1.y, signalcurrent2.i) annotation(Line(points = {{-34.5, 60}, {-20.7455, 60}, {-20.7455, -0.259319}, {-5.70502, -0.259319}, {-5.70502, -0.259319}}));
-    connect(u, gain1.u) annotation(Line(points = {{-140, 0}, {-92.3177, 0}, {-92.3177, 60.4214}, {-46.4182, 60.4214}, {-46.4182, 60.4214}}));
-    connect(gain1.y, signalcurrent1.i) annotation(Line(points = {{-34.5, 60}, {-6.07062, 60}, {-6.07062, 60.5165}, {-6.07062, 60.5165}}));
-    connect(voltagesensor1.v, v) annotation(Line(points = {{50, -40}, {50, -39.4911}, {74.9109, -39.4911}, {74.9109, -80.61069999999999}, {92.4173, -80.61069999999999}, {92.4173, -80.61069999999999}}));
-    connect(currentsensor1.i, i) annotation(Line(points = {{70, 100}, {70, 96.0814}, {85.0891, 96.0814}, {85.0891, 60.6616}, {92.8244, 60.6616}, {92.8244, 60.6616}}));
+    connect(cos1.u, u) annotation(Line(points = {{-102, 60}, {-142, 60}}, color = {0, 0, 127}));
+    connect(currentsensor1.i, i) annotation(Line(points = {{70, 100}, {70, 96.0814}, {85.0891, 96.0814}, {85.0891, 60}, {96, 60}}));
+    connect(voltagesensor1.v, v) annotation(Line(points = {{50, -24}, {50, -39.4911}, {74.9109, -39.4911}, {74.9109, -38}, {94, -38}}));
+    connect(cos1.y, abs1.u) annotation(Line(points = {{-79, 60}, {-70, 60}}, color = {0, 0, 127}));
+    connect(abs1.y, gain1.u) annotation(Line(points = {{-47, 60}, {-40, 60}}, color = {0, 0, 127}));
+    connect(gain1.y, signalcurrent1.i) annotation(Line(points = {{-28.5, 60}, {-6.07062, 60}, {-6.07062, 60.5165}}));
+    connect(gain1.y, signalcurrent2.i) annotation(Line(points = {{-28.5, 60}, {-20.7455, 60}, {-20.7455, -0.259319}, {-5.70502, -0.259319}}));
+    connect(signalcurrent2.p, pin_n) annotation(Line(points = {{-4.59227e-16, -7.5}, {-4.59227e-16, -58}, {86, -58}}));
+    connect(voltagesensor1.n, pin_n) annotation(Line(points = {{40, -34}, {40, -58}, {86, -58}}));
+    connect(pin_p, voltagesensor1.p) annotation(Line(points = {{94, 108}, {79.3893, 108}, {79.3893, -14}, {40, -14}}));
+    connect(pin_p, currentsensor1.n) annotation(Line(points = {{94, 108}, {60.2545, 108}, {60.2545, 109.924}}));
     connect(currentsensor1.p, resistor1.n) annotation(Line(points = {{60, 90}, {60, 80.20359999999999}, {44.7837, 80.20359999999999}, {44.7837, 80.20359999999999}}));
-    connect(pin_p, currentsensor1.n) annotation(Line(points = {{100, 120}, {60.2545, 120}, {60.2545, 109.924}, {60.2545, 109.924}}));
-    connect(voltagesensor1.n, pin_n) annotation(Line(points = {{40, -50}, {40, -119.695}, {101.374, -119.695}, {101.374, -119.695}}));
-    connect(pin_p, voltagesensor1.p) annotation(Line(points = {{100, 120}, {79.38930000000001, 120}, {79.38930000000001, -30.1272}, {40.3053, -30.1272}, {40.3053, -30.1272}}));
     connect(signalcurrent1.n, resistor1.p) annotation(Line(points = {{4.59227e-016, 67.5}, {4.59227e-016, 79.2975}, {34.5267, 79.2975}, {35, 80.4357}, {35, 80}}));
     connect(diode1.p, resistor1.p) annotation(Line(points = {{20, 65}, {20, 79.35639999999999}, {35.3465, 80}, {35, 80}}));
-    connect(signalcurrent2.p, pin_n) annotation(Line(points = {{-4.59227e-016, -7.5}, {-4.59227e-016, -118.863}, {98.9491, -118.863}, {98.9491, -118.863}}));
     connect(resistor2.n, signalcurrent1.p) annotation(Line(points = {{3.06152e-016, 25}, {3.06152e-016, 51.2168}, {-0.395497, 51.2168}, {-0.395497, 51.2168}}));
     connect(signalcurrent2.n, resistor2.p) annotation(Line(points = {{4.59227e-016, 7.5}, {4.59227e-016, 14.6334}, {-0.395497, 14.6334}, {-0.395497, 14.6334}}));
     connect(diode2.n, signalcurrent2.p) annotation(Line(points = {{20, -5}, {20, -13.0514}, {0.395497, -13.0514}, {0.395497, -7.31669}, {-0.988741, -7.31669}, {-0.988741, -7.31669}}));
@@ -177,25 +203,28 @@ model TbLib
   end Gyroscope_Momentum_Control;
 
   model BattSurrogate
+    parameter Real cap;
     Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-80, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica_EnergyStorages.Batteries.Cells.Basic.StaticResistance staticresistance1(cellParameters = Modelica_EnergyStorages.CellRecords.StaticResistance.Test1Parameters(), SOCini = 0.033) annotation(Placement(visible = true, transformation(origin = {-60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Basic.Capacitor capacitor1(C = cap, v(start = 10)) annotation(Placement(visible = true, transformation(origin = {-44, 62}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 0.001) annotation(Placement(visible = true, transformation(origin = {-8, 62}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
-    connect(staticresistance1.pin_n, pin_n) annotation(Line(points = {{-60, 10}, {-60.0266, 10}, {-60.0266, -79.68129999999999}, {-99.07040000000001, -79.68129999999999}, {-99.07040000000001, -79.68129999999999}}));
-    connect(pin_p, staticresistance1.pin_p) annotation(Line(points = {{-100, 80}, {-59.4954, 80}, {-59.4954, 29.4821}, {-59.4954, 29.4821}, {-59.4954, 29.4821}}));
+    connect(capacitor1.n, resistor1.p) annotation(Line(points = {{-34, 62}, {-18, 62}}, color = {0, 0, 255}));
+    connect(resistor1.n, pin_n) annotation(Line(points = {{2, 62}, {18, 62}, {18, -78}, {-100, -78}}, color = {0, 0, 255}));
+    connect(pin_p, capacitor1.p) annotation(Line(points = {{-100, 80}, {-78, 80}, {-78, 62}, {-54, 62}}, color = {0, 0, 255}));
     annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
   end BattSurrogate;
 
   model BattCapSurrogate
     parameter Real CEquivalent = 100;
-    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-80, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 0.05) annotation(Placement(visible = true, transformation(origin = {-60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
     Modelica.Electrical.Analog.Basic.Capacitor capacitor1(C = CEquivalent) annotation(Placement(visible = true, transformation(origin = {-60, -40}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
     Modelica.Electrical.Analog.Sensors.CurrentSensor currentsensor1 annotation(Placement(visible = true, transformation(origin = {-40, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Electrical.Analog.Sensors.VoltageSensor voltagesensor1 annotation(Placement(visible = true, transformation(origin = {40, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealOutput i annotation(Placement(visible = true, transformation(origin = {100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealOutput v annotation(Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -72}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, 72}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
     connect(currentsensor1.i, i) annotation(Line(points = {{-40, 50}, {-40.3732, 50}, {-40.3732, 49.1942}, {6.78541, 49.1942}, {6.78541, 91.6031}, {79.05, 91.6031}, {79.05, 79.05}, {93.97790000000001, 79.05}, {93.97790000000001, 79.05}}));
     connect(voltagesensor1.v, v) annotation(Line(points = {{40, 50}, {40.3732, 50}, {40.3732, -88.2103}, {80.4071, -88.2103}, {80.4071, -79.38930000000001}, {91.9423, -79.38930000000001}, {91.9423, -79.38930000000001}}));
@@ -275,21 +304,30 @@ model TbLib
   end SysCtrl;
 
   model Test2
-    Modelica.Blocks.Sources.Trapezoid trapezoid1(amplitude = 1.57, rising = 50, width = 500, falling = 50, period = 3600, startTime = 50) annotation(Placement(visible = true, transformation(origin = {-80, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    TbLib.Solar_Panels_3 solar_panels_31(currentFactor = 100) annotation(Placement(visible = true, transformation(origin = {-2.5, 80}, extent = {{-15, -12}, {10, 12}}, rotation = 0)));
-    TbLib.BattCapSurrogate battcapsurrogate1(CEquivalent = 100) annotation(Placement(visible = true, transformation(origin = {60, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    TbLib.Gyroscope_Momentum_Control gyroscope_momentum_control1 annotation(Placement(visible = true, transformation(origin = {20, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    TbLib.FullCtrl fullctrl2(ixx = 100, torqueGain = 0.5, iyy = 1, izz = 1, pI = 1, pP = 0.5, pD = 1) annotation(Placement(visible = true, transformation(origin = {-40, 40}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+    TbLib.Body body1(ixx = 100) annotation(Placement(visible = true, transformation(origin = {4, 38}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.Shelf shelf2 annotation(Placement(visible = true, transformation(origin = {-30, 4}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.BatteryV2 batteryv21 annotation(Placement(visible = true, transformation(origin = {-66, 4}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.Gyroscope gyroscope1(torquegain = 1, powergain = 1) annotation(Placement(visible = true, transformation(origin = {-76, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.Pulse pulse1(amplitude = 1, period = 10) annotation(Placement(visible = true, transformation(origin = {-92, 68}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    TbLib.Shelf shelf1 annotation(Placement(visible = true, transformation(origin = {-28, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
-    connect(trapezoid1.y, fullctrl2.targetAngle) annotation(Line(points = {{-69, 60}, {-64.7963, 60}, {-64.7963, 42.2001}, {-50, 41}, {-45, 41}}));
-    connect(fullctrl2.solarOut, solar_panels_31.u) annotation(Line(points = {{-35, 44}, {-32.7077, 44}, {-32.7077, 85.74160000000001}, {-12.5, 85.74160000000001}, {-12.5, 86}}));
-    connect(fullctrl2.torque, gyroscope_momentum_control1.torqueReq) annotation(Line(points = {{-35, 41}, {8.976559999999999, 41}, {8.976559999999999, 20}, {10, 20}}));
-    connect(fullctrl2.pin_p, solar_panels_31.pin_p) annotation(Line(points = {{-45, 44}, {-39.7239, 44}, {-39.7239, 95.6468}, {7.73841, 95.6468}, {7.73841, 89.97190000000001}, {7.73841, 89.97190000000001}}));
-    connect(fullctrl2.pin_n, gyroscope_momentum_control1.pin_n) annotation(Line(points = {{-45, 36}, {-40.8588, 36}, {-40.8588, 3.30172}, {12.2783, 3.30172}, {12.2783, 20.2231}, {12.2783, 20.2231}}));
-    connect(battcapsurrogate1.pin_n, gyroscope_momentum_control1.pin_n) annotation(Line(points = {{50, 52}, {48.5972, 52}, {48.5972, 20.0167}, {12.7942, 20.0167}, {12.7942, 20.0167}}));
-    connect(battcapsurrogate1.pin_p, gyroscope_momentum_control1.pin_p) annotation(Line(points = {{52, 68}, {39.7239, 68}, {39.7239, 24.0407}, {12.0719, 24.0407}, {12.0719, 24.0407}}));
-    connect(solar_panels_31.pin_n, battcapsurrogate1.pin_n) annotation(Line(points = {{7.5, 74}, {31.5727, 74}, {31.5727, 51.7958}, {49.5258, 51.7958}, {49.5258, 51.7958}}));
-    connect(solar_panels_31.pin_p, battcapsurrogate1.pin_p) annotation(Line(points = {{7.5, 90}, {39.7239, 90}, {39.7239, 67.8917}, {51.0735, 67.8917}, {51.0735, 67.8917}}));
+    connect(body1.Heat_b, shelf1.Heat_b) annotation(Line(points = {{13, 34}, {16, 34}, {16, 26}, {-14, 26}, {-14, 36}, {-20, 36}, {-20, 38}, {-20, 38}}, color = {191, 0, 0}));
+    connect(body1.Heat_b, shelf2.Heat_b) annotation(Line(points = {{13, 34}, {22, 34}, {22, 0}, {-20, 0}, {-20, 0}}, color = {191, 0, 0}));
+    connect(shelf1.pin_p, body1.pin_p) annotation(Line(points = {{-38, 48}, {-38, 50}, {-6, 50}, {-6, 46}}, color = {0, 0, 255}));
+    connect(shelf1.pin_n, body1.pin_n) annotation(Line(points = {{-37, 32}, {-40, 32}, {-40, 24}, {-10, 24}, {-10, 30}, {-4, 30}}, color = {0, 0, 255}));
+    connect(shelf1.flange_b, body1.flange_a) annotation(Line(points = {{-19, 41}, {-8, 41}, {-8, 38}, {-6, 38}}));
+    connect(gyroscope1.flange_b, shelf1.flange_a) annotation(Line(points = {{-67, 37}, {-50, 37}, {-50, 41}, {-37, 41}}));
+    connect(shelf1.pin_n, gyroscope1.pin_n) annotation(Line(points = {{-37, 32}, {-67, 32}}, color = {0, 0, 255}));
+    connect(gyroscope1.pin_p, shelf1.pin_p) annotation(Line(points = {{-67, 48}, {-38, 48}}, color = {0, 0, 255}));
+    connect(gyroscope1.Heat_a, shelf1.Heat_a) annotation(Line(points = {{-85, 31}, {-92, 31}, {-92, 26}, {-44, 26}, {-44, 37}, {-38, 37}}, color = {191, 0, 0}));
+    connect(pulse1.y, gyroscope1.torqueReq) annotation(Line(points = {{-81, 68}, {-68, 68}, {-68, 52}, {-92, 52}, {-92, 40}, {-86, 40}, {-86, 40}}, color = {0, 0, 127}));
+    connect(batteryv21.pin_n, shelf2.pin_n) annotation(Line(points = {{-75, -3}, {-76, -3}, {-76, -10}, {-40, -10}, {-40, -4}, {-40, -4}}, color = {0, 0, 255}));
+    connect(batteryv21.flange_b, shelf2.flange_a) annotation(Line(points = {{-57, 5}, {-44, 5}, {-44, 4}, {-38, 4}, {-38, 4}}));
+    connect(batteryv21.Heat_a, shelf2.Heat_a) annotation(Line(points = {{-76, 3}, {-84, 3}, {-84, -16}, {-50, -16}, {-50, 0}, {-40, 0}, {-40, 0}}, color = {191, 0, 0}));
+    connect(shelf2.flange_b, body1.flange_a) annotation(Line(points = {{-21, 5}, {-10, 5}, {-10, 38}, {-6, 38}, {-6, 40}, {-6, 40}}));
+    connect(body1.pin_n, shelf2.pin_n) annotation(Line(points = {{-5, 30}, {-6, 30}, {-6, -14}, {-44, -14}, {-44, -4}, {-38, -4}, {-38, -4}}, color = {0, 0, 255}));
+    connect(shelf2.pin_p, batteryv21.pin_p) annotation(Line(points = {{-40, 12}, {-44, 12}, {-44, 18}, {-80, 18}, {-80, 12}, {-74, 12}, {-74, 12}, {-74, 12}}, color = {0, 0, 255}));
+    connect(body1.pin_p, shelf2.pin_p) annotation(Line(points = {{-6, 46}, {-6, 46}, {-6, 54}, {34, 54}, {34, 18}, {-42, 18}, {-42, 12}, {-40, 12}, {-40, 12}}, color = {0, 0, 255}));
     annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
   end Test2;
 
@@ -339,11 +377,12 @@ model TbLib
   end Partial;
 
   model scenario
-    Modelica.Blocks.Interfaces.RealOutput y annotation(Placement(visible = true, transformation(origin = {40, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {40, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.Blocks.Sources.Trapezoid trapezoid1(rising = 50, width = 500, falling = 60, period = 2000, amplitude = 1.57, startTime = 80) annotation(Placement(visible = true, transformation(origin = {-40, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    parameter Real commTime, per, tstart;
+    Modelica.Blocks.Interfaces.RealOutput y annotation(Placement(visible = true, transformation(origin = {32, -2}, extent = {{-8, -8}, {8, 8}}, rotation = 0), iconTransformation(origin = {40, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.Trapezoid trapezoid1(rising = 10, width = commTime, falling = 10, period = per, amplitude = 1.57, startTime = tstart) annotation(Placement(visible = true, transformation(origin = {-11, -3}, extent = {{-7, -7}, {7, 7}}, rotation = 0)));
   equation
-    connect(trapezoid1.y, y) annotation(Line(points = {{-29, 40}, {9.107469999999999, 40}, {9.107469999999999, 40.0729}, {40, 40.0729}, {40, 40}}));
-    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2}), graphics = {Line(origin = {-16.7577, -2.73226}, points = {{-73.224, 98.1785}, {-189.8, 99.2714}, {-189.8, -82.8779}, {-63.0237, -83.2422}, {-62.2951, 98.9071}, {-83.42440000000001, 98.5428}})}));
+    connect(trapezoid1.y, y) annotation(Line(points = {{-3, -3}, {11.1075, -3}, {11.1075, -1.9271}, {32, -1.9271}, {32, -2}}));
+    annotation(Diagram(coordinateSystem(extent = {{-30, -30}, {30, 30}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Icon(coordinateSystem(extent = {{-30, -30}, {30, 30}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
   end scenario;
 
   model ConnPoints
@@ -351,6 +390,316 @@ model TbLib
     Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-80, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
   end ConnPoints;
+
+  model Computer
+    parameter Real k, p, d;
+    Modelica.Blocks.Continuous.LimPID PID(yMax = 100, k = k, wp = p, Ti = 1, Td = 1, wd = d, Ni = 4, Nd = 50) annotation(Placement(visible = true, transformation(origin = {-40, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput torqueReq annotation(Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    input Modelica.Blocks.Interfaces.RealInput setpoint annotation(Placement(visible = true, transformation(origin = {-100, 44}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-96, 22}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    input Modelica.Blocks.Interfaces.RealInput angleMeas annotation(Placement(visible = true, transformation(origin = {-94, -38}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 30) annotation(Placement(visible = true, transformation(origin = {42, -18}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {94, 86}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {94, 86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {92, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {92, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b annotation(Placement(visible = true, transformation(origin = {94, 56}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {94, 56}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Components.Inertia inertia1(J = 0.01) annotation(Placement(visible = true, transformation(origin = {26, 56}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(inertia1.flange_b, flange_b) annotation(Line(points = {{36, 56}, {92, 56}, {92, 58}, {92, 58}}));
+    connect(resistor1.p, pin_p) annotation(Line(points = {{42, -8}, {46, -8}, {46, 86}, {94, 86}, {94, 86}}, color = {0, 0, 255}));
+    connect(resistor1.n, pin_n) annotation(Line(points = {{42, -28}, {44, -28}, {44, -86}, {90, -86}, {90, -86}}, color = {0, 0, 255}));
+    connect(PID.u_m, angleMeas) annotation(Line(points = {{-40, 8}, {-40, 8}, {-40, -36}, {-90, -36}, {-90, -36}}, color = {0, 0, 127}));
+    connect(PID.u_s, setpoint) annotation(Line(points = {{-52, 20}, {-68, 20}, {-68, 44}, {-92, 44}, {-92, 44}}, color = {0, 0, 127}));
+    connect(PID.y, torqueReq) annotation(Line(points = {{-29, 20}, {91.49509999999999, 20}, {91.49509999999999, 22.2023}, {91.49509999999999, 22.2023}}));
+  end Computer;
+
+  model RotationalBody
+    parameter Real ixx, iyy, izz;
+    Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor1 annotation(Placement(visible = true, transformation(origin = {9, -1}, extent = {{-9, -9}, {9, 9}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatcapacitor1(C = 1) annotation(Placement(visible = true, transformation(origin = {0, 34}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {-46, -46}, extent = {{-6, -6}, {6, 6}}, rotation = 0), iconTransformation(origin = {-42, -38}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a Heat annotation(Placement(visible = true, transformation(origin = {44, 40}, extent = {{-6, -6}, {6, 6}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor1(R = 0.01) annotation(Placement(visible = true, transformation(origin = {24, 30}, extent = {{-6, -6}, {6, 6}}, rotation = 0)));
+    output Modelica.Blocks.Interfaces.RealOutput angle annotation(Placement(visible = true, transformation(origin = {49, -1}, extent = {{-9, -9}, {9, 9}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Components.Inertia inertia1(J = ixx) annotation(Placement(visible = true, transformation(origin = {-20, 8}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {-45, 43}, extent = {{-7, -7}, {7, 7}}, rotation = 0), iconTransformation(origin = {-44, -18}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a annotation(Placement(visible = true, transformation(origin = {-46, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-88, 14}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(flange_a, inertia1.flange_a) annotation(Line(points = {{-46, 0}, {-38, 0}, {-38, 8}, {-30, 8}}));
+    connect(inertia1.flange_b, anglesensor1.flange) annotation(Line(points = {{-10, 8}, {-11, 8}, {-11, -1}, {0, -1}}));
+    connect(anglesensor1.phi, angle) annotation(Line(points = {{19, -1}, {49, -1}}, color = {0, 0, 127}));
+    connect(thermalresistor1.port_b, heatcapacitor1.port) annotation(Line(points = {{30, 30}, {15, 30}, {15, 24}, {0, 24}}, color = {191, 0, 0}));
+    connect(thermalresistor1.port_a, Heat) annotation(Line(points = {{18, 30}, {32, 30}, {32, 40}, {44, 40}}, color = {191, 0, 0}));
+  end RotationalBody;
+
+  model Gyroscope
+    parameter Real torquegain, powergain;
+    Modelica.Electrical.Analog.Sensors.CurrentSensor currentsensor1 annotation(Placement(visible = true, transformation(origin = {40, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Sources.SignalCurrent signalcurrent1 annotation(Placement(visible = true, transformation(origin = {28, 0}, extent = {{10, -10}, {-10, 10}}, rotation = 90)));
+    Modelica.Blocks.Math.Gain gain1(k = powergain) annotation(Placement(visible = true, transformation(origin = {-19, 3}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Sources.Torque torque1(useSupport = false) annotation(Placement(visible = true, transformation(origin = {-16, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Math.Gain GyroTorqueGain(k = torquegain) "For Sizing of Gyro" annotation(Placement(visible = true, transformation(origin = {-52, -40}, extent = {{-8, -8}, {8, 8}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {94, 62}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {92, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput angle annotation(Placement(visible = true, transformation(origin = {98, 2}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {88, 4}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor1 annotation(Placement(visible = true, transformation(origin = {56, -24}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Math.Abs abs1 annotation(Placement(visible = true, transformation(origin = {-58, 2}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    input Modelica.Blocks.Interfaces.RealInput torqueReq annotation(Placement(visible = true, transformation(origin = {-98, 2}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-94, 2}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    output Modelica.Blocks.Interfaces.RealOutput current "current consumed" annotation(Placement(visible = true, transformation(origin = {98, 36}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {90, 42}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatcapacitor1(C = 1, der_T(start = 0), T(start = 20)) annotation(Placement(visible = true, transformation(origin = {12, -72}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {94, -64}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {88, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b annotation(Placement(visible = true, transformation(origin = {94, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {90, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor1(R = 0.1) annotation(Placement(visible = true, transformation(origin = {48, -82}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Sources.PrescribedHeatFlow prescribedheatflow1 annotation(Placement(visible = true, transformation(origin = {-24, -82}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Math.Gain gain2(k = -500) annotation(Placement(visible = true, transformation(origin = {-54, -82}, extent = {{-8, -8}, {8, 8}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a Heat_a annotation(Placement(visible = true, transformation(origin = {-94, -98}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-94, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Sensors.TemperatureSensor temperaturesensor1 annotation(Placement(visible = true, transformation(origin = {-48, 68}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput temp annotation(Placement(visible = true, transformation(origin = {-88, 90}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 38}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(heatcapacitor1.port, temperaturesensor1.port) annotation(Line(points = {{12, -82}, {0, -82}, {0, 58}, {-64, 58}, {-64, 68}, {-58, 68}, {-58, 68}}, color = {191, 0, 0}));
+    connect(temperaturesensor1.T, temp) annotation(Line(points = {{-38, 68}, {-24, 68}, {-24, 86}, {-94, 86}, {-94, 92}, {-94, 92}}, color = {0, 0, 127}));
+    connect(gain2.u, currentsensor1.i) annotation(Line(points = {{-64, -82}, {-76, -82}, {-76, 50}, {40, 50}}, color = {0, 0, 127}));
+    connect(gain2.y, prescribedheatflow1.Q_flow) annotation(Line(points = {{-45, -82}, {-34, -82}}, color = {0, 0, 127}));
+    connect(prescribedheatflow1.port, heatcapacitor1.port) annotation(Line(points = {{-14, -82}, {12, -82}}, color = {191, 0, 0}));
+    connect(thermalresistor1.port_b, Heat_a) annotation(Line(points = {{58, -82}, {75, -82}, {75, -98}, {-94, -98}}, color = {191, 0, 0}));
+    connect(heatcapacitor1.port, thermalresistor1.port_a) annotation(Line(points = {{12, -82}, {38, -82}}, color = {191, 0, 0}));
+    connect(torque1.flange, flange_b) annotation(Line(points = {{-6, -40}, {94, -40}}));
+    connect(signalcurrent1.n, pin_n) annotation(Line(points = {{28, -10}, {28, -64}, {94, -64}}, color = {0, 0, 255}));
+    connect(currentsensor1.i, current) annotation(Line(points = {{40, 50}, {42, 50}, {42, 36}, {88, 36}, {88, 36}}, color = {0, 0, 127}));
+    connect(torqueReq, GyroTorqueGain.u) annotation(Line(points = {{-98, 2}, {-82, 2}, {-82, -40}, {-62, -40}, {-62, -40}}, color = {0, 0, 127}));
+    connect(torqueReq, abs1.u) annotation(Line(points = {{-98, 2}, {-70, 2}, {-70, 0}, {-70, 0}}, color = {0, 0, 127}));
+    connect(abs1.y, gain1.u) annotation(Line(points = {{-47, 2}, {-40.8407, 2}, {-40.8407, -0.164204}, {-41, -0.164204}, {-41, 3.4179}, {-31, 3.4179}, {-31, 3}}));
+    connect(anglesensor1.phi, angle) annotation(Line(points = {{67, -24}, {78, -24}, {78, 4}, {92, 4}, {92, 4}}, color = {0, 0, 127}));
+    connect(anglesensor1.flange, torque1.flange) annotation(Line(points = {{46, -24}, {12, -24}, {12, -40}, {-6, -40}, {-6, -40}}));
+    connect(currentsensor1.n, pin_p) annotation(Line(points = {{50, 60}, {94, 60}, {94, 60}, {94, 60}}, color = {0, 0, 255}));
+    connect(GyroTorqueGain.y, torque1.tau) annotation(Line(points = {{-43, -40}, {-30, -40}, {-30, -40}, {-30, -40}}, color = {0, 0, 127}));
+    connect(gain1.y, signalcurrent1.i) annotation(Line(points = {{-8, 3}, {21, 3}, {21, 0}}));
+    connect(currentsensor1.p, signalcurrent1.p) annotation(Line(points = {{30, 60}, {24.1037, 60}, {24.1037, 10}, {28, 10}}));
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end Gyroscope;
+
+  model PV_Panel
+    parameter Real currentFactor;
+    Modelica.Electrical.Analog.Sources.SignalCurrent signalcurrent1 annotation(Placement(visible = true, transformation(origin = {0, 60}, extent = {{-7.5, -7.5}, {7.5, 7.5}}, rotation = 90)));
+    Modelica.Electrical.Analog.Semiconductors.Diode diode1(Vt = 0.18) annotation(Placement(visible = true, transformation(origin = {20, 60}, extent = {{-5, -5}, {5, 5}}, rotation = -90)));
+    Modelica.Electrical.Analog.Sources.SignalCurrent signalcurrent2 annotation(Placement(visible = true, transformation(origin = {0, 0}, extent = {{-7.5, -7.5}, {7.5, 7.5}}, rotation = 90)));
+    Modelica.Electrical.Analog.Semiconductors.Diode diode2(Vt = 0.18) annotation(Placement(visible = true, transformation(origin = {20, 0}, extent = {{-5, -5}, {5, 5}}, rotation = -90)));
+    Modelica.Electrical.Analog.Basic.Resistor resistor2(R = 0.01) annotation(Placement(visible = true, transformation(origin = {0, 20}, extent = {{-5, -5}, {5, 5}}, rotation = 90)));
+    Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 0.01) annotation(Placement(visible = true, transformation(origin = {40, 80}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+    Modelica.Electrical.Analog.Sensors.CurrentSensor currentsensor1 annotation(Placement(visible = true, transformation(origin = {60, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {94, 108}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Sensors.VoltageSensor voltagesensor1 annotation(Placement(visible = true, transformation(origin = {40, -24}, extent = {{-10, 10}, {10, -10}}, rotation = -90)));
+    Modelica.Blocks.Math.Gain gain1(k = currentFactor) annotation(Placement(visible = true, transformation(origin = {-34, 60}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
+    Modelica.Blocks.Math.Abs abs1 annotation(Placement(visible = true, transformation(origin = {-58, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Math.Cos cos1 annotation(Placement(visible = true, transformation(origin = {-90, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput i annotation(Placement(visible = true, transformation(origin = {96, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealInput incidentAngle "Angle of sun, radians" annotation(Placement(visible = true, transformation(origin = {-140, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {86, -58}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {90, -106}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput v annotation(Placement(visible = true, transformation(origin = {94, -26}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {98, -8}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(voltagesensor1.v, v) annotation(Line(points = {{50, -24}, {50, -39.4911}, {74.9109, -39.4911}, {74.9109, -26}, {94, -26}}));
+    connect(cos1.u, u) annotation(Line(points = {{-102, 60}, {-140, 60}}, color = {0, 0, 127}));
+    connect(currentsensor1.i, i) annotation(Line(points = {{70, 100}, {70, 96.0814}, {85.0891, 96.0814}, {85.0891, 60}, {96, 60}}));
+    connect(cos1.u, incidentAngle) annotation(Line(points = {{-102, 60}, {-122, 60}}, color = {0, 0, 127}));
+    connect(cos1.y, abs1.u) annotation(Line(points = {{-79, 60}, {-70, 60}}, color = {0, 0, 127}));
+    connect(abs1.y, gain1.u) annotation(Line(points = {{-47, 60}, {-40, 60}}, color = {0, 0, 127}));
+    connect(gain1.y, signalcurrent1.i) annotation(Line(points = {{-28.5, 60}, {-6.07062, 60}, {-6.07062, 60.5165}}));
+    connect(gain1.y, signalcurrent2.i) annotation(Line(points = {{-28.5, 60}, {-20.7455, 60}, {-20.7455, -0.259319}, {-5.70502, -0.259319}}));
+    connect(signalcurrent2.p, pin_n) annotation(Line(points = {{-4.59227e-16, -7.5}, {-4.59227e-16, -58}, {86, -58}}));
+    connect(voltagesensor1.n, pin_n) annotation(Line(points = {{40, -34}, {40, -58}, {86, -58}}));
+    connect(pin_p, voltagesensor1.p) annotation(Line(points = {{94, 108}, {79.3893, 108}, {79.3893, -14}, {40, -14}}));
+    connect(pin_p, currentsensor1.n) annotation(Line(points = {{94, 108}, {60.2545, 108}, {60.2545, 109.924}}));
+    connect(currentsensor1.p, resistor1.n) annotation(Line(points = {{60, 90}, {60, 80.20359999999999}, {44.7837, 80.20359999999999}, {44.7837, 80.20359999999999}}));
+    connect(signalcurrent1.n, resistor1.p) annotation(Line(points = {{4.59227e-016, 67.5}, {4.59227e-016, 79.2975}, {34.5267, 79.2975}, {35, 80.4357}, {35, 80}}));
+    connect(diode1.p, resistor1.p) annotation(Line(points = {{20, 65}, {20, 79.35639999999999}, {35.3465, 80}, {35, 80}}));
+    connect(resistor2.n, signalcurrent1.p) annotation(Line(points = {{3.06152e-016, 25}, {3.06152e-016, 51.2168}, {-0.395497, 51.2168}, {-0.395497, 51.2168}}));
+    connect(signalcurrent2.n, resistor2.p) annotation(Line(points = {{4.59227e-016, 7.5}, {4.59227e-016, 14.6334}, {-0.395497, 14.6334}, {-0.395497, 14.6334}}));
+    connect(diode2.n, signalcurrent2.p) annotation(Line(points = {{20, -5}, {20, -13.0514}, {0.395497, -13.0514}, {0.395497, -7.31669}, {-0.988741, -7.31669}, {-0.988741, -7.31669}}));
+    connect(signalcurrent2.n, diode2.p) annotation(Line(points = {{4.59227e-016, 7.5}, {4.59227e-016, 9.957140000000001}, {18.9808, 9.957140000000001}, {18.9808, 3.73393}, {18.9808, 3.73393}}));
+    connect(signalcurrent1.p, diode1.n) annotation(Line(points = {{-4.59227e-016, 52.5}, {-4.59227e-016, 51.1139}, {20.4455, 51.1139}, {20.4455, 55.099}, {20.4455, 55.099}}));
+    annotation(Diagram(coordinateSystem(extent = {{-150, -120}, {100, 120}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Icon(coordinateSystem(extent = {{-150, -120}, {100, 120}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end PV_Panel;
+
+  model SatBody
+    parameter Real ixx, iyy, izz;
+    Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor1 annotation(Placement(visible = true, transformation(origin = {9, -1}, extent = {{-9, -9}, {9, 9}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a Heat annotation(Placement(visible = true, transformation(origin = {92, 60}, extent = {{-6, -6}, {6, 6}}, rotation = 0), iconTransformation(extent = {{-6, -6}, {6, 6}}, rotation = 0)));
+    output Modelica.Blocks.Interfaces.RealOutput angle annotation(Placement(visible = true, transformation(origin = {99, -1}, extent = {{-9, -9}, {9, 9}}, rotation = 0), iconTransformation(extent = {{-9, -9}, {9, 9}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor1(R = 0.01) annotation(Placement(visible = true, transformation(origin = {38, 60}, extent = {{-6, -6}, {6, 6}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatcapacitor1 annotation(Placement(visible = true, transformation(origin = {-8, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Components.Inertia inertia1(J = ixx) annotation(Placement(visible = true, transformation(origin = {-22, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a annotation(Placement(visible = true, transformation(origin = {-94, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-96, -2}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {-92, 72}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-92, 72}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {-94, -64}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-94, -64}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(inertia1.flange_a, flange_a) annotation(Line(points = {{-32, 0}, {-94, 0}, {-94, 0}, {-94, 0}}));
+    connect(heatcapacitor1.port, thermalresistor1.port_a) annotation(Line(points = {{-8, 60}, {32, 60}, {32, 60}, {32, 60}}, color = {191, 0, 0}));
+    connect(inertia1.flange_b, anglesensor1.flange) annotation(Line(points = {{-12, 0}, {-11, 0}, {-11, -1}, {0, -1}}));
+    connect(thermalresistor1.port_a, Heat) annotation(Line(points = {{32, 60}, {92, 60}}, color = {191, 0, 0}));
+    connect(anglesensor1.phi, angle) annotation(Line(points = {{19, -1}, {99, -1}}, color = {0, 0, 127}));
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end SatBody;
+
+  model Body
+    parameter Real ixx;
+    Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a annotation(Placement(visible = true, transformation(origin = {-94, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-94, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Components.Spring spring1(c = 100, phi_rel(start = 1)) annotation(Placement(visible = true, transformation(origin = {-66, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Components.Inertia BodyInertia(J = ixx) annotation(Placement(visible = true, transformation(origin = {-38, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor1 annotation(Placement(visible = true, transformation(origin = {-8, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput angle annotation(Placement(visible = true, transformation(origin = {98, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {98, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {-96, 82}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-96, 82}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {-94, -82}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-94, -82}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 100000) annotation(Placement(visible = true, transformation(origin = {-64, 82}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b annotation(Placement(visible = true, transformation(origin = {92, 26}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {92, 26}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a Heat_a annotation(Placement(visible = true, transformation(origin = {-96, -34}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-96, -34}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_b Heat_b annotation(Placement(visible = true, transformation(origin = {92, -36}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {92, -36}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatcapacitor1(C = 10, T(start = 20)) annotation(Placement(visible = true, transformation(origin = {-8, -14}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor1(R = 0.2) annotation(Placement(visible = true, transformation(origin = {-64, -34}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Sources.FixedTemperature fixedtemperature1(T = 40) annotation(Placement(visible = true, transformation(origin = {66, -88}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.BodyRadiation bodyradiation1(Gr = 2) annotation(Placement(visible = true, transformation(origin = {66, -58}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor2(R = 0.2) annotation(Placement(visible = true, transformation(origin = {34, -34}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Sensors.TemperatureSensor temperaturesensor1 annotation(Placement(visible = true, transformation(origin = {58, 74}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput temp annotation(Placement(visible = true, transformation(origin = {98, 74}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 8}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(bodyradiation1.port_a, heatcapacitor1.port) annotation(Line(points = {{56, -58}, {-8, -58}, {-8, -24}, {-8, -24}}, color = {191, 0, 0}));
+    connect(temperaturesensor1.T, temp) annotation(Line(points = {{68, 74}, {90, 74}, {90, 74}, {90, 74}}, color = {0, 0, 127}));
+    connect(heatcapacitor1.port, temperaturesensor1.port) annotation(Line(points = {{-8, -24}, {-8, -24}, {-8, -28}, {10, -28}, {10, 74}, {48, 74}, {48, 74}}, color = {191, 0, 0}));
+    connect(thermalresistor2.port_b, Heat_b) annotation(Line(points = {{44, -34}, {68, -34}, {68, -36}, {92, -36}}, color = {191, 0, 0}));
+    connect(heatcapacitor1.port, thermalresistor2.port_a) annotation(Line(points = {{-8, -24}, {-8, -34}, {24, -34}}, color = {191, 0, 0}));
+    connect(bodyradiation1.port_b, fixedtemperature1.port) annotation(Line(points = {{76, -58}, {82, -58}, {82, -88}, {76, -88}}, color = {191, 0, 0}));
+    connect(thermalresistor1.port_b, heatcapacitor1.port) annotation(Line(points = {{-54, -34}, {-8, -34}, {-8, -24}, {-8, -24}}, color = {191, 0, 0}));
+    connect(thermalresistor1.port_a, Heat_a) annotation(Line(points = {{-74, -34}, {-92, -34}, {-92, -34}, {-92, -34}}, color = {191, 0, 0}));
+    connect(flange_b, BodyInertia.flange_b) annotation(Line(points = {{92, 26}, {-24, 26}, {-24, 6}, {-28, 6}, {-28, 6}}));
+    connect(resistor1.n, pin_n) annotation(Line(points = {{-54, 82}, {16, 82}, {16, -82}, {-94, -82}}, color = {0, 0, 255}));
+    connect(pin_p, resistor1.p) annotation(Line(points = {{-96, 82}, {-74, 82}}, color = {0, 0, 255}));
+    connect(anglesensor1.phi, angle) annotation(Line(points = {{3, 6}, {90, 6}, {90, 4}, {90, 4}}, color = {0, 0, 127}));
+    connect(BodyInertia.flange_b, anglesensor1.flange) annotation(Line(points = {{-28, 6}, {-18, 6}, {-18, 6}, {-18, 6}}));
+    connect(spring1.flange_b, BodyInertia.flange_a) annotation(Line(points = {{-56, 6}, {-48, 6}, {-48, 6}, {-48, 6}}));
+    connect(flange_a, spring1.flange_a) annotation(Line(points = {{-94, 6}, {-76, 6}}));
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end Body;
+
+  model PVPanel
+    parameter Real pvGain;
+    Modelica.Blocks.Math.Abs abs1 annotation(Placement(visible = true, transformation(origin = {-26, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Math.Cos cos1 annotation(Placement(visible = true, transformation(origin = {-58, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 0.01) annotation(Placement(visible = true, transformation(origin = {44, 12}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+    Modelica.Electrical.Analog.Sensors.VoltageSensor voltagesensor1 annotation(Placement(visible = true, transformation(origin = {86, 8}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+    Modelica.Electrical.Analog.Sensors.CurrentSensor currentsensor1 annotation(Placement(visible = true, transformation(origin = {44, -48}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+    Modelica.Electrical.Analog.Sources.SignalCurrent signalcurrent1 annotation(Placement(visible = true, transformation(origin = {44, 44}, extent = {{10, 10}, {-10, -10}}, rotation = -90)));
+    Modelica.Electrical.Analog.Sources.SignalCurrent signalcurrent2 annotation(Placement(visible = true, transformation(origin = {44, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+    Modelica.Blocks.Math.Gain gain1(k = pvGain) annotation(Placement(visible = true, transformation(origin = {8, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Semiconductors.Diode diode1(Vt = 0.58) annotation(Placement(visible = true, transformation(origin = {10, 44}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+    Modelica.Electrical.Analog.Semiconductors.Diode diode2(Vt = 0.58) annotation(Placement(visible = true, transformation(origin = {2, -20}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {96, -84}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {82, -82}, extent = {{-18, -18}, {18, 18}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput current annotation(Placement(visible = true, transformation(origin = {102, -50}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {90, -24}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput volts annotation(Placement(visible = true, transformation(origin = {100, 50}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {88, 16}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {93, 95}, extent = {{-15, -15}, {15, 15}}, rotation = 0), iconTransformation(origin = {93, 95}, extent = {{-15, -15}, {15, 15}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Sensors.AngleSensor anglesensor1 annotation(Placement(visible = true, transformation(origin = {-66, 24}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a annotation(Placement(visible = true, transformation(origin = {-92, 24}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-92, 24}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(anglesensor1.phi, cos1.u) annotation(Line(points = {{-55, 24}, {-44, 24}, {-44, 54}, {-78, 54}, {-78, 80}, {-70, 80}, {-70, 80}}, color = {0, 0, 127}));
+    connect(flange_a, anglesensor1.flange) annotation(Line(points = {{-92, 24}, {-76, 24}, {-76, 24}, {-76, 24}}));
+    connect(signalcurrent1.n, pin_p) annotation(Line(points = {{44, 54}, {44, 95}, {93, 95}}, color = {0, 0, 255}));
+    connect(pin_p, voltagesensor1.p) annotation(Line(points = {{93, 95}, {86, 95}, {86, 18}}, color = {0, 0, 255}));
+    connect(signalcurrent2.p, currentsensor1.p) annotation(Line(points = {{44, -30}, {44, -30}, {44, -38}, {44, -38}}, color = {0, 0, 255}));
+    connect(resistor1.n, signalcurrent2.n) annotation(Line(points = {{44, 2}, {44, 2}, {44, -10}, {44, -10}}, color = {0, 0, 255}));
+    connect(diode2.n, signalcurrent2.p) annotation(Line(points = {{2, -30}, {44, -30}, {44, -30}, {44, -30}}, color = {0, 0, 255}));
+    connect(diode2.p, signalcurrent2.n) annotation(Line(points = {{2, -10}, {44, -10}}, color = {0, 0, 255}));
+    connect(signalcurrent1.p, resistor1.p) annotation(Line(points = {{44, 34}, {44, 34}, {44, 22}, {44, 22}}, color = {0, 0, 255}));
+    connect(signalcurrent1.p, diode1.n) annotation(Line(points = {{44, 34}, {10, 34}, {10, 34}, {10, 34}}, color = {0, 0, 255}));
+    connect(diode1.p, signalcurrent1.n) annotation(Line(points = {{10, 54}, {44, 54}, {44, 54}, {44, 54}}, color = {0, 0, 255}));
+    connect(gain1.y, signalcurrent1.i) annotation(Line(points = {{19, 80}, {28, 80}, {28, 44}, {36, 44}, {36, 44}}, color = {0, 0, 127}));
+    connect(abs1.y, gain1.u) annotation(Line(points = {{-15, 80}, {-4, 80}}, color = {0, 0, 127}));
+    connect(gain1.y, signalcurrent2.i) annotation(Line(points = {{19, 80}, {28, 80}, {28, -20}, {37, -20}}, color = {0, 0, 127}));
+    connect(currentsensor1.i, current) annotation(Line(points = {{34, -48}, {20, -48}, {20, -66}, {74, -66}, {74, -50}, {96, -50}, {96, -50}}, color = {0, 0, 127}));
+    connect(currentsensor1.n, pin_n) annotation(Line(points = {{44, -58}, {46, -58}, {46, -84}, {96, -84}}, color = {0, 0, 255}));
+    connect(voltagesensor1.v, volts) annotation(Line(points = {{76, 8}, {72, 8}, {72, 50}, {94, 50}, {94, 50}}, color = {0, 0, 127}));
+    connect(voltagesensor1.n, pin_n) annotation(Line(points = {{86, -2}, {86, -84}, {96, -84}}, color = {0, 0, 255}));
+    connect(cos1.y, abs1.u) annotation(Line(points = {{-47, 80}, {-38, 80}}, color = {0, 0, 127}));
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end PVPanel;
+
+  model Shelf
+    parameter Real dist = 500;
+    Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a annotation(Placement(visible = true, transformation(origin = {-94, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-94, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Components.Spring spring1(c = 100, phi_rel(start = 1)) annotation(Placement(visible = true, transformation(origin = {-66, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {-96, 82}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-96, 82}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {-94, -82}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-94, -82}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 100000) annotation(Placement(visible = true, transformation(origin = {-64, 82}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b annotation(Placement(visible = true, transformation(origin = {92, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {92, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Components.Inertia BodyInertia(J = 0.01) annotation(Placement(visible = true, transformation(origin = {-28, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a Heat_a annotation(Placement(visible = true, transformation(origin = {-94, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-96, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatcapacitor1(C = 1, der_T(start = 0), T(start = 20)) annotation(Placement(visible = true, transformation(origin = {-12, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.ThermalResistor LoadToShelf(R = (1000.0 - dist) * 0.1) annotation(Placement(visible = true, transformation(origin = {56, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.ThermalResistor thermalresistor1(R = 0.1) annotation(Placement(visible = true, transformation(origin = {-52, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_b Heat_b annotation(Placement(visible = true, transformation(origin = {94, -30}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {94, -30}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(LoadToShelf.port_b, Heat_b) annotation(Line(points = {{66, -32}, {92, -32}, {92, -30}, {92, -30}}, color = {191, 0, 0}));
+    connect(heatcapacitor1.port, LoadToShelf.port_a) annotation(Line(points = {{-12, -30}, {-12, -30}, {-12, -32}, {46, -32}, {46, -32}}, color = {191, 0, 0}));
+    connect(thermalresistor1.port_b, heatcapacitor1.port) annotation(Line(points = {{-42, -32}, {-12, -32}, {-12, -30}, {-12, -30}}, color = {191, 0, 0}));
+    connect(thermalresistor1.port_a, Heat_a) annotation(Line(points = {{-62, -32}, {-92, -32}, {-92, -32}, {-92, -32}}, color = {191, 0, 0}));
+    connect(LoadToShelf.port_b, heatcapacitor1.port) annotation(Line(points = {{-56, -32}, {-20, -32}}, color = {191, 0, 0}));
+    connect(LoadToShelf.port_a, Heat_a) annotation(Line(points = {{-76, -32}, {-94, -32}}, color = {191, 0, 0}));
+    connect(flange_b, BodyInertia.flange_b) annotation(Line(points = {{92, 6}, {-18, 6}, {-18, 6}, {-18, 6}}));
+    connect(spring1.flange_b, BodyInertia.flange_a) annotation(Line(points = {{-56, 6}, {-38, 6}}));
+    connect(resistor1.n, pin_n) annotation(Line(points = {{-54, 82}, {16, 82}, {16, -82}, {-94, -82}}, color = {0, 0, 255}));
+    connect(pin_p, resistor1.p) annotation(Line(points = {{-96, 82}, {-74, 82}}, color = {0, 0, 255}));
+    connect(flange_a, spring1.flange_a) annotation(Line(points = {{-94, 6}, {-76, 6}}));
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end Shelf;
+
+  model Cargo
+    Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a annotation(Placement(visible = true, transformation(origin = {-94, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-94, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Components.Spring spring1(c = 10, phi_rel(start = 1)) annotation(Placement(visible = true, transformation(origin = {-66, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {-96, 82}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-96, 82}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {-94, -82}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-94, -82}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 100000) annotation(Placement(visible = true, transformation(origin = {-64, 82}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b annotation(Placement(visible = true, transformation(origin = {92, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {92, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Components.Inertia BodyInertia(J = 0.01) annotation(Placement(visible = true, transformation(origin = {-28, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_c annotation(Placement(visible = true, transformation(origin = {92, -38}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {92, -38}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(flange_c, BodyInertia.flange_b) annotation(Line(points = {{92, -38}, {42, -38}, {42, 6}, {-18, 6}, {-18, 6}}));
+    connect(flange_b, BodyInertia.flange_b) annotation(Line(points = {{92, 6}, {-18, 6}, {-18, 6}, {-18, 6}}));
+    connect(spring1.flange_b, BodyInertia.flange_a) annotation(Line(points = {{-56, 6}, {-38, 6}}));
+    connect(resistor1.n, pin_n) annotation(Line(points = {{-54, 82}, {16, 82}, {16, -82}, {-94, -82}}, color = {0, 0, 255}));
+    connect(pin_p, resistor1.p) annotation(Line(points = {{-96, 82}, {-74, 82}}, color = {0, 0, 255}));
+    connect(flange_a, spring1.flange_a) annotation(Line(points = {{-94, 6}, {-76, 6}}));
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end Cargo;
+
+  model BatteryV2
+    parameter Real CEquivalent = 100;
+    Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 0.05) annotation(Placement(visible = true, transformation(origin = {-60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+    Modelica.Electrical.Analog.Basic.Capacitor capacitor1(C = CEquivalent, v(start = 18)) annotation(Placement(visible = true, transformation(origin = {-60, -40}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+    Modelica.Electrical.Analog.Sensors.CurrentSensor currentsensor1 annotation(Placement(visible = true, transformation(origin = {-40, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Sensors.VoltageSensor voltagesensor1 annotation(Placement(visible = true, transformation(origin = {40, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput i annotation(Placement(visible = true, transformation(origin = {100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput v annotation(Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, -72}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(Placement(visible = true, transformation(origin = {-100, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-90, 72}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b annotation(Placement(visible = true, transformation(origin = {94, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {94, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Basic.Ground ground1 annotation(Placement(visible = true, transformation(origin = {-4, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Components.Inertia inertia1(J = 0.001) annotation(Placement(visible = true, transformation(origin = {28, 4}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a Heat_a annotation(Placement(visible = true, transformation(origin = {-98, -6}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-98, -6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.ThermalConductor thermalconductor1(G = 1) annotation(Placement(visible = true, transformation(origin = {-40, -6}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatcapacitor1(C = 10, T(start = 20)) annotation(Placement(visible = true, transformation(origin = {-4, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Thermal.HeatTransfer.Sensors.TemperatureSensor temperaturesensor1 annotation(Placement(visible = true, transformation(origin = {18, -24}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput temp "Internal Temperature" annotation(Placement(visible = true, transformation(origin = {94, -26}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {102, -78}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(temperaturesensor1.T, temp) annotation(Line(points = {{28, -24}, {88, -24}, {88, -26}, {88, -26}}, color = {0, 0, 127}));
+    connect(heatcapacitor1.port, temperaturesensor1.port) annotation(Line(points = {{-4, 0}, {-2, 0}, {-2, -24}, {8, -24}, {8, -24}}, color = {191, 0, 0}));
+    connect(thermalconductor1.port_b, heatcapacitor1.port) annotation(Line(points = {{-30, -6}, {-4, -6}, {-4, 0}, {-4, 0}}, color = {191, 0, 0}));
+    connect(Heat_a, thermalconductor1.port_a) annotation(Line(points = {{-98, -6}, {-50, -6}, {-50, -6}, {-50, -6}}, color = {191, 0, 0}));
+    connect(inertia1.flange_b, flange_b) annotation(Line(points = {{38, 4}, {94, 4}, {94, 8}, {94, 8}}));
+    connect(ground1.p, capacitor1.n) annotation(Line(points = {{-4, -50}, {-20, -50}, {-20, -68}, {-60, -68}, {-60, -50}, {-60, -50}}, color = {0, 0, 255}));
+    connect(currentsensor1.i, i) annotation(Line(points = {{-40, 50}, {-40.3732, 50}, {-40.3732, 49.1942}, {6.78541, 49.1942}, {6.78541, 91.6031}, {79.05, 91.6031}, {79.05, 79.05}, {93.97790000000001, 79.05}, {93.97790000000001, 79.05}}));
+    connect(voltagesensor1.v, v) annotation(Line(points = {{40, 50}, {40.3732, 50}, {40.3732, -88.2103}, {80.4071, -88.2103}, {80.4071, -79.38930000000001}, {91.9423, -79.38930000000001}, {91.9423, -79.38930000000001}}));
+    connect(voltagesensor1.n, pin_n) annotation(Line(points = {{50, 60}, {54.6226, 60}, {54.6226, -81.0857}, {-98.0492, -81.0857}, {-98.0492, -81.0857}}));
+    connect(pin_p, voltagesensor1.p) annotation(Line(points = {{-100, 80}, {29.8558, 80}, {29.8558, 60.7294}, {29.8558, 60.7294}}));
+    connect(currentsensor1.p, resistor1.p) annotation(Line(points = {{-50, 60}, {-60.0509, 60}, {-60.0509, 29.1773}, {-59.0331, 29.1773}, {-59.0331, 29.1773}}));
+    connect(pin_p, currentsensor1.n) annotation(Line(points = {{-100, 80}, {-26.4631, 80}, {-26.4631, 60.3902}, {-29.1773, 60.3902}, {-29.1773, 60.3902}}));
+    connect(capacitor1.n, pin_n) annotation(Line(points = {{-60, -50}, {-60, -80.5616}, {-100.864, -80.5616}, {-100.864, -80.5616}}));
+    connect(capacitor1.p, resistor1.n) annotation(Line(points = {{-60, -30}, {-60, 11.6631}, {-59.8272, 11.6631}, {-59.8272, 10}, {-60, 10}}));
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end BatteryV2;
 equation
   connect(tbload1.pin_n, src1.pin_n) annotation(Line(points = {{14, 40}, {-14.6172, 40}, {-14.6172, 38.3207}, {-20, 38.3207}, {-20, 38}}));
   connect(src1.pin_p, tbload1.pin_p) annotation(Line(points = {{-20, 44}, {12.5807, 44}, {12.5807, 41.4422}, {14, 41.4422}, {14, 42}}));

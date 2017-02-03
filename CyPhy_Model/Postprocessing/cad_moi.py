@@ -579,9 +579,10 @@ if __name__ == '__main__':
         gyroLoc = np.array(gyro_location)
         print "GyroLoc----------------------------------\n"
         print gyroLoc  
-        
+        inertiaScale = 1.0 / 1000000.0
         spaceMass = float(myMass)    
         parAx = parallel_axis(spaceInert,spaceMass,gyroLoc)
+        parAx = parAx * inertiaScale
         outlogf.write("Spacecraft Transformed Inertial Tensor at CG = \n" + str(parAx)+'\n')
         print parAx
         print compLocs

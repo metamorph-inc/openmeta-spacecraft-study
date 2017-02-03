@@ -1,2 +1,0 @@
-NORMAL: Component is missing CADModel object, it will be excluded from assembly xml: [RootFolder/A_DemoSystems/SpacecraftNominalConfig/attitudeScenario]
-WARNING: No referencecoordinatesystem was found. Root component of assembly will be selected arbitrarily.
