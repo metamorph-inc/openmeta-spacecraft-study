@@ -3,7 +3,7 @@ An example OpenMETA model for the preliminary design of a spacecraft.
 
 ## Installation instructions
 
-In addition to cloning this repository, you will need to install a number of software tools to be able to successfully run the some of the test benches in this model.
+In addition to cloning this repository, you will need to install a number of software tools to be able to successfully run some of the test benches in this model.
 
 ### OpenModelica
 
