@@ -84,7 +84,8 @@
       "./test-benches/ExtractModelProps_v2.testbench.json",
       "./test-benches/PowerAnalysis_v2_DS.testbench.json",
       "./test-benches/Inertial_and_Geometry_v2_DS.testbench.json",
-      "./test-benches/ExtractModelProps_v2_DS.testbench.json"
+      "./test-benches/ExtractModelProps_v2_DS.testbench.json",
+      "./test-benches/FEA_Shelf_2_Launch_Load.testbench.json"
     ],
     "Results": {
       "UrlHints": [
@@ -100,6 +101,6 @@
       "text": ""
     },
     "CyPhyProjectFileName": "ExampleSat_3_1.mga",
-    "LastModified": "2017-09-14 15-46-34"
+    "LastModified": "2018-02-06 09-26-55"
   }
 }
