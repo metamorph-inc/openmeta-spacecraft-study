@@ -9,3 +9,5 @@ requirements/
 results/
 stats/
 test-benches/
+*.mga
+manifest.project.json
