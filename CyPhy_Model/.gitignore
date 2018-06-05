@@ -9,5 +9,7 @@ requirements/
 results/
 stats/
 test-benches/
+merged/
+metalink/
 *.mga
 manifest.project.json
