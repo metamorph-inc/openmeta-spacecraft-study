@@ -23,4 +23,6 @@ The `SpacecraftComposition.xme` project is used for the effort to demonstrate th
 
 ### Cameo Projects
 
-The `SysML_Model` folder contains two projects that correspond to those in the `CyPhy_Model` folder. The `Spacecraft.mdzip` model that corresponds to the `Spacecraft.xme` model. This model includes a number of SysML 
+The `SysML_Model` folder contains two projects that correspond to those in the `CyPhy_Model` folder. The `Spacecraft.mdzip` model that corresponds to the `Spacecraft.xme` model. This model includes a number of SysML attempts to include functional and operational models in addition to the structural models that correspond to OpenMETA.
+
+The `CargoSolarPanels.mdxml` project includes the most recent modeling strategies although it doesn't include the whole spacecraft. We are using this model for development of concepts/implementations currently.
