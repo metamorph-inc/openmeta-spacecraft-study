@@ -19,7 +19,7 @@ The `ExampleSat_3_1.xme` and `ExampleSat3.3b.xme` projects are carbon copies of 
 
 The `Spacecraft.xme` model includes some slight modifications to the `ExampleSat3.3b.xme` model to standardize naming conventions and model organization, but most significantly it seeks to replace all the Connectors in the model with instances of "Connector" archetypes in the Connectors folder; this was significant for trying to map these to SysML "Interface Blocks."
 
-The `SpacecraftComposition.xme` project is used for the effort to demonstrate the ability to compose CAD and Sim Events models from within Cameo.
+The `CargoSolarPanels.xme` project is used for the effort to demonstrate the ability to compose CAD and Sim Events models from within Cameo. *Note: This requires OpenMETA v0.18.5 or higher.*
 
 ### Cameo Projects
 
