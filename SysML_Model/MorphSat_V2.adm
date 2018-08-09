@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Design Name="MorphSat_V2" xmlns:ns2="iFAB" xmlns:ns3="avm">
+    <RootContainer xsi:type="ns3:Compound" Name="MorphSat_V2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Property xsi:type="ns3:PrimitiveProperty" Name="cost" ID="param.id-24b0b1cc-c556-4484-b275-9e4db21e36b2">
+            <Value ID="id-24b0b1cc-c556-4484-b275-9e4db21e36b2">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>0.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="cost" ID="param.id-d6a2bbc8-ead1-4f35-bc5e-4e45ecfeec2d">
+            <Value ID="id-d6a2bbc8-ead1-4f35-bc5e-4e45ecfeec2d">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>9500.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="cost" ID="param.id-0dad1f03-d7e0-4dbf-bc13-58ae70248272">
+            <Value ID="id-0dad1f03-d7e0-4dbf-bc13-58ae70248272">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>4000.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="cost" ID="param.id-e4da5d57-0c6f-4173-b603-625c52c63872">
+            <Value ID="id-e4da5d57-0c6f-4173-b603-625c52c63872">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>4000.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="Angle_Between_Panels" ID="param.id-a58eb647-4ab1-487b-8699-6e8bf09084a7">
+            <Value ID="id-a58eb647-4ab1-487b-8699-6e8bf09084a7">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>90.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="cost" ID="param.id-3495618f-0708-413f-a31f-83b2e3898ad6">
+            <Value ID="id-3495618f-0708-413f-a31f-83b2e3898ad6">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>4000.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="cost" ID="param.id-2a5b0dc6-b10a-48eb-8238-d8053da5724f">
+            <Value ID="id-2a5b0dc6-b10a-48eb-8238-d8053da5724f">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>4000.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="Angle_Between_Panels" ID="param.id-ac14e6eb-44f4-48f3-9bae-69ce36bd9648">
+            <Value ID="id-ac14e6eb-44f4-48f3-9bae-69ce36bd9648">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>90.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="cost" ID="param.id-2639df58-2bc2-4f5c-a82c-8740b75037c2">
+            <Value ID="id-2639df58-2bc2-4f5c-a82c-8740b75037c2">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>3000.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="cost" ID="param.id-ffac2657-7817-43c8-9887-80d0ed6a64c0">
+            <Value ID="id-ffac2657-7817-43c8-9887-80d0ed6a64c0">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>17000.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="CEquiv" ID="param.id-e2bcb0f7-5713-4ae6-be9e-7d5dbbc75160">
+            <Value ID="id-e2bcb0f7-5713-4ae6-be9e-7d5dbbc75160">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>100.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="PID_GainP" ID="param.id-ceae1208-ee22-4c1a-a13c-65c2e2cf7826">
+            <Value ID="id-ceae1208-ee22-4c1a-a13c-65c2e2cf7826">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>1.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="cost" ID="param.id-67fbcf03-7857-4fd1-8105-f697210ce80f">
+            <Value ID="id-67fbcf03-7857-4fd1-8105-f697210ce80f">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>56666.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="Inertia" ID="param.id-40df3704-9d7f-4315-9bd7-10ed55582544">
+            <Value ID="id-40df3704-9d7f-4315-9bd7-10ed55582544">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>1.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="torqueGain" ID="param.id-c1c72bfb-60e2-4063-a6e0-1d65b4c00e1e">
+            <Value ID="id-c1c72bfb-60e2-4063-a6e0-1d65b4c00e1e">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>10.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="PID_GainD" ID="param.id-4d2e1d26-4f6f-4217-96bd-3ede72d9e563">
+            <Value ID="id-4d2e1d26-4f6f-4217-96bd-3ede72d9e563">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>1.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="cost" ID="param.id-f3c1b1c3-915d-4942-b8f7-be7b64340843">
+            <Value ID="id-f3c1b1c3-915d-4942-b8f7-be7b64340843">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>0.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="cost" ID="param.id-258efead-b11b-4b6e-9787-bd39ae7571fa">
+            <Value ID="id-258efead-b11b-4b6e-9787-bd39ae7571fa">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>77000.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="power_ratio" ID="param.id-6b86872d-5f4e-4f91-9dee-1119575dbecf">
+            <Value ID="id-6b86872d-5f4e-4f91-9dee-1119575dbecf">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>10.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="torque_ratio" ID="param.id-717156b2-de2c-49a0-be7e-17114043b1f0">
+            <Value ID="id-717156b2-de2c-49a0-be7e-17114043b1f0">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>130.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="gyro_size" ID="param.id-545ccca0-035e-4749-a4f7-08e1a2b5698b">
+            <Value ID="id-545ccca0-035e-4749-a4f7-08e1a2b5698b">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>1612.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="Inertia" ID="param.id-a5741d85-ee64-4ece-9f1e-1d719e31a007">
+            <Value ID="id-a5741d85-ee64-4ece-9f1e-1d719e31a007">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>100.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="cost" ID="param.id-d36cdb1f-71b0-4d65-a5ea-3d77014c6c34">
+            <Value ID="id-d36cdb1f-71b0-4d65-a5ea-3d77014c6c34">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>10600.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="Shelf_1_Top_Surface_Offset" ID="param.id-d91d74d7-41e9-4a8f-8eb5-ce5dd22d63e2">
+            <Value ID="id-d91d74d7-41e9-4a8f-8eb5-ce5dd22d63e2">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>150.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="Shelf_2_Top_Surface_Offset" ID="param.id-9f3fd292-cbb4-467c-99c3-b8b63f7ebd4c">
+            <Value ID="id-9f3fd292-cbb4-467c-99c3-b8b63f7ebd4c">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>1000.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="Shelf_3_Top_Surface_Offset" ID="param.id-7196e7ad-6e17-4e20-9868-448924a9ce6e">
+            <Value ID="id-7196e7ad-6e17-4e20-9868-448924a9ce6e">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>2000.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <Property xsi:type="ns3:PrimitiveProperty" Name="Shelf_4_Top_Surface_Offset" ID="param.id-12cceb82-7715-4751-b3ce-1eecc11a7237">
+            <Value ID="id-12cceb82-7715-4751-b3ce-1eecc11a7237">
+                <ValueExpression xsi:type="ns3:ParametricValue">
+                    <AssignedValue xsi:type="ns3:FixedValue">
+                        <Value>3000.0</Value>
+                    </AssignedValue>
+                </ValueExpression>
+            </Value>
+        </Property>
+        <ComponentInstance ComponentID="7c60e673-8297-4e27-a8c4-afb412a10394" ID="c91332ee-278b-4457-a676-10a98f2b8f05" Name="Antenna_V2">
+            <PrimitivePropertyInstance IDinComponentModel="id-53908a3c-daf5-4555-9129-918065de8849">
+                <Value ID="709ba56e-e035-4c2f-b707-499a308bd654">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-d6a2bbc8-ead1-4f35-bc5e-4e45ecfeec2d"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <ConnectorInstance IDinComponentModel="id-da96f4e2-5f9a-40c9-9890-fcb66af3c601" ConnectorComposition="6f81f0ec-5c87-49fe-b3bf-3ea0267da280id-77ee7690-6b0f-4b21-88b2-3b6abb34fc51" ID="c91332ee-278b-4457-a676-10a98f2b8f05id-da96f4e2-5f9a-40c9-9890-fcb66af3c601"/>
+        </ComponentInstance>
+        <ComponentInstance ComponentID="239934ef-c043-4d2b-9500-44aad7d7c622" ID="0abeeb69-84ec-4a4b-b83e-965032ec2fc8" Name="Solar_Panels_3B">
+            <PrimitivePropertyInstance IDinComponentModel="id-86ce547a-e4d7-49aa-b958-fc04640babb7">
+                <Value ID="1d929d87-19fa-42d5-a8d7-c82a379fe593"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-6bb4df64-6725-429c-bd5e-1fc82fb68dda">
+                <Value ID="9021b9a4-2353-49a1-96bc-b302c373d188">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-e4da5d57-0c6f-4173-b603-625c52c63872"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-a68ff5ce-779f-4006-b28c-42c7dd5feebb">
+                <Value ID="f144462a-42ad-4623-8853-d5bb5ff14f5a"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-793dbba4-8f42-4766-a85d-d235e249a4ef">
+                <Value ID="4bf08e6b-5d3a-4e55-954a-c36b7474f3d1">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-a58eb647-4ab1-487b-8699-6e8bf09084a7"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <ConnectorInstance IDinComponentModel="id-a264bd78-ed90-434b-aa34-980060a3ef14" ID="0abeeb69-84ec-4a4b-b83e-965032ec2fc8id-a264bd78-ed90-434b-aa34-980060a3ef14"/>
+            <ConnectorInstance IDinComponentModel="id-b9c808ee-1f1d-40b9-a7e4-2a87bef0847f" ID="0abeeb69-84ec-4a4b-b83e-965032ec2fc8id-b9c808ee-1f1d-40b9-a7e4-2a87bef0847f"/>
+            <ConnectorInstance IDinComponentModel="id-c686d459-85f5-4870-b81c-6baa837fea83" ConnectorComposition="6f81f0ec-5c87-49fe-b3bf-3ea0267da280id-2024ca65-5d57-4bf3-890c-db5008722d7a" ID="0abeeb69-84ec-4a4b-b83e-965032ec2fc8id-c686d459-85f5-4870-b81c-6baa837fea83"/>
+        </ComponentInstance>
+        <ComponentInstance ComponentID="239934ef-c043-4d2b-9500-44aad7d7c622" ID="da4a5bf8-fbd2-459e-adc6-3b6ea46d6631" Name="Solar_Panels_3A">
+            <PrimitivePropertyInstance IDinComponentModel="id-86ce547a-e4d7-49aa-b958-fc04640babb7">
+                <Value ID="2f6044ca-f27d-4225-99c1-edb9ac41b3a6"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-6bb4df64-6725-429c-bd5e-1fc82fb68dda">
+                <Value ID="5aa478e8-ca36-4d44-8bf6-bbe5e59dd05b">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-2a5b0dc6-b10a-48eb-8238-d8053da5724f"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-a68ff5ce-779f-4006-b28c-42c7dd5feebb">
+                <Value ID="c859d2e4-8bc7-4d21-817a-8ffacd40bd11"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-793dbba4-8f42-4766-a85d-d235e249a4ef">
+                <Value ID="507defe0-6d9f-4046-b85c-0d74c14c9cda">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-ac14e6eb-44f4-48f3-9bae-69ce36bd9648"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <ConnectorInstance IDinComponentModel="id-a264bd78-ed90-434b-aa34-980060a3ef14" ID="da4a5bf8-fbd2-459e-adc6-3b6ea46d6631id-a264bd78-ed90-434b-aa34-980060a3ef14"/>
+            <ConnectorInstance IDinComponentModel="id-b9c808ee-1f1d-40b9-a7e4-2a87bef0847f" ID="da4a5bf8-fbd2-459e-adc6-3b6ea46d6631id-b9c808ee-1f1d-40b9-a7e4-2a87bef0847f"/>
+            <ConnectorInstance IDinComponentModel="id-c686d459-85f5-4870-b81c-6baa837fea83" ConnectorComposition="6f81f0ec-5c87-49fe-b3bf-3ea0267da280id-20a3b304-1794-47aa-8923-5634307aff90" ID="da4a5bf8-fbd2-459e-adc6-3b6ea46d6631id-c686d459-85f5-4870-b81c-6baa837fea83"/>
+        </ComponentInstance>
+        <ComponentInstance ComponentID="a0bc7c1b-0948-496c-a165-652dbf2c78ce" ID="6f81f0ec-5c87-49fe-b3bf-3ea0267da280" Name="Cargo_Module_v2">
+            <PrimitivePropertyInstance IDinComponentModel="id-1d2e9db4-4df5-4e82-bc02-13937243a572">
+                <Value ID="b7b04b2f-abbb-4bfc-b90c-23a54c9b8c8e">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-2639df58-2bc2-4f5c-a82c-8740b75037c2"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <ConnectorInstance IDinComponentModel="id-77ee7690-6b0f-4b21-88b2-3b6abb34fc51" ConnectorComposition="c91332ee-278b-4457-a676-10a98f2b8f05id-da96f4e2-5f9a-40c9-9890-fcb66af3c601" ID="6f81f0ec-5c87-49fe-b3bf-3ea0267da280id-77ee7690-6b0f-4b21-88b2-3b6abb34fc51"/>
+            <ConnectorInstance IDinComponentModel="id-2024ca65-5d57-4bf3-890c-db5008722d7a" ConnectorComposition="0abeeb69-84ec-4a4b-b83e-965032ec2fc8id-c686d459-85f5-4870-b81c-6baa837fea83" ID="6f81f0ec-5c87-49fe-b3bf-3ea0267da280id-2024ca65-5d57-4bf3-890c-db5008722d7a"/>
+            <ConnectorInstance IDinComponentModel="id-20a3b304-1794-47aa-8923-5634307aff90" ConnectorComposition="da4a5bf8-fbd2-459e-adc6-3b6ea46d6631id-c686d459-85f5-4870-b81c-6baa837fea83" ID="6f81f0ec-5c87-49fe-b3bf-3ea0267da280id-20a3b304-1794-47aa-8923-5634307aff90"/>
+            <ConnectorInstance IDinComponentModel="id-b5ef9fd5-a8c5-4df1-ae79-8ca8449ef356" ConnectorComposition="83988b1e-11b7-459a-978a-05bfde550e0did-05a58d03-90cb-43d5-8a0b-67c740311e49" ID="6f81f0ec-5c87-49fe-b3bf-3ea0267da280id-b5ef9fd5-a8c5-4df1-ae79-8ca8449ef356"/>
+        </ComponentInstance>
+        <ComponentInstance ComponentID="6f3a0d5f-6e86-4050-bf88-5f27d1baf6d8" ID="95f5f1e4-8579-4a68-94d2-52b1df72aed8" Name="Shelf1">
+            <PrimitivePropertyInstance IDinComponentModel="id-d282fe3b-e208-47ff-a639-ee89b9c2c55d">
+                <Value ID="e312a009-f16e-45d1-b345-b46f96c1613d"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-82dc6afe-bfd1-4ea6-a16b-c1835bd12807">
+                <Value ID="a6cb22e2-d723-4948-b072-2a0fbd8e1a2a"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-6d4f6c39-8148-46b2-be9c-9ef7295c4ed9">
+                <Value ID="2deedc88-13ae-4861-acef-c236b34e0b81"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-64e861d9-8c51-44dd-acf0-2ea5015e94a6">
+                <Value ID="3dc1df25-cf13-4a0f-a5ce-771b0cba7780"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-457d2301-59f9-4712-8a7e-f7d652fac8cd">
+                <Value ID="cbc56ed4-dc36-4b5f-8d3c-776e7529a9e1"/>
+            </PrimitivePropertyInstance>
+            <ConnectorInstance IDinComponentModel="id-8dca10ab-80c1-4fe2-82a1-d440e15a2ad1" ID="95f5f1e4-8579-4a68-94d2-52b1df72aed8id-8dca10ab-80c1-4fe2-82a1-d440e15a2ad1"/>
+            <ConnectorInstance IDinComponentModel="id-5efdc5a5-d3d0-4d03-9f04-32556e09b759" ConnectorComposition="79aa9d19-98dc-41ad-abc6-fff899a6e3d3id-d2634dda-3cf3-4aea-9b46-fc8ccc502a1e" ID="95f5f1e4-8579-4a68-94d2-52b1df72aed8id-5efdc5a5-d3d0-4d03-9f04-32556e09b759"/>
+            <ConnectorInstance IDinComponentModel="id-5fefeceb-aaa7-4a17-a460-a93ac20657f7" ConnectorComposition="83988b1e-11b7-459a-978a-05bfde550e0did-273fe3f7-2bae-4f57-b53a-cc1123d2ab26" ID="95f5f1e4-8579-4a68-94d2-52b1df72aed8id-5fefeceb-aaa7-4a17-a460-a93ac20657f7"/>
+        </ComponentInstance>
+        <ComponentInstance ComponentID="6f3a0d5f-6e86-4050-bf88-5f27d1baf6d8" ID="f38c5861-b755-4c29-828c-14ff19eef1fc" Name="Shelf2">
+            <PrimitivePropertyInstance IDinComponentModel="id-d282fe3b-e208-47ff-a639-ee89b9c2c55d">
+                <Value ID="7fecc4d8-fcc9-47e5-bc33-ab047930cac6"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-82dc6afe-bfd1-4ea6-a16b-c1835bd12807">
+                <Value ID="d90fca9c-a705-414a-9cc8-e24a24d31440"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-6d4f6c39-8148-46b2-be9c-9ef7295c4ed9">
+                <Value ID="d8a49ec1-669c-45cf-a986-08d4c9061244"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-64e861d9-8c51-44dd-acf0-2ea5015e94a6">
+                <Value ID="0a0881c4-4289-4261-8679-8a17494c4e9b"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-457d2301-59f9-4712-8a7e-f7d652fac8cd">
+                <Value ID="1f2a45e1-6d08-4879-81ed-598af2084d80"/>
+            </PrimitivePropertyInstance>
+            <ConnectorInstance IDinComponentModel="id-8dca10ab-80c1-4fe2-82a1-d440e15a2ad1" ID="f38c5861-b755-4c29-828c-14ff19eef1fcid-8dca10ab-80c1-4fe2-82a1-d440e15a2ad1"/>
+            <ConnectorInstance IDinComponentModel="id-5efdc5a5-d3d0-4d03-9f04-32556e09b759" ConnectorComposition="109ae395-4f26-49a1-a699-d4a369c558eaid-cb2a444a-7c18-46a3-867e-3b29b05b67a9" ID="f38c5861-b755-4c29-828c-14ff19eef1fcid-5efdc5a5-d3d0-4d03-9f04-32556e09b759"/>
+            <ConnectorInstance IDinComponentModel="id-5fefeceb-aaa7-4a17-a460-a93ac20657f7" ConnectorComposition="83988b1e-11b7-459a-978a-05bfde550e0did-3055c683-9727-4ab2-84dc-895dc4298134" ID="f38c5861-b755-4c29-828c-14ff19eef1fcid-5fefeceb-aaa7-4a17-a460-a93ac20657f7"/>
+        </ComponentInstance>
+        <ComponentInstance ComponentID="6f3a0d5f-6e86-4050-bf88-5f27d1baf6d8" ID="7d323c04-acee-4b3c-a9d9-6ff75850d44c" Name="Shelf3">
+            <PrimitivePropertyInstance IDinComponentModel="id-d282fe3b-e208-47ff-a639-ee89b9c2c55d">
+                <Value ID="fab0ae56-11dc-44c9-80b9-1f53bea27fbb"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-82dc6afe-bfd1-4ea6-a16b-c1835bd12807">
+                <Value ID="87b7343a-eaaf-4185-93ad-20c93f63b2de"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-6d4f6c39-8148-46b2-be9c-9ef7295c4ed9">
+                <Value ID="c449eda1-fc62-408e-8afb-18d6866e39aa"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-64e861d9-8c51-44dd-acf0-2ea5015e94a6">
+                <Value ID="c314d241-5ad3-4838-a39d-e6a5192f2722"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-457d2301-59f9-4712-8a7e-f7d652fac8cd">
+                <Value ID="d1c7c365-c750-401b-a158-4995e9d97623"/>
+            </PrimitivePropertyInstance>
+            <ConnectorInstance IDinComponentModel="id-8dca10ab-80c1-4fe2-82a1-d440e15a2ad1" ID="7d323c04-acee-4b3c-a9d9-6ff75850d44cid-8dca10ab-80c1-4fe2-82a1-d440e15a2ad1"/>
+            <ConnectorInstance IDinComponentModel="id-5efdc5a5-d3d0-4d03-9f04-32556e09b759" ConnectorComposition="019b5c08-0efa-4778-968d-4b1370ea2464id-66cd0c71-75ea-47e8-bb70-5b1e47c74d47" ID="7d323c04-acee-4b3c-a9d9-6ff75850d44cid-5efdc5a5-d3d0-4d03-9f04-32556e09b759"/>
+            <ConnectorInstance IDinComponentModel="id-5fefeceb-aaa7-4a17-a460-a93ac20657f7" ConnectorComposition="83988b1e-11b7-459a-978a-05bfde550e0did-dc45edda-e6f1-4350-bc4a-595d5acb3476" ID="7d323c04-acee-4b3c-a9d9-6ff75850d44cid-5fefeceb-aaa7-4a17-a460-a93ac20657f7"/>
+        </ComponentInstance>
+        <ComponentInstance ComponentID="d098944a-abc3-4e0d-b2b5-f3ca3125afdd" ID="109ae395-4f26-49a1-a699-d4a369c558ea" Name="Battery">
+            <PrimitivePropertyInstance IDinComponentModel="id-d0fc116a-a015-4970-8237-58ef28d270df">
+                <Value ID="80ab2cc1-e4b0-41bd-b5b0-7726e19919f5">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-ffac2657-7817-43c8-9887-80d0ed6a64c0"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-a1a682de-0e07-48b3-8f12-202fb445a64f">
+                <Value ID="668cd3d2-a22a-45f0-a46d-500cc93ea9c7"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-1e8978e6-b104-4ecf-a734-964bc013210e">
+                <Value ID="e7420302-4017-4729-ac2c-9002f0d5483f">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-e2bcb0f7-5713-4ae6-be9e-7d5dbbc75160"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <ConnectorInstance IDinComponentModel="id-fb4fac84-f9fc-4d7b-8411-70e83d330ecc" ID="109ae395-4f26-49a1-a699-d4a369c558eaid-fb4fac84-f9fc-4d7b-8411-70e83d330ecc"/>
+            <ConnectorInstance IDinComponentModel="id-df98ee0c-400c-409b-8142-87805d6bacd4" ID="109ae395-4f26-49a1-a699-d4a369c558eaid-df98ee0c-400c-409b-8142-87805d6bacd4"/>
+            <ConnectorInstance IDinComponentModel="id-cb2a444a-7c18-46a3-867e-3b29b05b67a9" ConnectorComposition="f38c5861-b755-4c29-828c-14ff19eef1fcid-5efdc5a5-d3d0-4d03-9f04-32556e09b759" ID="109ae395-4f26-49a1-a699-d4a369c558eaid-cb2a444a-7c18-46a3-867e-3b29b05b67a9"/>
+            <ConnectorInstance IDinComponentModel="id-794d326f-5ffb-4379-bbc1-eb6cd72ec2c8" ID="109ae395-4f26-49a1-a699-d4a369c558eaid-794d326f-5ffb-4379-bbc1-eb6cd72ec2c8"/>
+            <ConnectorInstance IDinComponentModel="id-14ae1116-63b6-4aa9-acde-6784fff03a2f" ID="109ae395-4f26-49a1-a699-d4a369c558eaid-14ae1116-63b6-4aa9-acde-6784fff03a2f"/>
+            <ConnectorInstance IDinComponentModel="id-9d82d092-8414-429a-b0c5-e92eb1296b43" ID="109ae395-4f26-49a1-a699-d4a369c558eaid-9d82d092-8414-429a-b0c5-e92eb1296b43"/>
+        </ComponentInstance>
+        <ComponentInstance ComponentID="5abff485-8759-4c0b-8131-d3b4be1c8216" ID="79aa9d19-98dc-41ad-abc6-fff899a6e3d3" Name="Computer">
+            <PrimitivePropertyInstance IDinComponentModel="id-121df159-9c0d-4fa8-b1aa-389168add1a6">
+                <Value ID="5bf6d56d-4f0a-4db7-b98e-15e9af3d862f">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-67fbcf03-7857-4fd1-8105-f697210ce80f"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-6bb7fc37-15ca-40c6-8fd9-bb13ad9aaf75">
+                <Value ID="75542267-82ca-47d5-a722-9c9be5d52cf2">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-ceae1208-ee22-4c1a-a13c-65c2e2cf7826"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-1a008eea-a636-45dc-bc58-7a28273c2b33">
+                <Value ID="0904c904-2425-403c-a792-2c019e4d483d">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-4d2e1d26-4f6f-4217-96bd-3ede72d9e563"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-a5329943-d4b5-4fdf-9342-d64c61879d0b">
+                <Value ID="1cb6d1c1-e7d5-4948-a71d-222ec7d7238b">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-40df3704-9d7f-4315-9bd7-10ed55582544"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-f25e6a41-c8a3-46ed-8ff2-4915dc1a87da">
+                <Value ID="976a3121-7641-4422-af29-132b9fcee441">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-c1c72bfb-60e2-4063-a6e0-1d65b4c00e1e"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-e67dca1b-0b3c-4717-87eb-a4cf38253498">
+                <Value ID="fc01a6ec-2105-4caa-b472-3a3947ba2087"/>
+            </PrimitivePropertyInstance>
+            <ConnectorInstance IDinComponentModel="id-d2634dda-3cf3-4aea-9b46-fc8ccc502a1e" ConnectorComposition="95f5f1e4-8579-4a68-94d2-52b1df72aed8id-5efdc5a5-d3d0-4d03-9f04-32556e09b759" ID="79aa9d19-98dc-41ad-abc6-fff899a6e3d3id-d2634dda-3cf3-4aea-9b46-fc8ccc502a1e"/>
+            <ConnectorInstance IDinComponentModel="id-9e6f4848-69b0-4f58-9935-342645ea1ae9" ID="79aa9d19-98dc-41ad-abc6-fff899a6e3d3id-9e6f4848-69b0-4f58-9935-342645ea1ae9"/>
+            <ConnectorInstance IDinComponentModel="id-ae0a36a9-3b50-48f7-a6e2-c787d9547e12" ID="79aa9d19-98dc-41ad-abc6-fff899a6e3d3id-ae0a36a9-3b50-48f7-a6e2-c787d9547e12"/>
+            <ConnectorInstance IDinComponentModel="id-dd0d1a0b-1f43-4708-94ae-36f80c1a14b2" ID="79aa9d19-98dc-41ad-abc6-fff899a6e3d3id-dd0d1a0b-1f43-4708-94ae-36f80c1a14b2"/>
+            <ConnectorInstance IDinComponentModel="id-790d8eaf-7f45-4579-beba-dbb6d6e3831a" ConnectorComposition="019b5c08-0efa-4778-968d-4b1370ea2464id-3a56b2c4-b53c-46be-b5db-a23fcc85372a" ID="79aa9d19-98dc-41ad-abc6-fff899a6e3d3id-790d8eaf-7f45-4579-beba-dbb6d6e3831a"/>
+            <ConnectorInstance IDinComponentModel="id-39d86205-cd39-4c4c-b5dc-2ed3d785afa9" ID="79aa9d19-98dc-41ad-abc6-fff899a6e3d3id-39d86205-cd39-4c4c-b5dc-2ed3d785afa9"/>
+        </ComponentInstance>
+        <ComponentInstance ComponentID="ddfc5b15-2e01-4aff-9687-56f45657ce5f" ID="019b5c08-0efa-4778-968d-4b1370ea2464" Name="Gyroscope">
+            <PrimitivePropertyInstance IDinComponentModel="id-765326ff-4cd2-444e-8e95-1271e566ac55">
+                <Value ID="913df17b-d548-4b17-9cfb-9af52963e3ae">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-258efead-b11b-4b6e-9787-bd39ae7571fa"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-83cf5387-106d-4b64-9679-20b3469a9c17">
+                <Value ID="2f53a973-9249-447f-aac1-1033c1c79fc3">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-717156b2-de2c-49a0-be7e-17114043b1f0"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-05e8a4e6-5733-43ff-a643-72c6260700a5">
+                <Value ID="11919eba-476f-41f5-9fed-b545e9fa3571">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-545ccca0-035e-4749-a4f7-08e1a2b5698b"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-ca6a3bc2-f8f9-4584-9ef5-0c2d2577161f">
+                <Value ID="0594b660-8c8a-40f0-8a94-d5d7beea20d7"/>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-b96ac1f6-4a3e-4013-aaf3-a5929fa5d2ff">
+                <Value ID="411f90f0-3372-447d-afa7-595e865ddad4">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-6b86872d-5f4e-4f91-9dee-1119575dbecf"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <ConnectorInstance IDinComponentModel="id-eb13f4ca-84a0-422d-b7a7-95e736d18c66" ID="019b5c08-0efa-4778-968d-4b1370ea2464id-eb13f4ca-84a0-422d-b7a7-95e736d18c66"/>
+            <ConnectorInstance IDinComponentModel="id-1596f16e-6e2f-4880-b7c5-cbb2518b839c" ID="019b5c08-0efa-4778-968d-4b1370ea2464id-1596f16e-6e2f-4880-b7c5-cbb2518b839c"/>
+            <ConnectorInstance IDinComponentModel="id-66cd0c71-75ea-47e8-bb70-5b1e47c74d47" ConnectorComposition="7d323c04-acee-4b3c-a9d9-6ff75850d44cid-5efdc5a5-d3d0-4d03-9f04-32556e09b759" ID="019b5c08-0efa-4778-968d-4b1370ea2464id-66cd0c71-75ea-47e8-bb70-5b1e47c74d47"/>
+            <ConnectorInstance IDinComponentModel="id-4ef68d5a-96e2-4406-b72c-124c157a47b6" ID="019b5c08-0efa-4778-968d-4b1370ea2464id-4ef68d5a-96e2-4406-b72c-124c157a47b6"/>
+            <ConnectorInstance IDinComponentModel="id-3a56b2c4-b53c-46be-b5db-a23fcc85372a" ConnectorComposition="79aa9d19-98dc-41ad-abc6-fff899a6e3d3id-790d8eaf-7f45-4579-beba-dbb6d6e3831a" ID="019b5c08-0efa-4778-968d-4b1370ea2464id-3a56b2c4-b53c-46be-b5db-a23fcc85372a"/>
+            <ConnectorInstance IDinComponentModel="id-e432af37-0e89-4ec9-9706-d6a32585d503" ID="019b5c08-0efa-4778-968d-4b1370ea2464id-e432af37-0e89-4ec9-9706-d6a32585d503"/>
+        </ComponentInstance>
+        <ComponentInstance ComponentID="682455ec-653d-476c-9280-78e90f349155" ID="83988b1e-11b7-459a-978a-05bfde550e0d" Name="">
+            <PrimitivePropertyInstance IDinComponentModel="id-f0bb805f-8dfb-4c48-b308-5be75afd2c1e">
+                <Value ID="6dab76d6-3a7e-471f-99b0-41cbd7c2676e">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-d36cdb1f-71b0-4d65-a5ea-3d77014c6c34"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-609c4cb9-e03a-46e5-bf60-6481251d0b79">
+                <Value ID="dfab42a2-2760-4f4d-89af-dffb70bca57f">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-d91d74d7-41e9-4a8f-8eb5-ce5dd22d63e2"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-d1b06185-a21d-4109-9f65-99479859f894">
+                <Value ID="04d416a7-b1d8-4cc7-aea3-aec326f22604">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-a5741d85-ee64-4ece-9f1e-1d719e31a007"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-b39c0491-65a9-4b47-a034-47d5f88538ff">
+                <Value ID="cc4d572c-21bc-4864-afed-dedf81dcdab2">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-12cceb82-7715-4751-b3ce-1eecc11a7237"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-6469e742-5b70-4ff7-9073-e58923efb6cf">
+                <Value ID="a54dacbc-435a-4641-89c1-58dccd4d32ff">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-9f3fd292-cbb4-467c-99c3-b8b63f7ebd4c"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <PrimitivePropertyInstance IDinComponentModel="id-01c67012-59ba-421d-9070-0da1ef74a059">
+                <Value ID="ffdc5eb1-ce54-4a7c-a4bd-1625c6826e33">
+                    <ValueExpression xsi:type="ns3:DerivedValue" ValueSource="id-7196e7ad-6e17-4e20-9868-448924a9ce6e"/>
+                </Value>
+            </PrimitivePropertyInstance>
+            <ConnectorInstance IDinComponentModel="id-dace415d-86ff-4514-9b5c-d52038d0c332" ID="83988b1e-11b7-459a-978a-05bfde550e0did-dace415d-86ff-4514-9b5c-d52038d0c332"/>
+            <ConnectorInstance IDinComponentModel="id-48c4b0f8-0963-4a9f-8d76-043db1b4a24a" ID="83988b1e-11b7-459a-978a-05bfde550e0did-48c4b0f8-0963-4a9f-8d76-043db1b4a24a"/>
+            <ConnectorInstance IDinComponentModel="id-273fe3f7-2bae-4f57-b53a-cc1123d2ab26" ConnectorComposition="95f5f1e4-8579-4a68-94d2-52b1df72aed8id-5fefeceb-aaa7-4a17-a460-a93ac20657f7" ID="83988b1e-11b7-459a-978a-05bfde550e0did-273fe3f7-2bae-4f57-b53a-cc1123d2ab26"/>
+            <ConnectorInstance IDinComponentModel="id-05a58d03-90cb-43d5-8a0b-67c740311e49" ConnectorComposition="6f81f0ec-5c87-49fe-b3bf-3ea0267da280id-b5ef9fd5-a8c5-4df1-ae79-8ca8449ef356" ID="83988b1e-11b7-459a-978a-05bfde550e0did-05a58d03-90cb-43d5-8a0b-67c740311e49"/>
+            <ConnectorInstance IDinComponentModel="id-3055c683-9727-4ab2-84dc-895dc4298134" ConnectorComposition="f38c5861-b755-4c29-828c-14ff19eef1fcid-5fefeceb-aaa7-4a17-a460-a93ac20657f7" ID="83988b1e-11b7-459a-978a-05bfde550e0did-3055c683-9727-4ab2-84dc-895dc4298134"/>
+            <ConnectorInstance IDinComponentModel="id-dc45edda-e6f1-4350-bc4a-595d5acb3476" ConnectorComposition="7d323c04-acee-4b3c-a9d9-6ff75850d44cid-5fefeceb-aaa7-4a17-a460-a93ac20657f7" ID="83988b1e-11b7-459a-978a-05bfde550e0did-dc45edda-e6f1-4350-bc4a-595d5acb3476"/>
+        </ComponentInstance>
+    </RootContainer>
+</ns3:Design>
+
