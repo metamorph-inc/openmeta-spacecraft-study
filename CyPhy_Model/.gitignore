@@ -12,4 +12,5 @@ test-benches/
 merged/
 metalink/
 *.mga
+*.zip
 manifest.project.json
