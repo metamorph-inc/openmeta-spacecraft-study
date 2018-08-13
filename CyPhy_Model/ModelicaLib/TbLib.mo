@@ -753,7 +753,7 @@ package TbLib
 
   model Computer
     parameter Real k, p, d;
-    Modelica.Blocks.Continuous.LimPID PID(yMax = 100, k = k, wp = p, Ti = 1, Td = 1, wd = d, Ni = 4, Nd = 50) annotation(
+    Modelica.Blocks.Continuous.LimPID PID( Nd = 50, Ni = 4, Td = 1, Ti = 1, k = k, wd = d, wp = p,yMax = 0.001) annotation(
       Placement(visible = true, transformation(origin = {-40, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealOutput torqueReq annotation(
       Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -785,6 +785,8 @@ package TbLib
     connect(PID.y, torqueReq) annotation(
       Line(points = {{-29, 20}, {91.49509999999999, 20}, {91.49509999999999, 22.2023}, {91.49509999999999, 22.2023}}));
   end Computer;
+
+
 
   model RotationalBody
     parameter Real ixx, iyy, izz;
@@ -862,14 +864,14 @@ package TbLib
     Modelica.Electrical.Analog.Sensors.CurrentSensor currentsensor1 annotation(
       Placement(visible = true, transformation(origin = {44, 58}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
-    connect(gain2.u, currentsensor1.i) annotation(
-      Line(points = {{-64, -82}, {-116, -82}, {-116, 48}, {44, 48}}, color = {0, 0, 127}));
     connect(currentsensor1.p, signalcurrent1.p) annotation(
       Line(points = {{34, 58}, {24.1037, 58}, {24.1037, 10}, {28, 10}}));
     connect(currentsensor1.n, pin_p) annotation(
       Line(points = {{54, 58}, {72, 58}, {72, 60}, {94, 60}}, color = {0, 0, 255}));
     connect(currentsensor1.i, current) annotation(
       Line(points = {{44, 48}, {44, 36}, {88, 36}}, color = {0, 0, 127}));
+    connect(gain2.u, currentsensor1.i) annotation(
+      Line(points = {{-64, -82}, {-76, -82}, {-76, 48}, {44, 48}}, color = {0, 0, 127}));
     connect(flange_b, torque1.flange) annotation(
       Line(points = {{94, -40}, {-6, -40}}));
     connect(GyroTorqueGain.y, torque1.tau) annotation(
@@ -1314,10 +1316,7 @@ package TbLib
       Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
   end BatteryV2;
 
-
-
   package Development
-    
     model TestStateMachine
       Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 10) annotation(
         Placement(visible = true, transformation(origin = {-40, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -1373,7 +1372,6 @@ package TbLib
         Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
     end TestStateMachine;
 
-  
     model SM_switch
       Modelica.Blocks.Interfaces.RealInput v annotation(
         Placement(visible = true, transformation(origin = {-60, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-60, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -1415,8 +1413,6 @@ package TbLib
         Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
     end SM_switch;
 
-
-  
     model TestSMSwitch
       Modelica.Electrical.Analog.Basic.Ground ground1 annotation(
         Placement(visible = true, transformation(origin = {0, -50}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -1437,7 +1433,6 @@ package TbLib
         Line(points = {{0, -40}, {0, -40}, {0, -32}, {0, -32}}, color = {0, 0, 255}));
     end TestSMSwitch;
 
-  
     model ParallelStates
       Modelica.StateGraph.Step step2 annotation(
         Placement(visible = true, transformation(origin = {0, 40}, extent = {{-5, -5}, {5, 5}}, rotation = 0)));
@@ -1514,7 +1509,7 @@ package TbLib
         Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})),
         Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
     end ParallelStates;
-  
+
     model TestStateMachineNew
       Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 100) annotation(
         Placement(visible = true, transformation(origin = {-40, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -1565,12 +1560,12 @@ package TbLib
         Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})),
         Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
     end TestStateMachineNew;
-  
+
     model SMSwitchNew
       inner Boolean switch(start = false);
       inner Real vd;
       discrete Boolean yd;
-  
+
       class Charging
         outer output Boolean switch;
       equation
@@ -1580,10 +1575,10 @@ package TbLib
           __Dymola_state = true,
           singleInstance = true);
       end Charging;
-  
+
       Charging charging annotation(
         Placement(visible = true, transformation(origin = {-40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  
+
       class Discharging
         outer output Boolean switch;
       equation
@@ -1593,7 +1588,7 @@ package TbLib
           __Dymola_state = true,
           singleInstance = true);
       end Discharging;
-  
+
       Discharging discharging annotation(
         Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealInput v annotation(
@@ -1616,7 +1611,6 @@ package TbLib
       initialState(charging);
     end SMSwitchNew;
 
-  
     model TestSMSwitchNew
       Modelica.Electrical.Analog.Basic.Ground ground1 annotation(
         Placement(visible = true, transformation(origin = {0, -50}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -1731,6 +1725,89 @@ package TbLib
         initialState(adding);
       end TriangleWave;
     end TestStateMachineLibrary;
+
+    package AttitudeController
+      model BasicExample
+        Modelica.Mechanics.Rotational.Components.Fixed fixed1 annotation(
+          Placement(visible = true, transformation(origin = {0, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Mechanics.Rotational.Components.Inertia inertia1 annotation(
+          Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Mechanics.Rotational.Sources.Torque torque1 annotation(
+          Placement(visible = true, transformation(origin = {0, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Blocks.Sources.Pulse pulse1(offset = -0.5, period = 5) annotation(
+          Placement(visible = true, transformation(origin = {-50, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      equation
+        connect(torque1.flange, inertia1.flange_a) annotation(
+          Line(points = {{10, 0}, {30, 0}}));
+        connect(pulse1.y, torque1.tau) annotation(
+          Line(points = {{-39, 0}, {-13, 0}}, color = {0, 0, 127}));
+        connect(torque1.support, fixed1.flange) annotation(
+          Line(points = {{0, -12}, {0, -40}}));
+      annotation(
+          Documentation(info = "<html><head></head><body>This model demonstrates the use of the torque model driven by a pulse.</body></html>", revisions = "<html><head></head><body><span style=\"font-size: 12px;\">Author: Tim Thomas</span><div style=\"font-size: 12px;\">Creation Date: 8-10-2018</div></body></html>"));end BasicExample;
+
+      model BasicExample2
+        Modelica.Mechanics.Rotational.Components.Fixed fixed1 annotation(
+          Placement(visible = true, transformation(origin = {0, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Mechanics.Rotational.Components.Inertia inertia1(J = 0.1) annotation(
+          Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Mechanics.Rotational.Sources.Torque torque1 annotation(
+          Placement(visible = true, transformation(origin = {0, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Blocks.Sources.Pulse pulse1(amplitude = 1.57, period = 5) annotation(
+          Placement(visible = true, transformation(origin = {-88, -34}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Mechanics.Rotational.Sensors.AngleSensor angleSensor1 annotation(
+          Placement(visible = true, transformation(origin = {70, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Blocks.Math.Sum sum1(nin = 2, k = {1, -1}) annotation(
+          Placement(visible = true, transformation(origin = {-40, -56}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Blocks.Continuous.PID PID(Td = 0.1, Ti = 0.5, k = 100)  annotation(
+          Placement(visible = true, transformation(origin = {-40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      equation
+        connect(sum1.y, PID.u) annotation(
+          Line(points = {{-28, -56}, {-20, -56}, {-20, -18}, {-66, -18}, {-66, 0}, {-52, 0}, {-52, 0}}, color = {0, 0, 127}));
+        connect(PID.y, torque1.tau) annotation(
+          Line(points = {{-28, 0}, {-12, 0}, {-12, 0}, {-12, 0}}, color = {0, 0, 127}));
+        connect(angleSensor1.phi, sum1.u[2]) annotation(
+          Line(points = {{82, 0}, {88, 0}, {88, -78}, {-62, -78}, {-62, -56}, {-52, -56}, {-52, -56}}, color = {0, 0, 127}));
+        connect(pulse1.y, sum1.u[1]) annotation(
+          Line(points = {{-77, -34}, {-61.5, -34}, {-61.5, -56}, {-52, -56}}, color = {0, 0, 127}));
+        connect(inertia1.flange_b, angleSensor1.flange) annotation(
+          Line(points = {{50, 0}, {60, 0}, {60, 0}, {60, 0}}));
+        connect(torque1.flange, inertia1.flange_a) annotation(
+          Line(points = {{10, 0}, {30, 0}}));
+        connect(torque1.support, fixed1.flange) annotation(
+          Line(points = {{0, -12}, {0, -40}}));
+      annotation(
+          Documentation(info = "<html><head></head><body>This model demonstrates using the PID model to rotate a mass back and forth.</body></html>", revisions = "<html><head></head><body><span style=\"font-size: 12px;\">Author: Tim Thomas</span><div style=\"font-size: 12px;\">Creation Date: 8-10-2018</div></body></html>"));end BasicExample2;
+
+      model BasicExample3
+        Modelica.Mechanics.Rotational.Components.Fixed fixed1 annotation(
+          Placement(visible = true, transformation(origin = {0, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Mechanics.Rotational.Components.Inertia inertia1(J = 0.1) annotation(
+          Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Mechanics.Rotational.Sources.Torque torque1 annotation(
+          Placement(visible = true, transformation(origin = {0, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Blocks.Sources.Pulse pulse1(amplitude = 1.57, period = 5) annotation(
+          Placement(visible = true, transformation(origin = {-78, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Mechanics.Rotational.Sensors.AngleSensor angleSensor1 annotation(
+          Placement(visible = true, transformation(origin = {70, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Blocks.Continuous.LimPID PID(Td = 0.05,controllerType = Modelica.Blocks.Types.SimpleController.PID, k = 150, yMax = 150) annotation(
+          Placement(visible = true, transformation(origin = {-40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      equation
+        connect(PID.y, torque1.tau) annotation(
+          Line(points = {{-28, 0}, {-12, 0}, {-12, 0}, {-12, 0}}, color = {0, 0, 127}));
+        connect(angleSensor1.phi, PID.u_m) annotation(
+          Line(points = {{82, 0}, {92, 0}, {92, -60}, {-40, -60}, {-40, -12}, {-40, -12}, {-40, -12}}, color = {0, 0, 127}));
+        connect(pulse1.y, PID.u_s) annotation(
+          Line(points = {{-66, 0}, {-52, 0}, {-52, 0}, {-52, 0}}, color = {0, 0, 127}));
+        connect(inertia1.flange_b, angleSensor1.flange) annotation(
+          Line(points = {{50, 0}, {60, 0}, {60, 0}, {60, 0}}));
+        connect(torque1.flange, inertia1.flange_a) annotation(
+          Line(points = {{10, 0}, {30, 0}}));
+        connect(torque1.support, fixed1.flange) annotation(
+          Line(points = {{0, -12}, {0, -40}}));
+      annotation(
+          Documentation(info = "<html><head></head><body>This model demonstrates using the LimPID model to rotate a mass back and forth.</body></html>", revisions = "<html><head></head><body>Author: Tim Thomas<div>Creation Date: 8-10-2018</div></body></html>"));end BasicExample3;
+    end AttitudeController;
   end Development;
 equation
   connect(tbload1.pin_n, src1.pin_n) annotation(
