@@ -2432,6 +2432,8 @@ end SwitchEvolve2;
 
 
 
+
+
       model TestHarnessSwitchEvolve6
         Modelica.Blocks.Sources.Trapezoid voltage(amplitude = 5, falling = 5, offset = 10, period = 30, rising = 5, width = 10) annotation(
           Placement(visible = true, transformation(origin = {-70, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -2445,6 +2447,114 @@ end SwitchEvolve2;
         connect(voltage.y, switchEvolve.v) annotation(
           Line(points = {{-58, 40}, {-10, 40}}, color = {0, 0, 127}));
       end TestHarnessSwitchEvolve6;
+
+      model SwitchEvolve7
+        // Notes:
+        //   -- use yd instead of hard-coded values for transition conditions
+        parameter Real clockRate(start = 1.0);
+        parameter Real low(start = 10.0);
+        parameter Real high(start = 30.0);
+        inner Real yd(start = 0.0);
+        inner Real vd;
+        inner Real ad;
+
+        block Charging
+          outer output Real yd;
+        equation
+          yd = 0.0;
+          annotation(
+            Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+            __Dymola_state = true,
+            singleInstance = true);
+        end Charging;
+
+        TbLib.Development.StandaloneAttitudeController.SwitchEvolve5.Charging charging annotation(
+          Placement(visible = true, transformation(origin = {-40, -2}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+
+        block Transmitting
+          outer output Real yd;
+        equation
+          yd = 90.0;
+          annotation(
+            Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+            __Dymola_state = true,
+            singleInstance = true);
+        end Transmitting;
+
+        Transmitting transmitting annotation(
+          Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+
+        block TurnToGround
+          outer output Real yd;
+        equation
+          yd = 90.0;
+          annotation(
+            Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+            __Dymola_state = true,
+            singleInstance = true);
+        end TurnToGround;
+
+        TurnToGround grounding annotation(
+          Placement(visible = true, transformation(origin = {0, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+
+        block TurnToSun
+          outer output Real yd;
+        equation
+          yd = 0.0;
+          annotation(
+            Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+            __Dymola_state = true,
+            singleInstance = true);
+        end TurnToSun;
+
+        TurnToSun sunning annotation(
+          Placement(visible = true, transformation(origin = {0, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Blocks.Interfaces.RealInput v annotation(
+          Placement(visible = true, transformation(origin = {-100, 60}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
+        Modelica.Blocks.Interfaces.RealInput a annotation(
+          Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
+        Modelica.Blocks.Interfaces.RealOutput y annotation(
+          Placement(visible = true, transformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      equation
+        transition(charging, grounding, vd > high, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+          Line(points = {{-30, 1}, {-1, 1}, {-1, 30}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
+          Text(lineColor = {95, 95, 95}, extent = {{-4, 4}, {-4, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
+        transition(transmitting, sunning, vd < low, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+          Line(points = {{41, -10}, {41, -45}, {10, -45}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
+          Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
+        transition(grounding, transmitting, abs(ad - yd) < 0.1, immediate = false, reset = true, synchronize = false, priority = 1) annotation(
+          Line(points = {{10, 37}, {43, 37}, {43, 10}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
+          Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
+        initialState(charging) annotation(
+          Line(points = {{-40, 8}, {-40, 25}}, color = {175, 175, 175}));
+        transition(sunning, charging, abs(ad - yd) < 0.1, immediate = false, reset = true, synchronize = false, priority = 1) annotation(
+          Line(points = {{-10, -40}, {-40, -40}, {-40, -12}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
+          Text(lineColor = {95, 95, 95}, extent = {{-4, 4}, {-4, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
+        vd = sample(v, Clock(clockRate));
+        ad = sample(a);
+        y = hold(yd);
+      end SwitchEvolve7;
+
+
+
+
+
+
+      model TestHarnessSwitchEvolve7
+        Modelica.Blocks.Sources.Trapezoid voltage(amplitude = 5, falling = 5, offset = 10, period = 30, rising = 5, width = 10) annotation(
+          Placement(visible = true, transformation(origin = {-70, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Blocks.Sources.Trapezoid angle(amplitude = 90, falling = 3, period = 30, rising = 3, startTime = 5, width = 12) annotation(
+          Placement(visible = true, transformation(origin = {-70, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        SwitchEvolve7 switchEvolve(low = 11, high = 14, clockRate = 0.2, groundAttitude = 1.57, sunAttitude = 0.0) annotation(
+          Placement(visible = true, transformation(origin = {0, 34}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      equation
+        connect(angle.y, switchEvolve.a) annotation(
+          Line(points = {{-58, 0}, {-32, 0}, {-32, 34}, {-10, 34}, {-10, 34}}, color = {0, 0, 127}));
+        connect(voltage.y, switchEvolve.v) annotation(
+          Line(points = {{-58, 40}, {-10, 40}}, color = {0, 0, 127}));
+      end TestHarnessSwitchEvolve7;
+
+
 
 
 
