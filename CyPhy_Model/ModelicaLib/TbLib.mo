@@ -1322,6 +1322,18 @@ package TbLib
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
   package Development
     model TestStateMachine
       Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 10) annotation(
@@ -2218,7 +2230,9 @@ end SwitchEvolve2;
 
       model SwitchEvolve5
         // Notes:
-        //   -- switch 'class' to 'block' for states
+        //   -- Switch 'class' to 'block' for states
+        //   -- Add TurnToGround and TurnToSun states
+        //   -- Increase clockRate to 5 Hz
         parameter Real clockRate(start = 1.0);
         parameter Real low(start = 10.0);
         parameter Real high(start = 30.0);
@@ -2235,10 +2249,10 @@ end SwitchEvolve2;
             __Dymola_state = true,
             singleInstance = true);
         end Charging;
-        Charging charging annotation(
-          Placement(visible = true, transformation(origin = {-40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        TbLib.Development.StandaloneAttitudeController.SwitchEvolve5.Charging charging annotation(
+          Placement(visible = true, transformation(origin = {-40, -2}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 
-        block Discharging
+        block Transmitting
           outer output Real yd;
         equation
           yd = 90.0;
@@ -2246,8 +2260,8 @@ end SwitchEvolve2;
             Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
             __Dymola_state = true,
             singleInstance = true);
-        end Discharging;
-        Discharging discharging annotation(
+        end Transmitting;
+        Transmitting transmitting annotation(
           Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         
         block TurnToGround
@@ -2259,8 +2273,20 @@ end SwitchEvolve2;
             __Dymola_state = true,
             singleInstance = true);
         end TurnToGround;
-        TbLib.Development.StandaloneAttitudeController.SwitchEvolve5.TurnToGround grounding annotation(
+        TurnToGround grounding annotation(
           Placement(visible = true, transformation(origin = {0, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          
+        block TurnToSun
+          outer output Real yd;
+        equation
+          yd = 0.0;
+          annotation(
+            Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+            __Dymola_state = true,
+            singleInstance = true);
+        end TurnToSun;
+        TurnToSun sunning annotation(
+          Placement(visible = true, transformation(origin = {0, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         
 
         Modelica.Blocks.Interfaces.RealInput v annotation(
@@ -2270,21 +2296,29 @@ end SwitchEvolve2;
         Modelica.Blocks.Interfaces.RealOutput y annotation(
           Placement(visible = true, transformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       equation
-      transition(grounding, charging, ad < 1.0, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
-          Line(points = {{0, 50}, {-20, 32}, {-30, 5}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
-          Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-      transition(discharging, grounding, ad > 89.0, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
-          Line(points = {{30, 5}, {22, 18}, {10, 30}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
-          Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-        initialState(charging) annotation(
-          Line(points = {{-40, 10}, {-40, 25}}, color = {175, 175, 175}));
-        transition(charging, discharging, vd > high, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
-          Line(points = {{-30, -5}, {0, -10}, {30, -5}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
+  transition(charging, grounding, vd > high, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+          Line(points = {{-30, 1}, {-1, 1}, {-1, 30}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
           Text(lineColor = {95, 95, 95}, extent = {{-4, 4}, {-4, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-        vd = sample(v, Clock(clockRate));
+      transition(transmitting, sunning, vd < low, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+          Line(points = {{41, -10}, {41, -45}, {10, -45}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
+          Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
+      transition(grounding, transmitting, ad > 89.0, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+          Line(points = {{10, 37}, {43, 37}, {43, 10}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
+          Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
+  initialState(charging) annotation(
+          Line(points = {{-40, 8}, {-40, 25}}, color = {175, 175, 175}));
+  transition(sunning, charging, ad < 1.0, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+          Line(points = {{-10, -40}, {-40, -40}, {-40, -12}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
+          Text(lineColor = {95, 95, 95}, extent = {{-4, 4}, {-4, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
+        vd = sample(v, Clock(0.2));
         ad = sample(a);
         y = hold(yd);
       end SwitchEvolve5;
+
+
+
+
+
 
 
 
@@ -2443,7 +2477,6 @@ end ComputerWithController;
     inner Real vSysD;
     inner Real angleMeasD;
     inner Real setpointD(start = 0.0);
-    
     // State Machine States
 
     class Charging
@@ -2489,8 +2522,7 @@ end ComputerWithController;
     end OrientingTowardsSun;
     OrientingTowardsSun orientingTowardsSun annotation(
       Placement(visible = true, transformation(origin = {-68, 16}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      
-    // I/O ports
+      // I/O ports
     Modelica.Blocks.Interfaces.RealInput vSys annotation(
       Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealInput angleMeas annotation(
@@ -2516,18 +2548,6 @@ end ComputerWithController;
     angleMeasD = sample(angleMeas, Clock(1.0));
     setpoint = hold(setpointD);
   end StandaloneAttitudeController;
-
-
-
-
-
-
-
-
-
-
-
-
 equation
   connect(tbload1.pin_n, src1.pin_n) annotation(
     Line(points = {{14, 40}, {-14.6172, 40}, {-14.6172, 38.3207}, {-20, 38.3207}, {-20, 38}}));
