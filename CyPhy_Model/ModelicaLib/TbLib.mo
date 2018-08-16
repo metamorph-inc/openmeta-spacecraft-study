@@ -2808,8 +2808,8 @@ end ComputerWithController;
 
   model StandaloneAttitudeController
     // Parameters and Variables
-    parameter Real low(start=10);
-    parameter Real high(start=15);
+    parameter Real lowBatteryThreshold(start=10);
+    parameter Real fullyChargedThreshold(start=15);
     inner parameter Real sunAttitude(start=0);
     inner parameter Real groundStationAttitude(start=1.57);
     inner Real vSysD;
@@ -2872,13 +2872,13 @@ end ComputerWithController;
     
   equation
     initialState(charging);
-    transition(charging, orientingTowardsGroundStation, vSysD > high, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+    transition(charging, orientingTowardsGroundStation, vSysD > fullyChargedThreshold, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
       Line(points = {{-60, 86}, {30, 105}, {6, 72}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
       Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
     transition(orientingTowardsGroundStation, transmitting, abs(angleMeasD - setpointD) < 0.01, immediate = false, reset = true, synchronize = false, priority = 1) annotation(
       Line(points = {{10, 60}, {33, 53}, {9, 38}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
       Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-    transition(transmitting, orientingTowardsSun, vSysD < low, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+    transition(transmitting, orientingTowardsSun, vSysD < lowBatteryThreshold, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
       Line(points = {{-6, 29}, {-30, 34}, {-60, 26}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
       Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
     transition(orientingTowardsSun, charging, abs(angleMeasD - setpointD) < 0.01, immediate = false, reset = true, synchronize = false, priority = 1) annotation(
@@ -2888,6 +2888,7 @@ end ComputerWithController;
     angleMeasD = sample(angleMeas, Clock(0.2));
     setpoint = hold(setpointD);
   end StandaloneAttitudeController;
+
 
 
 
