@@ -753,7 +753,7 @@ package TbLib
 
   model Computer
     parameter Real k, p, d;
-    Modelica.Blocks.Continuous.LimPID PID( Nd = 50, Ni = 4, Td = 1, Ti = 1, k = k, wd = d, wp = p,yMax = 0.001) annotation(
+    Modelica.Blocks.Continuous.LimPID PID(Nd = 50, Ni = 4, Td = 1, Ti = 1, k = k, wd = d, wp = p, yMax = 0.001) annotation(
       Placement(visible = true, transformation(origin = {-40, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealOutput torqueReq annotation(
       Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -785,8 +785,6 @@ package TbLib
     connect(PID.y, torqueReq) annotation(
       Line(points = {{-29, 20}, {91.49509999999999, 20}, {91.49509999999999, 22.2023}, {91.49509999999999, 22.2023}}));
   end Computer;
-
-
 
   model RotationalBody
     parameter Real ixx, iyy, izz;
@@ -1315,24 +1313,6 @@ package TbLib
       Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})),
       Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
   end BatteryV2;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   package Development
     model TestStateMachine
@@ -1941,7 +1921,7 @@ package TbLib
           Placement(visible = true, transformation(origin = {-70, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Blocks.Sources.Trapezoid angle(amplitude = 90, falling = 3, period = 30, rising = 3, startTime = 5, width = 12) annotation(
           Placement(visible = true, transformation(origin = {-70, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-        TbLib.StandaloneAttitudeController standaloneAttitudeController1(low = 11, high = 14, groundStationAttitude=90) annotation(
+        TbLib.StandaloneAttitudeController standaloneAttitudeController1(lowBatteryThreshold = 11, fullyChargedThreshold = 14, groundStationAttitude = 90) annotation(
           Placement(visible = true, transformation(origin = {0, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       equation
         connect(angle.y, standaloneAttitudeController1.angleMeas) annotation(
@@ -1951,14 +1931,13 @@ package TbLib
       end TestHarness;
 
 
-
       model SwitchEvolve1
         parameter Real clockRate(start = 1.0);
         parameter Real low(start = 10.0);
         parameter Real high(start = 30.0);
         inner Boolean yd(start = false);
         inner Real vd;
-      
+
         class Charging
           outer output Boolean yd;
         equation
@@ -1968,10 +1947,10 @@ package TbLib
             __Dymola_state = true,
             singleInstance = true);
         end Charging;
-      
+
         Charging charging annotation(
           Placement(visible = true, transformation(origin = {-40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      
+
         class Discharging
           outer output Boolean yd;
         equation
@@ -1981,7 +1960,7 @@ package TbLib
             __Dymola_state = true,
             singleInstance = true);
         end Discharging;
-      
+
         Discharging discharging annotation(
           Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Blocks.Interfaces.RealInput v annotation(
@@ -1990,7 +1969,7 @@ package TbLib
           Placement(visible = true, transformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       equation
         initialState(charging) annotation(
-          Line(points = {{-40,10}, {-40,25}}, color = {175, 175, 175}));
+          Line(points = {{-40, 10}, {-40, 25}}, color = {175, 175, 175}));
         transition(discharging, charging, vd < low, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
           Line(points = {{30, 5}, {0, 10}, {-30, 5}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
           Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
@@ -2001,74 +1980,66 @@ package TbLib
         y = hold(yd);
       end SwitchEvolve1;
 
-
       model TestHarnessSwitchEvolve1
         Modelica.Blocks.Sources.Trapezoid voltage(amplitude = 5, falling = 5, offset = 10, period = 30, rising = 5, width = 10) annotation(
           Placement(visible = true, transformation(origin = {-70, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Blocks.Sources.Trapezoid angle(amplitude = 90, falling = 3, period = 30, rising = 3, startTime = 5, width = 12) annotation(
           Placement(visible = true, transformation(origin = {-70, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-        SwitchEvolve1 switchEvolve(low=11, high=14) annotation(
+        SwitchEvolve1 switchEvolve(low = 11, high = 14) annotation(
           Placement(visible = true, transformation(origin = {0, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       equation
         connect(voltage.y, switchEvolve.v) annotation(
           Line(points = {{-58, 40}, {-26, 40}, {-26, 46}, {-10, 46}, {-10, 46}}, color = {0, 0, 127}));
       end TestHarnessSwitchEvolve1;
 
+      model SwitchEvolve2
+        parameter Real clockRate(start = 1.0);
+        parameter Real low(start = 10.0);
+        parameter Real high(start = 30.0);
+        inner Real yd(start = 0.0);
+        inner Real vd;
 
+        class Charging
+          outer output Real yd;
+        equation
+          yd = 0.0;
+          annotation(
+            Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+            __Dymola_state = true,
+            singleInstance = true);
+        end Charging;
 
+        Charging charging annotation(
+          Placement(visible = true, transformation(origin = {-40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 
+        class Discharging
+          outer output Real yd;
+        equation
+          yd = 90.0;
+          annotation(
+            Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+            __Dymola_state = true,
+            singleInstance = true);
+        end Discharging;
 
-model SwitchEvolve2
-  parameter Real clockRate(start = 1.0);
-  parameter Real low(start = 10.0);
-  parameter Real high(start = 30.0);
-  inner Real yd(start = 0.0);
-  inner Real vd;
-
-  class Charging
-    outer output Real yd;
-  equation
-    yd = 0.0;
-    annotation(
-      Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
-      __Dymola_state = true,
-      singleInstance = true);
-  end Charging;
-
-  Charging charging annotation(
-    Placement(visible = true, transformation(origin = {-40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-
-  class Discharging
-    outer output Real yd;
-  equation
-    yd = 90.0;
-    annotation(
-      Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
-      __Dymola_state = true,
-      singleInstance = true);
-  end Discharging;
-
-  Discharging discharging annotation(
-    Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.RealInput v annotation(
-    Placement(visible = true, transformation(origin = {-100, 60}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.RealOutput y annotation(
-    Placement(visible = true, transformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-equation
-  initialState(charging) annotation(
-    Line(points = {{-40,10}, {-40,25}}, color = {175, 175, 175}));
-  transition(discharging, charging, vd < low, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
-    Line(points = {{30, 5}, {0, 10}, {-30, 5}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
-    Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-  transition(charging, discharging, vd > high, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
-    Line(points = {{-30, -5}, {0, -10}, {30, -5}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
-    Text(lineColor = {95, 95, 95}, extent = {{-4, 4}, {-4, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-  vd = sample(v, Clock(clockRate));
-  y = hold(yd);
-end SwitchEvolve2;
-
-
-
+        Discharging discharging annotation(
+          Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Blocks.Interfaces.RealInput v annotation(
+          Placement(visible = true, transformation(origin = {-100, 60}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
+        Modelica.Blocks.Interfaces.RealOutput y annotation(
+          Placement(visible = true, transformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      equation
+        initialState(charging) annotation(
+          Line(points = {{-40, 10}, {-40, 25}}, color = {175, 175, 175}));
+        transition(discharging, charging, vd < low, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+          Line(points = {{30, 5}, {0, 10}, {-30, 5}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
+          Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
+        transition(charging, discharging, vd > high, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+          Line(points = {{-30, -5}, {0, -10}, {30, -5}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
+          Text(lineColor = {95, 95, 95}, extent = {{-4, 4}, {-4, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
+        vd = sample(v, Clock(clockRate));
+        y = hold(yd);
+      end SwitchEvolve2;
 
       model TestHarnessSwitchEvolve2
         Modelica.Blocks.Sources.Trapezoid voltage(amplitude = 5, falling = 5, offset = 10, period = 30, rising = 5, width = 10) annotation(
@@ -2081,7 +2052,6 @@ end SwitchEvolve2;
         connect(voltage.y, switchEvolve.v) annotation(
           Line(points = {{-58, 40}, {-26, 40}, {-26, 46}, {-10, 46}, {-10, 46}}, color = {0, 0, 127}));
       end TestHarnessSwitchEvolve2;
-
 
       model SwitchEvolve3
         parameter Real clockRate(start = 1.0);
@@ -2135,13 +2105,6 @@ end SwitchEvolve2;
         ad = sample(a, Clock(clockRate));
         y = hold(yd);
       end SwitchEvolve3;
-
-
-
-
-
-
-
 
       model TestHarnessSwitchEvolve3
         Modelica.Blocks.Sources.Trapezoid voltage(amplitude = 5, falling = 5, offset = 10, period = 30, rising = 5, width = 10) annotation(
@@ -2210,11 +2173,6 @@ end SwitchEvolve2;
         y = hold(yd);
       end SwitchEvolve4;
 
-
-
-
-
-
       model TestHarnessSwitchEvolve4
         Modelica.Blocks.Sources.Trapezoid voltage(amplitude = 5, falling = 5, offset = 10, period = 30, rising = 5, width = 10) annotation(
           Placement(visible = true, transformation(origin = {-70, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -2250,6 +2208,7 @@ end SwitchEvolve2;
             __Dymola_state = true,
             singleInstance = true);
         end Charging;
+
         TbLib.Development.StandaloneAttitudeController.SwitchEvolve5.Charging charging annotation(
           Placement(visible = true, transformation(origin = {-40, -2}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 
@@ -2262,9 +2221,10 @@ end SwitchEvolve2;
             __Dymola_state = true,
             singleInstance = true);
         end Transmitting;
+
         Transmitting transmitting annotation(
           Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-        
+
         block TurnToGround
           outer output Real yd;
         equation
@@ -2274,9 +2234,10 @@ end SwitchEvolve2;
             __Dymola_state = true,
             singleInstance = true);
         end TurnToGround;
+
         TurnToGround grounding annotation(
           Placement(visible = true, transformation(origin = {0, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-          
+
         block TurnToSun
           outer output Real yd;
         equation
@@ -2286,10 +2247,9 @@ end SwitchEvolve2;
             __Dymola_state = true,
             singleInstance = true);
         end TurnToSun;
+
         TurnToSun sunning annotation(
           Placement(visible = true, transformation(origin = {0, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-        
-
         Modelica.Blocks.Interfaces.RealInput v annotation(
           Placement(visible = true, transformation(origin = {-100, 60}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-100, 60}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
         Modelica.Blocks.Interfaces.RealInput a annotation(
@@ -2297,33 +2257,24 @@ end SwitchEvolve2;
         Modelica.Blocks.Interfaces.RealOutput y annotation(
           Placement(visible = true, transformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       equation
-  transition(charging, grounding, vd > high, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+        transition(charging, grounding, vd > high, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
           Line(points = {{-30, 1}, {-1, 1}, {-1, 30}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
           Text(lineColor = {95, 95, 95}, extent = {{-4, 4}, {-4, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-      transition(transmitting, sunning, vd < low, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+        transition(transmitting, sunning, vd < low, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
           Line(points = {{41, -10}, {41, -45}, {10, -45}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
           Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-      transition(grounding, transmitting, ad > 89.0, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+        transition(grounding, transmitting, ad > 89.0, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
           Line(points = {{10, 37}, {43, 37}, {43, 10}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
           Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-  initialState(charging) annotation(
+        initialState(charging) annotation(
           Line(points = {{-40, 8}, {-40, 25}}, color = {175, 175, 175}));
-  transition(sunning, charging, ad < 1.0, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+        transition(sunning, charging, ad < 1.0, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
           Line(points = {{-10, -40}, {-40, -40}, {-40, -12}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
           Text(lineColor = {95, 95, 95}, extent = {{-4, 4}, {-4, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
         vd = sample(v, Clock(0.2));
         ad = sample(a);
         y = hold(yd);
       end SwitchEvolve5;
-
-
-
-
-
-
-
-
-
 
       model TestHarnessSwitchEvolve5
         Modelica.Blocks.Sources.Trapezoid voltage(amplitude = 5, falling = 5, offset = 10, period = 30, rising = 5, width = 10) annotation(
@@ -2427,14 +2378,6 @@ end SwitchEvolve2;
         y = hold(yd);
       end SwitchEvolve6;
 
-
-
-
-
-
-
-
-
       model TestHarnessSwitchEvolve6
         Modelica.Blocks.Sources.Trapezoid voltage(amplitude = 5, falling = 5, offset = 10, period = 30, rising = 5, width = 10) annotation(
           Placement(visible = true, transformation(origin = {-70, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -2536,11 +2479,6 @@ end SwitchEvolve2;
         y = hold(yd);
       end SwitchEvolve7;
 
-
-
-
-
-
       model TestHarnessSwitchEvolve7
         Modelica.Blocks.Sources.Trapezoid voltage(amplitude = 5, falling = 5, offset = 10, period = 30, rising = 5, width = 10) annotation(
           Placement(visible = true, transformation(origin = {-70, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -2555,10 +2493,9 @@ end SwitchEvolve2;
           Line(points = {{-58, 40}, {-10, 40}}, color = {0, 0, 127}));
       end TestHarnessSwitchEvolve7;
 
-
       model SwitchEvolve8
         // Notes:
-        //   -- 
+        //   --
         parameter Real clockRate(start = 1.0);
         parameter Real low(start = 10.0);
         parameter Real high(start = 30.0);
@@ -2645,10 +2582,6 @@ end SwitchEvolve2;
         y = hold(yd);
       end SwitchEvolve8;
 
-
-
-
-
       model TestHarnessSwitchEvolve8
         Modelica.Blocks.Sources.Trapezoid voltage(amplitude = 5, falling = 5, offset = 10, period = 30, rising = 5, width = 10) annotation(
           Placement(visible = true, transformation(origin = {-70, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -2663,155 +2596,140 @@ end SwitchEvolve2;
           Line(points = {{-58, 40}, {-10, 40}}, color = {0, 0, 127}));
       end TestHarnessSwitchEvolve8;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      model TestHarnessSG
+        Modelica.Blocks.Sources.Trapezoid voltage(amplitude = 5, falling = 5, offset = 10, period = 30, rising = 5, width = 10) annotation(
+          Placement(visible = true, transformation(origin = {-70, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.Blocks.Sources.Trapezoid angle(amplitude = 1.57, falling = 3, period = 30, rising = 3, startTime = 5, width = 12) annotation(
+          Placement(visible = true, transformation(origin = {-70, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        TbLib.StandaloneAttitudeControllerSG standaloneAttitudeController1(lowBatteryThreshold = 11, fullyChargedThreshold = 14, groundStationAttitude = 1.57) annotation(
+          Placement(visible = true, transformation(origin = {0, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      equation
+        connect(angle.y, standaloneAttitudeController1.angleMeas) annotation(
+          Line(points = {{-58, 0}, {-30, 0}, {-30, 32}, {-10, 32}, {-10, 32}, {-10, 32}}, color = {0, 0, 127}));
+        connect(voltage.y, standaloneAttitudeController1.vSys) annotation(
+          Line(points = {{-58, 40}, {-10, 40}, {-10, 40}, {-10, 40}}, color = {0, 0, 127}));
+      end TestHarnessSG;
 
 
 
     end StandaloneAttitudeController;
   end Development;
 
+  model ComputerWithController
+    inner parameter Real k, p, d;
+    inner parameter Real lowBatteryThreshold, fullyChargedThreshold;
+    inner parameter Real sunAttitude, groundStationAttitude;
+    inner Real v__discrete__, angleMeas__discrete__, setpoint__discrete__(start = 0.0);
+    inner Real setpoint_internal(start = 0.0);
+    // State Machine
 
+    class Charging
+    equation
 
+      annotation(
+        Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+        __Dymola_state = true,
+        singleInstance = true);
+    end Charging;
 
-  
-  
-  
+    TbLib.ComputerWithController.Charging s1 annotation(
+      Placement(visible = true, transformation(origin = {-70, 86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 
-model ComputerWithController
-  inner parameter Real k, p, d;
-  inner parameter Real lowBatteryThreshold, fullyChargedThreshold;
-  inner parameter Real sunAttitude, groundStationAttitude;
-  inner Real v__discrete__, angleMeas__discrete__, setpoint__discrete__(start=0.0);
-  inner Real setpoint_internal(start=0.0);
-  // State Machine
+    class Orienting_Towards_Ground_Station
+      outer output Real setpoint__discrete__;
+      outer input Real groundStationAttitude;
+    equation
+      setpoint__discrete__ = groundStationAttitude;
+      annotation(
+        Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+        __Dymola_state = true,
+        singleInstance = true);
+    end Orienting_Towards_Ground_Station;
 
-  class Charging
+    TbLib.ComputerWithController.Orienting_Towards_Ground_Station s2 annotation(
+      Placement(visible = true, transformation(origin = {0, 62}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+
+    class Transmitting
+    equation
+
+      annotation(
+        Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+        __Dymola_state = true,
+        singleInstance = true);
+    end Transmitting;
+
+    TbLib.ComputerWithController.Transmitting s3 annotation(
+      Placement(visible = true, transformation(origin = {4, 28}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+
+    class Orienting_Towards_Sun
+      outer output Real setpoint__discrete__;
+      outer input Real sunAttitude;
+    equation
+      setpoint__discrete__ = sunAttitude;
+      annotation(
+        Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+        __Dymola_state = true,
+        singleInstance = true);
+    end Orienting_Towards_Sun;
+
+    TbLib.ComputerWithController.Orienting_Towards_Sun s4 annotation(
+      Placement(visible = true, transformation(origin = {-68, 16}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    output Modelica.Blocks.Interfaces.RealOutput setpoint annotation(
+      Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Continuous.LimPID PID(Nd = 50, Ni = 4, Td = 1, Ti = 1, k = k, wd = d, wp = p, yMax = 0.001) annotation(
+      Placement(visible = true, transformation(origin = {-40, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput torqueReq annotation(
+      Placement(visible = true, transformation(origin = {100, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    input Modelica.Blocks.Interfaces.RealInput angleMeas annotation(
+      Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 30) annotation(
+      Placement(visible = true, transformation(origin = {42, -18}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+    Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(
+      Placement(visible = true, transformation(origin = {94, 86}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {94, 86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(
+      Placement(visible = true, transformation(origin = {92, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {92, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b annotation(
+      Placement(visible = true, transformation(origin = {94, 56}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {94, 56}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Components.Inertia inertia1(J = 0.01) annotation(
+      Placement(visible = true, transformation(origin = {64, 56}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
-    annotation(
-      Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
-      __Dymola_state = true,
-      singleInstance = true);
-  end Charging;
-  TbLib.ComputerWithController.Charging s1 annotation(
-    Placement(visible = true, transformation(origin = {-70, 86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  
-  class Orienting_Towards_Ground_Station
-    outer output Real setpoint__discrete__;
-    outer input Real groundStationAttitude;
-  equation
-    setpoint__discrete__ = groundStationAttitude;
-    annotation(
-      Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
-      __Dymola_state = true,
-      singleInstance = true);
-  end Orienting_Towards_Ground_Station;
-  TbLib.ComputerWithController.Orienting_Towards_Ground_Station s2 annotation(
-    Placement(visible = true, transformation(origin = {0, 62}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  
-  class Transmitting
-  equation
-    annotation(
-      Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
-      __Dymola_state = true,
-      singleInstance = true);
-  end Transmitting;
-  TbLib.ComputerWithController.Transmitting s3 annotation(
-    Placement(visible = true, transformation(origin = {4, 28}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  
-  class Orienting_Towards_Sun
-    outer output Real setpoint__discrete__;
-    outer input Real sunAttitude;
-  equation
-    setpoint__discrete__ = sunAttitude;
-    annotation(
-      Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
-      __Dymola_state = true,
-      singleInstance = true);
-  end Orienting_Towards_Sun;
-  TbLib.ComputerWithController.Orienting_Towards_Sun s4 annotation(
-    Placement(visible = true, transformation(origin = {-68, 16}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  
-  output Modelica.Blocks.Interfaces.RealOutput setpoint annotation(
-    Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));  
-  Modelica.Blocks.Continuous.LimPID PID(Nd = 50, Ni = 4, Td = 1, Ti = 1, k = k, wd = d, wp = p, yMax = 0.001) annotation(
-    Placement(visible = true, transformation(origin = {-40, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.RealOutput torqueReq annotation(
-    Placement(visible = true, transformation(origin = {100, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  input Modelica.Blocks.Interfaces.RealInput angleMeas annotation(
-    Placement(visible = true, transformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-100, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 30) annotation(
-    Placement(visible = true, transformation(origin = {42, -18}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
-  Modelica.Electrical.Analog.Interfaces.PositivePin pin_p annotation(
-    Placement(visible = true, transformation(origin = {94, 86}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {94, 86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Electrical.Analog.Interfaces.NegativePin pin_n annotation(
-    Placement(visible = true, transformation(origin = {92, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {92, -86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b annotation(
-    Placement(visible = true, transformation(origin = {94, 56}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {94, 56}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Mechanics.Rotational.Components.Inertia inertia1(J = 0.01) annotation(
-    Placement(visible = true, transformation(origin = {64, 56}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-equation
-  v__discrete__ = sample(resistor1.v);
-  angleMeas__discrete__ = sample(angleMeas);
-  initialState(s1) annotation(
+    v__discrete__ = sample(resistor1.v);
+    angleMeas__discrete__ = sample(angleMeas);
+    initialState(s1) annotation(
       Line);
-  transition(s1, s2, v__discrete__ > fullyChargedThreshold, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+    transition(s1, s2, v__discrete__ > fullyChargedThreshold, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
       Line(points = {{-60, 86}, {30, 105}, {6, 72}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
       Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-  transition(s2, s3, abs(angleMeas__discrete__ - setpoint__discrete__) < 0.01, immediate = false, reset = true, synchronize = false, priority = 1) annotation(
+    transition(s2, s3, abs(angleMeas__discrete__ - setpoint__discrete__) < 0.01, immediate = false, reset = true, synchronize = false, priority = 1) annotation(
       Line(points = {{10, 60}, {33, 53}, {9, 38}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
       Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-  transition(s3, s4, v__discrete__ < lowBatteryThreshold, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+    transition(s3, s4, v__discrete__ < lowBatteryThreshold, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
       Line(points = {{-6, 29}, {-30, 34}, {-60, 26}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
       Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-  transition(s4, s1, abs(angleMeas__discrete__ - setpoint__discrete__) < 0.01, immediate = false, reset = true, synchronize = false, priority = 1) annotation(
+    transition(s4, s1, abs(angleMeas__discrete__ - setpoint__discrete__) < 0.01, immediate = false, reset = true, synchronize = false, priority = 1) annotation(
       Line(points = {{-67, 26}, {-63, 49}, {-63, 76}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
       Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-  setpoint_internal = hold(setpoint__discrete__);
-  setpoint = setpoint_internal;
-  
-  connect(PID.y, torqueReq) annotation(
+    setpoint_internal = hold(setpoint__discrete__);
+    setpoint = setpoint_internal;
+    connect(PID.y, torqueReq) annotation(
       Line(points = {{-29, -32}, {100, -32}}));
-  connect(PID.u_m, angleMeas) annotation(
+    connect(PID.u_m, angleMeas) annotation(
       Line(points = {{-40, -44}, {-40, -60}, {-100, -60}}, color = {0, 0, 127}));
-  connect(PID.u_s, setpoint_internal);
-  connect(flange_b, inertia1.flange_b) annotation(
-    Line(points = {{94, 56}, {74, 56}, {74, 56}, {74, 56}}));
-  connect(resistor1.p, pin_p) annotation(
-    Line(points = {{42, -8}, {46, -8}, {46, 86}, {94, 86}, {94, 86}}, color = {0, 0, 255}));
-  connect(resistor1.n, pin_n) annotation(
-    Line(points = {{42, -28}, {44, -28}, {44, -86}, {90, -86}, {90, -86}}, color = {0, 0, 255}));
-  
-end ComputerWithController;
-
-
-
-
+    connect(PID.u_s, setpoint_internal);
+    connect(flange_b, inertia1.flange_b) annotation(
+      Line(points = {{94, 56}, {74, 56}, {74, 56}, {74, 56}}));
+    connect(resistor1.p, pin_p) annotation(
+      Line(points = {{42, -8}, {46, -8}, {46, 86}, {94, 86}, {94, 86}}, color = {0, 0, 255}));
+    connect(resistor1.n, pin_n) annotation(
+      Line(points = {{42, -28}, {44, -28}, {44, -86}, {90, -86}, {90, -86}}, color = {0, 0, 255}));
+  end ComputerWithController;
 
   model StandaloneAttitudeController
     // Parameters and Variables
-    parameter Real lowBatteryThreshold(start=10);
-    parameter Real fullyChargedThreshold(start=15);
-    inner parameter Real sunAttitude(start=0);
-    inner parameter Real groundStationAttitude(start=1.57);
+    parameter Real lowBatteryThreshold(start = 10);
+    parameter Real fullyChargedThreshold(start = 15);
+    inner parameter Real sunAttitude(start = 0);
+    inner parameter Real groundStationAttitude(start = 1.57);
     inner Real vSysD;
     inner Real angleMeasD;
     inner Real setpointD(start = 0.0);
@@ -2819,11 +2737,13 @@ end ComputerWithController;
 
     class Charging
     equation
+
       annotation(
         Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
         __Dymola_state = true,
         singleInstance = true);
     end Charging;
+
     Charging charging annotation(
       Placement(visible = true, transformation(origin = {-70, 86}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 
@@ -2837,16 +2757,19 @@ end ComputerWithController;
         __Dymola_state = true,
         singleInstance = true);
     end OrientingTowardsGroundStation;
+
     OrientingTowardsGroundStation orientingTowardsGroundStation annotation(
       Placement(visible = true, transformation(origin = {0, 62}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 
     class Transmitting
     equation
+
       annotation(
         Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
         __Dymola_state = true,
         singleInstance = true);
     end Transmitting;
+
     Transmitting transmitting annotation(
       Placement(visible = true, transformation(origin = {4, 28}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 
@@ -2860,16 +2783,16 @@ end ComputerWithController;
         __Dymola_state = true,
         singleInstance = true);
     end OrientingTowardsSun;
+
     OrientingTowardsSun orientingTowardsSun annotation(
       Placement(visible = true, transformation(origin = {-68, 16}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      // I/O ports
+    // I/O ports
     Modelica.Blocks.Interfaces.RealInput vSys annotation(
       Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealInput angleMeas annotation(
       Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealOutput setpoint annotation(
       Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    
   equation
     initialState(charging);
     transition(charging, orientingTowardsGroundStation, vSysD > fullyChargedThreshold, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
@@ -2889,6 +2812,59 @@ end ComputerWithController;
     setpoint = hold(setpointD);
   end StandaloneAttitudeController;
 
+  model StandaloneAttitudeControllerSG
+    // Parameters and Variables
+    parameter Real lowBatteryThreshold(start = 10);
+    parameter Real fullyChargedThreshold(start = 15);
+    parameter Real sunAttitude(start = 0);
+    parameter Real groundStationAttitude(start = 1.57);
+    // I/O ports
+    Modelica.Blocks.Interfaces.RealInput vSys annotation(
+      Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealInput angleMeas annotation(
+      Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
+    Modelica.Blocks.Interfaces.RealOutput setpoint annotation(
+      Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.StateGraph.InitialStep charging annotation(
+      Placement(visible = true, transformation(origin = {-60, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.StateGraph.Transition chargeToTurnGround(condition = vSys > fullyChargedThreshold) annotation(
+      Placement(visible = true, transformation(origin = {-20, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.StateGraph.Step turnGround annotation(
+      Placement(visible = true, transformation(origin = {20, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.StateGraph.Transition turnGroundToTransmitting(condition = abs(angleMeas - groundStationAttitude) < 0.01) annotation(
+      Placement(visible = true, transformation(origin = {60, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.StateGraph.Step transmitting annotation(
+      Placement(visible = true, transformation(origin = {-60, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.StateGraph.Transition transmittingToTurnSun(condition = vSys < lowBatteryThreshold) annotation(
+      Placement(visible = true, transformation(origin = {-20, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.StateGraph.Step turnSun annotation(
+      Placement(visible = true, transformation(origin = {20, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.StateGraph.Transition turnSunToCharging(condition = abs(angleMeas - sunAttitude) < 0.01) annotation(
+      Placement(visible = true, transformation(origin = {60, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    inner Modelica.StateGraph.StateGraphRoot stateGraphRoot annotation(
+      Placement(visible = true, transformation(origin = {0, -18}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Blocks.Sources.RealExpression realExpression1(y = if turnGround.active or transmitting.active then 1.57 else 0) annotation(
+      Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(realExpression1.y, setpoint) annotation(
+      Line(points = {{52, 0}, {92, 0}, {92, 0}, {100, 0}}, color = {0, 0, 127}));
+    connect(turnSunToCharging.outPort, charging.inPort[1]) annotation(
+      Line(points = {{62, 40}, {80, 40}, {80, 20}, {-90, 20}, {-90, 80}, {-72, 80}, {-72, 80}, {-72, 80}}));
+    connect(turnSun.outPort[1], turnSunToCharging.inPort) annotation(
+      Line(points = {{30, 40}, {54, 40}, {54, 40}, {56, 40}}, thickness = 0.5));
+    connect(transmittingToTurnSun.outPort, turnSun.inPort[1]) annotation(
+      Line(points = {{-18, 40}, {8, 40}, {8, 40}, {8, 40}}));
+    connect(transmitting.outPort[1], transmittingToTurnSun.inPort) annotation(
+      Line(points = {{-50, 40}, {-24, 40}, {-24, 40}, {-24, 40}}, thickness = 0.5));
+    connect(turnGroundToTransmitting.outPort, transmitting.inPort[1]) annotation(
+      Line(points = {{62, 80}, {80, 80}, {80, 60}, {-80, 60}, {-80, 40}, {-72, 40}, {-72, 40}, {-72, 40}}));
+    connect(turnGround.outPort[1], turnGroundToTransmitting.inPort) annotation(
+      Line(points = {{30, 80}, {56, 80}, {56, 80}, {56, 80}}, thickness = 0.5));
+    connect(chargeToTurnGround.outPort, turnGround.inPort[1]) annotation(
+      Line(points = {{-18, 80}, {8, 80}, {8, 80}, {8, 80}}));
+    connect(charging.outPort[1], chargeToTurnGround.inPort) annotation(
+      Line(points = {{-50, 80}, {-24, 80}, {-24, 80}, {-24, 80}}, thickness = 0.5));
+  end StandaloneAttitudeControllerSG;
 
 
 
