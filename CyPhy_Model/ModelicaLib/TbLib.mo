@@ -1930,7 +1930,6 @@ package TbLib
           Line(points = {{-58, 40}, {-10, 40}, {-10, 40}, {-10, 40}}, color = {0, 0, 127}));
       end TestHarness;
 
-
       model SwitchEvolve1
         parameter Real clockRate(start = 1.0);
         parameter Real low(start = 10.0);
@@ -2609,10 +2608,77 @@ package TbLib
         connect(voltage.y, standaloneAttitudeController1.vSys) annotation(
           Line(points = {{-58, 40}, {-10, 40}, {-10, 40}, {-10, 40}}, color = {0, 0, 127}));
       end TestHarnessSG;
-
-
-
     end StandaloneAttitudeController;
+
+model BuildSMExample
+  Real y;
+  block State1
+    annotation(
+      Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+      __Dymola_state = true,
+      singleInstance = true);
+  end State1;
+
+  TbLib.Development.BuildSMExample.State1 state1 annotation(
+    Placement(visible = true, transformation(origin = {38, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+
+  block State2
+    annotation(
+      Icon(graphics = {Text(extent = {{-100, 100}, {100, -100}}, textString = "%name")}, coordinateSystem(initialScale = 0.1)),
+      __Dymola_state = true,
+      singleInstance = true);
+  end State2;
+
+  TbLib.Development.BuildSMExample.State2 state2 annotation(
+    Placement(visible = true, transformation(origin = {0, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+Modelica.Blocks.Sources.Sine sine1(freqHz = 0.01)  annotation(
+    Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+equation
+transition(state2, state1, y < 0, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+    Line(points = {{10, -59.5}, {40, -59.5}, {40, -30}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
+    Text(lineColor = {95, 95, 95}, extent = {{-4, 4}, {-4, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
+transition(state1, state2, y > 0, immediate = true, reset = true, synchronize = false, priority = 1) annotation(
+    Line(points = {{28, -20}, {0, -20}, {0, -48}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
+    Text(lineColor = {95, 95, 95}, extent = {{-4, 4}, {-4, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
+initialState(state1) annotation(
+    Line);
+y=sample(sine1.y, Clock(1.0));
+end BuildSMExample;
+
+
+
+
+
+    model BuildSMExampleSG
+      Modelica.Blocks.Sources.Sine sine1(freqHz = 0.01) annotation(
+        Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.InitialStep state1 annotation(
+        Placement(visible = true, transformation(origin = {0, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.Step state2 annotation(
+        Placement(visible = true, transformation(origin = {60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.Transition transition1(condition = sine1.y < 0)  annotation(
+        Placement(visible = true, transformation(origin = {30, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.Transition transition2(condition = sine1.y > 0)  annotation(
+        Placement(visible = true, transformation(origin = {30, -36}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  inner Modelica.StateGraph.StateGraphRoot stateGraphRoot annotation(
+        Placement(visible = true, transformation(origin = {0, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    equation
+      connect(transition2.outPort, state1.inPort[1]) annotation(
+        Line(points = {{32, -36}, {40, -36}, {40, -60}, {-20, -60}, {-20, 0}, {-12, 0}, {-12, 0}, {-12, 0}}));
+      connect(state2.outPort[1], transition2.inPort) annotation(
+        Line(points = {{70, 0}, {80, 0}, {80, -20}, {14, -20}, {14, -36}, {26, -36}, {26, -36}}, thickness = 0.5));
+      connect(transition1.outPort, state2.inPort[1]) annotation(
+        Line(points = {{32, 0}, {48, 0}, {48, 0}, {48, 0}}));
+      connect(state1.outPort[1], transition1.inPort) annotation(
+        Line(points = {{10, 0}, {26, 0}, {26, 0}, {26, 0}}, thickness = 0.5));
+    end BuildSMExampleSG;
+
+
+
+
+
+
+
   end Development;
 
   model ComputerWithController
@@ -2865,9 +2931,6 @@ package TbLib
     connect(charging.outPort[1], chargeToTurnGround.inPort) annotation(
       Line(points = {{-50, 80}, {-24, 80}, {-24, 80}, {-24, 80}}, thickness = 0.5));
   end StandaloneAttitudeControllerSG;
-
-
-
 equation
   connect(tbload1.pin_n, src1.pin_n) annotation(
     Line(points = {{14, 40}, {-14.6172, 40}, {-14.6172, 38.3207}, {-20, 38.3207}, {-20, 38}}));
