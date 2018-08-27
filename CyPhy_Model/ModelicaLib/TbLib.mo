@@ -3082,7 +3082,19 @@ package TbLib
         Placement(visible = true, transformation(origin = {70, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.StateGraph.Step init annotation(
         Placement(visible = true, transformation(origin = {40, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.StateGraph.Transition transition5(enableTimer = true, waitTime = 140) annotation(
+        Placement(visible = true, transformation(origin = {30, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.StateGraph.StepWithSignal onOrbit_exit annotation(
+        Placement(visible = true, transformation(origin = {60, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+      Modelica.Blocks.Interfaces.BooleanOutput POWER_OFF_CMD annotation(
+        Placement(visible = true, transformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     equation
+      connect(onOrbit_exit.active, POWER_OFF_CMD) annotation(
+        Line(points = {{60, -72}, {60, -72}, {60, -80}, {100, -80}, {100, -80}}, color = {255, 0, 255}));
+      connect(transition5.outPort, onOrbit_exit.inPort[1]) annotation(
+        Line(points = {{32, -60}, {48, -60}, {48, -60}, {48, -60}}));
+      connect(onOrbit.outPort[1], transition5.inPort) annotation(
+        Line(points = {{10, -60}, {26, -60}, {26, -60}, {26, -60}}, thickness = 0.5));
       connect(transition4.outPort, launch.inPort[1]) annotation(
         Line(points = {{71.5, 60}, {80, 60}, {80, 40}, {-80, 40}, {-80, 0}, {-70, 0}}));
       connect(init.outPort[1], transition4.inPort) annotation(
@@ -3153,22 +3165,22 @@ package TbLib
       Modelica.Blocks.Interfaces.RealOutput setpoint annotation(
         Placement(visible = true, transformation(origin = {100, -30}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -30}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     equation
-      connect(on.suspend[1], transitionWithSignal2.inPort) annotation(
-        Line(points = {{-44, -46}, {-44, -46}, {-44, -60}, {16, -60}, {16, -60}}, thickness = 0.5));
-      connect(on.TRANSFER_COMPLETE, TRANSFER_COMPLETE) annotation(
-        Line(points = {{0, -20}, {70, -20}, {70, 10}, {100, 10}}, color = {255, 0, 255}));
-      connect(on.setpoint, setpoint) annotation(
-        Line(points = {{0, -28}, {94, -28}, {94, -30}, {100, -30}}, color = {0, 0, 127}));
-      connect(vSys, on.vSys) annotation(
-        Line(points = {{-100, -50}, {-76, -50}, {-76, -40}, {-60, -40}, {-60, -40}}, color = {0, 0, 127}));
-      connect(angleMeas, on.angleMeas) annotation(
-        Line(points = {{-100, -24}, {-60, -24}, {-60, -24}, {-60, -24}}, color = {0, 0, 127}));
-      connect(transition1.outPort, on.inPort) annotation(
-        Line(points = {{32, 60}, {40, 60}, {40, 28}, {-76, 28}, {-76, -15}, {-62, -15}, {-62, -14}}));
-      connect(SEPARATE_CMD, on.SEPARATE_CMD) annotation(
-        Line(points = {{-100, 10}, {-80, 10}, {-80, -6}, {-60, -6}}, color = {255, 0, 255}));
       connect(on.SEPARATION_COMPLETE, SEPARATION_COMPLETE) annotation(
         Line(points = {{0, -6}, {60, -6}, {60, 40}, {100, 40}}, color = {255, 0, 255}));
+      connect(SEPARATE_CMD, on.SEPARATE_CMD) annotation(
+        Line(points = {{-100, 10}, {-80, 10}, {-80, -6}, {-60, -6}}, color = {255, 0, 255}));
+      connect(transition1.outPort, on.inPort) annotation(
+        Line(points = {{32, 60}, {40, 60}, {40, 28}, {-76, 28}, {-76, -15}, {-62, -15}, {-62, -14}}));
+  connect(angleMeas, on.angleMeas) annotation(
+        Line(points = {{-100, -24}, {-80, -24}, {-80, -22}, {-60, -22}}, color = {0, 0, 127}));
+  connect(vSys, on.vSys) annotation(
+        Line(points = {{-100, -50}, {-76, -50}, {-76, -38}, {-60, -38}}, color = {0, 0, 127}));
+  connect(on.setpoint, setpoint) annotation(
+        Line(points = {{0, -26}, {94, -26}, {94, -30}, {100, -30}}, color = {0, 0, 127}));
+  connect(on.TRANSFER_COMPLETE, TRANSFER_COMPLETE) annotation(
+        Line(points = {{0, -18}, {70, -18}, {70, 10}, {100, 10}}, color = {255, 0, 255}));
+  connect(on.suspend[1], transitionWithSignal2.inPort) annotation(
+        Line(points = {{-45, -45}, {-45, -60}, {16, -60}}, thickness = 0.5));
       connect(transition2.outPort, off.inPort[1]) annotation(
         Line(points = {{82, -60}, {120, -60}, {120, 80}, {-76, 80}, {-76, 60}, {-70, 60}, {-70, 60}}));
       connect(poweringOff.outPort[1], transition2.inPort) annotation(
@@ -3261,8 +3273,6 @@ package TbLib
     end On;
 
     model MissionContextHarness
-      Modelica.Blocks.Sources.BooleanExpression booleanExpression1 annotation(
-        Placement(visible = true, transformation(origin = {0, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Nonlinear.FixedDelay fixedDelay1(delayTime = 7.5) annotation(
         Placement(visible = true, transformation(origin = {0, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Sources.Trapezoid trapezoid1(amplitude = 4.2, falling = 20, offset = 12.9, period = 60, rising = 20, startTime = 60, width = 10) annotation(
@@ -3273,11 +3283,7 @@ package TbLib
         Placement(visible = true, transformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.Blocks.Interfaces.RealOutput vSys annotation(
         Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.BooleanOutput POWER_OFF_CMD annotation(
-        Placement(visible = true, transformation(origin = {100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     equation
-      connect(booleanExpression1.y, POWER_OFF_CMD) annotation(
-        Line(points = {{12, -40}, {94, -40}, {94, -40}, {100, -40}}, color = {255, 0, 255}));
       connect(trapezoid1.y, vSys) annotation(
         Line(points = {{11, 0}, {100, 0}}, color = {0, 0, 127}));
       connect(fixedDelay1.y, angleMeas) annotation(
@@ -3347,18 +3353,18 @@ package TbLib
       TbLib.Behaviors.MissionContextHarness missionContextHarness1 annotation(
         Placement(visible = true, transformation(origin = {-40, -60}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
     equation
+      connect(missionScenario1.POWER_OFF_CMD, spacecraftStates1.POWER_OFF_CMD) annotation(
+        Line(points = {{-20, -2}, {-6, -2}, {-6, -14}, {20, -14}, {20, -14}}, color = {255, 0, 255}));
       connect(spacecraftStates1.setpoint, missionContextHarness1.setpoint) annotation(
         Line(points = {{60, -4}, {70, -4}, {70, -90}, {-70, -90}, {-70, -52}, {-60, -52}, {-60, -52}}, color = {0, 0, 127}));
-    connect(spacecraftStates1.SEPARATION_COMPLETE, missionScenario1.SEPARATION_COMPLETE) annotation(
+      connect(spacecraftStates1.SEPARATION_COMPLETE, missionScenario1.SEPARATION_COMPLETE) annotation(
         Line(points = {{60, 12}, {80, 12}, {80, 40}, {-80, 40}, {-80, 4}, {-60, 4}}, color = {255, 0, 255}));
-    connect(spacecraftStates1.TRANSFER_COMPLETE, missionScenario1.TRANSFER_COMPLETE) annotation(
+      connect(spacecraftStates1.TRANSFER_COMPLETE, missionScenario1.TRANSFER_COMPLETE) annotation(
         Line(points = {{60, 0}, {80, 0}, {80, -32}, {-80, -32}, {-80, -4}, {-60, -4}}, color = {255, 0, 255}));
-    connect(missionScenario1.SEPARATION_CMD, spacecraftStates1.SEPARATE_CMD) annotation(
+      connect(missionScenario1.SEPARATION_CMD, spacecraftStates1.SEPARATE_CMD) annotation(
         Line(points = {{-20, 8}, {0, 8}, {0, 6}, {20, 6}}, color = {255, 0, 255}));
-    connect(missionScenario1.POWER_ON_CMD, spacecraftStates1.POWER_ON_CMD) annotation(
+      connect(missionScenario1.POWER_ON_CMD, spacecraftStates1.POWER_ON_CMD) annotation(
         Line(points = {{-20, 18}, {0, 18}, {0, 12}, {20, 12}}, color = {255, 0, 255}));
-      connect(missionContextHarness1.POWER_OFF_CMD, spacecraftStates1.POWER_OFF_CMD) annotation(
-        Line(points = {{-20, -68}, {10, -68}, {10, -14}, {18, -14}, {18, -14}, {20, -14}}, color = {255, 0, 255}));
       connect(missionContextHarness1.vSys, spacecraftStates1.vSys) annotation(
         Line(points = {{-20, -60}, {0, -60}, {0, -8}, {20, -8}, {20, -8}}, color = {0, 0, 127}));
       connect(missionContextHarness1.angleMeas, spacecraftStates1.angleMeas) annotation(
