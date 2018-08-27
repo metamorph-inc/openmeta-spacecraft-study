@@ -3064,7 +3064,7 @@ package TbLib
         Placement(visible = true, transformation(origin = {-32, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.StateGraph.StepWithSignal separation annotation(
         Placement(visible = true, transformation(origin = {0, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.Blocks.Interfaces.BooleanOutput SEPARATION_CMD annotation(
+      Modelica.Blocks.Interfaces.BooleanOutput SEPARATE_CMD annotation(
         Placement(visible = true, transformation(origin = {100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.StateGraph.TransitionWithSignal transitionWithSignal1 annotation(
         Placement(visible = true, transformation(origin = {30, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -3117,7 +3117,7 @@ package TbLib
         Line(points = {{32, 0}, {60, 0}, {60, -40}, {-82, -40}, {-82, -60}, {-72, -60}, {-72, -60}, {-70, -60}}));
       connect(separation.outPort[1], transitionWithSignal1.inPort) annotation(
         Line(points = {{10, 0}, {26, 0}, {26, 0}, {26, 0}}, thickness = 0.5));
-      connect(separation.active, SEPARATION_CMD) annotation(
+      connect(separation.active, SEPARATE_CMD) annotation(
         Line(points = {{0, -12}, {0, -12}, {0, -20}, {100, -20}, {100, -20}}, color = {255, 0, 255}));
       connect(transition3.outPort, separation.inPort[1]) annotation(
         Line(points = {{-30, 0}, {-12, 0}, {-12, 0}, {-12, 0}}));
@@ -3128,6 +3128,7 @@ package TbLib
       connect(start.outPort[1], transition1.inPort) annotation(
         Line(points = {{-50, 60}, {-36, 60}, {-36, 60}, {-36, 60}}, thickness = 0.5));
     end MissionScenario;
+
 
     model SpacecraftStates
       Modelica.StateGraph.InitialStep off annotation(
@@ -3361,7 +3362,7 @@ package TbLib
         Line(points = {{60, 12}, {80, 12}, {80, 40}, {-80, 40}, {-80, 4}, {-60, 4}}, color = {255, 0, 255}));
       connect(spacecraftStates1.TRANSFER_COMPLETE, missionScenario1.TRANSFER_COMPLETE) annotation(
         Line(points = {{60, 0}, {80, 0}, {80, -32}, {-80, -32}, {-80, -4}, {-60, -4}}, color = {255, 0, 255}));
-      connect(missionScenario1.SEPARATION_CMD, spacecraftStates1.SEPARATE_CMD) annotation(
+      connect(missionScenario1.SEPARATE_CMD, spacecraftStates1.SEPARATE_CMD) annotation(
         Line(points = {{-20, 8}, {0, 8}, {0, 6}, {20, 6}}, color = {255, 0, 255}));
       connect(missionScenario1.POWER_ON_CMD, spacecraftStates1.POWER_ON_CMD) annotation(
         Line(points = {{-20, 18}, {0, 18}, {0, 12}, {20, 12}}, color = {255, 0, 255}));
@@ -3370,6 +3371,7 @@ package TbLib
       connect(missionContextHarness1.angleMeas, spacecraftStates1.angleMeas) annotation(
         Line(points = {{-20, -52}, {-12, -52}, {-12, -4}, {20, -4}, {20, -2}}, color = {0, 0, 127}));
     end TestMissionContext;
+
   end Behaviors;
 equation
   connect(tbload1.pin_n, src1.pin_n) annotation(
