@@ -2800,12 +2800,12 @@ package TbLib
           Placement(visible = true, transformation(origin = {-60, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.Transition transition1(condition = time >= 5) annotation(
           Placement(visible = true, transformation(origin = {-32, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-        Modelica.StateGraph.StepWithSignal init annotation(
+        Modelica.StateGraph.StepWithSignal init_entry annotation(
           Placement(visible = true, transformation(origin = {0, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Blocks.Interfaces.BooleanOutput POWER_ON_CMD annotation(
-          Placement(visible = true, transformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-        Modelica.StateGraph.Transition transition2(condition = time >= 30) annotation(
-          Placement(visible = true, transformation(origin = {30, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {100, 30}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 30}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+        Modelica.StateGraph.Transition transition2 annotation(
+          Placement(visible = true, transformation(origin = {20, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.Step launch annotation(
           Placement(visible = true, transformation(origin = {-60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.Transition transition3(enableTimer = true, waitTime = 10) annotation(
@@ -2826,7 +2826,21 @@ package TbLib
           Placement(visible = true, transformation(origin = {-30, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.Step onOrbit annotation(
           Placement(visible = true, transformation(origin = {0, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.Transition transition4(condition = time >= 30)  annotation(
+          Placement(visible = true, transformation(origin = {70, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.Step init annotation(
+          Placement(visible = true, transformation(origin = {40, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       equation
+        connect(transition4.outPort, launch.inPort[1]) annotation(
+          Line(points = {{71.5, 60}, {80, 60}, {80, 40}, {-80, 40}, {-80, 0}, {-70, 0}}));
+        connect(init.outPort[1], transition4.inPort) annotation(
+          Line(points = {{50.5, 60}, {66, 60}}, thickness = 0.5));
+        connect(transition2.outPort, init.inPort[1]) annotation(
+          Line(points = {{21.5, 60}, {29, 60}}));
+        connect(init_entry.outPort[1], transition2.inPort) annotation(
+          Line(points = {{10, 60}, {16, 60}}, thickness = 0.5));
+        connect(init_entry.active, POWER_ON_CMD) annotation(
+          Line(points = {{0, 48}, {0, 30}, {100, 30}}, color = {255, 0, 255}));
         connect(SEPARATION_COMPLETE, transitionWithSignal1.condition) annotation(
           Line(points = {{-100, -30}, {30, -30}, {30, -12}}, color = {255, 0, 255}));
         connect(TRANSFER_COMPLETE, transitionWithSignal2.condition) annotation(
@@ -2845,17 +2859,13 @@ package TbLib
           Line(points = {{-30, 0}, {-12, 0}, {-12, 0}, {-12, 0}}));
         connect(launch.outPort[1], transition3.inPort) annotation(
           Line(points = {{-50, 0}, {-36, 0}, {-36, 0}, {-36, 0}}, thickness = 0.5));
-        connect(transition2.outPort, launch.inPort[1]) annotation(
-          Line(points = {{32, 60}, {60, 60}, {60, 20}, {-80, 20}, {-80, 0}, {-72, 0}, {-72, 0}}));
-        connect(init.outPort[1], transition2.inPort) annotation(
-          Line(points = {{10, 60}, {26, 60}, {26, 60}, {26, 60}}, thickness = 0.5));
-        connect(transition1.outPort, init.inPort[1]) annotation(
+        connect(transition1.outPort, init_entry.inPort[1]) annotation(
           Line(points = {{-30, 60}, {-12, 60}, {-12, 60}, {-12, 60}}));
-        connect(init.active, POWER_ON_CMD) annotation(
-          Line(points = {{0, 48}, {0, 48}, {0, 40}, {100, 40}, {100, 40}}, color = {255, 0, 255}));
         connect(start.outPort[1], transition1.inPort) annotation(
           Line(points = {{-50, 60}, {-36, 60}, {-36, 60}, {-36, 60}}, thickness = 0.5));
       end MissionScenario;
+
+
 
       model SpacecraftStates
         Modelica.StateGraph.InitialStep off annotation(
@@ -2927,7 +2937,7 @@ package TbLib
           Placement(visible = true, transformation(origin = {-20, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.StepWithSignal separating_exit annotation(
           Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-        Modelica.StateGraph.Transition transition1(enableTimer = true, waitTime = 3) annotation(
+        Modelica.StateGraph.Transition transition1(enableTimer = true, waitTime = 4) annotation(
           Placement(visible = true, transformation(origin = {10, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Blocks.Interfaces.BooleanOutput SEPARATION_COMPLETE annotation(
           Placement(visible = true, transformation(origin = {150, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {150, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -2935,7 +2945,7 @@ package TbLib
           Placement(visible = true, transformation(origin = {-80, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.Transition transition2 annotation(
           Placement(visible = true, transformation(origin = {72, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-        Modelica.StateGraph.Transition transition3(enableTimer = true, waitTime = 8) annotation(
+        Modelica.StateGraph.Transition transition3(enableTimer = true, waitTime = 11) annotation(
           Placement(visible = true, transformation(origin = {-50, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.StepWithSignal transferring_exit annotation(
           Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -2986,16 +2996,16 @@ package TbLib
   Modelica.Blocks.Sources.BooleanExpression booleanExpression1 annotation(
           Placement(visible = true, transformation(origin = {-40, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       equation
+      connect(spacecraftStates1.TRANSFER_COMPLETE, missionScenario1.TRANSFER_COMPLETE) annotation(
+          Line(points = {{60, -4}, {80, -4}, {80, -32}, {-80, -32}, {-80, -14}, {-60, -14}}, color = {255, 0, 255}));
+      connect(spacecraftStates1.SEPARATION_COMPLETE, missionScenario1.SEPARATION_COMPLETE) annotation(
+          Line(points = {{60, 8}, {80, 8}, {80, 30}, {-80, 30}, {-80, -4}, {-60, -4}}, color = {255, 0, 255}));
+      connect(missionScenario1.SEPARATION_CMD, spacecraftStates1.SEPARATE_CMD) annotation(
+          Line(points = {{-20, -2}, {0, -2}, {0, -4}, {20, -4}}, color = {255, 0, 255}));
+      connect(missionScenario1.POWER_ON_CMD, spacecraftStates1.POWER_ON_CMD) annotation(
+          Line(points = {{-20, 8}, {20, 8}}, color = {255, 0, 255}));
         connect(booleanExpression1.y, spacecraftStates1.POWER_OFF_CMD) annotation(
           Line(points = {{-28, -60}, {0, -60}, {0, -16}, {18, -16}, {18, -16}, {20, -16}}, color = {255, 0, 255}));
-        connect(spacecraftStates1.TRANSFER_COMPLETE, missionScenario1.TRANSFER_COMPLETE) annotation(
-          Line(points = {{60, -4}, {80, -4}, {80, -32}, {-80, -32}, {-80, -16}, {-60, -16}, {-60, -16}, {-60, -16}}, color = {255, 0, 255}));
-        connect(spacecraftStates1.SEPARATION_COMPLETE, missionScenario1.SEPARATION_COMPLETE) annotation(
-          Line(points = {{60, 8}, {80, 8}, {80, 30}, {-80, 30}, {-80, -6}, {-60, -6}, {-60, -6}}, color = {255, 0, 255}));
-        connect(missionScenario1.SEPARATION_CMD, spacecraftStates1.SEPARATE_CMD) annotation(
-          Line(points = {{-20, -4}, {18, -4}, {18, -4}, {20, -4}}, color = {255, 0, 255}));
-        connect(missionScenario1.POWER_ON_CMD, spacecraftStates1.POWER_ON_CMD) annotation(
-          Line(points = {{-20, 8}, {-10, 8}, {-10, 8}, {20, 8}, {20, 8}}, color = {255, 0, 255}));
       end TestMissionContext;
     end EntryDoExitActions;
   end Development;
