@@ -2928,64 +2928,64 @@ package TbLib
       model On
         extends .Modelica.StateGraph.PartialCompositeStep;
         Modelica.StateGraph.Step launching annotation(
-          Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {-80, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.TransitionWithSignal transitionWithSignal1 annotation(
-          Placement(visible = true, transformation(origin = {-50, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {-50, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Blocks.Interfaces.BooleanInput SEPARATE_CMD annotation(
-          Placement(visible = true, transformation(origin = {-150, -20}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-150, -20}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {-150, 40}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-150, 40}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
         Modelica.StateGraph.Step separating annotation(
-          Placement(visible = true, transformation(origin = {-20, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {-20, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.StepWithSignal separating_exit annotation(
-          Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {40, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.Transition transition1(enableTimer = true, waitTime = 4) annotation(
-          Placement(visible = true, transformation(origin = {10, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {10, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Blocks.Interfaces.BooleanOutput SEPARATION_COMPLETE annotation(
-          Placement(visible = true, transformation(origin = {150, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {150, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {150, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {150, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.Step transferring annotation(
-          Placement(visible = true, transformation(origin = {-80, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {-80, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.Transition transition2 annotation(
-          Placement(visible = true, transformation(origin = {72, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {72, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.Transition transition3(enableTimer = true, waitTime = 11) annotation(
-          Placement(visible = true, transformation(origin = {-50, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {-50, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.StepWithSignal transferring_exit annotation(
-          Placement(visible = true, transformation(origin = {-20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {-20, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.Transition transition4 annotation(
-          Placement(visible = true, transformation(origin = {10, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {10, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.StateGraph.Step orbiting annotation(
-          Placement(visible = true, transformation(origin = {40, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {40, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
         Modelica.Blocks.Interfaces.BooleanOutput TRANSFER_COMPLETE annotation(
-          Placement(visible = true, transformation(origin = {150, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {150, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+          Placement(visible = true, transformation(origin = {150, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {150, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       equation
-        connect(orbiting.outPort[1], outPort) annotation(
-          Line(points = {{50, -60}, {120, -60}, {120, 0}, {156, 0}, {156, 0}}, thickness = 0.5));
-        connect(inPort, launching.inPort[1]) annotation(
-          Line(points = {{-160, 0}, {-92, 0}, {-92, 0}, {-90, 0}}));
-        connect(launching.outPort[1], transitionWithSignal1.inPort) annotation(
-          Line(points = {{-69.5, 0}, {-54, 0}}, thickness = 0.5));
-        connect(transferring_exit.active, TRANSFER_COMPLETE) annotation(
-          Line(points = {{-20, -72}, {-20, -80}, {150, -80}}, color = {255, 0, 255}));
-        connect(separating_exit.active, SEPARATION_COMPLETE) annotation(
-          Line(points = {{40, -11}, {40, -20}, {150, -20}}, color = {255, 0, 255}));
-        connect(SEPARATE_CMD, transitionWithSignal1.condition) annotation(
-          Line(points = {{-150, -20}, {-49.5, -20}, {-49.5, -12}, {-50, -12}}, color = {255, 0, 255}));
-        connect(transitionWithSignal1.outPort, separating.inPort[1]) annotation(
-          Line(points = {{-48.5, 0}, {-32, 0}}));
-        connect(transition4.outPort, orbiting.inPort[1]) annotation(
-          Line(points = {{12, -60}, {28, -60}, {28, -60}, {28, -60}}));
-        connect(transferring_exit.outPort[1], transition4.inPort) annotation(
-          Line(points = {{-10, -60}, {6, -60}, {6, -60}, {6, -60}}, thickness = 0.5));
-        connect(transition3.outPort, transferring_exit.inPort[1]) annotation(
-          Line(points = {{-48, -60}, {-32, -60}, {-32, -60}, {-32, -60}, {-32, -60}}));
-        connect(transferring.outPort[1], transition3.inPort) annotation(
-          Line(points = {{-70, -60}, {-54, -60}, {-54, -60}, {-54, -60}}, thickness = 0.5));
-        connect(transition2.outPort, transferring.inPort[1]) annotation(
-          Line(points = {{74, 0}, {80, 0}, {80, -40}, {-96, -40}, {-96, -60}, {-92, -60}, {-92, -60}, {-92, -60}}));
-        connect(separating_exit.outPort[1], transition2.inPort) annotation(
-          Line(points = {{50, 0}, {68, 0}, {68, 0}, {68, 0}}, thickness = 0.5));
-        connect(transition1.outPort, separating_exit.inPort[1]) annotation(
-          Line(points = {{12, 0}, {29, 0}}));
-        connect(separating.outPort[1], transition1.inPort) annotation(
-          Line(points = {{-10, 0}, {6, 0}}, thickness = 0.5));
+      connect(orbiting.outPort[1], outPort) annotation(
+          Line(points = {{50.5, 0}, {156, 0}}, thickness = 0.5));
+      connect(separating_exit.active, SEPARATION_COMPLETE) annotation(
+          Line(points = {{40, 49}, {40, 38}, {150, 38}}, color = {255, 0, 255}));
+      connect(transferring_exit.active, TRANSFER_COMPLETE) annotation(
+          Line(points = {{-20, -11}, {-20, -20}, {148, -20}}, color = {255, 0, 255}));
+      connect(transition4.outPort, orbiting.inPort[1]) annotation(
+          Line(points = {{11.5, 0}, {27.5, 0}}));
+      connect(transition3.outPort, transferring_exit.inPort[1]) annotation(
+          Line(points = {{-48.5, 0}, {-32.5, 0}}));
+      connect(transferring.outPort[1], transition3.inPort) annotation(
+          Line(points = {{-69.5, 0}, {-53.5, 0}}, thickness = 0.5));
+      connect(separating_exit.outPort[1], transition2.inPort) annotation(
+          Line(points = {{50.5, 60}, {68.5, 60}}, thickness = 0.5));
+      connect(inPort, launching.inPort[1]) annotation(
+          Line(points = {{-160, 0}, {-120, 0}, {-120, 60}, {-91, 60}}));
+      connect(SEPARATE_CMD, transitionWithSignal1.condition) annotation(
+          Line(points = {{-150, 40}, {-49.5, 40}, {-49.5, 48}, {-50, 48}}, color = {255, 0, 255}));
+      connect(transferring_exit.outPort[1], transition4.inPort) annotation(
+          Line(points = {{-9.5, 0}, {6.5, 0}, {6.5, 0}, {6.5, 0}}, thickness = 0.5));
+      connect(transition2.outPort, transferring.inPort[1]) annotation(
+          Line(points = {{73.5, 60}, {79.5, 60}, {79.5, 20}, {-96.5, 20}, {-96.5, 0}, {-92.5, 0}, {-92.5, 0}, {-92.5, 0}}));
+      connect(separating.outPort[1], transition1.inPort) annotation(
+          Line(points = {{-9.5, 60}, {6.5, 60}}, thickness = 0.5));
+      connect(transition1.outPort, separating_exit.inPort[1]) annotation(
+          Line(points = {{11.5, 60}, {28.5, 60}}));
+      connect(transitionWithSignal1.outPort, separating.inPort[1]) annotation(
+          Line(points = {{-48.5, 60}, {-32, 60}}));
+      connect(launching.outPort[1], transitionWithSignal1.inPort) annotation(
+          Line(points = {{-69.5, 60}, {-54, 60}}, thickness = 0.5));
       end On;
 
       model TestMissionContext
@@ -3007,6 +3007,67 @@ package TbLib
         connect(booleanExpression1.y, spacecraftStates1.POWER_OFF_CMD) annotation(
           Line(points = {{-28, -60}, {0, -60}, {0, -16}, {18, -16}, {18, -16}, {20, -16}}, color = {255, 0, 255}));
       end TestMissionContext;
+
+      model Orbiting
+        extends Modelica.StateGraph.PartialCompositeStep;
+        parameter Real fullyChargedThreshold(start = 17.0);
+        parameter Real lowBatteryThreshold(start = 13.0);
+        parameter Real sunAttitude(start = 0.0);
+        parameter Real groundStationAttitude(start = 1.57);
+        Modelica.StateGraph.Step charging(nIn = 2)  annotation(
+          Placement(visible = true, transformation(origin = {-120, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.Step orientingTowardsGroundStation annotation(
+          Placement(visible = true, transformation(origin = {-60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.Step transmitting annotation(
+          Placement(visible = true, transformation(origin = {0, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.Step orientingTowardsSun annotation(
+          Placement(visible = true, transformation(origin = {60, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.Transition transition1(condition = vSys > fullyChargedThreshold)  annotation(
+          Placement(visible = true, transformation(origin = {-90, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.Transition transition2(condition = abs(angleMeas - setpoint) < 0.01)  annotation(
+          Placement(visible = true, transformation(origin = {-30, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.Transition transition3(condition = vSys < lowBatteryThreshold)  annotation(
+          Placement(visible = true, transformation(origin = {32, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.StateGraph.Transition transition4(condition = abs(angleMeas - setpoint) < 0.01)  annotation(
+          Placement(visible = true, transformation(origin = {90, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Interfaces.RealOutput setpoint annotation(
+          Placement(visible = true, transformation(origin = {150, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {150, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Interfaces.RealInput angleMeas annotation(
+          Placement(visible = true, transformation(origin = {-150, 60}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-150, 60}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
+  Modelica.Blocks.Interfaces.RealInput vSys annotation(
+          Placement(visible = true, transformation(origin = {-150, -80}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-150, -80}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
+  Modelica.Blocks.Sources.RealExpression realExpression1(y = if orientingTowardsSun.active or charging.active then sunAttitude else (if orientingTowardsGroundStation.active or transmitting.active then groundStationAttitude else 0.0))  annotation(
+          Placement(visible = true, transformation(origin = {100, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+        connect(realExpression1.y, setpoint) annotation(
+          Line(points = {{112, 60}, {146, 60}, {146, 60}, {150, 60}}, color = {0, 0, 127}));
+        connect(transition4.outPort, charging.inPort[2]) annotation(
+          Line(points = {{92, 0}, {110, 0}, {110, -30}, {-140, -30}, {-140, 0}, {-132, 0}, {-132, 0}}));
+        connect(orientingTowardsSun.outPort[1], transition4.inPort) annotation(
+          Line(points = {{70, 0}, {86, 0}, {86, 0}, {86, 0}}, thickness = 0.5));
+        connect(transition3.outPort, orientingTowardsSun.inPort[1]) annotation(
+          Line(points = {{34, 0}, {48, 0}, {48, 0}, {48, 0}}));
+        connect(transmitting.outPort[1], transition3.inPort) annotation(
+          Line(points = {{10, 0}, {28, 0}, {28, 0}, {28, 0}}, thickness = 0.5));
+        connect(transition2.outPort, transmitting.inPort[1]) annotation(
+          Line(points = {{-28, 0}, {-12, 0}, {-12, 0}, {-12, 0}}));
+        connect(transition1.outPort, orientingTowardsGroundStation.inPort[1]) annotation(
+          Line(points = {{-88, 0}, {-72, 0}, {-72, 0}, {-72, 0}}));
+        connect(orientingTowardsGroundStation.outPort[1], transition2.inPort) annotation(
+          Line(points = {{-50, 0}, {-34, 0}, {-34, 0}, {-34, 0}}, thickness = 0.5));
+        connect(charging.outPort[1], transition1.inPort) annotation(
+          Line(points = {{-110, 0}, {-94, 0}, {-94, 0}, {-94, 0}}, thickness = 0.5));
+        connect(inPort, charging.inPort[1]) annotation(
+          Line(points = {{-160, 0}, {-132, 0}, {-132, 0}, {-132, 0}, {-132, 0}}));
+      
+      end Orbiting;
+
+
+
+
+
+
+
     end EntryDoExitActions;
   end Development;
 
