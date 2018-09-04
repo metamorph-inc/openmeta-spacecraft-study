@@ -537,7 +537,7 @@ if __name__ == '__main__':
                     print "CG=",cgloc
 
 
-                if "Spacecraft" in assyName:
+                if "Spacecraft" in assyName or "Context" in assyName:
                     outlogf.write("Spacecraft cg = ("+str(cgvars[0])+','+str(cgvars[1])+','+str(cgvars[2])+')\n')
                     myMass = "0.0001"
                     for scalars in me.iter('Scalars'):
