@@ -753,7 +753,7 @@ package TbLib
 
   model Computer
     parameter Real k, p, d;
-    Modelica.Blocks.Continuous.LimPID PID(Nd = 50, Ni = 4, Td = 1, Ti = 1, k = k, wd = d, wp = p, yMax = 0.001) annotation(
+    Modelica.Blocks.Continuous.LimPID PID(Nd = 50, Ni = 4, Td = 1, Ti = 1, k = k, wd = d, wp = p) annotation(
       Placement(visible = true, transformation(origin = {-40, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealOutput torqueReq annotation(
       Placement(visible = true, transformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -785,6 +785,7 @@ package TbLib
     connect(PID.y, torqueReq) annotation(
       Line(points = {{-29, 20}, {91.49509999999999, 20}, {91.49509999999999, 22.2023}, {91.49509999999999, 22.2023}}));
   end Computer;
+
 
   model RotationalBody
     parameter Real ixx, iyy, izz;
@@ -3082,7 +3083,7 @@ package TbLib
         Placement(visible = true, transformation(origin = {70, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.StateGraph.Step init annotation(
         Placement(visible = true, transformation(origin = {40, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-      Modelica.StateGraph.Transition transition5(enableTimer = true, waitTime = 140) annotation(
+      Modelica.StateGraph.Transition transition5(enableTimer = true, waitTime = 2840) annotation(
         Placement(visible = true, transformation(origin = {30, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
       Modelica.StateGraph.StepWithSignal onOrbit_exit annotation(
         Placement(visible = true, transformation(origin = {60, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
