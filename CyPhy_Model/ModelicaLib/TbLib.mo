@@ -2909,6 +2909,7 @@ package TbLib
     parameter Real fullyChargedThreshold(start = 15);
     inner parameter Real sunAttitude(start = 0);
     inner parameter Real groundStationAttitude(start = 1.57);
+    inner parameter Real clockPeriod(start = 0.2);
     inner Real vSysD;
     inner Real angleMeasD;
     inner Real setpointD(start = 0.0);
@@ -2986,10 +2987,12 @@ package TbLib
     transition(orientingTowardsSun, charging, abs(angleMeasD - setpointD) < 0.01, immediate = false, reset = true, synchronize = false, priority = 1) annotation(
       Line(points = {{-67, 26}, {-63, 49}, {-63, 76}}, color = {175, 175, 175}, smooth = Smooth.Bezier),
       Text(lineColor = {95, 95, 95}, extent = {{16, 4}, {16, 10}}, textString = "%condition", fontSize = 10, textStyle = {TextStyle.Bold}, horizontalAlignment = TextAlignment.Right));
-    vSysD = sample(vSys, Clock(0.2));
-    angleMeasD = sample(angleMeas, Clock(0.2));
+    vSysD = sample(vSys, Clock(clockPeriod));
+    angleMeasD = sample(angleMeas, Clock(clockPeriod));
     setpoint = hold(setpointD);
   end StandaloneAttitudeController;
+
+
 
   model StandaloneAttitudeControllerSG
     // Parameters and Variables
