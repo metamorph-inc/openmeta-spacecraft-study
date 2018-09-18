@@ -1,0 +1,12 @@
+{
+  "steps": [
+    {
+      "action": "block_metadata_export",
+      "block_id": "_18_5_3_23e012b_1528990701726_541446_14038"
+    },
+    {
+      "action": "block_metadata_export",
+      "block_id": "_18_5_3_652021e_1529437718623_444042_14649"
+    }
+  ]
+}

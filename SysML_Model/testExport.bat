@@ -1,0 +1,1 @@
+cmd /c batch_exporter -p Spacecraft.mdxml -s BlockMetadataExportScript.json
