@@ -715,59 +715,11 @@ package TbLib
 
   model scenario
     parameter Real commTime(start=100), per(start=600), tstart(start=100);
-    Modelica.Blocks.Interfaces.RealInput vSys annotation(
-      Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-100, 0}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
-    Modelica.Blocks.Interfaces.RealInput angleMeas annotation(
-      Placement(visible = true, transformation(origin = {-100, -80}, extent = {{-20, -20}, {20, 20}}, rotation = 0), iconTransformation(origin = {-100, -80}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
     Modelica.Blocks.Interfaces.RealOutput setpoint annotation(
       Placement(visible = true, transformation(origin = {32, -2}, extent = {{-8, -8}, {8, 8}}, rotation = 0), iconTransformation(origin = {40, 40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
     Modelica.Blocks.Sources.Trapezoid trapezoid1(rising = 10, width = commTime, falling = 10, period = per, amplitude = 1.57, startTime = tstart) annotation(
       Placement(visible = true, transformation(origin = {-11, -3}, extent = {{-7, -7}, {7, 7}}, rotation = 0)));
-    inner Modelica.StateGraph.StateGraphRoot stateGraphRoot annotation(
-      Placement(visible = true, transformation(origin = {-22, 22}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.StateGraph.InitialStep initialStep1 annotation(
-      Placement(visible = true, transformation(origin = {-28, -26}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.StateGraph.Transition transition1(enableTimer = true, waitTime = tstart)  annotation(
-      Placement(visible = true, transformation(origin = {-8, -26}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-    Modelica.StateGraph.Parallel parallel1(nBranches = 2) annotation(
-      Placement(visible = true, transformation(origin = {32, -26}, extent = {{-30, -18}, {30, 18}}, rotation = 0)));
-    Modelica.StateGraph.Step onOrbit annotation(
-      Placement(visible = true, transformation(origin = {19, -17}, extent = {{-3, -3}, {3, 3}}, rotation = 0)));
-    Modelica.StateGraph.Step transmitting(nIn = 2, nOut = 2) annotation(
-      Placement(visible = true, transformation(origin = {18, -26}, extent = {{-2, -2}, {2, 2}}, rotation = 0)));
-    Modelica.StateGraph.Transition transition2(condition = angleMeas < 0.785) annotation(
-      Placement(visible = true, transformation(origin = {27, -27}, extent = {{-3, -3}, {3, 3}}, rotation = 0)));
-    Modelica.StateGraph.Step notTransmitting annotation(
-      Placement(visible = true, transformation(origin = {38, -24}, extent = {{-4, -4}, {4, 4}}, rotation = 0)));
-    Modelica.StateGraph.Transition transition3(condition = angleMeas > 0.785) annotation(
-      Placement(visible = true, transformation(origin = {47, -25}, extent = {{-3, -3}, {3, 3}}, rotation = 0)));
-  Modelica.StateGraph.Transition transition4(condition = false)  annotation(
-      Placement(visible = true, transformation(origin = {72, -26}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   equation
-    connect(transition4.outPort, initialStep1.inPort[1]) annotation(
-      Line(points = {{74, -26}, {84, -26}, {84, -42}, {-46, -42}, {-46, -26}, {-40, -26}, {-40, -26}}));
-    connect(parallel1.outPort, transition4.inPort) annotation(
-      Line(points = {{62, -26}, {68, -26}, {68, -26}, {68, -26}}));
-    connect(transmitting.outPort[2], parallel1.join[2]) annotation(
-      Line(points = {{20, -26}, {56, -26}, {56, -26}, {56, -26}}, thickness = 0.5));
-    connect(onOrbit.outPort[1], parallel1.join[1]) annotation(
-      Line(points = {{22, -16}, {56, -16}, {56, -26}, {56, -26}}, thickness = 0.5));
-    connect(transition2.outPort, notTransmitting.inPort[1]) annotation(
-      Line(points = {{28, -24}, {34, -24}}));
-    connect(transmitting.outPort[1], transition2.inPort) annotation(
-      Line(points = {{20, -26}, {26, -26}, {26, -25}}, thickness = 0.5));
-    connect(notTransmitting.outPort[1], transition3.inPort) annotation(
-      Line(points = {{42, -26}, {44.5, -26}, {44.5, -25}, {46, -25}}, thickness = 0.5));
-    connect(transition3.outPort, transmitting.inPort[2]) annotation(
-      Line(points = {{47, -25}, {52, -25}, {52, -32}, {16, -32}, {16, -26}}));
-    connect(parallel1.split[2], transmitting.inPort[1]) annotation(
-      Line(points = {{9, -26}, {9, -27}, {16, -27}, {16, -26}}, thickness = 0.5));
-    connect(parallel1.split[1], onOrbit.inPort[1]) annotation(
-      Line(points = {{9, -26}, {9, -22.5}, {16, -22.5}, {16, -17}}, thickness = 0.5));
-    connect(transition1.outPort, parallel1.inPort) annotation(
-      Line(points = {{-6, -26}, {1, -26}}));
-    connect(initialStep1.outPort[1], transition1.inPort) annotation(
-      Line(points = {{-18, -26}, {-12, -26}, {-12, -26}, {-12, -26}}, thickness = 0.5));
     connect(trapezoid1.y, setpoint) annotation(
       Line(points = {{-3, -3}, {11.1075, -3}, {11.1075, -1.9271}, {32, -1.9271}, {32, -2}}));
     annotation(
