@@ -11,7 +11,7 @@ def main():
     sampleRate = 0.10
     startAnalysisTime = 50
     
-    f = open('rawdata.csv', 'w')
+    f = open('../rawdata.csv', 'w')
     mat_file_name = sys.argv[1]
     print "Mat file name is "+mat_file_name
     if not os.path.exists(mat_file_name):
